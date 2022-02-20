@@ -7724,6 +7724,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "itemtesta"
+    },
+    {
+      "name": "Itemtestb",
+      "type": "item",
+      "sortid": 638,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "itemtestb"
     }
   ],
   "variable_elements": [
@@ -8005,7 +8013,6 @@
       "item.palamod.socketpatern": "Socket patern",
       "item.palamod.jumporb": "Jump orb",
       "item.palamod.chervil": "Chervil",
-      "item.palamod.itemtesta": "Itemtesta_a_supprimer ceci est un test",
       "item.palamod.moneyother": "Money_other",
       "item.palamod.knockbackorb": "Knockbackorb",
       "item.palamod.smeltmodifier": "Smelt modifier",
@@ -8308,6 +8315,7 @@
       "block.palamod.titane_block": "Block de titane",
       "block.palamod.jacaranda_leaves": "Feuille de jacaranda",
       "item.palamod.paladium_ingot": "Lingot de paladium",
+      "item.palamod.itemtestb": "Itemtestb_ceci_est_test_a_a_suprimmer",
       "item.palamod.endium_pickaxe": "Pioche en paladium",
       "fluid.palamod.fakewater": "Fakewater",
       "item.palamod.dynamite": "Dynamite",

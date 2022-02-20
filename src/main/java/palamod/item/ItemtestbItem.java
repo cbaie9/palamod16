@@ -4,12 +4,12 @@ package palamod.item;
 import net.minecraft.entity.ai.attributes.Attributes;
 
 @PalamodModElements.ModElement.Tag
-public class ItemtestaItem extends PalamodModElements.ModElement {
+public class ItemtestbItem extends PalamodModElements.ModElement {
 
-	@ObjectHolder("palamod:itemtesta")
+	@ObjectHolder("palamod:itemtestb")
 	public static final Item block = null;
 
-	public ItemtestaItem(PalamodModElements instance) {
+	public ItemtestbItem(PalamodModElements instance) {
 		super(instance, 638);
 
 	}
@@ -23,7 +23,7 @@ public class ItemtestaItem extends PalamodModElements.ModElement {
 
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(64).rarity(Rarity.COMMON));
-			setRegistryName("itemtesta");
+			setRegistryName("itemtestb");
 		}
 
 		@Override
