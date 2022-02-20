@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=bottom,variant=default": {
+      "model": "palamod_:endstonebricksslab"
+    },
+    "half=top,variant=default": {
+      "model": "palamod_:endstonebricksslab_top"
+    }
+  }
+}

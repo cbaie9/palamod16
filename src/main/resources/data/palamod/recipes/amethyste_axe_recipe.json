@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23",
+    " 5"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod:amethyste"
+    },
+    "1": {
+      "item": "palamod:amethyste"
+    },
+    "2": {
+      "item": "palamod:amethyste"
+    },
+    "3": {
+      "item": "minecraft:stick"
+    },
+    "5": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "palamod:amethyste_axe",
+    "count": 1
+  }
+}

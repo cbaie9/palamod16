@@ -1,0 +1,36 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "palamod_:titaneingot"
+    },
+    "1": {
+      "item": "palamod_:titaneingot"
+    },
+    "2": {
+      "item": "palamod_:titaneingot"
+    },
+    "3": {
+      "item": "palamod_:titaneingot"
+    },
+    "4": {
+      "item": "palamod_:titaneingot"
+    },
+    "5": {
+      "item": "palamod_:titaneingot"
+    },
+    "7": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "palamod_:titanehammer",
+    "count": 1
+  }
+}

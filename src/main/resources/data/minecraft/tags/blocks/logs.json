@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:oak_log",
+    "palamod:jacaranda_wood",
+    "palamod:judeecercis_wood",
+    "palamod:ostrya_wood_log",
+    "palamod:erable_log",
+    "palamod:ostrya_wood_wood",
+    "palamod:erable_wood",
+    "palamod:jacaranda_log",
+    "palamod:judeecercis_log"
+  ]
+}

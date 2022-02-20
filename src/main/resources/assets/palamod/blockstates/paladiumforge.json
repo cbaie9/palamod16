@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "palamod:block/paladiumforge"
+    },
+    "facing=east": {
+      "model": "palamod:block/paladiumforge",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "palamod:block/paladiumforge",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "palamod:block/paladiumforge",
+      "y": 270
+    }
+  }
+}

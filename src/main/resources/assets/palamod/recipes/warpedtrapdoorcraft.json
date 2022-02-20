@@ -1,0 +1,32 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod_:warped_planks"
+    },
+    "1": {
+      "item": "palamod_:warped_planks"
+    },
+    "2": {
+      "item": "palamod_:warped_planks"
+    },
+    "3": {
+      "item": "palamod_:warped_planks"
+    },
+    "4": {
+      "item": "palamod_:warped_planks"
+    },
+    "5": {
+      "item": "palamod_:warped_planks"
+    }
+  },
+  "result": {
+    "item": "palamod_:warpedtrapdoor",
+    "count": 6
+  }
+}

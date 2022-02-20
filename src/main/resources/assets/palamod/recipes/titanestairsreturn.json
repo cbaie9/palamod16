@@ -1,0 +1,33 @@
+{
+  "group": "titane",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod_:titanestairs"
+    },
+    "1": {
+      "item": "palamod_:titanestairs"
+    },
+    "2": {
+      "item": "palamod_:titanestairs"
+    },
+    "3": {
+      "item": "palamod_:titanestairs"
+    },
+    "4": {
+      "item": "palamod_:titaneslab",
+      "data": 0
+    },
+    "5": {
+      "item": "palamod_:titanestairs"
+    }
+  },
+  "result": {
+    "item": "palamod_:titaneblock",
+    "count": 6
+  }
+}

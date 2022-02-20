@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "palamod:findium_block"
+    }
+  ],
+  "result": {
+    "item": "palamod:findium",
+    "count": 9
+  }
+}

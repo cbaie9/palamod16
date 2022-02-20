@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod_:blocks/smithing_table_bottom",
+    "up": "palamod_:blocks/smithing_table_top",
+    "north": "palamod_:blocks/smithing_table_front",
+    "east": "palamod_:blocks/smithing_table_side",
+    "south": "palamod_:blocks/smithing_table_front",
+    "west": "palamod_:blocks/smithing_table_side",
+    "particle": "palamod_:blocks/smithing_table_bottom"
+  }
+}

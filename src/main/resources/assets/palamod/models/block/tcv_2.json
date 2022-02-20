@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:blocks/grinder_frame_block",
+    "up": "palamod:blocks/grinder_frame_block",
+    "north": "palamod:blocks/grinder_block_front",
+    "east": "palamod:blocks/grinder_frame_block",
+    "south": "palamod:blocks/grinder_block_side",
+    "west": "palamod:blocks/grinder_frame_block",
+    "particle": "palamod:blocks/grinder_frame_block"
+  }
+}

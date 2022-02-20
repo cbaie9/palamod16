@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod_:blocks/judeecercis_top",
+    "up": "palamod_:blocks/judeecercis_top",
+    "north": "palamod_:blocks/judeecercis_log",
+    "east": "palamod_:blocks/judeecercis_log",
+    "south": "palamod_:blocks/judeecercis_log",
+    "west": "palamod_:blocks/judeecercis_log",
+    "particle": "palamod_:blocks/judeecercis_top"
+  }
+}

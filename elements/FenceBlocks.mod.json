@@ -1,0 +1,38 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:Jacaranda_Fence"
+      },
+      {
+        "value": "CUSTOM:Jacaranda_FenceGate"
+      },
+      {
+        "value": "CUSTOM:Erable_Fence"
+      },
+      {
+        "value": "CUSTOM:Erable_FenceGate"
+      },
+      {
+        "value": "CUSTOM:Judeecercis_Fence"
+      },
+      {
+        "value": "CUSTOM:Judeecercis_FenceGate"
+      },
+      {
+        "value": "CUSTOM:Ostrya_woodFence"
+      },
+      {
+        "value": "CUSTOM:Ostrya_woodFenceGate"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "fences",
+    "namespace": "minecraft"
+  }
+}

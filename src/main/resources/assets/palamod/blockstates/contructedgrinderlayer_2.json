@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "palamod:block/contructedgrinderlayer_2"
+    },
+    "type=top": {
+      "model": "palamod:block/contructedgrinderlayer_2_top"
+    },
+    "type=double": {
+      "model": "palamod:block/contructedgrinderlayer_2_full"
+    }
+  }
+}

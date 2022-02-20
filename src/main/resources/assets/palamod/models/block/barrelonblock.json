@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod_:blocks/barrel_bottom",
+    "up": "palamod_:blocks/barrel_top_open",
+    "north": "palamod_:blocks/barrel_side",
+    "east": "palamod_:blocks/barrel_side",
+    "south": "palamod_:blocks/barrel_side",
+    "west": "palamod_:blocks/barrel_side",
+    "particle": "palamod_:blocks/barrel_bottom"
+  }
+}

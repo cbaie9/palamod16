@@ -1,0 +1,151 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 200,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Palamachine",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Palamachine",
+          "x": 183,
+          "y": 37
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "La palamachine permet de crafter",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "La palamachine permet de crafter",
+          "x": 130,
+          "y": 55
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Batôn qui vous permeteront d'avoir des",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Batôn qui vous permeteront d'avoir des",
+          "x": 117,
+          "y": 65
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "effets différent ( force, soin, santé,",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "effets différent ( force, soin, santé,",
+          "x": 118,
+          "y": 77
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "vitesse et dégats )",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "vitesse et dégats )",
+          "x": 116,
+          "y": 88
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "palam2.png",
+          "use1Xscale": true,
+          "name": "palam2.png",
+          "x": 126,
+          "y": 123
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "La palamachine se presente comme ceci",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "La palamachine se presente comme ceci",
+          "x": 118,
+          "y": 108
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Voir Bâton pour les craft",
+          "color": {
+            "value": -3394816,
+            "falpha": 0.0
+          },
+          "name": "Voir Bâton pour les craft",
+          "x": 178,
+          "y": 201
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "back",
+          "onClick": {
+            "name": "Blockconnecthelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "back",
+          "x": 123,
+          "y": 27
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "menu",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "menu",
+          "x": 251,
+          "y": 27
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -1,0 +1,292 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 220,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 18,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Paladium :Le minerais le plus puissant",
+          "color": {
+            "value": -52480,
+            "falpha": 0.0
+          },
+          "name": "Paladium :Le minerais le plus puissant",
+          "x": 127,
+          "y": 86
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "minable",
+          "color": {
+            "value": -52480,
+            "falpha": 0.0
+          },
+          "name": "minable",
+          "x": 129,
+          "y": 96
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Très rare sert a quelque craft",
+          "color": {
+            "value": -205,
+            "falpha": 0.0
+          },
+          "name": "Très rare sert a quelque craft",
+          "x": 122,
+          "y": 119
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "dont le cave block et le spawn finder",
+          "color": {
+            "value": -205,
+            "falpha": 0.0
+          },
+          "name": "dont le cave block et le spawn finder",
+          "x": 109,
+          "y": 130
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "amethyst_ingot.png",
+          "use1Xscale": true,
+          "name": "amethyst_ingot.png",
+          "x": 111,
+          "y": 171
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_ingot.png",
+          "use1Xscale": true,
+          "name": "paladium_ingot.png",
+          "x": 107,
+          "y": 86
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "findium.png",
+          "use1Xscale": true,
+          "name": "findium.png",
+          "x": 108,
+          "y": 107
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Minerais de bas niveau trouvable assez",
+          "color": {
+            "value": -6750055,
+            "falpha": 0.0
+          },
+          "name": "Minerais de bas niveau trouvable assez",
+          "x": 111,
+          "y": 188
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "facilement",
+          "color": {
+            "value": -6750055,
+            "falpha": 0.0
+          },
+          "name": "facilement",
+          "x": 110,
+          "y": 198
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "titane_ingot.png",
+          "use1Xscale": true,
+          "name": "titane_ingot.png",
+          "x": 109,
+          "y": 142
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Resitant,très bon pour ses premiers",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Resitant,très bon pour ses premiers",
+          "x": 128,
+          "y": 151
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "outils",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "outils",
+          "x": 108,
+          "y": 160
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "back",
+          "onClick": {
+            "name": "Blockback"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "back",
+          "x": 199,
+          "y": 25
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "menu",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "menu",
+          "x": 134,
+          "y": 25
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Améthyste :",
+          "color": {
+            "value": -6750055,
+            "falpha": 0.0
+          },
+          "name": "Améthyste :",
+          "x": 130,
+          "y": 173
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Titane :",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Titane :",
+          "x": 128,
+          "y": 141
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Findium :",
+          "color": {
+            "value": -205,
+            "falpha": 0.0
+          },
+          "name": "Findium :",
+          "x": 125,
+          "y": 109
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_green_ingot.png",
+          "use1Xscale": true,
+          "name": "paladium_green_ingot.png",
+          "x": 107,
+          "y": 67
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Paladium vert : équivalent en plus rare",
+          "color": {
+            "value": -10027213,
+            "falpha": 0.0
+          },
+          "name": "Paladium vert : équivalent en plus rare",
+          "x": 126,
+          "y": 72
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "endium_ingot.png",
+          "use1Xscale": true,
+          "name": "endium_ingot.png",
+          "x": 105,
+          "y": 46
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Endium : Le materiau ultime obtenable",
+          "color": {
+            "value": -13434727,
+            "falpha": 0.0
+          },
+          "name": "Endium : Le materiau ultime obtenable",
+          "x": 128,
+          "y": 47
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "via le paladium crusher ( voir machine)",
+          "color": {
+            "value": -13434727,
+            "falpha": 0.0
+          },
+          "name": "via le paladium crusher ( voir machine)",
+          "x": 123,
+          "y": 59
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 31,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

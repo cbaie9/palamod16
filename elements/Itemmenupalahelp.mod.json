@@ -1,0 +1,162 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "forest32.png",
+          "use1Xscale": false,
+          "name": "forest32.png",
+          "x": 134,
+          "y": 45
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "desert16.png",
+          "use1Xscale": false,
+          "name": "desert16.png",
+          "x": 134,
+          "y": 61
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fish32.png",
+          "use1Xscale": false,
+          "name": "fish32.png",
+          "x": 150,
+          "y": 61
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lake32.png",
+          "use1Xscale": false,
+          "name": "lake32.png",
+          "x": 134,
+          "y": 93
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "nether32.png",
+          "use1Xscale": false,
+          "name": "nether32.png",
+          "x": 134,
+          "y": 124
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "plains16.png",
+          "use1Xscale": false,
+          "name": "plains16.png",
+          "x": 134,
+          "y": 77
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Item menu",
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "name": "Item menu",
+          "x": 195,
+          "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "back",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "back",
+          "x": 129,
+          "y": 178
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "legendary stone",
+          "onClick": {
+            "name": "Connectlegendarystone"
+          },
+          "width": 100,
+          "height": 20,
+          "name": "legendary stone",
+          "x": 191,
+          "y": 63
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Bâtons",
+          "onClick": {
+            "name": "Connectstickgui1"
+          },
+          "width": 50,
+          "height": 20,
+          "name": "Bâtons",
+          "x": 241,
+          "y": 84
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Armor",
+          "onClick": {
+            "name": "Connectarmorpalahelp"
+          },
+          "width": 50,
+          "height": 20,
+          "name": "Armor",
+          "x": 241,
+          "y": 105
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Xp bush / Xp berries",
+          "width": 125,
+          "height": 20,
+          "name": "Xp bush / Xp berries",
+          "x": 166,
+          "y": 126
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

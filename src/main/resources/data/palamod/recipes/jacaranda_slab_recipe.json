@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod:jacaranda_planks"
+    },
+    "1": {
+      "item": "palamod:jacaranda_planks"
+    },
+    "2": {
+      "item": "palamod:jacaranda_planks"
+    }
+  },
+  "result": {
+    "item": "palamod:jacaranda_slab",
+    "count": 6
+  }
+}

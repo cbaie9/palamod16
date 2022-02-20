@@ -1,0 +1,121 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 400,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "1hea.png",
+          "use1Xscale": true,
+          "name": "1hea.png",
+          "x": 15,
+          "y": 81
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "hyper-jump : vous donne saut 9 pendant 30 secondes",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "hyper-jump : vous donne saut 9 pendant 30 secondes",
+          "x": 17,
+          "y": 70
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "stick précédant",
+          "onClick": {
+            "name": "Connectstickgui4"
+          },
+          "width": 100,
+          "height": 20,
+          "name": "stick précédant",
+          "x": 21,
+          "y": 45
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "stick suivant",
+          "onClick": {
+            "name": "Connectstickgui6"
+          },
+          "width": 90,
+          "height": 20,
+          "name": "stick suivant",
+          "x": 126,
+          "y": 45
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "item menu",
+          "onClick": {
+            "name": "Connectitemmenu"
+          },
+          "width": 70,
+          "height": 20,
+          "name": "item menu",
+          "x": 221,
+          "y": 45
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "menu",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "menu",
+          "x": 296,
+          "y": 45
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "hyperjumpstick.png",
+          "use1Xscale": false,
+          "name": "hyperjumpstick.png",
+          "x": 277,
+          "y": 73
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "hyperjumpstick.png",
+          "use1Xscale": true,
+          "name": "hyperjumpstick.png",
+          "x": 136,
+          "y": 172
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_side",
+  "textures": {
+    "texture": "palamod_:blocks/crimson_planks",
+    "particle": "palamod_:blocks/crimson_planks"
+  }
+}

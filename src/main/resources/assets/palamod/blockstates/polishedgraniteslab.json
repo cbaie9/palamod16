@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=bottom,variant=default": {
+      "model": "palamod_:polishedgraniteslab"
+    },
+    "half=top,variant=default": {
+      "model": "palamod_:polishedgraniteslab_top"
+    }
+  }
+}

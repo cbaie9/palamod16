@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "palamod:amethyste"
+    },
+    "1": {
+      "item": "palamod:amethyste"
+    },
+    "2": {
+      "item": "palamod:amethyste"
+    },
+    "3": {
+      "item": "palamod:amethyste"
+    },
+    "4": {
+      "item": "palamod:amethyste"
+    },
+    "5": {
+      "item": "palamod:amethyste"
+    },
+    "7": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "palamod:amethystehammer",
+    "count": 1
+  }
+}

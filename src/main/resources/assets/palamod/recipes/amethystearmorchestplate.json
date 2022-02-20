@@ -1,0 +1,39 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod_:amethysteingot"
+    },
+    "2": {
+      "item": "palamod_:amethysteingot"
+    },
+    "3": {
+      "item": "palamod_:amethysteingot"
+    },
+    "4": {
+      "item": "palamod_:amethysteingot"
+    },
+    "5": {
+      "item": "palamod_:amethysteingot"
+    },
+    "6": {
+      "item": "palamod_:amethysteingot"
+    },
+    "7": {
+      "item": "palamod_:amethysteingot"
+    },
+    "8": {
+      "item": "palamod_:amethysteingot"
+    }
+  },
+  "result": {
+    "item": "palamod_:amethystearmorbody",
+    "count": 1
+  }
+}

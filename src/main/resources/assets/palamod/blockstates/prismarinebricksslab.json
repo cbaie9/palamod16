@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=bottom,variant=default": {
+      "model": "palamod_:prismarinebricksslab"
+    },
+    "half=top,variant=default": {
+      "model": "palamod_:prismarinebricksslab_top"
+    }
+  }
+}

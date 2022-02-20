@@ -1,0 +1,60 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "enter code",
+          "width": 120,
+          "height": 20,
+          "name": "cheat_code_secret",
+          "x": 130,
+          "y": 57
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Enter your secret code",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Enter your secret code",
+          "x": 130,
+          "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "test code",
+          "onClick": {
+            "name": "Phonecode"
+          },
+          "width": 72,
+          "height": 20,
+          "name": "test code",
+          "x": 224,
+          "y": 94
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

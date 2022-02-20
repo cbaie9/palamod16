@@ -1,0 +1,9 @@
+{
+  "_fv": 24,
+  "_type": "painting",
+  "definition": {
+    "texture": "golem64.png",
+    "width": 64,
+    "height": 64
+  }
+}

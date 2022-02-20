@@ -1,0 +1,74 @@
+{
+  "_fv": 24,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "endium_helmet",
+    "enableBody": true,
+    "textureBody": "endium_chestplate",
+    "enableLeggings": true,
+    "textureLeggings": "endium_leggings",
+    "enableBoots": true,
+    "textureBoots": "endium_boots",
+    "onHelmetTick": {
+      "name": "Fullendiuminvisible"
+    },
+    "onBodyTick": {
+      "name": "Fullendiuminvisible"
+    },
+    "onLeggingsTick": {
+      "name": "Fullendiuminvisible"
+    },
+    "onBootsTick": {
+      "name": "Fullendiuminvisible"
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Palamod"
+    },
+    "armorTextureFile": "endium_",
+    "helmetName": "Endium Helmet",
+    "bodyName": "Endium Chestplate",
+    "leggingsName": "Endium Leggings",
+    "bootsName": "Endium Boots",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "Arms L",
+    "armsModelPartR": "Arms R",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "maxDamage": 70,
+    "damageValueHelmet": 10,
+    "damageValueBody": 12,
+    "damageValueLeggings": 0,
+    "damageValueBoots": 10,
+    "enchantability": 64,
+    "toughness": 0.0,
+    "knockbackResistance": 0.0,
+    "equipSound": {
+      "value": ""
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:EndiumIngot"
+      }
+    ]
+  }
+}

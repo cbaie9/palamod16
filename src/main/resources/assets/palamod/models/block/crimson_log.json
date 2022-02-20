@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod_:blocks/crimson_stem_top",
+    "up": "palamod_:blocks/crimson_stem_top",
+    "north": "palamod_:blocks/crimseon_stemanimed",
+    "east": "palamod_:blocks/crimseon_stemanimed",
+    "south": "palamod_:blocks/crimseon_stemanimed",
+    "west": "palamod_:blocks/crimseon_stemanimed",
+    "particle": "palamod_:blocks/crimson_stem_top"
+  }
+}

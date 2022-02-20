@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod_:blocks/warped_stem_top",
+    "up": "palamod_:blocks/warped_stem_top",
+    "north": "palamod_:blocks/warpstm",
+    "east": "palamod_:blocks/warpstm",
+    "south": "palamod_:blocks/warpstm",
+    "west": "palamod_:blocks/warpstm",
+    "particle": "palamod_:blocks/warped_stem_top"
+  }
+}

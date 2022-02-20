@@ -1,0 +1,8 @@
+{
+  "parent": "block/half_slab",
+  "textures": {
+    "bottom": "palamod_:blocks/cut_sandstone",
+    "top": "palamod_:blocks/cut_sandstone",
+    "side": "palamod_:blocks/cut_sandstone"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod:paladium_ingot"
+    },
+    "1": {
+      "item": "palamod:paladium_ingot"
+    },
+    "2": {
+      "item": "palamod:paladium_ingot"
+    },
+    "3": {
+      "item": "palamod:paladium_ingot"
+    },
+    "5": {
+      "item": "palamod:paladium_ingot"
+    }
+  },
+  "result": {
+    "item": "palamod:paladium_armor_helmet",
+    "count": 1
+  }
+}

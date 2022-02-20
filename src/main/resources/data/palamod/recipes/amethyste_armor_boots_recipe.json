@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod:amethyste"
+    },
+    "2": {
+      "item": "palamod:amethyste"
+    },
+    "3": {
+      "item": "palamod:amethyste"
+    },
+    "5": {
+      "item": "palamod:amethyste"
+    }
+  },
+  "result": {
+    "item": "palamod:amethyste_armor_boots",
+    "count": 1
+  }
+}

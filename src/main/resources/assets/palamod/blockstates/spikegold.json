@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "palamod:block/spikegold"
+    },
+    "facing=east": {
+      "model": "palamod:block/spikegold",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "palamod:block/spikegold",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "palamod:block/spikegold",
+      "y": 270
+    }
+  }
+}

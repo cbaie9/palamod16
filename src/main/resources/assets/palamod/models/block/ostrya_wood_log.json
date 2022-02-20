@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:blocks/ostrya_top",
+    "up": "palamod:blocks/ostrya_top",
+    "north": "palamod:blocks/ostrya_log",
+    "east": "palamod:blocks/ostrya_log",
+    "south": "palamod:blocks/ostrya_log",
+    "west": "palamod:blocks/ostrya_log",
+    "particle": "palamod:blocks/ostrya_top"
+  }
+}

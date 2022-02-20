@@ -1,0 +1,30 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "palamod_:compressedpaladium"
+    },
+    "3": {
+      "item": "palamod_:compressedpaladium"
+    },
+    "4": {
+      "item": "palamod_:paladiumhammer"
+    },
+    "5": {
+      "item": "palamod_:compressedpaladium"
+    },
+    "7": {
+      "item": "palamod_:compressedpaladium"
+    }
+  },
+  "result": {
+    "item": "palamod_:onemoreupgrademodifier",
+    "count": 1
+  }
+}

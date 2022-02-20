@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:blocks/jacaranda_top",
+    "up": "palamod:blocks/jacaranda_top",
+    "north": "palamod:blocks/jacaranda_log",
+    "east": "palamod:blocks/jacaranda_log",
+    "south": "palamod:blocks/jacaranda_log",
+    "west": "palamod:blocks/jacaranda_log",
+    "particle": "palamod:blocks/jacaranda_top"
+  }
+}

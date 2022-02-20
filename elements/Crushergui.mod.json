@@ -1,0 +1,146 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 184,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 10,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Paladium crusher",
+          "color": {
+            "value": -3407821,
+            "falpha": 0.0
+          },
+          "name": "Paladium crusher",
+          "x": 175,
+          "y": 32
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Paladiumcrusherprocess"
+          },
+          "name": "Slot #0",
+          "x": 133,
+          "y": 82
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Inventaire",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Inventaire",
+          "x": 130,
+          "y": 116
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Paladiumcrusherprocess"
+          },
+          "name": "Slot #1",
+          "x": 132,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "mode : <VAR:crusher_mode>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "mode : <VAR:crusher_mode>",
+          "x": 215,
+          "y": 46
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Probabilité : <VAR:integer:crusher_num_var_seen> %",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Probabilité : <VAR:integer:crusher_num_var_seen> %",
+          "x": 216,
+          "y": 62
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "start fusion",
+          "onClick": {
+            "name": "Paladiumcrusherprocess"
+          },
+          "width": 85,
+          "height": 20,
+          "name": "start fusion",
+          "x": 207,
+          "y": 105
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #2",
+          "x": 272,
+          "y": 82
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "fuel",
+          "color": {
+            "value": -3394816,
+            "falpha": 0.0
+          },
+          "name": "fuel",
+          "x": 154,
+          "y": 55
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

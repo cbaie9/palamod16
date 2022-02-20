@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "palamod:blocks/kiwano_stage_3",
+    "particle": "palamod:blocks/kiwano_stage_3"
+  }
+}

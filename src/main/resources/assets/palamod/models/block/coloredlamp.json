@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod:blocks/colored_lamp",
+    "particle": "palamod:blocks/colored_lamp"
+  }
+}

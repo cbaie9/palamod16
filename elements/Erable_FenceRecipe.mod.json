@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 3,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Erable_Planks"
+      },
+      {
+        "value": "Items.STICK"
+      },
+      {
+        "value": "CUSTOM:Erable_Planks"
+      },
+      {
+        "value": "CUSTOM:Erable_Planks"
+      },
+      {
+        "value": "Items.STICK"
+      },
+      {
+        "value": "CUSTOM:Erable_Planks"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Erable_Fence"
+    },
+    "name": "erable_fence_recipe",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [
+      {
+        "value": "CUSTOM:Judeecercis_Log"
+      },
+      {
+        "value": "CUSTOM:Judeecercis_Wood"
+      },
+      {
+        "value": "CUSTOM:Erable_Log"
+      },
+      {
+        "value": "CUSTOM:Erable_Log"
+      },
+      {
+        "value": "CUSTOM:Jacaranda_Log"
+      },
+      {
+        "value": "CUSTOM:Jacaranda_Wood"
+      },
+      {
+        "value": "CUSTOM:Ostrya_woodWood"
+      },
+      {
+        "value": "CUSTOM:Ostrya_woodLog"
+      },
+      {
+        "value": "Blocks.DIRT#0"
+      },
+      {
+        "value": "Blocks.DIRT#1"
+      },
+      {
+        "value": "Blocks.DIRT#2"
+      },
+      {
+        "value": "Blocks.GRASS"
+      },
+      {
+        "value": "Blocks.LOG"
+      }
+    ],
+    "blocks": [
+      {
+        "value": "CUSTOM:Ostrya_woodWood"
+      },
+      {
+        "value": "CUSTOM:Ostrya_woodLog"
+      },
+      {
+        "value": "CUSTOM:Jacaranda_Wood"
+      },
+      {
+        "value": "CUSTOM:Jacaranda_Log"
+      },
+      {
+        "value": "CUSTOM:Judeecercis_Wood"
+      },
+      {
+        "value": "CUSTOM:Judeecercis_Log"
+      },
+      {
+        "value": "CUSTOM:Erable_Wood"
+      },
+      {
+        "value": "CUSTOM:Erable_Log"
+      },
+      {
+        "value": "Blocks.DIRT#0"
+      },
+      {
+        "value": "Blocks.LOG"
+      },
+      {
+        "value": "Blocks.GRASS"
+      },
+      {
+        "value": "Blocks.STONE#0"
+      },
+      {
+        "value": "Blocks.COBBLESTONE"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "destructable",
+    "namespace": "forge"
+  }
+}

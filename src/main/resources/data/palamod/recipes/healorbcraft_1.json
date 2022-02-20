@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "palamod:paladium_ingot"
+    },
+    "3": {
+      "item": "palamod:paladium_ingot"
+    },
+    "4": {
+      "item": "minecraft:book"
+    },
+    "5": {
+      "item": "palamod:paladium_ingot"
+    },
+    "7": {
+      "item": "palamod:paladium_ingot"
+    }
+  },
+  "result": {
+    "item": "palamod:healorb",
+    "count": 1
+  }
+}

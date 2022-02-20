@@ -1,0 +1,31 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "paladium_sword",
+    "customModelName": "Normal",
+    "name": "Paladium Sword",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Palamod"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 6,
+    "efficiency": 0.5,
+    "attackSpeed": 2.0,
+    "enchantability": 14,
+    "damageVsEntity": 8.0,
+    "usageCount": 4999,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

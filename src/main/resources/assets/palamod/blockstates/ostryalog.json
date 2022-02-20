@@ -1,0 +1,31 @@
+{
+  "variants": {
+    "normal": {
+      "model": "palamod_:ostryalog"
+    },
+    "facing=south": {
+      "model": "palamod_:ostryalog"
+    },
+    "facing=north": {
+      "model": "palamod_:ostryalog"
+    },
+    "facing=east": {
+      "model": "palamod_:ostryalog",
+      "x": 90
+    },
+    "facing=west": {
+      "model": "palamod_:ostryalog",
+      "x": 90
+    },
+    "facing=up": {
+      "model": "palamod_:ostryalog",
+      "x": 90,
+      "y": 90
+    },
+    "facing=down": {
+      "model": "palamod_:ostryalog",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "modid": "palamod_",
+    "name": "palamod",
+    "description": "une version 1.12.2 du mod Paladium en 1.17.10",
+    "version": "0.9.4.10",
+    "credits": "paladium team ( pour le mod orginale) ",
+    "logoFile": "assets/palamod_/textures/pack.png",
+    "mcversion": "1.12.2",
+    "url": "https://discord.gg/X7jftPfxB3",
+    "updateUrl": "https://github.com/cb200709/palamod_alpha10",
+    "authorList": [
+      "cb9 #4009"
+    ],
+    "dependencies": [],
+    "dependants": [],
+    "requiredMods": [],
+    "useDependencyInformation": "true"
+  }
+]

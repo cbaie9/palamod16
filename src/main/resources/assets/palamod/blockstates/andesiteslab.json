@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=bottom,variant=default": {
+      "model": "palamod_:andesiteslab"
+    },
+    "half=top,variant=default": {
+      "model": "palamod_:andesiteslab_top"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="Tout droit reservé à la Team de dev de Paladium "
+
+[[mods]]
+modId="palamod"
+version="15a2.3"
+displayName="palamod "
+credits="cb9,Paladium team"
+displayURL="https://mcreator.net, https://paladium-pvp.fr"
+logoFile="logo.png"
+authors="cb9"
+description='''
+the palamod ... in 1.16
+'''
+
+[[dependencies.palamod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+[[dependencies.palamod]]
+    modId="just_enough_items"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+

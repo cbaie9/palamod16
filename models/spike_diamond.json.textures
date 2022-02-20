@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "spike_diam_2",
+        "1": "spike_diam_1"
+      },
+      "name": "default"
+    }
+  }
+}

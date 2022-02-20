@@ -1,0 +1,19 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:water_bucket"
+    },
+    "1": {
+      "item": "palamod_:paladiumingot"
+    }
+  },
+  "result": {
+    "item": "palamod_:fakewater",
+    "count": 4
+  }
+}

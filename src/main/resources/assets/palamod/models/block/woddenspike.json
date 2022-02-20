@@ -1,0 +1,8 @@
+{
+  "parent": "palamod:custom/wook_spike",
+  "textures": {
+    "all": "palamod:blocks/planks_oak",
+    "particle": "palamod:blocks/planks_oak",
+    "0": "palamod:blocks/planks_oak"
+  }
+}

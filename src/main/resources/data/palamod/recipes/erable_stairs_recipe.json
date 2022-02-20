@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod:erable_planks"
+    },
+    "3": {
+      "item": "palamod:erable_planks"
+    },
+    "4": {
+      "item": "palamod:erable_planks"
+    },
+    "6": {
+      "item": "palamod:erable_planks"
+    },
+    "7": {
+      "item": "palamod:erable_planks"
+    },
+    "8": {
+      "item": "palamod:erable_planks"
+    }
+  },
+  "result": {
+    "item": "palamod:erable_stairs",
+    "count": 4
+  }
+}

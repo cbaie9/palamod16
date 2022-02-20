@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "spike_titane_1",
+        "1": "spike_titane_2"
+      },
+      "name": "default"
+    }
+  }
+}

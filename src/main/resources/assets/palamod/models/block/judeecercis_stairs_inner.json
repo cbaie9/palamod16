@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "palamod:blocks/judeecercis",
+    "top": "palamod:blocks/judeecercis",
+    "side": "palamod:blocks/judeecercis"
+  }
+}

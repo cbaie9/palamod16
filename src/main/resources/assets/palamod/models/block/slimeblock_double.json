@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod_:blocks/slime_green",
+    "particle": "palamod_:blocks/slime_green"
+  }
+}

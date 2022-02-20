@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_orientable_trapdoor_top",
+  "textures": {
+    "texture": "palamod:blocks/temp_obsidian_trapdoor",
+    "particle": "palamod:blocks/temp_obsidian_trapdoor"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23",
+    "4 "
+  ],
+  "key": {
+    "0": {
+      "item": "palamod:paladium_greeningot"
+    },
+    "1": {
+      "item": "palamod:paladium_greeningot"
+    },
+    "2": {
+      "item": "minecraft:stick"
+    },
+    "3": {
+      "item": "palamod:paladium_greeningot"
+    },
+    "4": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "palamod:paladiumgreenaxe",
+    "count": 1
+  }
+}

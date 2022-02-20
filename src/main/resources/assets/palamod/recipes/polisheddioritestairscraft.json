@@ -1,0 +1,39 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  2",
+    " 45",
+    "678"
+  ],
+  "key": {
+    "2": {
+      "item": "minecraft:stone",
+      "data": 4
+    },
+    "4": {
+      "item": "minecraft:stone",
+      "data": 4
+    },
+    "5": {
+      "item": "minecraft:stone",
+      "data": 4
+    },
+    "6": {
+      "item": "minecraft:stone",
+      "data": 4
+    },
+    "7": {
+      "item": "minecraft:stone",
+      "data": 4
+    },
+    "8": {
+      "item": "minecraft:stone",
+      "data": 4
+    }
+  },
+  "result": {
+    "item": "palamod_:polisheddioritestairs",
+    "count": 6
+  }
+}

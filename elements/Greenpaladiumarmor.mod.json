@@ -1,0 +1,74 @@
+{
+  "_fv": 24,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "paladium_green_helmet",
+    "enableBody": true,
+    "textureBody": "paladium_green_chestplate",
+    "enableLeggings": true,
+    "textureLeggings": "paladium_green_leggings",
+    "enableBoots": true,
+    "textureBoots": "paladium_green_boots",
+    "onHelmetTick": {
+      "name": "PaladiumArmorHelmetTickEvent"
+    },
+    "onBodyTick": {
+      "name": "PaladiumArmorBodyTickEvent"
+    },
+    "onLeggingsTick": {
+      "name": "PaladiumArmorLeggingsTickEvent"
+    },
+    "onBootsTick": {
+      "name": "PaladiumArmorBootsTickEvent"
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Palamod"
+    },
+    "armorTextureFile": "paladium_green_",
+    "helmetName": "Green paladium Helmet",
+    "bodyName": "Green paladium Chestplate",
+    "leggingsName": "Green paladium Leggings",
+    "bootsName": "Green paladium Boots",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "Arms L",
+    "armsModelPartR": "Arms R",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "maxDamage": 60,
+    "damageValueHelmet": 7,
+    "damageValueBody": 8,
+    "damageValueLeggings": 8,
+    "damageValueBoots": 7,
+    "enchantability": 55,
+    "toughness": 0.0,
+    "knockbackResistance": 0.0,
+    "equipSound": {
+      "value": ""
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:PaladiumGreeningot"
+      }
+    ]
+  }
+}

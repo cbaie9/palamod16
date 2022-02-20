@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "palamod:paladium_greeningot"
+    },
+    {
+      "item": "palamod:paladium_greeningot"
+    },
+    {
+      "item": "palamod:paladium_greeningot"
+    },
+    {
+      "item": "palamod:paladium_greeningot"
+    },
+    {
+      "item": "palamod:paladium_greeningot"
+    },
+    {
+      "item": "palamod:paladium_greeningot"
+    },
+    {
+      "item": "palamod:paladium_greeningot"
+    },
+    {
+      "item": "palamod:paladium_greeningot"
+    },
+    {
+      "item": "palamod:paladium_greeningot"
+    }
+  ],
+  "result": {
+    "item": "palamod:paladium_greenblock",
+    "count": 1
+  }
+}

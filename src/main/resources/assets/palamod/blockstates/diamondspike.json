@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "palamod:block/diamondspike"
+    },
+    "facing=east": {
+      "model": "palamod:block/diamondspike",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "palamod:block/diamondspike",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "palamod:block/diamondspike",
+      "y": 270
+    }
+  }
+}

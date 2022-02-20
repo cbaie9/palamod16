@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "palamod_:blocks/mossy_stone_bricks",
+    "top": "palamod_:blocks/mossy_stone_bricks",
+    "side": "palamod_:blocks/mossy_stone_bricks"
+  }
+}

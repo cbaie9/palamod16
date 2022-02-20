@@ -1,0 +1,7 @@
+{
+  "parent": "block/trapdoor_bottom",
+  "textures": {
+    "texture": "palamod_:blocks/warped_trapdoor",
+    "particle": "palamod_:blocks/warped_trapdoor"
+  }
+}

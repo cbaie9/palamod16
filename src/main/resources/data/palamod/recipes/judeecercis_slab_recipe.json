@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod:judeecercis_planks"
+    },
+    "1": {
+      "item": "palamod:judeecercis_planks"
+    },
+    "2": {
+      "item": "palamod:judeecercis_planks"
+    }
+  },
+  "result": {
+    "item": "palamod:judeecercis_slab",
+    "count": 6
+  }
+}

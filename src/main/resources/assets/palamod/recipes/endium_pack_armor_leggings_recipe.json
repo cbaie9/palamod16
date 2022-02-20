@@ -1,0 +1,36 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5",
+    "6 8"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod_:endium_pack_ingot"
+    },
+    "1": {
+      "item": "palamod_:endium_pack_ingot"
+    },
+    "2": {
+      "item": "palamod_:endium_pack_ingot"
+    },
+    "3": {
+      "item": "palamod_:endium_pack_ingot"
+    },
+    "5": {
+      "item": "palamod_:endium_pack_ingot"
+    },
+    "6": {
+      "item": "palamod_:endium_pack_ingot"
+    },
+    "8": {
+      "item": "palamod_:endium_pack_ingot"
+    }
+  },
+  "result": {
+    "item": "palamod_:endium_pack_armorlegs",
+    "count": 1
+  }
+}

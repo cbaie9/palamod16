@@ -1,0 +1,26 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:stone",
+      "data": 5
+    },
+    "1": {
+      "item": "minecraft:stone",
+      "data": 5
+    },
+    "2": {
+      "item": "minecraft:stone",
+      "data": 5
+    }
+  },
+  "result": {
+    "item": "palamod_:andesiteslab",
+    "data": 0,
+    "count": 6
+  }
+}

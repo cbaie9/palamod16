@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5",
+    "6 8"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod:paladium_greeningot"
+    },
+    "1": {
+      "item": "palamod:paladium_greeningot"
+    },
+    "2": {
+      "item": "palamod:paladium_greeningot"
+    },
+    "3": {
+      "item": "palamod:paladium_greeningot"
+    },
+    "5": {
+      "item": "palamod:paladium_greeningot"
+    },
+    "6": {
+      "item": "palamod:paladium_greeningot"
+    },
+    "8": {
+      "item": "palamod:paladium_greeningot"
+    }
+  },
+  "result": {
+    "item": "palamod:greenpaladiumarmor_leggings",
+    "count": 1
+  }
+}

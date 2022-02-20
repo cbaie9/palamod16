@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod_:blocks/findium_ore",
+    "particle": "palamod_:blocks/findium_ore"
+  }
+}

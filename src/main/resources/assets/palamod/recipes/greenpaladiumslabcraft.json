@@ -1,0 +1,23 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod_:greenpaladiumblock"
+    },
+    "1": {
+      "item": "palamod_:greenpaladiumblock"
+    },
+    "2": {
+      "item": "palamod_:greenpaladiumblock"
+    }
+  },
+  "result": {
+    "item": "palamod_:greenpaladiumslab",
+    "data": 0,
+    "count": 6
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "palamod:blocks/sap.erable",
+    "particle": "palamod:blocks/sap.erable"
+  }
+}

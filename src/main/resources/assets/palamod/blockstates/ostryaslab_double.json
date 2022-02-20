@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "variant=default": {
+      "model": "palamod_:ostryaslab_double"
+    }
+  }
+}

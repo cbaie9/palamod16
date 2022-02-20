@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=bottom,variant=default": {
+      "model": "palamod_:cutsandstoneslab"
+    },
+    "half=top,variant=default": {
+      "model": "palamod_:cutsandstoneslab_top"
+    }
+  }
+}

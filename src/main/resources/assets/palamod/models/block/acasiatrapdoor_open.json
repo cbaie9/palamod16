@@ -1,0 +1,7 @@
+{
+  "parent": "block/trapdoor_open",
+  "textures": {
+    "texture": "palamod_:blocks/acacia_trapdoor",
+    "particle": "palamod_:blocks/acacia_trapdoor"
+  }
+}

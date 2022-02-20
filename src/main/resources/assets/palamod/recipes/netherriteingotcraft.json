@@ -1,0 +1,47 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "type": "forge:ore_dict",
+      "ore": "forgeingot_nether"
+    },
+    "1": {
+      "type": "forge:ore_dict",
+      "ore": "forgeingot_tag"
+    },
+    "2": {
+      "type": "forge:ore_dict",
+      "ore": "forgenether_tag"
+    },
+    "3": {
+      "type": "forge:ore_dict",
+      "ore": "forgeingot_nether"
+    },
+    "5": {
+      "type": "forge:ore_dict",
+      "ore": "forgeingot_nether"
+    },
+    "6": {
+      "type": "forge:ore_dict",
+      "ore": "forgeingot_nether"
+    },
+    "7": {
+      "type": "forge:ore_dict",
+      "ore": "forgeingot_nether"
+    },
+    "8": {
+      "type": "forge:ore_dict",
+      "ore": "forgeingot_nether"
+    }
+  },
+  "result": {
+    "item": "palamod_:netherite_ingot",
+    "count": 1
+  }
+}

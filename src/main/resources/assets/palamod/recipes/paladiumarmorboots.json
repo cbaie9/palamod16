@@ -1,0 +1,26 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod_:paladiumingot"
+    },
+    "2": {
+      "item": "palamod_:paladiumingot"
+    },
+    "3": {
+      "item": "palamod_:paladiumingot"
+    },
+    "5": {
+      "item": "palamod_:paladiumingot"
+    }
+  },
+  "result": {
+    "item": "palamod_:paladiumarmorboots",
+    "count": 1
+  }
+}

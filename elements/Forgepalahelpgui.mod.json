@@ -1,0 +1,174 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 300,
+    "height": 175,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Paladium Forge",
+          "color": {
+            "value": -65485,
+            "falpha": 0.0
+          },
+          "name": "Paladium Forge",
+          "x": 69,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "5forge.png",
+          "use1Xscale": true,
+          "name": "5forge.png",
+          "x": 190,
+          "y": 34
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "La forge est un machine permettant de recycler ses outils",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "La forge est un machine permettant de recycler ses outils",
+          "x": 66,
+          "y": 129
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "forge_front_on.png",
+          "use1Xscale": false,
+          "name": "forge_front_on.png",
+          "x": 71,
+          "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "en améthyste, titane , paladium et... endium pour les",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "en améthyste, titane , paladium et... endium pour les",
+          "x": 66,
+          "y": 139
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "pour les transformés en minerais pour les ré-utilisés",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "pour les transformés en minerais pour les ré-utilisés",
+          "x": 66,
+          "y": 149
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Pour cela il suffi d'insèré du charbon ou du palamixed coal",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Pour cela il suffi d'insèré du charbon ou du palamixed coal",
+          "x": 65,
+          "y": 159
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "dane le slot 1 et mettre les outil que vous voulez recycler",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "dane le slot 1 et mettre les outil que vous voulez recycler",
+          "x": 65,
+          "y": 170
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "dans le slot 2, attendre un peu et c'est le minerais est",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "dans le slot 2, attendre un peu et c'est le minerais est",
+          "x": 66,
+          "y": 181
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "cuit :]",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "cuit :]",
+          "x": 67,
+          "y": 192
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "back",
+          "onClick": {
+            "name": "Machineconnectpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "back",
+          "x": 66,
+          "y": 47
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "menu",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "menu",
+          "x": 66,
+          "y": 68
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=bottom,variant=default": {
+      "model": "palamod_:constructedgrinderlayer_2"
+    },
+    "half=top,variant=default": {
+      "model": "palamod_:constructedgrinderlayer_2_top"
+    }
+  }
+}

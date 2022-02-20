@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "palamod:block/woddenspike"
+    },
+    "facing=east": {
+      "model": "palamod:block/woddenspike",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "palamod:block/woddenspike",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "palamod:block/woddenspike",
+      "y": 270
+    }
+  }
+}

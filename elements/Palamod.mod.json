@@ -1,0 +1,11 @@
+{
+  "_fv": 24,
+  "_type": "tab",
+  "definition": {
+    "name": "Palamod 1.16",
+    "icon": {
+      "value": "CUSTOM:PaladiumIngot"
+    },
+    "showSearch": false
+  }
+}

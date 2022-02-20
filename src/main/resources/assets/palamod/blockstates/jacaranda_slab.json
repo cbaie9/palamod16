@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "palamod:block/jacaranda_slab"
+    },
+    "type=top": {
+      "model": "palamod:block/jacaranda_slab_top"
+    },
+    "type=double": {
+      "model": "palamod:block/jacaranda_slab_full"
+    }
+  }
+}

@@ -1,0 +1,266 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 200,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "legend_fortune.png",
+          "use1Xscale": false,
+          "name": "legend_fortune.png",
+          "x": 115,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Legendary stone wiki",
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "name": "Legendary stone wiki",
+          "x": 164,
+          "y": 24
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Forturne : permet  de vous give",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Forturne : permet  de vous give",
+          "x": 132,
+          "y": 58
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "des minerais",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "des minerais",
+          "x": 122,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "note :utilisable une fois par jour",
+          "color": {
+            "value": -3407872,
+            "falpha": 0.0
+          },
+          "name": "note :utilisable une fois par jour",
+          "x": 128,
+          "y": 37
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "legend_invisibility.png",
+          "use1Xscale": false,
+          "name": "legend_invisibility.png",
+          "x": 117,
+          "y": 85
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Invisible : vous rend invisible",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Invisible : vous rend invisible",
+          "x": 139,
+          "y": 89
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "legend_jobs.png",
+          "use1Xscale": false,
+          "name": "legend_jobs.png",
+          "x": 118,
+          "y": 104
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Jobs :vous donne de l'xp ",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Jobs :vous donne de l'xp ",
+          "x": 140,
+          "y": 108
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "legend_power.png",
+          "use1Xscale": false,
+          "name": "legend_power.png",
+          "x": 118,
+          "y": 120
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Power : vous permet d'être protèger",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Power : vous permet d'être protèger",
+          "x": 134,
+          "y": 125
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "contre la fake water",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "contre la fake water",
+          "x": 120,
+          "y": 135
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "legend_tp.png",
+          "use1Xscale": false,
+          "name": "legend_tp.png",
+          "x": 118,
+          "y": 144
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Téléportation : vous tp alétorement",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Téléportation : vous tp alétorement",
+          "x": 133,
+          "y": 146
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "sur la map",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "sur la map",
+          "x": 118,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "legend_random.png",
+          "use1Xscale": false,
+          "name": "legend_random.png",
+          "x": 114,
+          "y": 169
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "random : vous donne une des 5 pierre ",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "random : vous donne une des 5 pierre ",
+          "x": 130,
+          "y": 173
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "au dessus",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "au dessus",
+          "x": 117,
+          "y": 184
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "back",
+          "onClick": {
+            "name": "Connectitemmenu"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "back",
+          "x": 135,
+          "y": 193
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "menu",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "menu",
+          "x": 202,
+          "y": 193
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

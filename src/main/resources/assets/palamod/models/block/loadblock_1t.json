@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:blocks/time_1t",
+    "up": "palamod:blocks/crystal",
+    "north": "palamod:blocks/crystal",
+    "east": "palamod:blocks/crystal",
+    "south": "palamod:blocks/crystal",
+    "west": "palamod:blocks/crystal",
+    "particle": "palamod:blocks/time_1t"
+  }
+}

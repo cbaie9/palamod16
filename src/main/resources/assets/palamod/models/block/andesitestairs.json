@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "palamod_:blocks/andesite",
+    "top": "palamod_:blocks/andesite",
+    "side": "palamod_:blocks/andesite"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "palamod_:blocks/end_stone",
+    "top": "palamod_:blocks/end_stone",
+    "side": "palamod_:blocks/end_stone"
+  }
+}

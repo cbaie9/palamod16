@@ -1,0 +1,47 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "palamod_:yo.obj",
+    "custom": {
+      "flip-v": true
+    },
+    "textures": {
+      "#m_3": "palamod_:blocks/pillartex",
+      "#m_2": "palamod_:blocks/tex2",
+      "#m_0": "palamod_:blocks/tex3"
+    }
+  },
+  "variants": {
+    "normal": {
+      "model": "palamod_:yo.obj"
+    },
+    "facing=north": {
+      "model": "palamod_:yo.obj"
+    },
+    "facing=east": {
+      "model": "palamod_:yo.obj",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "palamod_:yo.obj",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "palamod_:yo.obj",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "palamod_:yo.obj",
+      "x": 90
+    },
+    "facing=down": {
+      "model": "palamod_:yo.obj",
+      "x": 270
+    },
+    "inventory": [
+      {
+        "transform": "forge:default-item"
+      }
+    ]
+  }
+}

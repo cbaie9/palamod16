@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=bottom,variant=default": {
+      "model": "palamod_:slimeblock"
+    },
+    "half=top,variant=default": {
+      "model": "palamod_:slimeblock_top"
+    }
+  }
+}

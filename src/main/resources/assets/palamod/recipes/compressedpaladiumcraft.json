@@ -1,0 +1,42 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod_:paladiumblock"
+    },
+    "1": {
+      "item": "palamod_:paladiumblock"
+    },
+    "2": {
+      "item": "palamod_:paladiumblock"
+    },
+    "3": {
+      "item": "palamod_:paladiumblock"
+    },
+    "4": {
+      "item": "palamod_:paladiumingot"
+    },
+    "5": {
+      "item": "palamod_:paladiumblock"
+    },
+    "6": {
+      "item": "palamod_:paladiumblock"
+    },
+    "7": {
+      "item": "palamod_:paladiumblock"
+    },
+    "8": {
+      "item": "palamod_:paladiumblock"
+    }
+  },
+  "result": {
+    "item": "palamod_:compressedpaladium",
+    "count": 1
+  }
+}

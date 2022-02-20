@@ -1,0 +1,10 @@
+{
+  "_fv": 24,
+  "_type": "fuel",
+  "definition": {
+    "power": 60,
+    "block": {
+      "value": "CUSTOM:Erable_Leaves"
+    }
+  }
+}

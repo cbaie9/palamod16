@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "   ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod:paladium_ingot"
+    },
+    "1": {
+      "item": "palamod:titane_ingot"
+    },
+    "2": {
+      "item": "palamod:paladium_ingot"
+    },
+    "6": {
+      "item": "palamod:paladium_ingot"
+    },
+    "7": {
+      "item": "palamod:titane_ingot"
+    },
+    "8": {
+      "item": "palamod:paladium_ingot"
+    }
+  },
+  "result": {
+    "item": "palamod:grinderframe",
+    "count": 1
+  }
+}

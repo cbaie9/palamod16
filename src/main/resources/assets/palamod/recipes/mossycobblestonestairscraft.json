@@ -1,0 +1,34 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  2",
+    " 45",
+    "678"
+  ],
+  "key": {
+    "2": {
+      "item": "minecraft:mossy_cobblestone"
+    },
+    "4": {
+      "item": "minecraft:mossy_cobblestone"
+    },
+    "5": {
+      "item": "minecraft:mossy_cobblestone"
+    },
+    "6": {
+      "item": "minecraft:mossy_cobblestone"
+    },
+    "7": {
+      "item": "minecraft:mossy_cobblestone"
+    },
+    "8": {
+      "item": "minecraft:mossy_cobblestone"
+    }
+  },
+  "result": {
+    "item": "palamod_:mossycoblestoneslab",
+    "data": 0,
+    "count": 6
+  }
+}

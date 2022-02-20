@@ -1,0 +1,41 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:Ostrya_woodLog"
+      },
+      {
+        "value": "CUSTOM:Ostrya_woodWood"
+      },
+      {
+        "value": "CUSTOM:Jacaranda_Wood"
+      },
+      {
+        "value": "CUSTOM:Jacaranda_Log"
+      },
+      {
+        "value": "CUSTOM:Judeecercis_Wood"
+      },
+      {
+        "value": "CUSTOM:Judeecercis_Log"
+      },
+      {
+        "value": "CUSTOM:Erable_Wood"
+      },
+      {
+        "value": "CUSTOM:Erable_Log"
+      },
+      {
+        "value": "Blocks.LOG"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "logs",
+    "namespace": "minecraft"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "palamod:blocks/chervil_stage_3",
+    "particle": "palamod:blocks/chervil_stage_3"
+  }
+}

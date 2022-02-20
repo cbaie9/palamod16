@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod_:blocks/berry_xp_bush_fancy",
+    "particle": "palamod_:blocks/berry_xp_bush_fancy"
+  }
+}

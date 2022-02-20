@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod:blocks/stone_mc",
+    "particle": "palamod:blocks/stone_mc"
+  }
+}

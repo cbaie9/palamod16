@@ -1,0 +1,33 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  2",
+    " 45",
+    "678"
+  ],
+  "key": {
+    "2": {
+      "item": "palamod_:findiumblock"
+    },
+    "4": {
+      "item": "palamod_:findiumblock"
+    },
+    "5": {
+      "item": "palamod_:findiumblock"
+    },
+    "6": {
+      "item": "palamod_:findiumblock"
+    },
+    "7": {
+      "item": "palamod_:findiumblock"
+    },
+    "8": {
+      "item": "palamod_:findiumblock"
+    }
+  },
+  "result": {
+    "item": "palamod_:findiumstairs",
+    "count": 6
+  }
+}

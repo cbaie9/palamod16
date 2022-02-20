@@ -1,0 +1,39 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  2",
+    " 45",
+    "678"
+  ],
+  "key": {
+    "2": {
+      "item": "minecraft:sandstone",
+      "data": 2
+    },
+    "4": {
+      "item": "minecraft:sandstone",
+      "data": 2
+    },
+    "5": {
+      "item": "minecraft:sandstone",
+      "data": 2
+    },
+    "6": {
+      "item": "minecraft:sandstone",
+      "data": 2
+    },
+    "7": {
+      "item": "minecraft:sandstone",
+      "data": 2
+    },
+    "8": {
+      "item": "minecraft:sandstone",
+      "data": 2
+    }
+  },
+  "result": {
+    "item": "palamod_:cutsandstonestairs",
+    "count": 6
+  }
+}

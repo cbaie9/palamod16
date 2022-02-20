@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod:erable_log"
+    },
+    "1": {
+      "item": "palamod:erable_log"
+    },
+    "2": {
+      "item": "palamod:erable_log"
+    },
+    "3": {
+      "item": "palamod:erable_log"
+    }
+  },
+  "result": {
+    "item": "palamod:erable_wood",
+    "count": 3
+  }
+}

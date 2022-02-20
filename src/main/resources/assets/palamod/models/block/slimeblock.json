@@ -1,0 +1,8 @@
+{
+  "parent": "block/half_slab",
+  "textures": {
+    "bottom": "palamod_:blocks/slime_green",
+    "top": "palamod_:blocks/slime_green",
+    "side": "palamod_:blocks/slime_green"
+  }
+}

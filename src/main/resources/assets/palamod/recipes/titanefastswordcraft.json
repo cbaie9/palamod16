@@ -1,0 +1,24 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod_:titanestick"
+    },
+    "1": {
+      "item": "palamod_:titanestick"
+    },
+    "2": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "palamod_:titanefastsword",
+    "count": 1
+  }
+}

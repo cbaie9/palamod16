@@ -1,0 +1,157 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 400,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "1strenght.png",
+          "use1Xscale": true,
+          "name": "1strenght.png",
+          "x": 16,
+          "y": 82
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Strenght stick : vous donne force 3 pendant 40 secondes",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Strenght stick : vous donne force 3 pendant 40 secondes",
+          "x": 17,
+          "y": 70
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "1orbstrenght.png",
+          "use1Xscale": true,
+          "name": "1orbstrenght.png",
+          "x": 268,
+          "y": 112
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "craft de la strenght orb",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "craft de la strenght orb",
+          "x": 275,
+          "y": 99
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "(--",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "(--",
+          "x": 355,
+          "y": 113
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "stick précédant",
+          "onClick": {
+            "name": "Connectstickgui1"
+          },
+          "width": 100,
+          "height": 20,
+          "name": "stick précédant",
+          "x": 21,
+          "y": 45
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "stick suivant",
+          "onClick": {
+            "name": "Connectstickjump"
+          },
+          "width": 90,
+          "height": 20,
+          "name": "stick suivant",
+          "x": 126,
+          "y": 45
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "item menu",
+          "onClick": {
+            "name": "Connectitemmenu"
+          },
+          "width": 70,
+          "height": 20,
+          "name": "item menu",
+          "x": 221,
+          "y": 45
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "menu",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "menu",
+          "x": 296,
+          "y": 45
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "strenghtstick.png",
+          "use1Xscale": true,
+          "name": "strenghtstick.png",
+          "x": 138,
+          "y": 171
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "strenghtstick.png",
+          "use1Xscale": false,
+          "name": "strenghtstick.png",
+          "x": 301,
+          "y": 67
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "palamod:blocks/titane_block",
+    "top": "palamod:blocks/titane_block",
+    "side": "palamod:blocks/titane_block"
+  }
+}

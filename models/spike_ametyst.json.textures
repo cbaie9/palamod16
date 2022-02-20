@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "spikeametyste_1",
+        "1": "spikeametyste_2"
+      },
+      "name": "default"
+    }
+  }
+}

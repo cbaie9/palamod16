@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:blocks/mega_safe_chest_top",
+    "up": "palamod:blocks/mega_safe_chest_top",
+    "north": "palamod:blocks/mega_safe_chest_side_1",
+    "east": "palamod:blocks/mega_safe_chest_side_2",
+    "south": "palamod:blocks/mega_safe_chest_side_3",
+    "west": "palamod:blocks/mega_safe_chest_side_2",
+    "particle": "palamod:blocks/mega_safe_chest_top"
+  }
+}

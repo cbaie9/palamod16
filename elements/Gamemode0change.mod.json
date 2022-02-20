@@ -1,0 +1,11 @@
+{
+  "_fv": 24,
+  "_type": "command",
+  "definition": {
+    "commandName": "gm0",
+    "permissionLevel": "No requirement",
+    "onCommandExecuted": {
+      "name": "Gamemode0changeCommandExecuted"
+    }
+  }
+}

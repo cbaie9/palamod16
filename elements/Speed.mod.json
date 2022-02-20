@@ -1,0 +1,33 @@
+{
+  "_fv": 24,
+  "_type": "enchantment",
+  "definition": {
+    "name": "Speed",
+    "type": "BREAKABLE",
+    "rarity": "COMMON",
+    "minLevel": 1,
+    "maxLevel": 3,
+    "damageModifier": 0,
+    "compatibleEnchantments": [
+      {
+        "value": "CUSTOM:Hammerforturne"
+      },
+      {
+        "value": "CUSTOM:Smelt"
+      }
+    ],
+    "compatibleItems": [
+      {
+        "value": "CUSTOM:Endiumhammer"
+      },
+      {
+        "value": "CUSTOM:Paladiumhammer"
+      }
+    ],
+    "isTreasureEnchantment": false,
+    "isCurse": false,
+    "isAllowedOnBooks": false,
+    "canGenerateInLootTables": true,
+    "canVillagerTrade": true
+  }
+}

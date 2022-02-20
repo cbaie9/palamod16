@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod_:blocks/xpbusk32",
+    "particle": "palamod_:blocks/xpbusk32"
+  }
+}

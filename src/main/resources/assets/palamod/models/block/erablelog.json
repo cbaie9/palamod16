@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod_:blocks/erable_top",
+    "up": "palamod_:blocks/erable_top",
+    "north": "palamod_:blocks/erable_log",
+    "east": "palamod_:blocks/erable_log",
+    "south": "palamod_:blocks/erable_log",
+    "west": "palamod_:blocks/erable_log",
+    "particle": "palamod_:blocks/erable_top"
+  }
+}

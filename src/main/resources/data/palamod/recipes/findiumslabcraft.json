@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod:findium"
+    },
+    "1": {
+      "item": "palamod:findium"
+    },
+    "2": {
+      "item": "palamod:findium"
+    }
+  },
+  "result": {
+    "item": "palamod:findiumslab",
+    "count": 6
+  }
+}

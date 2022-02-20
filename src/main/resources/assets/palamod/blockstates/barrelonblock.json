@@ -1,0 +1,31 @@
+{
+  "variants": {
+    "normal": {
+      "model": "palamod_:barrelonblock"
+    },
+    "facing=south": {
+      "model": "palamod_:barrelonblock"
+    },
+    "facing=north": {
+      "model": "palamod_:barrelonblock"
+    },
+    "facing=east": {
+      "model": "palamod_:barrelonblock",
+      "x": 90
+    },
+    "facing=west": {
+      "model": "palamod_:barrelonblock",
+      "x": 90
+    },
+    "facing=up": {
+      "model": "palamod_:barrelonblock",
+      "x": 90,
+      "y": 90
+    },
+    "facing=down": {
+      "model": "palamod_:barrelonblock",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

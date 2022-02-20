@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "palamod:block/paladiumcrusher"
+    },
+    "facing=east": {
+      "model": "palamod:block/paladiumcrusher",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "palamod:block/paladiumcrusher",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "palamod:block/paladiumcrusher",
+      "y": 270
+    }
+  }
+}

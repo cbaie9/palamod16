@@ -1,0 +1,107 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Palahelp",
+          "color": {
+            "value": -52429,
+            "falpha": 0.0
+          },
+          "name": "Palahelp",
+          "x": 131,
+          "y": 41
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "2/2",
+          "color": {
+            "value": -16750951,
+            "falpha": 0.0
+          },
+          "name": "2/2",
+          "x": 130,
+          "y": 139
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "palablock_green_palahelp2-removebg-preview_1.png",
+          "use1Xscale": true,
+          "name": "palablock_green_palahelp2-removebg-preview_1.png",
+          "x": 131,
+          "y": 57
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": " /..Commands",
+          "width": 80,
+          "height": 20,
+          "name": " /..Commands",
+          "x": 213,
+          "y": 61
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Lucky Stats",
+          "width": 80,
+          "height": 20,
+          "name": "Lucky Stats",
+          "x": 213,
+          "y": 93
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "(---- Back",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 75,
+          "height": 20,
+          "name": "(---- Back",
+          "x": 132,
+          "y": 171
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "more in the future :)",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "more in the future :)",
+          "x": 189,
+          "y": 148
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "group": "amethyste",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod_:amethystestairs"
+    },
+    "1": {
+      "item": "palamod_:amethystestairs"
+    },
+    "2": {
+      "item": "palamod_:amethystestairs"
+    },
+    "3": {
+      "item": "palamod_:amethystestairs"
+    },
+    "4": {
+      "item": "palamod_:amethystestairs"
+    },
+    "5": {
+      "item": "palamod_:amethystestairs"
+    }
+  },
+  "result": {
+    "item": "palamod_:amethysteblock",
+    "count": 6
+  }
+}

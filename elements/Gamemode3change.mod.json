@@ -1,0 +1,11 @@
+{
+  "_fv": 24,
+  "_type": "command",
+  "definition": {
+    "commandName": "gm3",
+    "permissionLevel": "2",
+    "onCommandExecuted": {
+      "name": "Gamemode3changeCommandExecuted"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "palamod:custom/spike_titane",
+  "textures": {
+    "all": "palamod:blocks/spike_titane_2",
+    "particle": "palamod:blocks/spike_titane_2",
+    "0": "palamod:blocks/spike_titane_1",
+    "1": "palamod:blocks/spike_titane_2"
+  }
+}

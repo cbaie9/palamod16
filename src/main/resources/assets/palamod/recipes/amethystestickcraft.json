@@ -1,0 +1,20 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod_:amethysteingot"
+    },
+    "1": {
+      "item": "palamod_:amethysteingot"
+    }
+  },
+  "result": {
+    "item": "palamod_:amethystestick",
+    "count": 1
+  }
+}

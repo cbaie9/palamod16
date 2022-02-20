@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod:blocks/big_obsi",
+    "particle": "palamod:blocks/big_obsi"
+  }
+}

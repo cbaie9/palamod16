@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:blocks/large",
+    "up": "palamod:blocks/assembleur_b",
+    "north": "palamod:blocks/large",
+    "east": "palamod:blocks/assembleur_a",
+    "south": "palamod:blocks/large",
+    "west": "palamod:blocks/assembleur_a",
+    "particle": "palamod:blocks/large"
+  }
+}

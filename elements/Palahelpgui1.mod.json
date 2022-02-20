@@ -1,0 +1,136 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "text": "Blocks",
+          "onClick": {
+            "name": "Blockconnecthelp"
+          },
+          "width": 50,
+          "height": 20,
+          "name": "Blocks",
+          "x": 237,
+          "y": 51
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "palablock_palahelp1-removebg-preview.png",
+          "use1Xscale": true,
+          "name": "palablock_palahelp1-removebg-preview.png",
+          "x": 132,
+          "y": 56
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Palahelp",
+          "color": {
+            "value": -52429,
+            "falpha": 0.0
+          },
+          "name": "Palahelp",
+          "x": 132,
+          "y": 42
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Items",
+          "onClick": {
+            "name": "Connectitemmenu"
+          },
+          "width": 50,
+          "height": 20,
+          "name": "Items",
+          "x": 237,
+          "y": 82
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Gui",
+          "onClick": {
+            "name": "Machineconnectpalahelp"
+          },
+          "width": 40,
+          "height": 20,
+          "name": "Gui",
+          "x": 237,
+          "y": 111
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Next",
+          "onClick": {
+            "name": "Nextpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "Next",
+          "x": 133,
+          "y": 160
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "1/2",
+          "color": {
+            "value": -16750951,
+            "falpha": 0.0
+          },
+          "name": "1/2",
+          "x": 132,
+          "y": 184
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Lucky blocks",
+          "width": 85,
+          "height": 20,
+          "name": "Lucky blocks",
+          "x": 202,
+          "y": 171
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Metiers ( soon ",
+          "width": 55,
+          "height": 20,
+          "name": "Metiers ( soon ",
+          "x": 237,
+          "y": 140
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

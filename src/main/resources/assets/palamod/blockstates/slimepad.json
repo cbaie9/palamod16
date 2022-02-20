@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "palamod:block/slimepad"
+    },
+    "type=top": {
+      "model": "palamod:block/slimepad_top"
+    },
+    "type=double": {
+      "model": "palamod:block/slimepad_full"
+    }
+  }
+}

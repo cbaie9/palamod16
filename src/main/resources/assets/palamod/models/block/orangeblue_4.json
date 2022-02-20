@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "palamod:blocks/orangeblue_stage_4",
+    "particle": "palamod:blocks/orangeblue_stage_4"
+  }
+}

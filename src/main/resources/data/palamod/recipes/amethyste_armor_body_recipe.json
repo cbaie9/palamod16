@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod:amethyste"
+    },
+    "2": {
+      "item": "palamod:amethyste"
+    },
+    "3": {
+      "item": "palamod:amethyste"
+    },
+    "4": {
+      "item": "palamod:amethyste"
+    },
+    "5": {
+      "item": "palamod:amethyste"
+    },
+    "6": {
+      "item": "palamod:amethyste"
+    },
+    "7": {
+      "item": "palamod:amethyste"
+    },
+    "8": {
+      "item": "palamod:amethyste"
+    }
+  },
+  "result": {
+    "item": "palamod:amethyste_armor_chestplate",
+    "count": 1
+  }
+}

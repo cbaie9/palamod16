@@ -1,0 +1,32 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod_:paladiumstair"
+    },
+    "1": {
+      "item": "palamod_:paladiumstair"
+    },
+    "2": {
+      "item": "palamod_:paladiumstair"
+    },
+    "3": {
+      "item": "palamod_:paladiumstair"
+    },
+    "4": {
+      "item": "palamod_:paladiumstair"
+    },
+    "5": {
+      "item": "palamod_:paladiumstair"
+    }
+  },
+  "result": {
+    "item": "palamod_:paladiumblock",
+    "count": 6
+  }
+}

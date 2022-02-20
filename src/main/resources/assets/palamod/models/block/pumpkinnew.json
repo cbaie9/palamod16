@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod_:blocks/pumpkin_top",
+    "up": "palamod_:blocks/pumpkin_top",
+    "north": "palamod_:blocks/pumpkin_side",
+    "east": "palamod_:blocks/pumpkin_side",
+    "south": "palamod_:blocks/pumpkin_side",
+    "west": "palamod_:blocks/pumpkin_side",
+    "particle": "palamod_:blocks/pumpkin_top"
+  }
+}

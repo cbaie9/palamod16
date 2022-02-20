@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod:blocks/titane_ore",
+    "particle": "palamod:blocks/titane_ore"
+  }
+}

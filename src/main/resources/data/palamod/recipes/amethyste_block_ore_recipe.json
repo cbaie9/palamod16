@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "palamod:amethyste_block"
+    }
+  ],
+  "result": {
+    "item": "palamod:amethyste",
+    "count": 9
+  }
+}

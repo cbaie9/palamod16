@@ -1,0 +1,38 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:planks",
+      "data": 3
+    },
+    "1": {
+      "item": "minecraft:planks",
+      "data": 3
+    },
+    "2": {
+      "item": "minecraft:planks",
+      "data": 3
+    },
+    "3": {
+      "item": "minecraft:planks",
+      "data": 3
+    },
+    "4": {
+      "item": "minecraft:planks",
+      "data": 3
+    },
+    "5": {
+      "item": "minecraft:planks",
+      "data": 3
+    }
+  },
+  "result": {
+    "item": "palamod_:jungletrapdoor",
+    "count": 6
+  }
+}

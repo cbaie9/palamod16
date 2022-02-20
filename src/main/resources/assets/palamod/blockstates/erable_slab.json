@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "palamod:block/erable_slab"
+    },
+    "type=top": {
+      "model": "palamod:block/erable_slab_top"
+    },
+    "type=double": {
+      "model": "palamod:block/erable_slab_full"
+    }
+  }
+}

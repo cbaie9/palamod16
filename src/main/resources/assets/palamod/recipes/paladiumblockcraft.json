@@ -1,0 +1,37 @@
+{
+  "group": "paladium",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "palamod_:paladiumingot"
+    },
+    {
+      "item": "palamod_:paladiumingot"
+    },
+    {
+      "item": "palamod_:paladiumingot"
+    },
+    {
+      "item": "palamod_:paladiumingot"
+    },
+    {
+      "item": "palamod_:paladiumingot"
+    },
+    {
+      "item": "palamod_:paladiumingot"
+    },
+    {
+      "item": "palamod_:paladiumingot"
+    },
+    {
+      "item": "palamod_:paladiumingot"
+    },
+    {
+      "item": "palamod_:paladiumingot"
+    }
+  ],
+  "result": {
+    "item": "palamod_:paladiumblock",
+    "count": 1
+  }
+}

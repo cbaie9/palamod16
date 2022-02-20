@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:jacaranda__log"
+    }
+  ],
+  "result": {
+    "item": "palamod:jacaranda_planks",
+    "count": 4
+  }
+}

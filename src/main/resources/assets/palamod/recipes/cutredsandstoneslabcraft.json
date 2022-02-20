@@ -1,0 +1,26 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:red_sandstone",
+      "data": 2
+    },
+    "1": {
+      "item": "minecraft:red_sandstone",
+      "data": 2
+    },
+    "2": {
+      "item": "minecraft:red_sandstone",
+      "data": 2
+    }
+  },
+  "result": {
+    "item": "palamod_:cutredsandstoneslab",
+    "data": 0,
+    "count": 6
+  }
+}

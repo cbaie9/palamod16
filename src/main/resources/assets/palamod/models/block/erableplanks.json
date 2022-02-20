@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod_:blocks/erable",
+    "particle": "palamod_:blocks/erable"
+  }
+}

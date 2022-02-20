@@ -1,0 +1,26 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:Ostrya_woodLeaves"
+      },
+      {
+        "value": "CUSTOM:Erable_Leaves"
+      },
+      {
+        "value": "CUSTOM:Jacaranda_Leaves"
+      },
+      {
+        "value": "CUSTOM:Judeecercis_Leaves"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "leaves",
+    "namespace": "minecraft"
+  }
+}

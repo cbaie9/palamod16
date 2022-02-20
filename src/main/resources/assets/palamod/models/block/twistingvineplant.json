@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "palamod_:blocks/twisting_vines_plant",
+    "particle": "palamod_:blocks/twisting_vines_plant"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "experience": 0.7,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "palamod:findium_ore"
+  },
+  "result": {
+    "item": "palamod:findium"
+  }
+}

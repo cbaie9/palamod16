@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "palamod:blocks/ostrya",
+    "top": "palamod:blocks/ostrya",
+    "side": "palamod:blocks/ostrya"
+  }
+}

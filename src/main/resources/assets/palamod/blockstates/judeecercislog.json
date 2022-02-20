@@ -1,0 +1,31 @@
+{
+  "variants": {
+    "normal": {
+      "model": "palamod_:judeecercislog"
+    },
+    "facing=south": {
+      "model": "palamod_:judeecercislog"
+    },
+    "facing=north": {
+      "model": "palamod_:judeecercislog"
+    },
+    "facing=east": {
+      "model": "palamod_:judeecercislog",
+      "x": 90
+    },
+    "facing=west": {
+      "model": "palamod_:judeecercislog",
+      "x": 90
+    },
+    "facing=up": {
+      "model": "palamod_:judeecercislog",
+      "x": 90,
+      "y": 90
+    },
+    "facing=down": {
+      "model": "palamod_:judeecercislog",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

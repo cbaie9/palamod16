@@ -1,0 +1,24 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod_:amethysteingot"
+    },
+    "1": {
+      "item": "palamod_:amethysteingot"
+    },
+    "2": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "palamod_:amethystesword",
+    "count": 1
+  }
+}

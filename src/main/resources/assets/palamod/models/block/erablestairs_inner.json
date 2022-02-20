@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "palamod_:blocks/erable",
+    "top": "palamod_:blocks/erable",
+    "side": "palamod_:blocks/erable"
+  }
+}

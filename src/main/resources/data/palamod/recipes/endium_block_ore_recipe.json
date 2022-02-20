@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "palamod:endium_block"
+    }
+  ],
+  "result": {
+    "item": "palamod:endium_ingot",
+    "count": 9
+  }
+}

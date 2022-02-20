@@ -1,0 +1,33 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  2",
+    " 45",
+    "678"
+  ],
+  "key": {
+    "2": {
+      "item": "minecraft:red_nether_brick"
+    },
+    "4": {
+      "item": "minecraft:red_nether_brick"
+    },
+    "5": {
+      "item": "minecraft:red_nether_brick"
+    },
+    "6": {
+      "item": "minecraft:red_nether_brick"
+    },
+    "7": {
+      "item": "minecraft:red_nether_brick"
+    },
+    "8": {
+      "item": "minecraft:red_nether_brick"
+    }
+  },
+  "result": {
+    "item": "palamod_:rednetherbricksstairs",
+    "count": 6
+  }
+}

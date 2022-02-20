@@ -1,0 +1,29 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod_:titaneingot"
+    },
+    "1": {
+      "item": "palamod_:titaneingot"
+    },
+    "2": {
+      "item": "palamod_:titaneingot"
+    },
+    "3": {
+      "item": "palamod_:titaneingot"
+    },
+    "5": {
+      "item": "palamod_:titaneingot"
+    }
+  },
+  "result": {
+    "item": "palamod_:titanearmorhelmet",
+    "count": 1
+  }
+}

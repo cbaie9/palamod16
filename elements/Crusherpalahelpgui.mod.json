@@ -1,0 +1,291 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 400,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Paladium crusher wiki",
+          "color": {
+            "value": -65485,
+            "falpha": 0.0
+          },
+          "name": "Paladium crusher wiki",
+          "x": 115,
+          "y": 23
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "crusher_front.png",
+          "use1Xscale": false,
+          "name": "crusher_front.png",
+          "x": 20,
+          "y": 26
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "4crusher1.png",
+          "use1Xscale": true,
+          "name": "4crusher1.png",
+          "x": 237,
+          "y": 21
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Voici le crusher, la machine permetant, avec",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Voici le crusher, la machine permetant, avec",
+          "x": 16,
+          "y": 49
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "des fruit de fabriquer des minerais dont",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "des fruit de fabriquer des minerais dont",
+          "x": 15,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "l'endium entre autre. Le principe est simple",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "l'endium entre autre. Le principe est simple",
+          "x": 16,
+          "y": 74
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Il faut mettre du fuel* et des fruit dans le",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Il faut mettre du fuel* et des fruit dans le",
+          "x": 16,
+          "y": 86
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "crusher. Le fuel est soit le gold mixed coal,",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "crusher. Le fuel est soit le gold mixed coal,",
+          "x": 15,
+          "y": 98
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "( améthyste ) soit l'améthyste mixed coal,",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "( améthyste ) soit l'améthyste mixed coal,",
+          "x": 15,
+          "y": 109
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "( titane ) soit le titane mixed coal ( paladium) ou le palamixed coal pour",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "( titane ) soit le titane mixed coal ( paladium) ou le palamixed coal pour",
+          "x": 13,
+          "y": 121
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "L'endium. Pour celui-ci il faudra insérer 128 palamixed et 128 orangeblue puis",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "L'endium. Pour celui-ci il faudra insérer 128 palamixed et 128 orangeblue puis",
+          "x": 17,
+          "y": 133
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Fruit ici",
+          "color": {
+            "value": -256,
+            "falpha": 0.0
+          },
+          "name": "Fruit ici",
+          "x": 262,
+          "y": 79
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Résultat ici",
+          "color": {
+            "value": -16776961,
+            "falpha": 0.0
+          },
+          "name": "Résultat ici",
+          "x": 321,
+          "y": 79
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Appuyer sur le bouton \"start fusion\" vous donnera 1 nugget quand tout les",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Appuyer sur le bouton \"start fusion\" vous donnera 1 nugget quand tout les",
+          "x": 16,
+          "y": 146
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "élément auront été insèrés.",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "élément auront été insèrés.",
+          "x": 15,
+          "y": 158
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Note : vous n'êtes pas obliger d'insèrè 128 de chaque mais il aura une chance",
+          "color": {
+            "value": -26368,
+            "falpha": 0.0
+          },
+          "name": "Note : vous n'êtes pas obliger d'insèrè 128 de chaque mais il aura une chance",
+          "x": 17,
+          "y": 169
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "que le nugget n'apparaise [ probabilité étant la chance que le nugget appairaise",
+          "color": {
+            "value": -26368,
+            "falpha": 0.0
+          },
+          "name": "que le nugget n'apparaise [ probabilité étant la chance que le nugget appairaise",
+          "x": 14,
+          "y": 178
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "et 128 étant 100% de chance  ] pas",
+          "color": {
+            "value": -26368,
+            "falpha": 0.0
+          },
+          "name": "et 128 étant 100% de chance  ] pas",
+          "x": 18,
+          "y": 188
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "back",
+          "onClick": {
+            "name": "Machineconnectpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "back",
+          "x": 200,
+          "y": 191
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "menu",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "menu",
+          "x": 251,
+          "y": 191
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "1/1 v1",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "1/1 v1",
+          "x": 378,
+          "y": 203
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

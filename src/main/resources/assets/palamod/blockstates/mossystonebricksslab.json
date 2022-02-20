@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=bottom,variant=default": {
+      "model": "palamod_:mossystonebricksslab"
+    },
+    "half=top,variant=default": {
+      "model": "palamod_:mossystonebricksslab_top"
+    }
+  }
+}

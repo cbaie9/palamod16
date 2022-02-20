@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod:blocks/grinder_frame_block",
+    "particle": "palamod:blocks/grinder_frame_block"
+  }
+}

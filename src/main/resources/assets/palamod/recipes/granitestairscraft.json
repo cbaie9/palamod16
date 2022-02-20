@@ -1,0 +1,39 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  2",
+    " 45",
+    "678"
+  ],
+  "key": {
+    "2": {
+      "item": "minecraft:stone",
+      "data": 1
+    },
+    "4": {
+      "item": "minecraft:stone",
+      "data": 1
+    },
+    "5": {
+      "item": "minecraft:stone",
+      "data": 1
+    },
+    "6": {
+      "item": "minecraft:stone",
+      "data": 1
+    },
+    "7": {
+      "item": "minecraft:stone",
+      "data": 1
+    },
+    "8": {
+      "item": "minecraft:stone",
+      "data": 1
+    }
+  },
+  "result": {
+    "item": "palamod_:granitestairs",
+    "count": 6
+  }
+}

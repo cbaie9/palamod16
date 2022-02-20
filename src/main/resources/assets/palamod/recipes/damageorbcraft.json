@@ -1,0 +1,30 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "palamod_:paladiumingot"
+    },
+    "3": {
+      "item": "palamod_:paladiumingot"
+    },
+    "4": {
+      "item": "palamod_:damagecore"
+    },
+    "5": {
+      "item": "palamod_:paladiumingot"
+    },
+    "7": {
+      "item": "palamod_:paladiumingot"
+    }
+  },
+  "result": {
+    "item": "palamod_:damageorb",
+    "count": 1
+  }
+}

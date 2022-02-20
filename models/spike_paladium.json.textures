@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "spike_paladium_1",
+        "1": "spike_paladium_2"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "palamod:custom/spike_ametyst",
+  "textures": {
+    "all": "palamod:blocks/spikeametyste_2",
+    "particle": "palamod:blocks/spikeametyste_2",
+    "0": "palamod:blocks/spikeametyste_1",
+    "1": "palamod:blocks/spikeametyste_2"
+  }
+}

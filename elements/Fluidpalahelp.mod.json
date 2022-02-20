@@ -1,0 +1,148 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 200,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Fluid",
+          "color": {
+            "value": -13369345,
+            "falpha": 0.0
+          },
+          "name": "Fluid",
+          "x": 199,
+          "y": 25
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "6_fluid.png",
+          "use1Xscale": true,
+          "name": "6_fluid.png",
+          "x": 121,
+          "y": 57
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "fake water: un type d'eau invisible qui",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "fake water: un type d'eau invisible qui",
+          "x": 116,
+          "y": 83
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "vous fait des dégats Peut peut être",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "vous fait des dégats Peut peut être",
+          "x": 116,
+          "y": 96
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "êmpecher la legendary stone de power",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "êmpecher la legendary stone de power",
+          "x": 118,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "7angel.png",
+          "use1Xscale": true,
+          "name": "7angel.png",
+          "x": 119,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Angelique water : type d'eau qui vous",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Angelique water : type d'eau qui vous",
+          "x": 118,
+          "y": 142
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "soigne",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "soigne",
+          "x": 117,
+          "y": 152
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "back",
+          "onClick": {
+            "name": "Blockback"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "back",
+          "x": 122,
+          "y": 185
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "menu",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "menu",
+          "x": 171,
+          "y": 185
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

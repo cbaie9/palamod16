@@ -1,0 +1,26 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:stone",
+      "data": 3
+    },
+    "1": {
+      "item": "minecraft:stone",
+      "data": 3
+    },
+    "2": {
+      "item": "minecraft:stone",
+      "data": 3
+    }
+  },
+  "result": {
+    "item": "palamod_:dioriteslab",
+    "data": 0,
+    "count": 6
+  }
+}

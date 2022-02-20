@@ -1,0 +1,8 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "palamod_:blocks/amethyst_block",
+    "top": "palamod_:blocks/amethyst_block",
+    "side": "palamod_:blocks/amethyst_block"
+  }
+}

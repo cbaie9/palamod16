@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "palamod:block/ostrya_wood_slab"
+    },
+    "type=top": {
+      "model": "palamod:block/ostrya_wood_slab_top"
+    },
+    "type=double": {
+      "model": "palamod:block/ostrya_wood_slab_full"
+    }
+  }
+}

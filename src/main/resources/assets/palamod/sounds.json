@@ -1,0 +1,12 @@
+{
+  "fuze_record": {
+    "category": "music",
+    "subtitle": "subtitles.fuze_record",
+    "sounds": [
+      {
+        "name": "palamod:fuzeiii",
+        "stream": true
+      }
+    ]
+  }
+}

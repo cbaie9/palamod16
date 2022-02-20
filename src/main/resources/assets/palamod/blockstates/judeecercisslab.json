@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=bottom,variant=default": {
+      "model": "palamod_:judeecercisslab"
+    },
+    "half=top,variant=default": {
+      "model": "palamod_:judeecercisslab_top"
+    }
+  }
+}

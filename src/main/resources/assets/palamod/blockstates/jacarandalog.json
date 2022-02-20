@@ -1,0 +1,31 @@
+{
+  "variants": {
+    "normal": {
+      "model": "palamod_:jacarandalog"
+    },
+    "facing=south": {
+      "model": "palamod_:jacarandalog"
+    },
+    "facing=north": {
+      "model": "palamod_:jacarandalog"
+    },
+    "facing=east": {
+      "model": "palamod_:jacarandalog",
+      "x": 90
+    },
+    "facing=west": {
+      "model": "palamod_:jacarandalog",
+      "x": 90
+    },
+    "facing=up": {
+      "model": "palamod_:jacarandalog",
+      "x": 90,
+      "y": 90
+    },
+    "facing=down": {
+      "model": "palamod_:jacarandalog",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

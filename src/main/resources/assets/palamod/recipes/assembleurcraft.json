@@ -1,0 +1,46 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:iron_ingot"
+    },
+    "1": {
+      "item": "minecraft:concrete",
+      "data": 32767
+    },
+    "2": {
+      "item": "minecraft:iron_ingot"
+    },
+    "3": {
+      "item": "minecraft:concrete",
+      "data": 32767
+    },
+    "4": {
+      "item": "palamod_:paladiumcore"
+    },
+    "5": {
+      "item": "minecraft:concrete",
+      "data": 32767
+    },
+    "6": {
+      "item": "minecraft:iron_ingot"
+    },
+    "7": {
+      "item": "minecraft:concrete_powder",
+      "data": 32767
+    },
+    "8": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "palamod_:assembleurblock",
+    "count": 1
+  }
+}

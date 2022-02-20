@@ -1,0 +1,39 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  2",
+    " 45",
+    "678"
+  ],
+  "key": {
+    "2": {
+      "item": "minecraft:stone",
+      "data": 0
+    },
+    "4": {
+      "item": "minecraft:stone",
+      "data": 0
+    },
+    "5": {
+      "item": "minecraft:stone",
+      "data": 0
+    },
+    "6": {
+      "item": "minecraft:stone",
+      "data": 0
+    },
+    "7": {
+      "item": "minecraft:stone",
+      "data": 0
+    },
+    "8": {
+      "item": "minecraft:stone",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "palamod_:stonestairs",
+    "count": 4
+  }
+}

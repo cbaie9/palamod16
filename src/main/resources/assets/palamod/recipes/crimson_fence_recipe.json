@@ -1,0 +1,32 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod_:crimson_planks"
+    },
+    "1": {
+      "item": "minecraft:stick"
+    },
+    "2": {
+      "item": "palamod_:crimson_planks"
+    },
+    "3": {
+      "item": "palamod_:crimson_planks"
+    },
+    "4": {
+      "item": "minecraft:stick"
+    },
+    "5": {
+      "item": "palamod_:crimson_planks"
+    }
+  },
+  "result": {
+    "item": "palamod_:crimson_fence",
+    "count": 3
+  }
+}

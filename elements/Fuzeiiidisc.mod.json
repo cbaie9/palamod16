@@ -1,0 +1,17 @@
+{
+  "_fv": 24,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "fuzeiiirecord",
+    "name": "Fuzeiii - On m'appelle Fuze iii",
+    "description": "La music de fuze",
+    "creativeTab": {
+      "value": "CUSTOM:Palamod"
+    },
+    "music": {
+      "value": "CUSTOM:fuze_record"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

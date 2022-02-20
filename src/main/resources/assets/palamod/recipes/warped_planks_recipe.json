@@ -1,0 +1,14 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "forgewarped_log"
+    }
+  ],
+  "result": {
+    "item": "palamod_:warped_planks",
+    "count": 4
+  }
+}

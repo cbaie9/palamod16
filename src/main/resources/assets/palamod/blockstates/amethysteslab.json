@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=bottom,variant=default": {
+      "model": "palamod_:amethysteslab"
+    },
+    "half=top,variant=default": {
+      "model": "palamod_:amethysteslab_top"
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 195,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 17,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 4,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Gcodev3"
+          },
+          "name": "Slot #4",
+          "x": 131,
+          "y": 94
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Gcodev3"
+          },
+          "name": "Slot #0",
+          "x": 133,
+          "y": 40
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Gcodev3"
+          },
+          "name": "Slot #1",
+          "x": 133,
+          "y": 59
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_xxl.png",
+          "use1Xscale": false,
+          "name": "arrow_xxl.png",
+          "x": 155,
+          "y": 49
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_new.png",
+          "use1Xscale": true,
+          "name": "arrow_new.png",
+          "x": 153,
+          "y": 97
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arr0.png",
+          "use1Xscale": false,
+          "name": "arr0.png",
+          "x": 263,
+          "y": 104
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 3,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Gcodev3"
+          },
+          "name": "Slot #3",
+          "x": 242,
+          "y": 102
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:g_num> /100",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<VAR:g_num> /100",
+          "x": 214,
+          "y": 122
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Inventory",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Inventory",
+          "x": 132,
+          "y": 124
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "r2_1.png",
+          "use1Xscale": false,
+          "name": "r2_1.png",
+          "x": 238,
+          "y": 31
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 5,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #5",
+          "x": 181,
+          "y": 94
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #2",
+          "x": 191,
+          "y": 48
+        }
+      }
+    ],
+    "onOpen": {
+      "name": "Gcodev3"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

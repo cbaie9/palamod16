@@ -1,0 +1,23 @@
+{
+  "_fv": 24,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "antifake",
+    "icon": "antifake_icon.png",
+    "color": {
+      "value": -13434676,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "AntifakeEffect_add_nbt"
+    },
+    "onActiveTick": {
+      "name": "AntifakeOnEffect_delete_nbt"
+    }
+  }
+}

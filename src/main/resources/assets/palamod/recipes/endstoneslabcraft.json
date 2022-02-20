@@ -1,0 +1,23 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:end_stone"
+    },
+    "1": {
+      "item": "minecraft:end_stone"
+    },
+    "2": {
+      "item": "minecraft:end_stone"
+    }
+  },
+  "result": {
+    "item": "palamod_:endstoneslab",
+    "data": 0,
+    "count": 6
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:red_nether_brick"
+    },
+    "1": {
+      "item": "minecraft:red_nether_brick"
+    },
+    "2": {
+      "item": "minecraft:red_nether_brick"
+    }
+  },
+  "result": {
+    "item": "palamod_:rednetherbricksslab",
+    "data": 0,
+    "count": 6
+  }
+}

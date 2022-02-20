@@ -1,0 +1,194 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 190,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "erable_log.png",
+          "use1Xscale": false,
+          "name": "erable_log.png",
+          "x": 125,
+          "y": 43
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Erable : permet de crafter le",
+          "color": {
+            "value": -52480,
+            "falpha": 0.0
+          },
+          "name": "Erable : permet de crafter le",
+          "x": 158,
+          "y": 42
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "portail en paladium",
+          "color": {
+            "value": -52480,
+            "falpha": 0.0
+          },
+          "name": "portail en paladium",
+          "x": 159,
+          "y": 54
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "jacaranda_log.png",
+          "use1Xscale": false,
+          "name": "jacaranda_log.png",
+          "x": 125,
+          "y": 74
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Jacaranda : permet de crafter",
+          "color": {
+            "value": -6750055,
+            "falpha": 0.0
+          },
+          "name": "Jacaranda : permet de crafter",
+          "x": 157,
+          "y": 74
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "le portail en améthyste",
+          "color": {
+            "value": -6750055,
+            "falpha": 0.0
+          },
+          "name": "le portail en améthyste",
+          "x": 158,
+          "y": 85
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "judeecercis_log.png",
+          "use1Xscale": false,
+          "name": "judeecercis_log.png",
+          "x": 125,
+          "y": 106
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Judeecercis : permet de",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Judeecercis : permet de",
+          "x": 156,
+          "y": 108
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Crafter le portail en titane",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Crafter le portail en titane",
+          "x": 157,
+          "y": 121
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ostrya_log.png",
+          "use1Xscale": false,
+          "name": "ostrya_log.png",
+          "x": 125,
+          "y": 137
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Ostrya : permet de crafter le",
+          "color": {
+            "value": -13434727,
+            "falpha": 0.0
+          },
+          "name": "Ostrya : permet de crafter le",
+          "x": 158,
+          "y": 138
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "portail en endium",
+          "color": {
+            "value": -13434727,
+            "falpha": 0.0
+          },
+          "name": "portail en endium",
+          "x": 158,
+          "y": 153
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "back",
+          "onClick": {
+            "name": "Blockback"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "back",
+          "x": 128,
+          "y": 171
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "menu",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "menu",
+          "x": 188,
+          "y": 171
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

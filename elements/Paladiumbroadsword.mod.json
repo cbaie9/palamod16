@@ -1,0 +1,27 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "broadsword_pala",
+    "customModelName": "Normal",
+    "name": "Paladium Broadsword",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Palamod"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 6,
+    "efficiency": 2.0,
+    "attackSpeed": 0.5,
+    "enchantability": 0,
+    "damageVsEntity": 9.0,
+    "usageCount": 3999,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

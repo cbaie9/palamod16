@@ -1,0 +1,30 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Antifake",
+    "splashName": "Splash Potion of Antifake",
+    "lingeringName": "Lingering Potion of Antifake",
+    "arrowName": "Arrow of Antifake",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:Antifake"
+        },
+        "duration": 3600,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      },
+      {
+        "effect": {
+          "value": "WATER_BREATHING"
+        },
+        "duration": 3600,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

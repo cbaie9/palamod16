@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod:blocks/amethyst_block",
+    "particle": "palamod:blocks/amethyst_block"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod_:paladiumcore"
+    },
+    "1": {
+      "item": "palamod_:compressedamethyste"
+    },
+    "2": {
+      "item": "palamod_:paladiumcore"
+    },
+    "3": {
+      "item": "palamod_:paladiumstick"
+    },
+    "4": {
+      "item": "palamod_:findium"
+    },
+    "5": {
+      "item": "palamod_:paladiumstick"
+    },
+    "6": {
+      "item": "palamod_:paladiumcore"
+    },
+    "7": {
+      "item": "palamod_:paladiumstick"
+    },
+    "8": {
+      "item": "palamod_:paladiumcore"
+    }
+  },
+  "result": {
+    "item": "palamod_:paladiumcrusherblock",
+    "count": 1
+  }
+}

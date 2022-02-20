@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=bottom,variant=default": {
+      "model": "palamod_:greenpaladiumslab"
+    },
+    "half=top,variant=default": {
+      "model": "palamod_:greenpaladiumslab_top"
+    }
+  }
+}

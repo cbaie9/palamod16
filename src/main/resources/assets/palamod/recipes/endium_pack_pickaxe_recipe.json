@@ -1,0 +1,30 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 4 ",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "palamod_:endium_pack_ingot"
+    },
+    "1": {
+      "item": "palamod_:endium_pack_ingot"
+    },
+    "2": {
+      "item": "palamod_:endium_pack_ingot"
+    },
+    "4": {
+      "item": "minecraft:stick"
+    },
+    "7": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "palamod_:endium_pack_pickaxe",
+    "count": 1
+  }
+}

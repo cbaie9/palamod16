@@ -1,0 +1,32 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod_:greenpaladiumstairs"
+    },
+    "1": {
+      "item": "palamod_:greenpaladiumstairs"
+    },
+    "2": {
+      "item": "palamod_:greenpaladiumstairs"
+    },
+    "3": {
+      "item": "palamod_:greenpaladiumstairs"
+    },
+    "4": {
+      "item": "palamod_:greenpaladiumstairs"
+    },
+    "5": {
+      "item": "palamod_:greenpaladiumstairs"
+    }
+  },
+  "result": {
+    "item": "palamod_:greenpaladiumblock",
+    "count": 6
+  }
+}

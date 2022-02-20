@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod_:blocks/endium_block",
+    "particle": "palamod_:blocks/endium_block"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    " 3",
+    " 5"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod_:endium_pack_ingot"
+    },
+    "1": {
+      "item": "palamod_:endium_pack_ingot"
+    },
+    "3": {
+      "item": "minecraft:stick"
+    },
+    "5": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "palamod_:endium_pack_hoe",
+    "count": 1
+  }
+}

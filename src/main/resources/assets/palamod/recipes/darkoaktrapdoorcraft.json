@@ -1,0 +1,38 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:planks",
+      "data": 5
+    },
+    "1": {
+      "item": "minecraft:planks",
+      "data": 5
+    },
+    "2": {
+      "item": "minecraft:planks",
+      "data": 5
+    },
+    "3": {
+      "item": "minecraft:planks",
+      "data": 5
+    },
+    "4": {
+      "item": "minecraft:planks",
+      "data": 5
+    },
+    "5": {
+      "item": "minecraft:planks",
+      "data": 5
+    }
+  },
+  "result": {
+    "item": "palamod_:darkoaktrapdoor",
+    "count": 6
+  }
+}

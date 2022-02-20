@@ -1,0 +1,13 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "pillartex",
+        "2": "tex3",
+        "3": "pillartex",
+        "missing": "alchimie_texture"
+      },
+      "name": "default"
+    }
+  }
+}

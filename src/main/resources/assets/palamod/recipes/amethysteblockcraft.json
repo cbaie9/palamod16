@@ -1,0 +1,37 @@
+{
+  "group": "amethyste",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "palamod_:amethysteingot"
+    },
+    {
+      "item": "palamod_:amethysteingot"
+    },
+    {
+      "item": "palamod_:amethysteingot"
+    },
+    {
+      "item": "palamod_:amethysteingot"
+    },
+    {
+      "item": "palamod_:amethysteingot"
+    },
+    {
+      "item": "palamod_:amethysteingot"
+    },
+    {
+      "item": "palamod_:amethysteingot"
+    },
+    {
+      "item": "palamod_:amethysteingot"
+    },
+    {
+      "item": "palamod_:amethysteingot"
+    }
+  ],
+  "result": {
+    "item": "palamod_:amethysteblock",
+    "count": 1
+  }
+}

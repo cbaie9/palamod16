@@ -1,0 +1,8 @@
+{
+  "parent": "block/half_slab",
+  "textures": {
+    "bottom": "palamod_:blocks/prismarine_ani",
+    "top": "palamod_:blocks/prismarine_ani",
+    "side": "palamod_:blocks/prismarine_ani"
+  }
+}

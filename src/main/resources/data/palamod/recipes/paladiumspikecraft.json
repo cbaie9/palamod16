@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    "678"
+  ],
+  "key": {
+    "1": {
+      "item": "palamod:titane_sword"
+    },
+    "3": {
+      "item": "palamod:titane_sword"
+    },
+    "4": {
+      "item": "palamod:paladium_ingot"
+    },
+    "5": {
+      "item": "palamod:titane_sword"
+    },
+    "6": {
+      "item": "palamod:paladium_ingot"
+    },
+    "7": {
+      "item": "palamod:paladium_ingot"
+    },
+    "8": {
+      "item": "palamod:paladium_ingot"
+    }
+  },
+  "result": {
+    "item": "palamod:paladiumspike",
+    "count": 1
+  }
+}

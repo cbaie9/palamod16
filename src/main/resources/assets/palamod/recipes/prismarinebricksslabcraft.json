@@ -1,0 +1,26 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:prismarine",
+      "data": 1
+    },
+    "1": {
+      "item": "minecraft:prismarine",
+      "data": 1
+    },
+    "2": {
+      "item": "minecraft:prismarine",
+      "data": 1
+    }
+  },
+  "result": {
+    "item": "palamod_:prismarinebricksslab",
+    "data": 0,
+    "count": 1
+  }
+}

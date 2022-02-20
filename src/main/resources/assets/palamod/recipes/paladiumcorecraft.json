@@ -1,0 +1,42 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod_:titaneingot"
+    },
+    "1": {
+      "item": "palamod_:paladiumingot"
+    },
+    "2": {
+      "item": "palamod_:titaneingot"
+    },
+    "3": {
+      "item": "palamod_:paladiumingot"
+    },
+    "4": {
+      "item": "palamod_:paladiumingot"
+    },
+    "5": {
+      "item": "palamod_:paladiumingot"
+    },
+    "6": {
+      "item": "palamod_:titaneingot"
+    },
+    "7": {
+      "item": "palamod_:paladiumingot"
+    },
+    "8": {
+      "item": "palamod_:titaneingot"
+    }
+  },
+  "result": {
+    "item": "palamod_:paladiumcore",
+    "count": 1
+  }
+}

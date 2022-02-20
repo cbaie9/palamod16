@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "palamod:blocks/findium_block",
+    "top": "palamod:blocks/findium_block",
+    "side": "palamod:blocks/findium_block"
+  }
+}

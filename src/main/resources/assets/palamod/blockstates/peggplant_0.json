@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=dandelion": {
+      "model": "palamod_:peggplant_0"
+    }
+  }
+}

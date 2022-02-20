@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "palamod:block/ametystespike"
+    },
+    "facing=east": {
+      "model": "palamod:block/ametystespike",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "palamod:block/ametystespike",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "palamod:block/ametystespike",
+      "y": 270
+    }
+  }
+}

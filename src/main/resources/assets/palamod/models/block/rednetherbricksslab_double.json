@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod_:blocks/red_nether_bricks",
+    "particle": "palamod_:blocks/red_nether_bricks"
+  }
+}

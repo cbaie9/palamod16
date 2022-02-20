@@ -1,0 +1,22 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1"
+  ],
+  "key": {
+    "0": {
+      "type": "forge:ore_dict",
+      "ore": "planksall"
+    },
+    "1": {
+      "type": "forge:ore_dict",
+      "ore": "planksall"
+    }
+  },
+  "result": {
+    "item": "minecraft:stick",
+    "count": 4
+  }
+}

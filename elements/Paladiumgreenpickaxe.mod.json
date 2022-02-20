@@ -1,0 +1,33 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "paladium_green_pickaxe",
+    "customModelName": "Normal",
+    "name": "Green Paladium Pickaxe",
+    "specialInfo": [
+      "green"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:Palamod"
+    },
+    "toolType": "Pickaxe",
+    "harvestLevel": 6,
+    "efficiency": 24.0,
+    "attackSpeed": 1.5,
+    "enchantability": 10,
+    "damageVsEntity": 6.0,
+    "usageCount": 4999,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

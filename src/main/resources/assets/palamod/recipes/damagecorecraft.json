@@ -1,0 +1,30 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "palamod_:titanesword"
+    },
+    "3": {
+      "item": "palamod_:titanesword"
+    },
+    "4": {
+      "item": "palamod_:titaneingot"
+    },
+    "5": {
+      "item": "palamod_:titanesword"
+    },
+    "7": {
+      "item": "palamod_:titanesword"
+    }
+  },
+  "result": {
+    "item": "palamod_:damagecore",
+    "count": 1
+  }
+}

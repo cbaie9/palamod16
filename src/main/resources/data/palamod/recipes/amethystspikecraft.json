@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    "678"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:diamond_sword"
+    },
+    "3": {
+      "item": "minecraft:diamond_sword"
+    },
+    "4": {
+      "item": "palamod:amethyste"
+    },
+    "5": {
+      "item": "minecraft:diamond_sword"
+    },
+    "6": {
+      "item": "palamod:amethyste"
+    },
+    "7": {
+      "item": "palamod:amethyste"
+    },
+    "8": {
+      "item": "palamod:amethyste"
+    }
+  },
+  "result": {
+    "item": "palamod:ametystespike",
+    "count": 1
+  }
+}

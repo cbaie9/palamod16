@@ -1,0 +1,31 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "paladium_green_shovel",
+    "customModelName": "Normal",
+    "name": "Green Paladium Shovel",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Palamod"
+    },
+    "toolType": "Spade",
+    "harvestLevel": 6,
+    "efficiency": 36.0,
+    "attackSpeed": 0.5,
+    "enchantability": 14,
+    "damageVsEntity": 5.0,
+    "usageCount": 4999,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod_:blocks/prismarine_bricks",
+    "particle": "palamod_:blocks/prismarine_bricks"
+  }
+}

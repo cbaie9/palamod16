@@ -1,0 +1,42 @@
+{
+  "group": "palamod_",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:packed_ice"
+    },
+    "1": {
+      "item": "minecraft:packed_ice"
+    },
+    "2": {
+      "item": "minecraft:packed_ice"
+    },
+    "3": {
+      "item": "minecraft:packed_ice"
+    },
+    "4": {
+      "item": "minecraft:packed_ice"
+    },
+    "5": {
+      "item": "minecraft:packed_ice"
+    },
+    "6": {
+      "item": "minecraft:packed_ice"
+    },
+    "7": {
+      "item": "minecraft:packed_ice"
+    },
+    "8": {
+      "item": "minecraft:packed_ice"
+    }
+  },
+  "result": {
+    "item": "palamod_:blueice",
+    "count": 1
+  }
+}

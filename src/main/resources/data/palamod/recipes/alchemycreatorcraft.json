@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:blaze_powder"
+    },
+    "1": {
+      "item": "palamod:compressedpaladium"
+    },
+    "2": {
+      "item": "minecraft:blaze_powder"
+    },
+    "3": {
+      "item": "palamod:titane_ingot"
+    },
+    "4": {
+      "item": "palamod:paladiumcore"
+    },
+    "5": {
+      "item": "palamod:titane_ingot"
+    },
+    "6": {
+      "item": "palamod:titane_ingot"
+    },
+    "7": {
+      "item": "palamod:titane_ingot"
+    },
+    "8": {
+      "item": "palamod:titane_ingot"
+    }
+  },
+  "result": {
+    "item": "palamod:alchimet_1",
+    "count": 1
+  }
+}

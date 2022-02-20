@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=bottom,variant=default": {
+      "model": "palamod_:constructedgrindercouche_1"
+    },
+    "half=top,variant=default": {
+      "model": "palamod_:constructedgrindercouche_1_top"
+    }
+  }
+}

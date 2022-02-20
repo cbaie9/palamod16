@@ -1,0 +1,182 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 400,
+    "height": 225,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Sticks",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Sticks",
+          "x": 187,
+          "y": 12
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Les stick ( bâton) de craftent dans la palamachine.Il en existe de plusieures",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Les stick ( bâton) de craftent dans la palamachine.Il en existe de plusieures",
+          "x": 22,
+          "y": 23
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "types différent",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "types différent",
+          "x": 21,
+          "y": 36
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "1speed.png",
+          "use1Xscale": true,
+          "name": "1speed.png",
+          "x": 13,
+          "y": 111
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Speed stick : vous permet d'avoir un speed 3 pendant 10 secondes",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Speed stick : vous permet d'avoir un speed 3 pendant 10 secondes",
+          "x": 19,
+          "y": 91
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "1orbspeed.png",
+          "use1Xscale": true,
+          "name": "1orbspeed.png",
+          "x": 269,
+          "y": 141
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "item menu",
+          "onClick": {
+            "name": "Connectitemmenu"
+          },
+          "width": 70,
+          "height": 20,
+          "name": "item menu",
+          "x": 18,
+          "y": 65
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "menu",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "menu",
+          "x": 91,
+          "y": 65
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "next stick",
+          "onClick": {
+            "name": "Connectstickgui2"
+          },
+          "width": 75,
+          "height": 20,
+          "name": "next stick",
+          "x": 141,
+          "y": 65
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Craft de la speed orb",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Craft de la speed orb",
+          "x": 271,
+          "y": 132
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "(-",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "(-",
+          "x": 357,
+          "y": 145
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "speedstick.png",
+          "use1Xscale": true,
+          "name": "speedstick.png",
+          "x": 134,
+          "y": 201
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "speedstick.png",
+          "use1Xscale": false,
+          "name": "speedstick.png",
+          "x": 348,
+          "y": 91
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

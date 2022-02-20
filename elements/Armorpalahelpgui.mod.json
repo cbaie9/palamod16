@@ -1,0 +1,549 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 300,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "amethyst_helmet.png",
+          "use1Xscale": false,
+          "name": "amethyst_helmet.png",
+          "x": 68,
+          "y": 26
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "amethyst_chestplate.png",
+          "use1Xscale": false,
+          "name": "amethyst_chestplate.png",
+          "x": 68,
+          "y": 60
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "amethyst_leggings.png",
+          "use1Xscale": false,
+          "name": "amethyst_leggings.png",
+          "x": 69,
+          "y": 97
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "amethyst_boots.png",
+          "use1Xscale": false,
+          "name": "amethyst_boots.png",
+          "x": 69,
+          "y": 141
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "endium_helmet.png",
+          "use1Xscale": false,
+          "name": "endium_helmet.png",
+          "x": 280,
+          "y": 32
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "endium_chestplate.png",
+          "use1Xscale": false,
+          "name": "endium_chestplate.png",
+          "x": 281,
+          "y": 65
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "endium_leggings.png",
+          "use1Xscale": false,
+          "name": "endium_leggings.png",
+          "x": 280,
+          "y": 100
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "endium_boots.png",
+          "use1Xscale": false,
+          "name": "endium_boots.png",
+          "x": 284,
+          "y": 137
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_chestplate.png",
+          "use1Xscale": false,
+          "name": "paladium_chestplate.png",
+          "x": 214,
+          "y": 64
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_green_chestplate.png",
+          "use1Xscale": false,
+          "name": "paladium_green_chestplate.png",
+          "x": 178,
+          "y": 62
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_green_boots.png",
+          "use1Xscale": false,
+          "name": "paladium_green_boots.png",
+          "x": 178,
+          "y": 138
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_green_helmet.png",
+          "use1Xscale": false,
+          "name": "paladium_green_helmet.png",
+          "x": 178,
+          "y": 31
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_green_leggings.png",
+          "use1Xscale": false,
+          "name": "paladium_green_leggings.png",
+          "x": 178,
+          "y": 99
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_helmet.png",
+          "use1Xscale": false,
+          "name": "paladium_helmet.png",
+          "x": 214,
+          "y": 33
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_leggings.png",
+          "use1Xscale": false,
+          "name": "paladium_leggings.png",
+          "x": 213,
+          "y": 101
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_boots.png",
+          "use1Xscale": false,
+          "name": "paladium_boots.png",
+          "x": 216,
+          "y": 138
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "+ 4.5",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "+ 4.5",
+          "x": 99,
+          "y": 38
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "+ 5",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "+ 5",
+          "x": 100,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "+ 4",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "+ 4",
+          "x": 100,
+          "y": 103
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "+ 4.5",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "+ 4.5",
+          "x": 101,
+          "y": 150
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "titane_helmet.png",
+          "use1Xscale": false,
+          "name": "titane_helmet.png",
+          "x": 120,
+          "y": 26
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "titane_chestplate.png",
+          "use1Xscale": false,
+          "name": "titane_chestplate.png",
+          "x": 123,
+          "y": 61
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "titane_leggings.png",
+          "use1Xscale": false,
+          "name": "titane_leggings.png",
+          "x": 124,
+          "y": 99
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "titane_boots.png",
+          "use1Xscale": false,
+          "name": "titane_boots.png",
+          "x": 124,
+          "y": 137
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "+ 4.5",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "+ 4.5",
+          "x": 146,
+          "y": 36
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "+ 4.5",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "+ 4.5",
+          "x": 152,
+          "y": 144
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "+ 5",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "+ 5",
+          "x": 152,
+          "y": 108
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "+ 5",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "+ 5",
+          "x": 154,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "+ 4.5",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "+ 4.5",
+          "x": 243,
+          "y": 41
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Night Vision II",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Night Vision II",
+          "x": 223,
+          "y": 27
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "+ 6.5",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "+ 6.5",
+          "x": 247,
+          "y": 70
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Force",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Force",
+          "x": 245,
+          "y": 79
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "+ 5.5 ",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "+ 5.5 ",
+          "x": 243,
+          "y": 105
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Haste",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Haste",
+          "x": 244,
+          "y": 118
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "+ 5 Speed",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "+ 5 Speed",
+          "x": 243,
+          "y": 144
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "+ 5",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "+ 5",
+          "x": 312,
+          "y": 41
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "+ 7",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "+ 7",
+          "x": 312,
+          "y": 73
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "+ 5.5",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "+ 5.5",
+          "x": 307,
+          "y": 107
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "+ 5.5",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "+ 5.5",
+          "x": 311,
+          "y": 142
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Night Vision II",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Night Vision II",
+          "x": 282,
+          "y": 57
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Force",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Force",
+          "x": 312,
+          "y": 82
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Haste",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Haste",
+          "x": 313,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Speed",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Speed",
+          "x": 317,
+          "y": 151
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Back",
+          "onClick": {
+            "name": "Connectitemmenu"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "Back",
+          "x": 73,
+          "y": 175
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "menu",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "menu",
+          "x": 126,
+          "y": 175
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

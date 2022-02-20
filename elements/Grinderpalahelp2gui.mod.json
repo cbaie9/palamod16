@@ -1,0 +1,272 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 200,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "2/2",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "2/2",
+          "x": 292,
+          "y": 25
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder_block_front.png",
+          "use1Xscale": false,
+          "name": "grinder_block_front.png",
+          "x": 117,
+          "y": 26
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Grinder wiki",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Grinder wiki",
+          "x": 182,
+          "y": 26
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Knockback : augmente le knockback -)",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Knockback : augmente le knockback -)",
+          "x": 118,
+          "y": 61
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "fastsword + broadsword",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "fastsword + broadsword",
+          "x": 117,
+          "y": 70
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Comment crafter le grinder",
+          "color": {
+            "value": -4385001,
+            "falpha": 0.0
+          },
+          "name": "Comment crafter le grinder",
+          "x": 117,
+          "y": 82
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Il sufit de crafter :",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Il sufit de crafter :",
+          "x": 117,
+          "y": 93
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "1 grinder block, 5 grinder casing, 20",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "1 grinder block, 5 grinder casing, 20",
+          "x": 118,
+          "y": 103
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "grinder frame et l'asembing table",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "grinder frame et l'asembing table",
+          "x": 116,
+          "y": 114
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "1.png",
+          "use1Xscale": true,
+          "name": "1.png",
+          "x": 120,
+          "y": 166
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "2.png",
+          "use1Xscale": true,
+          "name": "2.png",
+          "x": 167,
+          "y": 167
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "et crafter 2 layer 1 et 1 layer 2",
+          "color": {
+            "value": -5433600,
+            "falpha": 0.0
+          },
+          "name": "et crafter 2 layer 1 et 1 layer 2",
+          "x": 117,
+          "y": 124
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "et les assembler en sandwitch",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "et les assembler en sandwitch",
+          "x": 117,
+          "y": 135
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Layer 1",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Layer 1",
+          "x": 125,
+          "y": 155
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Layer 2",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Layer 2",
+          "x": 166,
+          "y": 156
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Assemblage final",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Assemblage final",
+          "x": 210,
+          "y": 156
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "3.png",
+          "use1Xscale": true,
+          "name": "3.png",
+          "x": 213,
+          "y": 167
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Et fini",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Et fini",
+          "x": 268,
+          "y": 135
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "back",
+          "onClick": {
+            "name": "Grinderconnectpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "back",
+          "x": 261,
+          "y": 193
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "menu",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "menu",
+          "x": 261,
+          "y": 171
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

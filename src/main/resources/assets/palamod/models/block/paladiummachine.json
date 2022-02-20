@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:blocks/paladiummachine",
+    "up": "palamod:blocks/paladiummachine_top",
+    "north": "palamod:blocks/paladiummachine",
+    "east": "palamod:blocks/paladiummachine",
+    "south": "palamod:blocks/paladiummachine",
+    "west": "palamod:blocks/paladiummachine",
+    "particle": "palamod:blocks/paladiummachine"
+  }
+}

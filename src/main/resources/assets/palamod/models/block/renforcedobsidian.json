@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod:blocks/obsidian",
+    "particle": "palamod:blocks/obsidian"
+  }
+}

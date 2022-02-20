@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "normal": {
+      "model": "palamod_:assembledgrinderblock"
+    },
+    "facing=north": {
+      "model": "palamod_:assembledgrinderblock"
+    },
+    "facing=east": {
+      "model": "palamod_:assembledgrinderblock",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "palamod_:assembledgrinderblock",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "palamod_:assembledgrinderblock",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "palamod_:assembledgrinderblock",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "palamod_:assembledgrinderblock",
+      "x": 90
+    }
+  }
+}

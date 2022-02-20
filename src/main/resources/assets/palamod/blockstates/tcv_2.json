@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "palamod:block/tcv_2"
+    },
+    "facing=east": {
+      "model": "palamod:block/tcv_2",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "palamod:block/tcv_2",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "palamod:block/tcv_2",
+      "y": 270
+    }
+  }
+}

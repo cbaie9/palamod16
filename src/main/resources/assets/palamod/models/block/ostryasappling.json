@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "palamod:blocks/sap.ostrya",
+    "particle": "palamod:blocks/sap.ostrya"
+  }
+}

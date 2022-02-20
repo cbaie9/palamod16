@@ -1,0 +1,11 @@
+{
+  "_fv": 24,
+  "_type": "tab",
+  "definition": {
+    "name": "Beta items",
+    "icon": {
+      "value": "CUSTOM:Betaitems"
+    },
+    "showSearch": false
+  }
+}

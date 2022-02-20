@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "palamod:block/ironspike"
+    },
+    "facing=east": {
+      "model": "palamod:block/ironspike",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "palamod:block/ironspike",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "palamod:block/ironspike",
+      "y": 270
+    }
+  }
+}

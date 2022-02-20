@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=bottom,variant=default": {
+      "model": "palamod_:polisheddioriteslab"
+    },
+    "half=top,variant=default": {
+      "model": "palamod_:polisheddioriteslab_top"
+    }
+  }
+}
