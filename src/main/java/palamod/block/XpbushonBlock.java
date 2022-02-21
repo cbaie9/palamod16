@@ -3,8 +3,6 @@ package palamod.block;
 
 import palamod.procedures.XpbushongiveProcedure;
 
-import palamod.itemgroup.CoreItemGroup;
-
 import palamod.PalamodModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
@@ -50,7 +48,7 @@ public class XpbushonBlock extends PalamodModElements.ModElement {
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(CoreItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(null)).setRegistryName(block.getRegistryName()));
 	}
 
 	@Override
@@ -91,8 +89,10 @@ public class XpbushonBlock extends PalamodModElements.ModElement {
 			double hitZ = hit.getHitVec().z;
 			Direction direction = hit.getFace();
 
-			XpbushongiveProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
-					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+			XpbushongiveProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			return ActionResultType.SUCCESS;
 		}
 	}

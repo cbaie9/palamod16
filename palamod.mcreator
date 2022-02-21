@@ -1105,22 +1105,6 @@
       "registry_name": "jacaranda_stick_recipe"
     },
     {
-      "name": "Coreitem",
-      "type": "item",
-      "sortid": 194,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "coreitem"
-    },
-    {
-      "name": "Core",
-      "type": "tab",
-      "sortid": 284,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "core"
-    },
-    {
       "name": "Betaitems",
       "type": "item",
       "sortid": 195,
@@ -2832,6 +2816,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -7716,22 +7716,6 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "orangeblue_4"
-    },
-    {
-      "name": "Itemtesta",
-      "type": "item",
-      "sortid": 638,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "itemtesta"
-    },
-    {
-      "name": "Itemtestb",
-      "type": "item",
-      "sortid": 638,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "itemtestb"
     }
   ],
   "variable_elements": [
@@ -7931,7 +7915,7 @@
       "item.minecraft.tipped_arrow.effect.antifakepotion": "Arrow of Antifake",
       "item.palamod.greenpaladiumarmor_leggings": "Green paladium Leggings",
       "block.palamod.judeecercis_log": "Judeecercis Log",
-      "block.palamod.xpbushon": "Xpbush on",
+      "block.palamod.xpbushon": "Xpbush",
       "enchantment.palamod.smelt": "Smelt",
       "item.palamod.endium_armor_helmet": "Endium Helmet",
       "block.palamod.grinderblock": "Grinder block",
@@ -7955,11 +7939,9 @@
       "enchantment.palamod.hammerforturne": "Forturne",
       "item.palamod.bigdynamite": "Big Dynamite",
       "block.palamod.falsetresure": "False tresure",
-      "item.palamod.coreitem": "Core item",
       "block.palamod.judeecercis_fence_gate": "Judeecercis Fence Gate",
       "item.palamod.amethystehammer": "Amethyste hammer",
       "block.palamod.paladium_block": "Block of Paladium",
-      "itemGroup.tabcore": "Core items",
       "item.palamod.healstick": "Heal stick",
       "item.palamod.compressedtitane": "Compressed Titane",
       "item.palamod.palamixedcharoal": "Palamixed charoal",
@@ -8236,11 +8218,9 @@
       "enchantment.palamod.hammerforturne": "Forturne",
       "item.palamod.bigdynamite": "Dynamite",
       "block.palamod.falsetresure": "False tresure",
-      "item.palamod.coreitem": "Palamod core ",
       "block.palamod.judeecercis_fence_gate": "Portail en judeecercis",
       "item.palamod.amethystehammer": "Hammer en améthyste",
       "block.palamod.paladium_block": "Block de paladium",
-      "itemGroup.tabcore": "Palamod core",
       "item.palamod.healstick": "Bâton de santé",
       "item.palamod.compressedtitane": "Titane compressée",
       "item.palamod.palamixedcharoal": "Charbon infusée de titane",
@@ -8294,7 +8274,6 @@
       "item.palamod.socketpatern": "Entête de socket",
       "item.palamod.jumporb": "Orbe de saut",
       "item.palamod.chervil": "Chervil",
-      "item.palamod.itemtesta": "Itemtesta_a_supprimer ceci est un test",
       "item.palamod.moneyother": "Money_other",
       "item.palamod.knockbackorb": "Orbe de poussée",
       "item.palamod.smeltmodifier": "Modifier de cuisson",
@@ -8315,7 +8294,6 @@
       "block.palamod.titane_block": "Block de titane",
       "block.palamod.jacaranda_leaves": "Feuille de jacaranda",
       "item.palamod.paladium_ingot": "Lingot de paladium",
-      "item.palamod.itemtestb": "Itemtestb_ceci_est_test_a_a_suprimmer",
       "item.palamod.endium_pickaxe": "Pioche en paladium",
       "fluid.palamod.fakewater": "Fakewater",
       "item.palamod.dynamite": "Dynamite",
@@ -8362,12 +8340,7 @@
   },
   "foldersRoot": {
     "name": "~",
-    "children": [
-      {
-        "name": "Findium",
-        "children": []
-      }
-    ]
+    "children": []
   },
   "workspaceSettings": {
     "modid": "palamod",
