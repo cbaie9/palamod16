@@ -62,7 +62,7 @@
     "customDrop": {
       "value": ""
     },
-    "dropAmount": 1,
+    "dropAmount": 0,
     "forceTicking": false,
     "emissiveRendering": false,
     "hasTileEntity": false,
@@ -79,9 +79,7 @@
     "speedFactor": 1.0,
     "canBePlacedOn": [],
     "frequencyOnChunks": 5,
-    "spawnWorldTypes": [
-      "Surface"
-    ],
+    "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "patchSize": 64,
     "onDestroyedByPlayer": {

@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "item": "palamod:paladiummachine"
+    },
+    "title": {
+      "translate": "advancements.avancementanvofp.title"
+    },
+    "description": {
+      "translate": "advancements.avancementanvofp.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "avancementanvofp": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "palamod:paladiummachine",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "palamod:avancementanshinyredingot"
+}

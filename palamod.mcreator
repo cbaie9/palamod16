@@ -1105,22 +1105,6 @@
       "registry_name": "jacaranda_stick_recipe"
     },
     {
-      "name": "Betaitems",
-      "type": "item",
-      "sortid": 195,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "betaitems"
-    },
-    {
-      "name": "Betaitem",
-      "type": "tab",
-      "sortid": 285,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "betaitem"
-    },
-    {
       "name": "Nbtblock",
       "type": "block",
       "sortid": 83,
@@ -7716,6 +7700,354 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "orangeblue_4"
+    },
+    {
+      "name": "Paladiumoreblasting",
+      "type": "recipe",
+      "sortid": 638,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiumoreblasting"
+    },
+    {
+      "name": "Titaneoreblasting",
+      "type": "recipe",
+      "sortid": 639,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titaneoreblasting"
+    },
+    {
+      "name": "Amethystoreblasting",
+      "type": "recipe",
+      "sortid": 640,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethystoreblasting"
+    },
+    {
+      "name": "Paladiumapple_effect",
+      "type": "procedure",
+      "sortid": 641,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiumapple_effect",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Paladiumapple",
+      "type": "food",
+      "sortid": 641,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiumapple"
+    },
+    {
+      "name": "Paladiumapplecraft",
+      "type": "recipe",
+      "sortid": 642,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiumapplecraft"
+    },
+    {
+      "name": "Greenpaladiumoreblasting",
+      "type": "recipe",
+      "sortid": 643,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "greenpaladiumoreblasting"
+    },
+    {
+      "name": "Findiumoreblasting",
+      "type": "recipe",
+      "sortid": 644,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "findiumoreblasting"
+    },
+    {
+      "name": "Safekeepcodeprocess",
+      "type": "procedure",
+      "sortid": 643,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "safekeepcodeprocess",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Megasafechestfirstsetup",
+      "type": "gui",
+      "sortid": 645,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "megasafechestfirstsetup"
+    },
+    {
+      "name": "Authsafegui",
+      "type": "gui",
+      "sortid": 646,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "authsafegui"
+    },
+    {
+      "name": "Megasafechest_open",
+      "type": "procedure",
+      "sortid": 647,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "megasafechest_open",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Safecodecheck",
+      "type": "procedure",
+      "sortid": 648,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "safecodecheck",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Truetresure_drop",
+      "type": "procedure",
+      "sortid": 649,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "truetresure_drop",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Avancementanuncommoncristal",
+      "type": "achievement",
+      "sortid": 650,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "avancementanuncommoncristal"
+    },
+    {
+      "name": "Avancementanshinyredingot",
+      "type": "achievement",
+      "sortid": 651,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "avancementanshinyredingot"
+    },
+    {
+      "name": "Luckyblockcraft",
+      "type": "recipe",
+      "sortid": 652,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "luckyblockcraft"
+    },
+    {
+      "name": "Avancementluckytoday",
+      "type": "achievement",
+      "sortid": 653,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "avancementluckytoday"
+    },
+    {
+      "name": "Avancementanvofp",
+      "type": "achievement",
+      "sortid": 654,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "avancementanvofp"
+    },
+    {
+      "name": "Avancementlittlekitforalchimist",
+      "type": "achievement",
+      "sortid": 655,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "avancementlittlekitforalchimist"
+    },
+    {
+      "name": "Avancementrecyclingisgood",
+      "type": "achievement",
+      "sortid": 656,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "avancementrecyclingisgood"
+    },
+    {
+      "name": "Avancementendiumingot",
+      "type": "achievement",
+      "sortid": 657,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "avancementendiumingot"
+    },
+    {
+      "name": "Avancementcrafttoegether",
+      "type": "achievement",
+      "sortid": 658,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "avancementcrafttoegether"
+    },
+    {
+      "name": "Avancementsupremearmor",
+      "type": "achievement",
+      "sortid": 659,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "avancementsupremearmor"
+    },
+    {
+      "name": "Avancementforgeafa",
+      "type": "achievement",
+      "sortid": 660,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "avancementforgeafa"
+    },
+    {
+      "name": "Avancementassembleur",
+      "type": "achievement",
+      "sortid": 661,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "avancementassembleur"
+    },
+    {
+      "name": "Avancementgrindre",
+      "type": "achievement",
+      "sortid": 662,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "avancementgrindre"
+    },
+    {
+      "name": "AvancementHammeryourlife",
+      "type": "achievement",
+      "sortid": 663,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "avancement_hammeryourlife"
+    },
+    {
+      "name": "Endiumarmorgetavancement",
+      "type": "procedure",
+      "sortid": 659,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endiumarmorgetavancement",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -7794,34 +8126,38 @@
       "gamerule.logsall.description": "logs all action executed by the player ",
       "item.palamod.amethystmixedcoal": "Amethyst mixed coal",
       "item.palamod.swordpatern": "Sword patern",
-      "item.palamod.paladiumgreenshovel": "Green Paladium Shovel",
       "block.palamod.titane_ore": "Titane Ore",
+      "item.palamod.paladiumgreenshovel": "Green Paladium Shovel",
       "block.palamod.jacaranda_fence_gate": "Jacaranda Fence Gate",
-      "item.palamod.greenpaladiumarmor_helmet": "Green paladium Helmet",
-      "item.palamod.xpberry": "Xp berry",
+      "advancements.avancementcrafttoegether.title": "let\u0027s craft it toegether",
       "item.palamod.endium_axe": "Endium Axe",
+      "item.palamod.xpberry": "Xp berry",
+      "item.palamod.greenpaladiumarmor_helmet": "Green paladium Helmet",
       "block.palamod.endium_block": "Block of Endium",
       "block.palamod.compactedobsidian": "Compacted obsidian",
+      "advancements.avancementluckytoday.descr": "Craft a lucky block",
       "block.palamod.judeecercis_wood": "Judeecercis Wood",
-      "item.palamod.titane_armor_boots": "Titane Boots",
       "item.palamod.orangeblue": "Orangeblue",
+      "item.palamod.titane_armor_boots": "Titane Boots",
       "block.palamod.erable_leaves": "Erable Leaves",
       "effect.fireimbue": "Fire imbue",
       "item.palamod.weighted_boots": "Weighted Boots",
       "item.palamod.swordhead": "Sword head",
+      "advancements.avancementsupremearmor.descr": "Craft all endium armor and wear it",
       "block.palamod.jacaranda_stairs": "Jacaranda Stairs",
       "item.palamod.axehead": "Axe head",
       "item.minecraft.splash_potion.effect.antifakepotion": "Splash Potion of Antifake",
       "block.palamod.titaneslab": "Titane slab",
       "item.palamod.kiwanoseed": "Kiwano seed",
       "item.palamod.shovelpatern": "Shove lpatern",
+      "advancements.avancementendiumingot.title": "Very rare blue nugget",
       "item.palamod.titanestick": "Titane stick",
       "block.palamod.contructedgrinderlayer_1": "Contructed grinder layer 1 (and 3)",
       "block.palamod.contructedgrinderlayer_2": "Contructed grinder layer 2",
       "item.palamod.amethystefastsword": "Amethyste fastsword",
       "block.palamod.ostryasappling": "Ostrya sappling",
-      "item.palamod.chervilseed": "Chervil seed",
       "block.palamod.alarm": "Alarm",
+      "item.palamod.chervilseed": "Chervil seed",
       "block.palamod.jacaranda_planks": "Jacaranda Planks",
       "item.palamod.amethyste_shovel": "Amethyste Shovel",
       "item.palamod.titane_sword": "Titane Sword",
@@ -7831,18 +8167,20 @@
       "block.palamod.findiumslab": "Findium slab",
       "item.palamod.poisonimbuepotion": "Poison imbue potion",
       "block.palamod.coloredlamp": "Colored lamp",
+      "advancements.avancementendiumingot.descr": "Obtain a Endium Nugget",
       "item.palamod.forturnemodifier": "Forturne modifier",
       "block.palamod.ametystespike": "Ametyste spike",
       "item.palamod.endium_armor_boots": "Endium Boots",
       "block.palamod.amethyste_block": "Block of Amethyste",
-      "block.palamod.judeecercis_planks": "Judeecercis Planks",
-      "block.palamod.paladiumcrusher": "Paladium crusher",
       "block.palamod.judeecercissappling": "Judeecercis sappling",
+      "block.palamod.paladiumcrusher": "Paladium crusher",
+      "block.palamod.judeecercis_planks": "Judeecercis Planks",
       "block.palamod.findium_ore": "Findium Ore",
       "item.palamod.goldmixedcoal": "Gold mixed coal",
       "block.palamod.colofullamp": "Coloful  lamp",
-      "item.palamod.paladium_armor_helmet": "Paladium Helmet",
+      "advancements.avancementanvofp.title": "An new vision of pvp",
       "block.palamod.jacaranda_log": "Jacaranda Log",
+      "item.palamod.paladium_armor_helmet": "Paladium Helmet",
       "block.palamod.slimepad": "Slime pad",
       "item.palamod.orangeblueseed": "Orangeblue seed",
       "item.palamod.fakewater_bucket": "Fakewater Bucket",
@@ -7866,11 +8204,14 @@
       "block.palamod.ostrya_wood_fence": "Ostrya Fence",
       "item.palamod.amethytestick": "Amethyte stick",
       "block.palamod.grindercasing": "Grinder casing",
+      "advancements.avancementlittlekitforalchimist.title": "A little kit for alchimist",
       "item.palamod.amethystebroadsword": "Amethyste broadsword",
       "item.palamod.paladium_armor_leggings": "Paladium Leggings",
+      "advancements.avancement_hammeryourlife.descr": "Craft a hammer in the grinder",
       "item.palamod.ingotpatern": "Ingot patern",
       "item.palamod.legendarystonefortune": "Legendary stone fortune",
       "item.palamod.legendarystonerandom": "Legendary stone random",
+      "advancements.avancementgrindre.title": "Need a smeltery ?",
       "block.palamod.renforcedobsidian": "Renforced obsidian",
       "block.palamod.spikegold": "Gold spike",
       "item.minecraft.lingering_potion.effect.antifakepotion": "Lingering Potion of Antifake",
@@ -7881,6 +8222,7 @@
       "item.palamod.fastswordhead": "Fastsword head",
       "item.palamod.titanemixedcoal": "Titane mixed coal",
       "item.palamod.strenghorb": "Strenght orb",
+      "advancements.avancementrecyclingisgood.title": "recycling is good for planet",
       "item.palamod.hammerpatern": "Hammer patern",
       "item.palamod.endiumdynamite_spawn_egg": "Endium dynamite Spawn Egg",
       "item.palamod.paladium_shovel": "Paladium Shovel",
@@ -7896,6 +8238,7 @@
       "item.palamod.legendarystonejobs": "Legendary stone jobs",
       "item.palamod.endiumdyna": "Endium Dynamite",
       "block.palamod.ostrya_wood_fence_gate": "Ostrya Fence Gate",
+      "advancements.avancementassembleur.title": "Compress something here",
       "block.palamod.findiumstairs": "Findium stairs",
       "block.palamod.truetresure": "True tresure",
       "block.palamod.paladiummachine": "Paladium machine",
@@ -7910,10 +8253,12 @@
       "item.palamod.fuzeiiidisc.desc": "La music de fuze",
       "item.palamod.paladiumfastsword": "Paladium fastsword",
       "item.palamod.paladium_axe": "Paladium Axe",
+      "advancements.avancementsupremearmor.title": "supreme armor",
       "block.palamod.erable_log": "Erable Log",
       "block.palamod.paladiumforge": "Paladium forge",
       "item.minecraft.tipped_arrow.effect.antifakepotion": "Arrow of Antifake",
       "item.palamod.greenpaladiumarmor_leggings": "Green paladium Leggings",
+      "advancements.avancementluckytoday.title": "You are Lucky today",
       "block.palamod.judeecercis_log": "Judeecercis Log",
       "block.palamod.xpbushon": "Xpbush",
       "enchantment.palamod.smelt": "Smelt",
@@ -7923,6 +8268,7 @@
       "block.palamod.ostrya_wood_leaves": "Ostrya Leaves",
       "item.palamod.damagestick": "Damage stick",
       "item.palamod.diamondstring": "Diamond string",
+      "advancements.avancementanvofp.descr": "Craft an paladium machine ",
       "effect.antifake": "antifake",
       "subtitles.devmod.test.sound.ogg": "Radio is playing : devmod radio Test",
       "item.palamod.speedmodifier": "Speed modifier",
@@ -7941,7 +8287,10 @@
       "block.palamod.falsetresure": "False tresure",
       "block.palamod.judeecercis_fence_gate": "Judeecercis Fence Gate",
       "item.palamod.amethystehammer": "Amethyste hammer",
+      "advancements.avancementrecyclingisgood.descr": "Craft a crusher",
       "block.palamod.paladium_block": "Block of Paladium",
+      "advancements.avancementanshinyredingot.title": "An shiny red ingot",
+      "advancements.avancementanuncommoncristal.title": "An uncommon cristal",
       "item.palamod.healstick": "Heal stick",
       "item.palamod.compressedtitane": "Compressed Titane",
       "item.palamod.palamixedcharoal": "Palamixed charoal",
@@ -7949,11 +8298,12 @@
       "item.palamod.speedstick": "Speed stick",
       "block.palamod.findium_block": "Block of Findium",
       "item.palamod.legendarystoneinvisible": "Legendary stone invisible",
+      "advancements.avancementforgeafa.descr": "Craft a Forge",
       "block.palamod.woddenspike": "Iron spike",
       "block.palamod.ostrya_wood_stairs": "Ostrya Stairs",
       "item.palamod.endium_armor_chestplate": "Endium Chestplate",
-      "item.palamod.betaitems": "Betaitems",
       "item.palamod.amethyste_pickaxe": "Amethyste Pickaxe",
+      "item.palamod.paladiumapple": "Paladium apple",
       "item.palamod.findium": "Findium ingot",
       "block.palamod.megasafechest": "Mega safe chest",
       "block.palamod.obsidiantrapdoor": "Obsidian trapdoor",
@@ -7964,11 +8314,13 @@
       "block.palamod.judeecercis_leaves": "Judeecercis Leaves",
       "block.palamod.paladium_greenblock": "Block of Green Paladium ",
       "item.palamod.elephantlittle_spawn_egg": "Elephant_little Spawn Egg",
+      "advancements.avancementforgeafa.title": "Forge it today and tomorow",
       "item.palamod.axepartern": "Axe partern",
       "block.palamod.fakepaladiumore": "Paladium Ore",
       "item.palamod.fastswordpatern": "Fastsword patern",
       "item.palamod.paladiumdynamite_spawn_egg": "Paladium dynamite Spawn Egg",
       "item.palamod.bigdynamiteentity_spawn_egg": "Big dynamite Spawn Egg",
+      "advancements.avancementcrafttoegether.descr": "Craft an endium ingot ",
       "effect.poisonimbue": "poison imbue",
       "item.palamod.paladium_sword": "Paladium Sword",
       "block.palamod.erable_wood": "Erable Wood",
@@ -8011,7 +8363,6 @@
       "block.palamod.titanespike": "Titane spike",
       "item.palamod.titane_armor_chestplate": "Titane Chestplate",
       "item.palamod.paladiumphone": "Paladiumphone",
-      "itemGroup.tabbetaitem": "Beta items",
       "block.palamod.titane_block": "Block of Titane",
       "block.palamod.jacaranda_leaves": "Jacaranda Leaves",
       "item.palamod.paladium_ingot": "Paladium ingot",
@@ -8023,10 +8374,12 @@
       "block.palamod.kiwano_1": "Kiwano state",
       "block.palamod.kiwano_0": "Kiwano state 0",
       "block.palamod.titanestairs": "Titane stairs",
+      "advancements.avancementlittlekitforalchimist.descr": "Craft an alchemy creator ",
       "block.palamod.jacarandasappling": "Jacaranda sappling",
       "block.palamod.kiwano_4": "Kiwano state 4",
       "block.palamod.kiwano_3": "Kiwano state 3",
       "subtitles.fuze_iii_disc": "Fuze iii - On m\u0027appelle fuze iii",
+      "advancements.avancementassembleur.descr": "Craft the Assembling Table ",
       "item.palamod.amethyste": "Amethyste ingot",
       "item.palamod.pickaxepatern": "Pickaxe patern",
       "item.minecraft.potion.effect.antifakepotion": "Potion of Antifake",
@@ -8047,6 +8400,7 @@
       "block.palamod.erable_slab": "Erable Slab",
       "item.palamod.amethyste_armor_boots": "Amethyste Boots",
       "block.palamod.jacaranda_fence": "Jacaranda Fence",
+      "advancements.avancementgrindre.descr": "Craft a Constructed Grinder",
       "block.palamod.paladium_ore": "Paladium Ore",
       "item.palamod.endium_sword": "Endium Sword",
       "item.palamod.paladium_armor_chestplate": "Paladium Chestplate",
@@ -8054,7 +8408,10 @@
       "item.palamod.amethyste_armor_chestplate": "Amethyste Chestplate",
       "block.palamod.erable_fence": "Erable Fence",
       "block.palamod.asemblingtable": "asembling table",
-      "block.palamod.judeecercis_stairs": "Judeecercis Stairs"
+      "advancements.avancementanuncommoncristal.descr": "find and smelt an amethyst",
+      "advancements.avancementanshinyredingot.descr": "Obtain an paladium ingot",
+      "block.palamod.judeecercis_stairs": "Judeecercis Stairs",
+      "advancements.avancement_hammeryourlife.title": "Hammer your life"
     },
     "fr_fr": {
       "block.palamod.loadblock_1t": "Block de chargement 1 tick",
@@ -8071,34 +8428,38 @@
       "gamerule.logsall.description": "Logs tout les action que font les joueur ",
       "item.palamod.amethystmixedcoal": "Charbon infusée à améthyste",
       "item.palamod.swordpatern": "Entête d\u0027épée en paladium",
-      "block.palamod.titane_ore": "Minerais de titane",
       "item.palamod.paladiumgreenshovel": "épée en paladium vert",
+      "block.palamod.titane_ore": "Minerais de titane",
       "block.palamod.jacaranda_fence_gate": "Portail en Jacaranda",
-      "item.palamod.greenpaladiumarmor_helmet": "Paladium Helmet",
-      "item.palamod.endium_axe": "Hache en endium",
+      "advancements.avancementcrafttoegether.title": "let\u0027s craft it toegether",
       "item.palamod.xpberry": "Buisson d\u0027xp",
+      "item.palamod.endium_axe": "Hache en endium",
+      "item.palamod.greenpaladiumarmor_helmet": "Paladium Helmet",
       "block.palamod.endium_block": "Block en Endium",
       "block.palamod.compactedobsidian": "Obsidienne compactée",
+      "advancements.avancementluckytoday.descr": "Craft a lucky block",
       "block.palamod.judeecercis_wood": "Bois de Judeecercis",
-      "item.palamod.titane_armor_boots": "Bottes en titane",
       "item.palamod.orangeblue": "Orangeblue",
+      "item.palamod.titane_armor_boots": "Bottes en titane",
       "block.palamod.erable_leaves": "Feuille en erable",
       "effect.fireimbue": "Fire imbue",
       "item.palamod.weighted_boots": "Weighted Boots",
       "item.palamod.swordhead": "Tête d\u0027épée en paladium",
+      "advancements.avancementsupremearmor.descr": "Craft all endium armor and wear it",
       "block.palamod.jacaranda_stairs": "Escalier en Jacaranda",
       "item.palamod.axehead": "Tête de hache en paladium",
       "item.minecraft.splash_potion.effect.antifakepotion": "Splash Potion of Antifake",
       "block.palamod.titaneslab": "Slab en titane",
       "item.palamod.kiwanoseed": "Grain de Kiwano",
       "item.palamod.shovelpatern": "Entête de pelle en paladium",
+      "advancements.avancementendiumingot.title": "Very rare blue nugget",
       "item.palamod.titanestick": "Baton en titane",
       "block.palamod.contructedgrinderlayer_1": "Couche de grinder de type 1",
       "block.palamod.contructedgrinderlayer_2": "Couche de grinder de type 2",
       "item.palamod.amethystefastsword": "Améthyste fastsword",
       "block.palamod.ostryasappling": "Pousse d\u0027ostrya",
-      "item.palamod.chervilseed": "Graine de chervil",
       "block.palamod.alarm": "Alarm",
+      "item.palamod.chervilseed": "Graine de chervil",
       "block.palamod.jacaranda_planks": "Planches de Jacaranda",
       "item.palamod.amethyste_shovel": "Pelle en améthyste",
       "item.palamod.titane_sword": "épée en titane",
@@ -8108,16 +8469,18 @@
       "block.palamod.findiumslab": "Slab en Findium",
       "item.palamod.poisonimbuepotion": "Fire imbue potion",
       "block.palamod.coloredlamp": "Colored lamp",
+      "advancements.avancementendiumingot.descr": "Obtain a Endium Nugget",
       "item.palamod.forturnemodifier": "Modifier de forturne",
       "block.palamod.ametystespike": "Spike en amétyste",
       "item.palamod.endium_armor_boots": "bottes en endium",
       "block.palamod.amethyste_block": "Block d\u0027améthyste",
-      "block.palamod.judeecercissappling": "Pousse de judeecercis",
-      "block.palamod.paladiumcrusher": "Paladium crusher",
       "block.palamod.judeecercis_planks": "Planches de judeecercis",
+      "block.palamod.paladiumcrusher": "Paladium crusher",
+      "block.palamod.judeecercissappling": "Pousse de judeecercis",
       "block.palamod.findium_ore": "Minerais de findium",
       "item.palamod.goldmixedcoal": "Charbon infusée d\u0027or",
       "block.palamod.colofullamp": "Coloful  lamp",
+      "advancements.avancementanvofp.title": "An new vision of pvp",
       "item.palamod.paladium_armor_helmet": "Casque en paladium",
       "block.palamod.jacaranda_log": "Bûche de jacaranda",
       "item.palamod.orangeblueseed": "Graine d\u0027orangeblue",
@@ -8145,11 +8508,14 @@
       "item.palamod.amethytestick": "Baton en améthyte",
       "block.palamod.grindercasing": "Grinder casing",
       "item.palamod.amethyste_ingot": "Lingot d\u0027amethyste",
+      "advancements.avancementlittlekitforalchimist.title": "A little kit for alchimist",
       "item.palamod.amethystebroadsword": "Amethyste broadsword",
       "item.palamod.paladium_armor_leggings": "Jampbière en paladium",
+      "advancements.avancement_hammeryourlife.descr": "Craft a hammer in the grinder",
       "item.palamod.ingotpatern": "Entête de lingot",
       "item.palamod.legendarystonefortune": "Legendary stone fortune",
       "item.palamod.legendarystonerandom": "Legendary stone random",
+      "advancements.avancementgrindre.title": "Need a smeltery ?",
       "block.palamod.renforcedobsidian": "Obsidienne renforcée",
       "block.palamod.spikegold": "Spike en or",
       "item.minecraft.lingering_potion.effect.antifakepotion": "Lingering Potion of Antifake",
@@ -8160,6 +8526,7 @@
       "item.palamod.fastswordhead": "Tête de fastsword en paladium",
       "item.palamod.titanemixedcoal": "Charbon infusée de Titane",
       "item.palamod.strenghorb": "Orbe de force",
+      "advancements.avancementrecyclingisgood.title": "recycling is good for planet",
       "item.palamod.hammerpatern": "Entête de hammer en paladium",
       "item.palamod.endiumdynamite_spawn_egg": "Paladium dynamite Spawn Egg",
       "item.palamod.paladium_shovel": "Pelle en paladium",
@@ -8175,6 +8542,7 @@
       "item.palamod.legendarystonejobs": "Legendary stone jobs",
       "item.palamod.endiumdyna": "Dynamite",
       "block.palamod.ostrya_wood_fence_gate": "Portail en ostrya",
+      "advancements.avancementassembleur.title": "Compress something here",
       "block.palamod.findiumstairs": "Escalier en findium",
       "block.palamod.truetresure": "True tresure",
       "block.palamod.paladiummachine": "Paladium machine",
@@ -8189,10 +8557,12 @@
       "item.palamod.fuzeiiidisc.desc": "La music de fuze",
       "item.palamod.paladiumfastsword": "Paladium fastsword",
       "item.palamod.paladium_axe": "Hache en paladium",
+      "advancements.avancementsupremearmor.title": "supreme armor",
       "block.palamod.erable_log": "Bûche d\u0027erable",
       "block.palamod.paladiumforge": "Paladium forge",
       "item.minecraft.tipped_arrow.effect.antifakepotion": "Arrow of Antifake",
       "item.palamod.greenpaladiumarmor_leggings": "Paladium Leggings",
+      "advancements.avancementluckytoday.title": "You are Lucky today",
       "block.palamod.judeecercis_log": "Bûche de judeecercis",
       "block.palamod.xpbushon": "Xpbush on",
       "enchantment.palamod.smelt": "Smelt",
@@ -8202,6 +8572,7 @@
       "block.palamod.ostrya_wood_leaves": "Feuille d\u0027ostrya",
       "item.palamod.damagestick": "Bâton de dégats",
       "item.palamod.diamondstring": "Diamond string",
+      "advancements.avancementanvofp.descr": "Craft an paladium machine ",
       "effect.antifake": "antifake",
       "subtitles.devmod.test.sound.ogg": "La Radio joue :  Devmod test sound",
       "item.palamod.speedmodifier": "Modifier de vitesse",
@@ -8220,7 +8591,10 @@
       "block.palamod.falsetresure": "False tresure",
       "block.palamod.judeecercis_fence_gate": "Portail en judeecercis",
       "item.palamod.amethystehammer": "Hammer en améthyste",
+      "advancements.avancementrecyclingisgood.descr": "Craft a crusher",
       "block.palamod.paladium_block": "Block de paladium",
+      "advancements.avancementanshinyredingot.title": "An shiny red ingot",
+      "advancements.avancementanuncommoncristal.title": "an uncommon cristal",
       "item.palamod.healstick": "Bâton de santé",
       "item.palamod.compressedtitane": "Titane compressée",
       "item.palamod.palamixedcharoal": "Charbon infusée de titane",
@@ -8228,11 +8602,12 @@
       "item.palamod.speedstick": "Bâton de vitesse",
       "block.palamod.findium_block": "Block de Findium",
       "item.palamod.legendarystoneinvisible": "Legendary stone invisible",
+      "advancements.avancementforgeafa.descr": "Craft a Forge",
       "block.palamod.woddenspike": "Iron spike",
       "block.palamod.ostrya_wood_stairs": "Escalier d\u0027ostrya",
       "item.palamod.endium_armor_chestplate": "Plastron en endium",
-      "item.palamod.betaitems": "Beta_item_devanture",
       "item.palamod.amethyste_pickaxe": "Pioche en améthyste",
+      "item.palamod.paladiumapple": "Paladium apple",
       "item.palamod.findium": "Cristaux de Findium",
       "block.palamod.megasafechest": "Mega safe chest",
       "block.palamod.obsidiantrapdoor": "Trappe en obsidienne",
@@ -8243,11 +8618,13 @@
       "block.palamod.judeecercis_leaves": "Feuilles de judeecercis",
       "block.palamod.paladium_greenblock": "Block de paladium vert",
       "item.palamod.elephantlittle_spawn_egg": "Elephant_little Spawn Egg",
+      "advancements.avancementforgeafa.title": "Forge it today and tomorow",
       "item.palamod.axepartern": "Entête de hache",
       "block.palamod.fakepaladiumore": "Paladium Ore",
       "item.palamod.fastswordpatern": "Entête de fastsword ",
       "item.palamod.paladiumdynamite_spawn_egg": "Paladium dynamite Spawn Egg",
       "item.palamod.bigdynamiteentity_spawn_egg": "Endium dynamite Spawn Egg",
+      "advancements.avancementcrafttoegether.descr": "Craft an endium ingot ",
       "effect.poisonimbue": "Wither imbue",
       "item.palamod.paladium_sword": "épée en paladium",
       "block.palamod.erable_wood": "Bois d\u0027érable",
@@ -8290,7 +8667,6 @@
       "block.palamod.titanespike": "Spike en titane",
       "item.palamod.titane_armor_chestplate": "Titane Chestplate",
       "item.palamod.paladiumphone": "Paladiumphone",
-      "itemGroup.tabbetaitem": "Beta items",
       "block.palamod.titane_block": "Block de titane",
       "block.palamod.jacaranda_leaves": "Feuille de jacaranda",
       "item.palamod.paladium_ingot": "Lingot de paladium",
@@ -8302,11 +8678,13 @@
       "block.palamod.kiwano_1": "Kiwano state",
       "block.palamod.kiwano_0": "Kiwano state 0",
       "block.palamod.titanestairs": "Escalier en Titane",
+      "advancements.avancementlittlekitforalchimist.descr": "Craft an alchemy creator ",
       "block.palamod.jacarandasappling": "Pousse de jacaranda",
       "block.palamod.kiwano_4": "Kiwano state 4",
       "block.palamod.kiwano_3": "Kiwano state 3",
       "item.palamod.titane_chestplate": "Plastron en titane",
       "subtitles.fuze_iii_disc": "Fuze iii - On m\u0027appelle fuze iii",
+      "advancements.avancementassembleur.descr": "Craft the Assembling Table ",
       "item.palamod.pickaxepatern": "Entête de pioche en paladium",
       "item.palamod.amethyste": "Amethyste ingot",
       "item.minecraft.potion.effect.antifakepotion": "Potion of Antifake",
@@ -8328,6 +8706,7 @@
       "block.palamod.erable_slab": "Dalle d\u0027érable",
       "item.palamod.amethyste_armor_boots": "Bottes en améthyste",
       "block.palamod.jacaranda_fence": "Barrière en jacaranda",
+      "advancements.avancementgrindre.descr": "Craft a Constructed Grinder",
       "block.palamod.paladium_ore": "Minerais de paladium",
       "item.palamod.endium_sword": "épée en endium",
       "item.palamod.paladium_armor_chestplate": "Plastron en paladium",
@@ -8335,7 +8714,10 @@
       "item.palamod.amethyste_armor_chestplate": "Plastron en améthyste",
       "block.palamod.erable_fence": "Barrière en érable",
       "block.palamod.asemblingtable": "Testas",
-      "block.palamod.judeecercis_stairs": "Escalier en judeecercis"
+      "advancements.avancementanuncommoncristal.descr": "find and smelt an amethyst",
+      "advancements.avancementanshinyredingot.descr": "Obtain an paladium ingot",
+      "block.palamod.judeecercis_stairs": "Escalier en judeecercis",
+      "advancements.avancement_hammeryourlife.title": "Hammer your life"
     }
   },
   "foldersRoot": {
@@ -8345,7 +8727,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "palamod ",
-    "version": "15a2.3",
+    "version": "15a2.4",
     "description": "the palamod ... in 1.16",
     "author": "cb9",
     "websiteURL": "https://mcreator.net, https://paladium-pvp.fr",
@@ -8364,5 +8746,5 @@
     "modElementsPackage": "palamod",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100353117
+  "mcreatorVersion": 202100354000
 }

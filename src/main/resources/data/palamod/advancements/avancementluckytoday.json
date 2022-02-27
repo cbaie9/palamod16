@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "item": "palamod:luckyblock"
+    },
+    "title": {
+      "translate": "advancements.avancementluckytoday.title"
+    },
+    "description": {
+      "translate": "advancements.avancementluckytoday.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "avancementluckytoday": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "palamod:luckyblock",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "palamod:avancementanshinyredingot"
+}

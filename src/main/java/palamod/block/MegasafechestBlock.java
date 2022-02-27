@@ -1,6 +1,8 @@
 
 package palamod.block;
 
+import palamod.procedures.Megasafechest_openProcedure;
+
 import palamod.itemgroup.PalamodItemGroup;
 
 import palamod.gui.SafeguiGui;
@@ -11,7 +13,6 @@ import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.items.wrapper.SidedInvWrapper;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.CapabilityItemHandler;
-import net.minecraftforge.fml.network.NetworkHooks;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
@@ -42,9 +43,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.ItemStackHelper;
-import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.block.material.Material;
@@ -54,9 +53,13 @@ import net.minecraft.block.Block;
 
 import javax.annotation.Nullable;
 
+import java.util.stream.Stream;
 import java.util.stream.IntStream;
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 import java.util.Collections;
+import java.util.AbstractMap;
 
 import io.netty.buffer.Unpooled;
 
@@ -87,7 +90,7 @@ public class MegasafechestBlock extends PalamodModElements.ModElement {
 
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(10f, 1000f).setLightLevel(s -> 0)
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(10f, 1000f).setLightLevel(s -> 0)
 					.jumpFactor(1.5f));
 			setRegistryName("megasafechest");
 		}
@@ -112,20 +115,15 @@ public class MegasafechestBlock extends PalamodModElements.ModElement {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			if (entity instanceof ServerPlayerEntity) {
-				NetworkHooks.openGui((ServerPlayerEntity) entity, new INamedContainerProvider() {
-					@Override
-					public ITextComponent getDisplayName() {
-						return new StringTextComponent("Mega safe chest");
-					}
+			double hitX = hit.getHitVec().x;
+			double hitY = hit.getHitVec().y;
+			double hitZ = hit.getHitVec().z;
+			Direction direction = hit.getFace();
 
-					@Override
-					public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-						return new SafeguiGui.GuiContainerMod(id, inventory,
-								new PacketBuffer(Unpooled.buffer()).writeBlockPos(new BlockPos(x, y, z)));
-					}
-				}, new BlockPos(x, y, z));
-			}
+			Megasafechest_openProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			return ActionResultType.SUCCESS;
 		}
 
@@ -150,19 +148,6 @@ public class MegasafechestBlock extends PalamodModElements.ModElement {
 			super.eventReceived(state, world, pos, eventID, eventParam);
 			TileEntity tileentity = world.getTileEntity(pos);
 			return tileentity == null ? false : tileentity.receiveClientEvent(eventID, eventParam);
-		}
-
-		@Override
-		public void onReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean isMoving) {
-			if (state.getBlock() != newState.getBlock()) {
-				TileEntity tileentity = world.getTileEntity(pos);
-				if (tileentity instanceof CustomTileEntity) {
-					InventoryHelper.dropInventoryItems(world, pos, (CustomTileEntity) tileentity);
-					world.updateComparatorOutputLevel(pos, this);
-				}
-
-				super.onReplaced(state, world, pos, newState, isMoving);
-			}
 		}
 
 		@Override

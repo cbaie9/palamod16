@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "item": "palamod:asemblingtable"
+    },
+    "title": {
+      "translate": "advancements.avancementassembleur.title"
+    },
+    "description": {
+      "translate": "advancements.avancementassembleur.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "avancementassembleur": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "palamod:asemblingtable",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "palamod:avancementanshinyredingot"
+}

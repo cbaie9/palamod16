@@ -1,6 +1,6 @@
 package palamod.procedures;
 
-import palamod.item.DiamondstringItem;
+import palamod.item.PaladiumSwordItem;
 
 import palamod.block.FakepaladiumoreBlock;
 
@@ -17,6 +17,7 @@ import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.vector.Vector2f;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.DamageSource;
+import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
@@ -175,7 +176,7 @@ public class PhonecodeProcedure {
 			}
 		}.getText()).contains("wolfen")) {
 			if (entity instanceof PlayerEntity) {
-				ItemStack _setstack = new ItemStack(DiamondstringItem.block);
+				ItemStack _setstack = new ItemStack(Items.LEAD);
 				_setstack.setCount((int) 1);
 				ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 			}
@@ -183,10 +184,46 @@ public class PhonecodeProcedure {
 				((World) world).getServer().getCommandManager().handleCommand(
 						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-						"msg @s No suicide today please. Suicide is bad :{");
+						"msg @p No suicide today please. Suicide is bad :{");
 			}
 			if (entity instanceof PlayerEntity)
 				((PlayerEntity) entity).closeScreen();
+		} else if ((new Object() {
+			public String getText() {
+				TextFieldWidget _tf = (TextFieldWidget) guistate.get("text:cheat_code_secret");
+				if (_tf != null) {
+					return _tf.getText();
+				}
+				return "";
+			}
+		}.getText()).contains("jojo") || (new Object() {
+			public String getText() {
+				TextFieldWidget _tf = (TextFieldWidget) guistate.get("text:cheat_code_secret");
+				if (_tf != null) {
+					return _tf.getText();
+				}
+				return "";
+			}
+		}.getText()).contains("wlf") || (new Object() {
+			public String getText() {
+				TextFieldWidget _tf = (TextFieldWidget) guistate.get("text:cheat_code_secret");
+				if (_tf != null) {
+					return _tf.getText();
+				}
+				return "";
+			}
+		}.getText()).contains("jojo_xd30")) {
+			if (entity instanceof PlayerEntity) {
+				ItemStack _setstack = new ItemStack(PaladiumSwordItem.block);
+				_setstack.setCount((int) 1);
+				ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+			}
+			if (world instanceof ServerWorld) {
+				((World) world).getServer().getCommandManager().handleCommand(
+						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+						"msg @p Jojo veut la mort de quelqu'un ici");
+			}
 		}
 	}
 }

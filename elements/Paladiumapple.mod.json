@@ -1,0 +1,29 @@
+{
+  "_fv": 24,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "paladium_apple",
+    "customModelName": "Normal",
+    "name": "Paladium apple",
+    "rarity": "UNCOMMON",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Palamod"
+    },
+    "stackSize": 64,
+    "nutritionalValue": 9,
+    "saturation": 1.0,
+    "eatingSpeed": 32,
+    "resultItem": {
+      "value": ""
+    },
+    "forDogs": false,
+    "isAlwaysEdible": false,
+    "animation": "eat",
+    "hasGlow": false,
+    "onEaten": {
+      "name": "Paladiumapple_effect"
+    }
+  }
+}

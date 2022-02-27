@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "palamod:paladiumforge"
+    },
+    "title": {
+      "translate": "advancements.avancementforgeafa.title"
+    },
+    "description": {
+      "translate": "advancements.avancementforgeafa.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "avancementforgeafa": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "item": {
+          "item": "palamod:paladiumforge"
+        }
+      }
+    }
+  },
+  "parent": "palamod:avancementanshinyredingot"
+}

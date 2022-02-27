@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "palamod:endium_armor_helmet"
+    },
+    "title": {
+      "translate": "advancements.avancementsupremearmor.title"
+    },
+    "description": {
+      "translate": "advancements.avancementsupremearmor.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "avancementsupremearmor": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "palamod:avancementcrafttoegether"
+}

@@ -38,7 +38,7 @@ public class Kiwano2upProcedure {
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		if (new Random().nextInt(750 + 1) == 1
+		if (new Random().nextInt(350 + 1) == 1
 				&& (world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == Blocks.FARMLAND) {
 			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Kiwano3Block.block.getDefaultState(), 3);
 		}

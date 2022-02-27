@@ -1,8 +1,6 @@
 
 package palamod.item;
 
-import palamod.itemgroup.BetaitemItemGroup;
-
 import palamod.PalamodModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
@@ -34,7 +32,7 @@ public class LuckybetaItem extends PalamodModElements.ModElement {
 
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(BetaitemItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
+			super(new Item.Properties().group(null).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("luckybeta");
 		}
 

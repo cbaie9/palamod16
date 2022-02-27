@@ -79,14 +79,8 @@
     "speedFactor": 1.0,
     "canBePlacedOn": [],
     "frequencyOnChunks": 1,
-    "spawnWorldTypes": [
-      "Surface"
-    ],
-    "restrictionBiomes": [
-      {
-        "value": "plains"
-      }
-    ],
+    "spawnWorldTypes": [],
+    "restrictionBiomes": [],
     "patchSize": 32,
     "onRandomUpdateEvent": {
       "name": "Eggplant0up"

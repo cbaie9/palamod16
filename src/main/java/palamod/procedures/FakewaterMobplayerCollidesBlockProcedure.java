@@ -1,11 +1,16 @@
 package palamod.procedures;
 
+import palamod.potion.AntifakePotionEffect;
+
 import palamod.PalamodMod;
 
 import net.minecraft.util.DamageSource;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
 import java.util.Map;
+import java.util.Collection;
 
 public class FakewaterMobplayerCollidesBlockProcedure {
 
@@ -16,6 +21,19 @@ public class FakewaterMobplayerCollidesBlockProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		entity.attackEntityFrom(DamageSource.DROWN, (float) 1);
+		if ((new Object() {
+			boolean check(Entity _entity) {
+				if (_entity instanceof LivingEntity) {
+					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+					for (EffectInstance effect : effects) {
+						if (effect.getPotion() == AntifakePotionEffect.potion)
+							return true;
+					}
+				}
+				return false;
+			}
+		}.check(entity)) == false) {
+			entity.attackEntityFrom(DamageSource.DROWN, (float) 1);
+		}
 	}
 }
