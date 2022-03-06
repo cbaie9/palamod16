@@ -1,13 +1,13 @@
 {
   "display": {
     "icon": {
-      "item": "palamod:paladiummachine"
+      "item": "palamod:paladiumcore"
     },
     "title": {
-      "translate": "advancements.avancementanvofp.title"
+      "translate": "advancements.avancementcoreloading.title"
     },
     "description": {
-      "translate": "advancements.avancementanvofp.descr"
+      "translate": "advancements.avancementcoreloading.descr"
     },
     "frame": "task",
     "show_toast": true,
@@ -15,12 +15,12 @@
     "hidden": false
   },
   "criteria": {
-    "avancementanvofp": {
+    "avancementcoreloading": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "palamod:paladiummachine",
+            "item": "palamod:paladiumcore",
             "count": {
               "min": 1,
               "max": 1
@@ -30,5 +30,5 @@
       }
     }
   },
-  "parent": "palamod:avancementcompressedavantur"
+  "parent": "palamod:avancementanshinyredingot"
 }

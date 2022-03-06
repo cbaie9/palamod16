@@ -64,7 +64,7 @@ public class XpbushprocessProcedure {
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "xp_bush_grown_count") == 5000) {
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "xp_bush_grown_count") == 256) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = XpbushonBlock.block.getDefaultState();
