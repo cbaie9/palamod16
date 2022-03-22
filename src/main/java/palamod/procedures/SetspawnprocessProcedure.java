@@ -4,6 +4,10 @@ import palamod.block.NbtblockBlock;
 
 import palamod.PalamodMod;
 
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.common.MinecraftForge;
+
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
@@ -11,9 +15,16 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.vector.Vector2f;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.RegistryKey;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.state.Property;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.network.play.server.SPlayerAbilitiesPacket;
+import net.minecraft.network.play.server.SPlaySoundEventPacket;
+import net.minecraft.network.play.server.SPlayEntityEffectPacket;
+import net.minecraft.network.play.server.SChangeGameStatePacket;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.command.ICommandSource;
 import net.minecraft.command.CommandSource;
@@ -129,7 +140,7 @@ public class SetspawnprocessProcedure {
 				}
 				entity.getPersistentData().putBoolean("spawn_warn", (false));
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
@@ -137,6 +148,179 @@ public class SetspawnprocessProcedure {
 					if (world instanceof World)
 						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
+				new Object() {
+					private int ticks = 0;
+					private float waitTicks;
+					private IWorld world;
+
+					public void start(IWorld world, int waitTicks) {
+						this.waitTicks = waitTicks;
+						MinecraftForge.EVENT_BUS.register(this);
+						this.world = world;
+					}
+
+					@SubscribeEvent
+					public void tick(TickEvent.ServerTickEvent event) {
+						if (event.phase == TickEvent.Phase.END) {
+							this.ticks += 1;
+							if (this.ticks >= this.waitTicks)
+								run();
+						}
+					}
+
+					private void run() {
+						{
+							Entity _ent = entity;
+							if (!_ent.world.isRemote && _ent instanceof ServerPlayerEntity) {
+								RegistryKey<World> destinationType = World.THE_NETHER;
+								ServerWorld nextWorld = _ent.getServer().getWorld(destinationType);
+								if (nextWorld != null) {
+									((ServerPlayerEntity) _ent).connection
+											.sendPacket(new SChangeGameStatePacket(SChangeGameStatePacket.field_241768_e_, 0));
+									((ServerPlayerEntity) _ent).teleport(nextWorld, nextWorld.getSpawnPoint().getX(),
+											nextWorld.getSpawnPoint().getY() + 1, nextWorld.getSpawnPoint().getZ(), _ent.rotationYaw,
+											_ent.rotationPitch);
+									((ServerPlayerEntity) _ent).connection
+											.sendPacket(new SPlayerAbilitiesPacket(((ServerPlayerEntity) _ent).abilities));
+									for (EffectInstance effectinstance : ((ServerPlayerEntity) _ent).getActivePotionEffects()) {
+										((ServerPlayerEntity) _ent).connection
+												.sendPacket(new SPlayEntityEffectPacket(_ent.getEntityId(), effectinstance));
+									}
+									((ServerPlayerEntity) _ent).connection.sendPacket(new SPlaySoundEventPacket(1032, BlockPos.ZERO, 0, false));
+								}
+							}
+						}
+						{
+							BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+							BlockState _bs = NbtblockBlock.block.getDefaultState();
+							BlockState _bso = world.getBlockState(_bp);
+							TileEntity _te = world.getTileEntity(_bp);
+							CompoundNBT _bnbt = null;
+							if (_te != null) {
+								_bnbt = _te.write(new CompoundNBT());
+								_te.remove();
+							}
+							world.setBlockState(_bp, _bs, 3);
+							if (_bnbt != null) {
+								_te = world.getTileEntity(_bp);
+								if (_te != null) {
+									try {
+										_te.read(_bso, _bnbt);
+									} catch (Exception ignored) {
+									}
+								}
+							}
+						}
+						if (!world.isRemote()) {
+							BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+							TileEntity _tileEntity = world.getTileEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_tileEntity != null)
+								_tileEntity.getTileData().putString("spawn_dim_id", "0");
+							if (world instanceof World)
+								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+						}
+						new Object() {
+							private int ticks = 0;
+							private float waitTicks;
+							private IWorld world;
+
+							public void start(IWorld world, int waitTicks) {
+								this.waitTicks = waitTicks;
+								MinecraftForge.EVENT_BUS.register(this);
+								this.world = world;
+							}
+
+							@SubscribeEvent
+							public void tick(TickEvent.ServerTickEvent event) {
+								if (event.phase == TickEvent.Phase.END) {
+									this.ticks += 1;
+									if (this.ticks >= this.waitTicks)
+										run();
+								}
+							}
+
+							private void run() {
+								{
+									Entity _ent = entity;
+									if (!_ent.world.isRemote && _ent instanceof ServerPlayerEntity) {
+										RegistryKey<World> destinationType = World.THE_END;
+										ServerWorld nextWorld = _ent.getServer().getWorld(destinationType);
+										if (nextWorld != null) {
+											((ServerPlayerEntity) _ent).connection
+													.sendPacket(new SChangeGameStatePacket(SChangeGameStatePacket.field_241768_e_, 0));
+											((ServerPlayerEntity) _ent).teleport(nextWorld, nextWorld.getSpawnPoint().getX(),
+													nextWorld.getSpawnPoint().getY() + 1, nextWorld.getSpawnPoint().getZ(), _ent.rotationYaw,
+													_ent.rotationPitch);
+											((ServerPlayerEntity) _ent).connection
+													.sendPacket(new SPlayerAbilitiesPacket(((ServerPlayerEntity) _ent).abilities));
+											for (EffectInstance effectinstance : ((ServerPlayerEntity) _ent).getActivePotionEffects()) {
+												((ServerPlayerEntity) _ent).connection
+														.sendPacket(new SPlayEntityEffectPacket(_ent.getEntityId(), effectinstance));
+											}
+											((ServerPlayerEntity) _ent).connection
+													.sendPacket(new SPlaySoundEventPacket(1032, BlockPos.ZERO, 0, false));
+										}
+									}
+								}
+								{
+									BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+									BlockState _bs = NbtblockBlock.block.getDefaultState();
+									BlockState _bso = world.getBlockState(_bp);
+									TileEntity _te = world.getTileEntity(_bp);
+									CompoundNBT _bnbt = null;
+									if (_te != null) {
+										_bnbt = _te.write(new CompoundNBT());
+										_te.remove();
+									}
+									world.setBlockState(_bp, _bs, 3);
+									if (_bnbt != null) {
+										_te = world.getTileEntity(_bp);
+										if (_te != null) {
+											try {
+												_te.read(_bso, _bnbt);
+											} catch (Exception ignored) {
+											}
+										}
+									}
+								}
+								if (!world.isRemote()) {
+									BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+									TileEntity _tileEntity = world.getTileEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_tileEntity != null)
+										_tileEntity.getTileData().putString("spawn_dim_id", "0");
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								}
+								{
+									Entity _ent = entity;
+									if (!_ent.world.isRemote && _ent instanceof ServerPlayerEntity) {
+										RegistryKey<World> destinationType = World.OVERWORLD;
+										ServerWorld nextWorld = _ent.getServer().getWorld(destinationType);
+										if (nextWorld != null) {
+											((ServerPlayerEntity) _ent).connection
+													.sendPacket(new SChangeGameStatePacket(SChangeGameStatePacket.field_241768_e_, 0));
+											((ServerPlayerEntity) _ent).teleport(nextWorld, nextWorld.getSpawnPoint().getX(),
+													nextWorld.getSpawnPoint().getY() + 1, nextWorld.getSpawnPoint().getZ(), _ent.rotationYaw,
+													_ent.rotationPitch);
+											((ServerPlayerEntity) _ent).connection
+													.sendPacket(new SPlayerAbilitiesPacket(((ServerPlayerEntity) _ent).abilities));
+											for (EffectInstance effectinstance : ((ServerPlayerEntity) _ent).getActivePotionEffects()) {
+												((ServerPlayerEntity) _ent).connection
+														.sendPacket(new SPlayEntityEffectPacket(_ent.getEntityId(), effectinstance));
+											}
+											((ServerPlayerEntity) _ent).connection
+													.sendPacket(new SPlaySoundEventPacket(1032, BlockPos.ZERO, 0, false));
+										}
+									}
+								}
+								MinecraftForge.EVENT_BUS.unregister(this);
+							}
+						}.start(world, (int) 20);
+						MinecraftForge.EVENT_BUS.unregister(this);
+					}
+				}.start(world, (int) 20);
 			} else if ((entity.world.getDimensionKey()) == (World.THE_NETHER)) {
 				if (!world.isRemote()) {
 					BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
@@ -173,14 +357,187 @@ public class SetspawnprocessProcedure {
 				}
 				entity.getPersistentData().putBoolean("spawn_warn", (false));
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
-						_tileEntity.getTileData().putString("spawn_dim_id", "-1");
+						_tileEntity.getTileData().putString("spawn_dim_id", "1");
 					if (world instanceof World)
 						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
+				new Object() {
+					private int ticks = 0;
+					private float waitTicks;
+					private IWorld world;
+
+					public void start(IWorld world, int waitTicks) {
+						this.waitTicks = waitTicks;
+						MinecraftForge.EVENT_BUS.register(this);
+						this.world = world;
+					}
+
+					@SubscribeEvent
+					public void tick(TickEvent.ServerTickEvent event) {
+						if (event.phase == TickEvent.Phase.END) {
+							this.ticks += 1;
+							if (this.ticks >= this.waitTicks)
+								run();
+						}
+					}
+
+					private void run() {
+						{
+							Entity _ent = entity;
+							if (!_ent.world.isRemote && _ent instanceof ServerPlayerEntity) {
+								RegistryKey<World> destinationType = World.OVERWORLD;
+								ServerWorld nextWorld = _ent.getServer().getWorld(destinationType);
+								if (nextWorld != null) {
+									((ServerPlayerEntity) _ent).connection
+											.sendPacket(new SChangeGameStatePacket(SChangeGameStatePacket.field_241768_e_, 0));
+									((ServerPlayerEntity) _ent).teleport(nextWorld, nextWorld.getSpawnPoint().getX(),
+											nextWorld.getSpawnPoint().getY() + 1, nextWorld.getSpawnPoint().getZ(), _ent.rotationYaw,
+											_ent.rotationPitch);
+									((ServerPlayerEntity) _ent).connection
+											.sendPacket(new SPlayerAbilitiesPacket(((ServerPlayerEntity) _ent).abilities));
+									for (EffectInstance effectinstance : ((ServerPlayerEntity) _ent).getActivePotionEffects()) {
+										((ServerPlayerEntity) _ent).connection
+												.sendPacket(new SPlayEntityEffectPacket(_ent.getEntityId(), effectinstance));
+									}
+									((ServerPlayerEntity) _ent).connection.sendPacket(new SPlaySoundEventPacket(1032, BlockPos.ZERO, 0, false));
+								}
+							}
+						}
+						{
+							BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+							BlockState _bs = NbtblockBlock.block.getDefaultState();
+							BlockState _bso = world.getBlockState(_bp);
+							TileEntity _te = world.getTileEntity(_bp);
+							CompoundNBT _bnbt = null;
+							if (_te != null) {
+								_bnbt = _te.write(new CompoundNBT());
+								_te.remove();
+							}
+							world.setBlockState(_bp, _bs, 3);
+							if (_bnbt != null) {
+								_te = world.getTileEntity(_bp);
+								if (_te != null) {
+									try {
+										_te.read(_bso, _bnbt);
+									} catch (Exception ignored) {
+									}
+								}
+							}
+						}
+						if (!world.isRemote()) {
+							BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+							TileEntity _tileEntity = world.getTileEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_tileEntity != null)
+								_tileEntity.getTileData().putString("spawn_dim_id", "1");
+							if (world instanceof World)
+								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+						}
+						new Object() {
+							private int ticks = 0;
+							private float waitTicks;
+							private IWorld world;
+
+							public void start(IWorld world, int waitTicks) {
+								this.waitTicks = waitTicks;
+								MinecraftForge.EVENT_BUS.register(this);
+								this.world = world;
+							}
+
+							@SubscribeEvent
+							public void tick(TickEvent.ServerTickEvent event) {
+								if (event.phase == TickEvent.Phase.END) {
+									this.ticks += 1;
+									if (this.ticks >= this.waitTicks)
+										run();
+								}
+							}
+
+							private void run() {
+								{
+									Entity _ent = entity;
+									if (!_ent.world.isRemote && _ent instanceof ServerPlayerEntity) {
+										RegistryKey<World> destinationType = World.THE_END;
+										ServerWorld nextWorld = _ent.getServer().getWorld(destinationType);
+										if (nextWorld != null) {
+											((ServerPlayerEntity) _ent).connection
+													.sendPacket(new SChangeGameStatePacket(SChangeGameStatePacket.field_241768_e_, 0));
+											((ServerPlayerEntity) _ent).teleport(nextWorld, nextWorld.getSpawnPoint().getX(),
+													nextWorld.getSpawnPoint().getY() + 1, nextWorld.getSpawnPoint().getZ(), _ent.rotationYaw,
+													_ent.rotationPitch);
+											((ServerPlayerEntity) _ent).connection
+													.sendPacket(new SPlayerAbilitiesPacket(((ServerPlayerEntity) _ent).abilities));
+											for (EffectInstance effectinstance : ((ServerPlayerEntity) _ent).getActivePotionEffects()) {
+												((ServerPlayerEntity) _ent).connection
+														.sendPacket(new SPlayEntityEffectPacket(_ent.getEntityId(), effectinstance));
+											}
+											((ServerPlayerEntity) _ent).connection
+													.sendPacket(new SPlaySoundEventPacket(1032, BlockPos.ZERO, 0, false));
+										}
+									}
+								}
+								{
+									BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+									BlockState _bs = NbtblockBlock.block.getDefaultState();
+									BlockState _bso = world.getBlockState(_bp);
+									TileEntity _te = world.getTileEntity(_bp);
+									CompoundNBT _bnbt = null;
+									if (_te != null) {
+										_bnbt = _te.write(new CompoundNBT());
+										_te.remove();
+									}
+									world.setBlockState(_bp, _bs, 3);
+									if (_bnbt != null) {
+										_te = world.getTileEntity(_bp);
+										if (_te != null) {
+											try {
+												_te.read(_bso, _bnbt);
+											} catch (Exception ignored) {
+											}
+										}
+									}
+								}
+								if (!world.isRemote()) {
+									BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+									TileEntity _tileEntity = world.getTileEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_tileEntity != null)
+										_tileEntity.getTileData().putString("spawn_dim_id", "1");
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								}
+								{
+									Entity _ent = entity;
+									if (!_ent.world.isRemote && _ent instanceof ServerPlayerEntity) {
+										RegistryKey<World> destinationType = World.THE_NETHER;
+										ServerWorld nextWorld = _ent.getServer().getWorld(destinationType);
+										if (nextWorld != null) {
+											((ServerPlayerEntity) _ent).connection
+													.sendPacket(new SChangeGameStatePacket(SChangeGameStatePacket.field_241768_e_, 0));
+											((ServerPlayerEntity) _ent).teleport(nextWorld, nextWorld.getSpawnPoint().getX(),
+													nextWorld.getSpawnPoint().getY() + 1, nextWorld.getSpawnPoint().getZ(), _ent.rotationYaw,
+													_ent.rotationPitch);
+											((ServerPlayerEntity) _ent).connection
+													.sendPacket(new SPlayerAbilitiesPacket(((ServerPlayerEntity) _ent).abilities));
+											for (EffectInstance effectinstance : ((ServerPlayerEntity) _ent).getActivePotionEffects()) {
+												((ServerPlayerEntity) _ent).connection
+														.sendPacket(new SPlayEntityEffectPacket(_ent.getEntityId(), effectinstance));
+											}
+											((ServerPlayerEntity) _ent).connection
+													.sendPacket(new SPlaySoundEventPacket(1032, BlockPos.ZERO, 0, false));
+										}
+									}
+								}
+								MinecraftForge.EVENT_BUS.unregister(this);
+							}
+						}.start(world, (int) 20);
+						MinecraftForge.EVENT_BUS.unregister(this);
+					}
+				}.start(world, (int) 20);
 			} else {
 				if (!world.isRemote()) {
 					BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
@@ -217,14 +574,165 @@ public class SetspawnprocessProcedure {
 				}
 				entity.getPersistentData().putBoolean("spawn_warn", (false));
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
-						_tileEntity.getTileData().putString("spawn_dim_id", "1");
+						_tileEntity.getTileData().putString("spawn_dim_id", "2");
 					if (world instanceof World)
 						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
+				new Object() {
+					private int ticks = 0;
+					private float waitTicks;
+					private IWorld world;
+
+					public void start(IWorld world, int waitTicks) {
+						this.waitTicks = waitTicks;
+						MinecraftForge.EVENT_BUS.register(this);
+						this.world = world;
+					}
+
+					@SubscribeEvent
+					public void tick(TickEvent.ServerTickEvent event) {
+						if (event.phase == TickEvent.Phase.END) {
+							this.ticks += 1;
+							if (this.ticks >= this.waitTicks)
+								run();
+						}
+					}
+
+					private void run() {
+						{
+							Entity _ent = entity;
+							if (!_ent.world.isRemote && _ent instanceof ServerPlayerEntity) {
+								RegistryKey<World> destinationType = World.OVERWORLD;
+								ServerWorld nextWorld = _ent.getServer().getWorld(destinationType);
+								if (nextWorld != null) {
+									((ServerPlayerEntity) _ent).connection
+											.sendPacket(new SChangeGameStatePacket(SChangeGameStatePacket.field_241768_e_, 0));
+									((ServerPlayerEntity) _ent).teleport(nextWorld, nextWorld.getSpawnPoint().getX(),
+											nextWorld.getSpawnPoint().getY() + 1, nextWorld.getSpawnPoint().getZ(), _ent.rotationYaw,
+											_ent.rotationPitch);
+									((ServerPlayerEntity) _ent).connection
+											.sendPacket(new SPlayerAbilitiesPacket(((ServerPlayerEntity) _ent).abilities));
+									for (EffectInstance effectinstance : ((ServerPlayerEntity) _ent).getActivePotionEffects()) {
+										((ServerPlayerEntity) _ent).connection
+												.sendPacket(new SPlayEntityEffectPacket(_ent.getEntityId(), effectinstance));
+									}
+									((ServerPlayerEntity) _ent).connection.sendPacket(new SPlaySoundEventPacket(1032, BlockPos.ZERO, 0, false));
+								}
+							}
+						}
+						{
+							BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+							BlockState _bs = NbtblockBlock.block.getDefaultState();
+							BlockState _bso = world.getBlockState(_bp);
+							TileEntity _te = world.getTileEntity(_bp);
+							CompoundNBT _bnbt = null;
+							if (_te != null) {
+								_bnbt = _te.write(new CompoundNBT());
+								_te.remove();
+							}
+							world.setBlockState(_bp, _bs, 3);
+							if (_bnbt != null) {
+								_te = world.getTileEntity(_bp);
+								if (_te != null) {
+									try {
+										_te.read(_bso, _bnbt);
+									} catch (Exception ignored) {
+									}
+								}
+							}
+						}
+						if (!world.isRemote()) {
+							BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+							TileEntity _tileEntity = world.getTileEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_tileEntity != null)
+								_tileEntity.getTileData().putString("spawn_dim_id", "2");
+							if (world instanceof World)
+								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+						}
+						new Object() {
+							private int ticks = 0;
+							private float waitTicks;
+							private IWorld world;
+
+							public void start(IWorld world, int waitTicks) {
+								this.waitTicks = waitTicks;
+								MinecraftForge.EVENT_BUS.register(this);
+								this.world = world;
+							}
+
+							@SubscribeEvent
+							public void tick(TickEvent.ServerTickEvent event) {
+								if (event.phase == TickEvent.Phase.END) {
+									this.ticks += 1;
+									if (this.ticks >= this.waitTicks)
+										run();
+								}
+							}
+
+							private void run() {
+								{
+									Entity _ent = entity;
+									if (!_ent.world.isRemote && _ent instanceof ServerPlayerEntity) {
+										RegistryKey<World> destinationType = World.THE_NETHER;
+										ServerWorld nextWorld = _ent.getServer().getWorld(destinationType);
+										if (nextWorld != null) {
+											((ServerPlayerEntity) _ent).connection
+													.sendPacket(new SChangeGameStatePacket(SChangeGameStatePacket.field_241768_e_, 0));
+											((ServerPlayerEntity) _ent).teleport(nextWorld, nextWorld.getSpawnPoint().getX(),
+													nextWorld.getSpawnPoint().getY() + 1, nextWorld.getSpawnPoint().getZ(), _ent.rotationYaw,
+													_ent.rotationPitch);
+											((ServerPlayerEntity) _ent).connection
+													.sendPacket(new SPlayerAbilitiesPacket(((ServerPlayerEntity) _ent).abilities));
+											for (EffectInstance effectinstance : ((ServerPlayerEntity) _ent).getActivePotionEffects()) {
+												((ServerPlayerEntity) _ent).connection
+														.sendPacket(new SPlayEntityEffectPacket(_ent.getEntityId(), effectinstance));
+											}
+											((ServerPlayerEntity) _ent).connection
+													.sendPacket(new SPlaySoundEventPacket(1032, BlockPos.ZERO, 0, false));
+										}
+									}
+								}
+								if (!world.isRemote()) {
+									BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+									TileEntity _tileEntity = world.getTileEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_tileEntity != null)
+										_tileEntity.getTileData().putString("spawn_dim_id", "2");
+									if (world instanceof World)
+										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								}
+								{
+									BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+									BlockState _bs = NbtblockBlock.block.getDefaultState();
+									BlockState _bso = world.getBlockState(_bp);
+									TileEntity _te = world.getTileEntity(_bp);
+									CompoundNBT _bnbt = null;
+									if (_te != null) {
+										_bnbt = _te.write(new CompoundNBT());
+										_te.remove();
+									}
+									world.setBlockState(_bp, _bs, 3);
+									if (_bnbt != null) {
+										_te = world.getTileEntity(_bp);
+										if (_te != null) {
+											try {
+												_te.read(_bso, _bnbt);
+											} catch (Exception ignored) {
+											}
+										}
+									}
+								}
+								MinecraftForge.EVENT_BUS.unregister(this);
+							}
+						}.start(world, (int) 20);
+						MinecraftForge.EVENT_BUS.unregister(this);
+					}
+				}.start(world, (int) 20);
 			}
 		} else {
 			entity.getPersistentData().putBoolean("spawn_warn", (true));

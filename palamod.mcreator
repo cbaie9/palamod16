@@ -6440,10 +6440,6 @@
             "type": "entity"
           },
           {
-            "name": "cmdparams",
-            "type": "map"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -8080,6 +8076,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "avancementcoreloading"
+    },
+    {
+      "name": "Trixiumnbtblock",
+      "type": "block",
+      "sortid": 666,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trixiumnbtblock"
     }
   ],
   "variable_elements": [
@@ -8393,6 +8397,7 @@
       "item.palamod.endium_armor_leggings": "Endium Leggings",
       "item.palamod.amethyste_axe": "Amethyste Axe",
       "item.palamod.amethyste_armor_leggings": "Amethyste Leggings",
+      "block.palamod.trixiumnbtblock": "Trixiumnbtblock",
       "itemGroup.tabpalamod": "Palamod 1.16",
       "block.palamod.jacaranda_slab": "Jacaranda Slab",
       "block.palamod.titanespike": "Titane spike",
@@ -8701,6 +8706,7 @@
       "item.palamod.endium_armor_leggings": "Endium Leggings",
       "item.palamod.amethyste_axe": "Hache d\u0027améthyste",
       "item.palamod.amethyste_armor_leggings": "Amethyste Leggings",
+      "block.palamod.trixiumnbtblock": "Trixiumnbtblock",
       "itemGroup.tabpalamod": "Palamod",
       "block.palamod.jacaranda_slab": "Dalle de jacaranda",
       "block.palamod.titanespike": "Spike en titane",
