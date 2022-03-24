@@ -1,10 +1,13 @@
 {
   "variants": {
-    "half=bottom,variant=default": {
-      "model": "palamod_:paladiumslab"
+    "type=bottom": {
+      "model": "palamod:block/paladiumslab"
     },
-    "half=top,variant=default": {
-      "model": "palamod_:paladiumslab_top"
+    "type=top": {
+      "model": "palamod:block/paladiumslab_top"
+    },
+    "type=double": {
+      "model": "palamod:block/paladiumslab_full"
     }
   }
 }

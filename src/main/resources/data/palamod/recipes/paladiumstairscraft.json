@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  2",
+    " 45",
+    "678"
+  ],
+  "key": {
+    "2": {
+      "item": "palamod:paladium_ingot"
+    },
+    "4": {
+      "item": "palamod:paladium_ingot"
+    },
+    "5": {
+      "item": "palamod:paladium_ingot"
+    },
+    "6": {
+      "item": "palamod:paladium_ingot"
+    },
+    "7": {
+      "item": "palamod:paladium_ingot"
+    },
+    "8": {
+      "item": "palamod:paladium_ingot"
+    }
+  },
+  "result": {
+    "item": "palamod:paladiumstairs",
+    "count": 4
+  }
+}

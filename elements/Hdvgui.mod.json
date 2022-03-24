@@ -1,0 +1,325 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 300,
+    "height": 225,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 200,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Hôtel de vente",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Hôtel de vente",
+          "x": 111,
+          "y": 13
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "beta",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "beta",
+          "x": 338,
+          "y": 11
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "suivant",
+          "width": 61,
+          "height": 20,
+          "name": "suivant",
+          "x": 297,
+          "y": 204
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "aide",
+          "onClick": {
+            "name": "Hdvaide"
+          },
+          "width": 46,
+          "height": 20,
+          "name": "aide",
+          "x": 242,
+          "y": 203
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "buy",
+          "width": 40,
+          "height": 20,
+          "name": "buy",
+          "x": 298,
+          "y": 79
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Premium ",
+          "color": {
+            "value": -26368,
+            "falpha": 0.0
+          },
+          "name": "Premium ",
+          "x": 71,
+          "y": 67
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "mettre en vente un article",
+          "width": 160,
+          "height": 20,
+          "name": "mettre en vente un article",
+          "x": 73,
+          "y": 202
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:market_name_0>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<VAR:market_name_0>",
+          "x": 114,
+          "y": 84
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 0,
+          "disableStackInteraction": true,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #0",
+          "x": 90,
+          "y": 81
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:market_price_0> $",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<VAR:market_price_0> $",
+          "x": 218,
+          "y": 85
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 1,
+          "disableStackInteraction": true,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #1",
+          "x": 90,
+          "y": 105
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "rechercher quelque chose dans l' hôtel de vente",
+          "width": 120,
+          "height": 20,
+          "name": "recs",
+          "x": 73,
+          "y": 39
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 2,
+          "disableStackInteraction": true,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #2",
+          "x": 90,
+          "y": 128
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 3,
+          "disableStackInteraction": true,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #3",
+          "x": 89,
+          "y": 153
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:market_name_1>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<VAR:market_name_1>",
+          "x": 111,
+          "y": 108
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:market_name_2>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<VAR:market_name_2>",
+          "x": 111,
+          "y": 131
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:market_name_3>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<VAR:market_name_3>",
+          "x": 110,
+          "y": 155
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:market_price_1> $",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<VAR:market_price_1> $",
+          "x": 218,
+          "y": 107
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "buy",
+          "width": 40,
+          "height": 20,
+          "name": "buy",
+          "x": 298,
+          "y": 102
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "buy",
+          "width": 40,
+          "height": 20,
+          "name": "buy",
+          "x": 298,
+          "y": 127
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "buy",
+          "width": 40,
+          "height": 20,
+          "name": "buy",
+          "x": 298,
+          "y": 151
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:market_price_2>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<VAR:market_price_2>",
+          "x": 217,
+          "y": 128
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:market_price_3>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<VAR:market_price_3>",
+          "x": 219,
+          "y": 153
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Barre de recherche",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Barre de recherche",
+          "x": 74,
+          "y": 28
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

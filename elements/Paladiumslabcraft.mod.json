@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 6,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Paladiumslab"
+    },
+    "name": "paladiumslabcraft",
+    "namespace": "mod"
+  }
+}

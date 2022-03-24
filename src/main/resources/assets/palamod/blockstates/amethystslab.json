@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "palamod:block/amethystslab"
+    },
+    "type=top": {
+      "model": "palamod:block/amethystslab_top"
+    },
+    "type=double": {
+      "model": "palamod:block/amethystslab_full"
+    }
+  }
+}

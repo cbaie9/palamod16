@@ -1,5 +1,5 @@
 {
-  "parent": "palamod:block/paladiumslab",
+  "parent": "palamod:block/paladiumstairs",
   "display": {
     "thirdperson": {
       "rotation": [

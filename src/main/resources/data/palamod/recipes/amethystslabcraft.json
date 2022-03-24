@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "palamod:amethyste"
+    },
+    "1": {
+      "item": "palamod:amethyste"
+    },
+    "2": {
+      "item": "palamod:amethyste"
+    },
+    "3": {
+      "item": "palamod:amethyste"
+    },
+    "4": {
+      "item": "palamod:amethyste"
+    },
+    "5": {
+      "item": "palamod:amethyste"
+    }
+  },
+  "result": {
+    "item": "palamod:amethystslab",
+    "count": 6
+  }
+}

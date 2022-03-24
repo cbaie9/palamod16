@@ -8084,6 +8084,190 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "trixiumnbtblock"
+    },
+    {
+      "name": "Trixium",
+      "type": "item",
+      "sortid": 667,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trixium"
+    },
+    {
+      "name": "Trxiumblock",
+      "type": "block",
+      "sortid": 668,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trxiumblock"
+    },
+    {
+      "name": "Trxiumtoblock",
+      "type": "recipe",
+      "sortid": 669,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trxiumtoblock"
+    },
+    {
+      "name": "Trxiumore",
+      "type": "block",
+      "sortid": 670,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trxiumore"
+    },
+    {
+      "name": "Trixiumsmelting",
+      "type": "recipe",
+      "sortid": 671,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trixiumsmelting"
+    },
+    {
+      "name": "Trxiumblasting",
+      "type": "recipe",
+      "sortid": 672,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trxiumblasting"
+    },
+    {
+      "name": "Paladiumstairs",
+      "type": "block",
+      "sortid": 673,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiumstairs"
+    },
+    {
+      "name": "Paladiumslab",
+      "type": "block",
+      "sortid": 674,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiumslab"
+    },
+    {
+      "name": "Paladiumstairscraft",
+      "type": "recipe",
+      "sortid": 675,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiumstairscraft"
+    },
+    {
+      "name": "Paladiumslabcraft",
+      "type": "recipe",
+      "sortid": 676,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiumslabcraft"
+    },
+    {
+      "name": "Amethyststairs",
+      "type": "block",
+      "sortid": 677,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethyststairs"
+    },
+    {
+      "name": "Amethystslab",
+      "type": "block",
+      "sortid": 678,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethystslab"
+    },
+    {
+      "name": "Amethyststairscraft",
+      "type": "recipe",
+      "sortid": 679,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethyststairscraft"
+    },
+    {
+      "name": "Amethystslabcraft",
+      "type": "recipe",
+      "sortid": 680,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethystslabcraft"
+    },
+    {
+      "name": "Hdvgui",
+      "type": "gui",
+      "sortid": 681,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hdvgui"
+    },
+    {
+      "name": "Hdvhelp",
+      "type": "gui",
+      "sortid": 682,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hdvhelp"
+    },
+    {
+      "name": "Hdvaide",
+      "type": "procedure",
+      "sortid": 683,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hdvaide",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Donjonbibl",
+      "type": "structure",
+      "sortid": 684,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "donjonbibl"
+    },
+    {
+      "name": "Donjon",
+      "type": "loottable",
+      "sortid": 685,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "donjon"
+    },
+    {
+      "name": "Donjonbibi",
+      "type": "structure",
+      "sortid": 686,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "donjonbibi"
     }
   ],
   "variable_elements": [
@@ -8134,6 +8318,126 @@
       "type": "number",
       "scope": "global",
       "value": "0"
+    },
+    {
+      "name": "market_price_0",
+      "type": "number",
+      "scope": "map",
+      "value": "0.0"
+    },
+    {
+      "name": "market_price_1",
+      "type": "number",
+      "scope": "map",
+      "value": "0.0"
+    },
+    {
+      "name": "market_price_2",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "market_price_3",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "market_price_4",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "market_price_5",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "market_price_6",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "market_price_7",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "market_price_8",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "market_price_9",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "market_name_0",
+      "type": "string",
+      "scope": "map",
+      "value": "not attribued"
+    },
+    {
+      "name": "market_name_1",
+      "type": "string",
+      "scope": "map",
+      "value": "not attribued"
+    },
+    {
+      "name": "market_name_2",
+      "type": "string",
+      "scope": "map",
+      "value": "not attribued"
+    },
+    {
+      "name": "market_name_3",
+      "type": "string",
+      "scope": "map",
+      "value": "not attribued"
+    },
+    {
+      "name": "market_name_4",
+      "type": "string",
+      "scope": "map",
+      "value": "not attribued"
+    },
+    {
+      "name": "market_name_5",
+      "type": "string",
+      "scope": "map",
+      "value": "not attribued"
+    },
+    {
+      "name": "market_name_6",
+      "type": "string",
+      "scope": "map",
+      "value": "not attribued"
+    },
+    {
+      "name": "market_name_7",
+      "type": "string",
+      "scope": "map",
+      "value": "not attribued"
+    },
+    {
+      "name": "market_name_8",
+      "type": "string",
+      "scope": "map",
+      "value": "not attribued"
+    },
+    {
+      "name": "market_name_9",
+      "type": "string",
+      "scope": "map",
+      "value": "not attribued"
     }
   ],
   "sound_elements": [
@@ -8162,20 +8466,22 @@
       "item.palamod.paladiumhammer": "Paladium hammer",
       "gamerule.logsall.description": "logs all action executed by the player ",
       "item.palamod.amethystmixedcoal": "Amethyst mixed coal",
+      "block.palamod.trxiumblock": "Trxium block",
+      "block.palamod.paladiumslab": "Paladium slab",
       "item.palamod.swordpatern": "Sword patern",
-      "item.palamod.paladiumgreenshovel": "Green Paladium Shovel",
       "block.palamod.titane_ore": "Titane Ore",
+      "item.palamod.paladiumgreenshovel": "Green Paladium Shovel",
       "block.palamod.jacaranda_fence_gate": "Jacaranda Fence Gate",
       "advancements.avancementcrafttoegether.title": "let\u0027s craft it toegether",
-      "item.palamod.greenpaladiumarmor_helmet": "Green paladium Helmet",
-      "item.palamod.xpberry": "Xp berry",
       "item.palamod.endium_axe": "Endium Axe",
+      "item.palamod.xpberry": "Xp berry",
+      "item.palamod.greenpaladiumarmor_helmet": "Green paladium Helmet",
       "block.palamod.endium_block": "Block of Endium",
       "block.palamod.compactedobsidian": "Compacted obsidian",
       "advancements.avancementluckytoday.descr": "Craft a lucky block",
       "block.palamod.judeecercis_wood": "Judeecercis Wood",
-      "item.palamod.titane_armor_boots": "Titane Boots",
       "item.palamod.orangeblue": "Orangeblue",
+      "item.palamod.titane_armor_boots": "Titane Boots",
       "block.palamod.erable_leaves": "Erable Leaves",
       "effect.fireimbue": "Fire imbue",
       "item.palamod.weighted_boots": "Weighted Boots",
@@ -8191,10 +8497,11 @@
       "item.palamod.titanestick": "Titane stick",
       "block.palamod.contructedgrinderlayer_1": "Contructed grinder layer 1 (and 3)",
       "block.palamod.contructedgrinderlayer_2": "Contructed grinder layer 2",
+      "item.palamod.trixium": "Trixium",
       "item.palamod.amethystefastsword": "Amethyste fastsword",
       "block.palamod.ostryasappling": "Ostrya sappling",
-      "item.palamod.chervilseed": "Chervil seed",
       "block.palamod.alarm": "Alarm",
+      "item.palamod.chervilseed": "Chervil seed",
       "block.palamod.jacaranda_planks": "Jacaranda Planks",
       "item.palamod.amethyste_shovel": "Amethyste Shovel",
       "item.palamod.titane_sword": "Titane Sword",
@@ -8307,6 +8614,7 @@
       "item.palamod.damagestick": "Damage stick",
       "advancements.avancementcompressedavantur.title": "Compressed avanture",
       "item.palamod.diamondstring": "Diamond string",
+      "block.palamod.trxiumore": "Trxium ore",
       "advancements.avancementanvofp.descr": "Craft an paladium machine ",
       "effect.antifake": "antifake",
       "subtitles.devmod.test.sound.ogg": "Radio is playing : devmod radio Test",
@@ -8341,6 +8649,7 @@
       "block.palamod.woddenspike": "Iron spike",
       "block.palamod.ostrya_wood_stairs": "Ostrya Stairs",
       "item.palamod.endium_armor_chestplate": "Endium Chestplate",
+      "block.palamod.paladiumstairs": "Paladium stairs",
       "item.palamod.amethyste_pickaxe": "Amethyste Pickaxe",
       "item.palamod.paladiumapple": "Paladium apple",
       "item.palamod.findium": "Findium ingot",
@@ -8366,6 +8675,7 @@
       "item.palamod.compressedpaladium": "Compressed Paladium",
       "item.palamod.endiumnugget": "Endium nugget",
       "item.palamod.amethyste_sword": "Amethyste Sword",
+      "block.palamod.amethyststairs": "Amethyst stairs",
       "block.palamod.alchimet_1": "Alchemy creator",
       "block.palamod.nbtblock": "Nbt block",
       "item.palamod.fuzeiiidisc": "Fuzeiii - On m\u0027appelle Fuze iii",
@@ -8419,6 +8729,7 @@
       "block.palamod.jacarandasappling": "Jacaranda sappling",
       "block.palamod.kiwano_4": "Kiwano state 4",
       "block.palamod.kiwano_3": "Kiwano state 3",
+      "block.palamod.amethystslab": "Amethyst slab",
       "subtitles.fuze_iii_disc": "Fuze iii - On m\u0027appelle fuze iii",
       "advancements.avancementassembleur.descr": "Craft the Assembling Table ",
       "item.palamod.amethyste": "Amethyste ingot",
@@ -8469,14 +8780,16 @@
       "item.palamod.paladiumhammer": "Hammer en paladium",
       "gamerule.logsall.description": "Logs tout les action que font les joueur ",
       "item.palamod.amethystmixedcoal": "Charbon infusée à améthyste",
+      "block.palamod.trxiumblock": "Trxium block",
+      "block.palamod.paladiumslab": "Paladium slab",
       "item.palamod.swordpatern": "Entête d\u0027épée en paladium",
-      "block.palamod.titane_ore": "Minerais de titane",
       "item.palamod.paladiumgreenshovel": "épée en paladium vert",
+      "block.palamod.titane_ore": "Minerais de titane",
       "block.palamod.jacaranda_fence_gate": "Portail en Jacaranda",
       "advancements.avancementcrafttoegether.title": "let\u0027s craft it toegether",
-      "item.palamod.greenpaladiumarmor_helmet": "Paladium Helmet",
-      "item.palamod.endium_axe": "Hache en endium",
       "item.palamod.xpberry": "Buisson d\u0027xp",
+      "item.palamod.endium_axe": "Hache en endium",
+      "item.palamod.greenpaladiumarmor_helmet": "Paladium Helmet",
       "block.palamod.endium_block": "Block en Endium",
       "block.palamod.compactedobsidian": "Obsidienne compactée",
       "advancements.avancementluckytoday.descr": "Craft a lucky block",
@@ -8498,6 +8811,7 @@
       "item.palamod.titanestick": "Baton en titane",
       "block.palamod.contructedgrinderlayer_1": "Couche de grinder de type 1",
       "block.palamod.contructedgrinderlayer_2": "Couche de grinder de type 2",
+      "item.palamod.trixium": "Trixium",
       "item.palamod.amethystefastsword": "Améthyste fastsword",
       "block.palamod.ostryasappling": "Pousse d\u0027ostrya",
       "block.palamod.alarm": "Alarm",
@@ -8616,6 +8930,7 @@
       "item.palamod.damagestick": "Bâton de dégats",
       "advancements.avancementcompressedavantur.title": "Compressed avanture",
       "item.palamod.diamondstring": "Diamond string",
+      "block.palamod.trxiumore": "Trxium ore",
       "advancements.avancementanvofp.descr": "Craft an paladium machine ",
       "effect.antifake": "antifake",
       "subtitles.devmod.test.sound.ogg": "La Radio joue :  Devmod test sound",
@@ -8650,6 +8965,7 @@
       "block.palamod.woddenspike": "Iron spike",
       "block.palamod.ostrya_wood_stairs": "Escalier d\u0027ostrya",
       "item.palamod.endium_armor_chestplate": "Plastron en endium",
+      "block.palamod.paladiumstairs": "Paladium stairs",
       "item.palamod.amethyste_pickaxe": "Pioche en améthyste",
       "item.palamod.paladiumapple": "Paladium apple",
       "item.palamod.findium": "Cristaux de Findium",
@@ -8675,6 +8991,7 @@
       "item.palamod.compressedpaladium": "Paladium compressée",
       "item.palamod.endiumnugget": "Endium nugget",
       "item.palamod.amethyste_sword": "épée en améthyste",
+      "block.palamod.amethyststairs": "Amethyst stairs",
       "block.palamod.alchimet_1": "Alchemy creator",
       "block.palamod.nbtblock": "Nbt block",
       "item.palamod.fuzeiiidisc": "Fuzeiii - On m\u0027appelle Fuze iii",
@@ -8728,6 +9045,7 @@
       "block.palamod.jacarandasappling": "Pousse de jacaranda",
       "block.palamod.kiwano_4": "Kiwano state 4",
       "block.palamod.kiwano_3": "Kiwano state 3",
+      "block.palamod.amethystslab": "Amethyst slab",
       "item.palamod.titane_chestplate": "Plastron en titane",
       "subtitles.fuze_iii_disc": "Fuze iii - On m\u0027appelle fuze iii",
       "advancements.avancementassembleur.descr": "Craft the Assembling Table ",
@@ -8773,7 +9091,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "palamod ",
-    "version": "15a2.4",
+    "version": "beta 1 build 16a1  0001",
     "description": "the palamod ... in 1.16",
     "author": "cb9",
     "websiteURL": "https://mcreator.net, https://paladium-pvp.fr",

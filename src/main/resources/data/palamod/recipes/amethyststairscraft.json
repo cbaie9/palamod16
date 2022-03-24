@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  2",
+    " 45",
+    "678"
+  ],
+  "key": {
+    "2": {
+      "item": "palamod:amethyste"
+    },
+    "4": {
+      "item": "palamod:amethyste"
+    },
+    "5": {
+      "item": "palamod:amethyste"
+    },
+    "6": {
+      "item": "palamod:amethyste"
+    },
+    "7": {
+      "item": "palamod:amethyste"
+    },
+    "8": {
+      "item": "palamod:amethyste"
+    }
+  },
+  "result": {
+    "item": "palamod:amethyststairs",
+    "count": 4
+  }
+}

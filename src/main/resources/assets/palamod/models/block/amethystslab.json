@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "palamod:blocks/amethyst_block",
+    "top": "palamod:blocks/amethyst_block",
+    "side": "palamod:blocks/amethyst_block"
+  }
+}

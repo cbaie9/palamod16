@@ -1,0 +1,243 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 250,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Hôtel de vente - aide",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Hôtel de vente - aide",
+          "x": 93,
+          "y": 24
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "L'hôtel de vente est un endroit oû les joueurs",
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "name": "L'hôtel de vente est un endroit oû les joueurs",
+          "x": 92,
+          "y": 47
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "vendent et s'achètent  des items de différente",
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "name": "vendent et s'achètent  des items de différente",
+          "x": 93,
+          "y": 57
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "valeur de façon sécurisé sans interaction entre",
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "name": "valeur de façon sécurisé sans interaction entre",
+          "x": 90,
+          "y": 67
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "joueur directe ",
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "name": "joueur directe ",
+          "x": 91,
+          "y": 77
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Pour mettre en vente un objet cliquez sur ",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Pour mettre en vente un objet cliquez sur ",
+          "x": 92,
+          "y": 97
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "l'onglet correspondant mettez l'item à vendre ",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "l'onglet correspondant mettez l'item à vendre ",
+          "x": 92,
+          "y": 108
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "dans le slot puis selectionné le prix et le",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "dans le slot puis selectionné le prix et le",
+          "x": 92,
+          "y": 118
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "nom qui sera afficher",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "nom qui sera afficher",
+          "x": 92,
+          "y": 129
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Pour acheter, trouvez un item interessant puis,",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Pour acheter, trouvez un item interessant puis,",
+          "x": 91,
+          "y": 155
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "appuyer le bouton 'buy' puis confimer votre",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "appuyer le bouton 'buy' puis confimer votre",
+          "x": 91,
+          "y": 164
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "choix",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "choix",
+          "x": 92,
+          "y": 175
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Vente",
+          "color": {
+            "value": -16751104,
+            "falpha": 0.0
+          },
+          "name": "Vente",
+          "x": 91,
+          "y": 87
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Achat",
+          "color": {
+            "value": -3407821,
+            "falpha": 0.0
+          },
+          "name": "Achat",
+          "x": 90,
+          "y": 145
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Toute anarque n'est pas de notre faute sauf si  ",
+          "color": {
+            "value": -16777012,
+            "falpha": 0.0
+          },
+          "name": "Toute anarque n'est pas de notre faute sauf si  ",
+          "x": 90,
+          "y": 188
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Bug Les exploite sont souvent des mods non",
+          "color": {
+            "value": -16777012,
+            "falpha": 0.0
+          },
+          "name": "Bug Les exploite sont souvent des mods non",
+          "x": 90,
+          "y": 196
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "prévue Soyez prudent",
+          "color": {
+            "value": -16777012,
+            "falpha": 0.0
+          },
+          "name": "prévue Soyez prudent",
+          "x": 91,
+          "y": 205
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

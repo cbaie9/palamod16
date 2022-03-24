@@ -1,5 +1,5 @@
 {
-  "parent": "block/slab",
+  "parent": "block/outer_stairs",
   "textures": {
     "bottom": "palamod:blocks/paladium_block",
     "top": "palamod:blocks/paladium_block",

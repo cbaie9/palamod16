@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod:blocks/trxium_ore",
+    "particle": "palamod:blocks/trxium_ore"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "parent": "block/slab",
+  "parent": "block/cube_bottom_top",
   "textures": {
     "bottom": "palamod:blocks/paladium_block",
     "top": "palamod:blocks/paladium_block",
