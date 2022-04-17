@@ -26,14 +26,14 @@
       {
         "type": "label",
         "data": {
-          "text": "beta",
+          "text": "Wip build 0031",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "beta",
-          "x": 338,
-          "y": 11
+          "name": "Wip build 0031",
+          "x": 284,
+          "y": 12
         }
       },
       {
@@ -65,6 +65,9 @@
         "type": "button",
         "data": {
           "text": "buy",
+          "onClick": {
+            "name": "Hdvbuy"
+          },
           "width": 40,
           "height": 20,
           "name": "buy",
@@ -89,6 +92,9 @@
         "type": "button",
         "data": {
           "text": "mettre en vente un article",
+          "onClick": {
+            "name": "Openhdvsell"
+          },
           "width": 160,
           "height": 20,
           "name": "mettre en vente un article",
@@ -245,6 +251,9 @@
         "type": "button",
         "data": {
           "text": "buy",
+          "onClick": {
+            "name": "Hdvbuy1"
+          },
           "width": 40,
           "height": 20,
           "name": "buy",
@@ -256,6 +265,9 @@
         "type": "button",
         "data": {
           "text": "buy",
+          "onClick": {
+            "name": "Hdvbuy2"
+          },
           "width": 40,
           "height": 20,
           "name": "buy",
@@ -267,6 +279,9 @@
         "type": "button",
         "data": {
           "text": "buy",
+          "onClick": {
+            "name": "Hdvbuy3"
+          },
           "width": 40,
           "height": 20,
           "name": "buy",

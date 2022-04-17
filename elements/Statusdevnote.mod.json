@@ -1,0 +1,165 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 300,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Dev log #0001 build 0040  v16a1",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Dev log #0001 build 0040  v16a1",
+          "x": 67,
+          "y": 25
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Problème de market",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Problème de market",
+          "x": 66,
+          "y": 46
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "- Stokage de l'item en tant que nbt ",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "- Stokage de l'item en tant que nbt ",
+          "x": 73,
+          "y": 59
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "autre",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "autre",
+          "x": 70,
+          "y": 74
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Retard inderminée des commande type /f",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Retard inderminée des commande type /f",
+          "x": 69,
+          "y": 85
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "A cause de refont, + maj moteur  arguments prochianment",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "A cause de refont, + maj moteur  arguments prochianment",
+          "x": 68,
+          "y": 96
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "11/04/2022",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "11/04/2022",
+          "x": 304,
+          "y": 27
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Info rapide : Le Market sera de 100 slots extensibles",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Info rapide : Le Market sera de 100 slots extensibles",
+          "x": 72,
+          "y": 136
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Par les maj : system de copier coller relais",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Par les maj : system de copier coller relais",
+          "x": 70,
+          "y": 149
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Au faite l'adminshop sortira rapidement après la snapshot",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Au faite l'adminshop sortira rapidement après la snapshot",
+          "x": 65,
+          "y": 170
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Du market ; system similaire",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Du market ; system similaire",
+          "x": 65,
+          "y": 181
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

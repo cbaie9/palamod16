@@ -1,0 +1,193 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 275,
+    "height": 225,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Palamod - Not in working in progress",
+          "color": {
+            "value": -3407872,
+            "falpha": 0.0
+          },
+          "name": "Palamod - Not in working in progress",
+          "x": 121,
+          "y": 14
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "release² / poisson d'avril",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "release² / poisson d'avril",
+          "x": 81,
+          "y": 216
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Vous croyer qu'en 1 semaine on peut créer un hdv",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Vous croyer qu'en 1 semaine on peut créer un hdv",
+          "x": 87,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "BRUH",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "BRUH",
+          "x": 87,
+          "y": 59
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Ceci est un poisson d'avril ( sans blague )",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Ceci est un poisson d'avril ( sans blague )",
+          "x": 86,
+          "y": 72
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Sinon serieux rendez-vous à la fermeture de la ",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Sinon serieux rendez-vous à la fermeture de la ",
+          "x": 83,
+          "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "v7.5",
+          "color": {
+            "value": -26368,
+            "falpha": 0.0
+          },
+          "name": "v7.5",
+          "x": 326,
+          "y": 88
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Pour avoir une surprise ",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Pour avoir une surprise ",
+          "x": 83,
+          "y": 100
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Ps /palagift pour du bonus",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Ps /palagift pour du bonus",
+          "x": 82,
+          "y": 128
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Ps 2 Chercher bien pour les indices",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Ps 2 Chercher bien pour les indices",
+          "x": 81,
+          "y": 139
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Build 0031",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Build 0031",
+          "x": 291,
+          "y": 216
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "continuer pour voir les travaux -)",
+          "onClick": {
+            "name": "Hdv_open"
+          },
+          "width": 186,
+          "height": 20,
+          "name": "continuer pour voir les travaux -)",
+          "x": 80,
+          "y": 171
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "devnote",
+          "onClick": {
+            "name": "StatusCommandExecuted"
+          },
+          "width": 61,
+          "height": 20,
+          "name": "devnote",
+          "x": 275,
+          "y": 171
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

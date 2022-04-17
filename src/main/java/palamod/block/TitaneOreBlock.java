@@ -129,7 +129,7 @@ public class TitaneOreBlock extends PalamodModElements.ModElement {
 					return super.generate(world, generator, rand, pos, config);
 				}
 			};
-			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 4)).range(64)
+			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 4)).range(32)
 					.square().func_242731_b(10);
 			event.getRegistry().register(feature.setRegistryName("titane_ore"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("palamod:titane_ore"), configuredFeature);

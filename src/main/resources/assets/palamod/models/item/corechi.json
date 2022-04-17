@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "palamod:items/core_chi"
+    "layer0": "palamod:items/nbeta"
   }
 }

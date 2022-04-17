@@ -85,7 +85,7 @@ public class HdvguiGuiWindow extends ContainerScreen<HdvguiGui.GuiContainerMod> 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
 		this.font.drawString(ms, "H\u00F4tel de vente", 47, 5, -12829636);
-		this.font.drawString(ms, "beta", 274, 3, -12829636);
+		this.font.drawString(ms, "Wip build 0031", 220, 4, -12829636);
 		this.font.drawString(ms, "Premium ", 7, 59, -26368);
 		this.font.drawString(ms, "" + (PalamodModVariables.MapVariables.get(world).market_name_0) + "", 50, 76, -12829636);
 		this.font.drawString(ms, "" + (PalamodModVariables.MapVariables.get(world).market_price_0) + " $", 154, 77, -12829636);

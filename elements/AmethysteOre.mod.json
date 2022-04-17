@@ -34,7 +34,7 @@
     ],
     "name": "Amethyste Ore",
     "specialInfo": [],
-    "hardness": 12.0,
+    "hardness": 3.0,
     "resistance": 15.157165665103982,
     "hasGravity": false,
     "isWaterloggable": false,

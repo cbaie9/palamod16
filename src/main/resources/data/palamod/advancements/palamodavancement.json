@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "palamod:textures/paladium_block.png",
+    "icon": {
+      "item": "palamod:paladium_block"
+    },
+    "title": {
+      "translate": "advancements.palamodavancement.title"
+    },
+    "description": {
+      "translate": "advancements.palamodavancement.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "palamodavancement": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

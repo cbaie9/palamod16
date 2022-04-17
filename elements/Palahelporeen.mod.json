@@ -1,0 +1,240 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 280,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 18,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Paladium : The most powerful ore  who can be mined",
+          "color": {
+            "value": -52480,
+            "falpha": 0.0
+          },
+          "name": "Paladium : The most powerful ore  who can be mined",
+          "x": 92,
+          "y": 93
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "some other thing",
+          "color": {
+            "value": -205,
+            "falpha": 0.0
+          },
+          "name": "some other thing",
+          "x": 92,
+          "y": 117
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "amethyst_ingot.png",
+          "use1Xscale": true,
+          "name": "amethyst_ingot.png",
+          "x": 78,
+          "y": 161
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_ingot.png",
+          "use1Xscale": true,
+          "name": "paladium_ingot.png",
+          "x": 77,
+          "y": 85
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "findium.png",
+          "use1Xscale": true,
+          "name": "findium.png",
+          "x": 78,
+          "y": 103
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Low cost ore, can be easily find ",
+          "color": {
+            "value": -6750055,
+            "falpha": 0.0
+          },
+          "name": "Low cost ore, can be easily find ",
+          "x": 80,
+          "y": 177
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "titane_ingot.png",
+          "use1Xscale": true,
+          "name": "titane_ingot.png",
+          "x": 78,
+          "y": 129
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Very good ore for your first tools in the mod",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Very good ore for your first tools in the mod",
+          "x": 98,
+          "y": 145
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "back",
+          "onClick": {
+            "name": "Blockback"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "back",
+          "x": 296,
+          "y": 26
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "menu",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "menu",
+          "x": 80,
+          "y": 24
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Améthyste :",
+          "color": {
+            "value": -6750055,
+            "falpha": 0.0
+          },
+          "name": "Améthyste :",
+          "x": 98,
+          "y": 165
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Titane :",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Titane :",
+          "x": 97,
+          "y": 136
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Findium : can be used for crafting cave block and",
+          "color": {
+            "value": -205,
+            "falpha": 0.0
+          },
+          "name": "Findium : can be used for crafting cave block and",
+          "x": 94,
+          "y": 107
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_green_ingot.png",
+          "use1Xscale": true,
+          "name": "paladium_green_ingot.png",
+          "x": 77,
+          "y": 67
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Green Paladium : Paladium but very very rare",
+          "color": {
+            "value": -10027213,
+            "falpha": 0.0
+          },
+          "name": "Green Paladium : Paladium but very very rare",
+          "x": 97,
+          "y": 71
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "endium_ingot.png",
+          "use1Xscale": true,
+          "name": "endium_ingot.png",
+          "x": 77,
+          "y": 47
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Endium : The ultimate ingot",
+          "color": {
+            "value": -13434727,
+            "falpha": 0.0
+          },
+          "name": "Endium : The ultimate ingot",
+          "x": 96,
+          "y": 49
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Obtain by Paladium crusher",
+          "color": {
+            "value": -13434727,
+            "falpha": 0.0
+          },
+          "name": "Obtain by Paladium crusher",
+          "x": 213,
+          "y": 57
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 31,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

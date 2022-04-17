@@ -1,0 +1,138 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #0",
+          "x": 336,
+          "y": 95
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "alpha",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "alpha",
+          "x": 353,
+          "y": 53
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Nom de l'item",
+          "width": 120,
+          "height": 20,
+          "name": "market_name",
+          "x": 186,
+          "y": 86
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "prix",
+          "width": 120,
+          "height": 20,
+          "name": "market_price",
+          "x": 186,
+          "y": 124
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Prix de vente",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Prix de vente",
+          "x": 187,
+          "y": 109
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Nom de l'item",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Nom de l'item",
+          "x": 186,
+          "y": 71
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "backgroun2d.png",
+          "use1Xscale": true,
+          "name": "backgroun2d.png",
+          "x": 7,
+          "y": 0
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Item",
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "name": "Item",
+          "x": 330,
+          "y": 77
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "vendre",
+          "onClick": {
+            "name": "Hdvsell0"
+          },
+          "width": 56,
+          "height": 20,
+          "name": "vendre",
+          "x": 187,
+          "y": 164
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

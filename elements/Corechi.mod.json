@@ -3,9 +3,9 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "core_chi",
+    "texture": "nbeta",
     "customModelName": "Normal",
-    "name": "Corechi ( beta )",
+    "name": "reddated:/f soon",
     "rarity": "EPIC",
     "creativeTab": {
       "value": "CUSTOM:Palamod"
@@ -18,7 +18,7 @@
     "recipeRemainder": {
       "value": ""
     },
-    "destroyAnyBlock": false,
+    "destroyAnyBlock": true,
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,

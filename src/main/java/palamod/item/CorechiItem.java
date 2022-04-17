@@ -63,6 +63,11 @@ public class CorechiItem extends PalamodModElements.ModElement {
 		}
 
 		@Override
+		public boolean canHarvestBlock(BlockState state) {
+			return true;
+		}
+
+		@Override
 		public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity entity, Hand hand) {
 			ActionResult<ItemStack> ar = super.onItemRightClick(world, entity, hand);
 			ItemStack itemstack = ar.getResult();

@@ -1,0 +1,269 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 210,
+    "height": 185,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder_block_front.png",
+          "use1Xscale": false,
+          "name": "grinder_block_front.png",
+          "x": 115,
+          "y": 35
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Grinder",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Grinder",
+          "x": 194,
+          "y": 37
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "The grinder is a machine for crafting",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "The grinder is a machine for crafting",
+          "x": 112,
+          "y": 70
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "special tool like hammer, fastword",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "special tool like hammer, fastword",
+          "x": 109,
+          "y": 81
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "and broadsword You can also add",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "and broadsword You can also add",
+          "x": 110,
+          "y": 92
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "upgrades give some effect to your tools",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "upgrades give some effect to your tools",
+          "x": 110,
+          "y": 102
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Fortune : like vanilla but on hammer",
+          "color": {
+            "value": -256,
+            "falpha": 0.0
+          },
+          "name": "Fortune : like vanilla but on hammer",
+          "x": 111,
+          "y": 111
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": " -) hammer",
+          "color": {
+            "value": -256,
+            "falpha": 0.0
+          },
+          "name": " -) hammer",
+          "x": 110,
+          "y": 120
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Smelt : smelt the ore mined -) hammer",
+          "color": {
+            "value": -8504309,
+            "falpha": 0.0
+          },
+          "name": "Smelt : smelt the ore mined -) hammer",
+          "x": 111,
+          "y": 130
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Speed : haste / effiency  -) hammer",
+          "color": {
+            "value": -816878,
+            "falpha": 0.0
+          },
+          "name": "Speed : haste / effiency  -) hammer",
+          "x": 111,
+          "y": 143
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "",
+          "x": 103,
+          "y": 99
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Flame : -) fire aspect for fastsword and",
+          "color": {
+            "value": -3335911,
+            "falpha": 0.0
+          },
+          "name": "Flame : -) fire aspect for fastsword and",
+          "x": 110,
+          "y": 153
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Broadsword",
+          "color": {
+            "value": -1826784,
+            "falpha": 0.0
+          },
+          "name": "Broadsword",
+          "x": 111,
+          "y": 161
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Damage : does more damage -) fastsword",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Damage : does more damage -) fastsword",
+          "x": 110,
+          "y": 169
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "+ broadsword",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "+ broadsword",
+          "x": 110,
+          "y": 178
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "next",
+          "onClick": {
+            "name": "Grinder2connectpalahelp"
+          },
+          "width": 50,
+          "height": 20,
+          "name": "next",
+          "x": 114,
+          "y": 187
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "menu",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "menu",
+          "x": 172,
+          "y": 187
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "back",
+          "onClick": {
+            "name": "Machineconnectpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "back",
+          "x": 233,
+          "y": 187
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "2 min 1/2",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "2 min 1/2",
+          "x": 268,
+          "y": 32
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

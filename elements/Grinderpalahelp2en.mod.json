@@ -1,0 +1,272 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 200,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "2/2",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "2/2",
+          "x": 292,
+          "y": 25
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder_block_front.png",
+          "use1Xscale": false,
+          "name": "grinder_block_front.png",
+          "x": 117,
+          "y": 26
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Grinder wiki",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Grinder wiki",
+          "x": 182,
+          "y": 26
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Knockback : add  knockback effect  -)",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Knockback : add  knockback effect  -)",
+          "x": 118,
+          "y": 61
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "fastsword + broadsword",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "fastsword + broadsword",
+          "x": 117,
+          "y": 70
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "How to Craft the grinder ",
+          "color": {
+            "value": -4385001,
+            "falpha": 0.0
+          },
+          "name": "How to Craft the grinder ",
+          "x": 117,
+          "y": 82
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "We need for this  :",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "We need for this  :",
+          "x": 117,
+          "y": 93
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "1 grinder block, 5 grinder casing, 20",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "1 grinder block, 5 grinder casing, 20",
+          "x": 118,
+          "y": 103
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "grinder frame et l'asembing table",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "grinder frame et l'asembing table",
+          "x": 116,
+          "y": 114
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "1.png",
+          "use1Xscale": true,
+          "name": "1.png",
+          "x": 120,
+          "y": 166
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "2.png",
+          "use1Xscale": true,
+          "name": "2.png",
+          "x": 166,
+          "y": 166
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "With this craft step 1 two time and",
+          "color": {
+            "value": -5433600,
+            "falpha": 0.0
+          },
+          "name": "With this craft step 1 two time and",
+          "x": 117,
+          "y": 124
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "step 2 one time and craft step 3",
+          "color": {
+            "value": -6750208,
+            "falpha": 0.0
+          },
+          "name": "step 2 one time and craft step 3",
+          "x": 117,
+          "y": 135
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "step 1",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "step 1",
+          "x": 125,
+          "y": 155
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "step 2",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "step 2",
+          "x": 166,
+          "y": 156
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "step 3",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "step 3",
+          "x": 219,
+          "y": 155
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "3.png",
+          "use1Xscale": true,
+          "name": "3.png",
+          "x": 214,
+          "y": 166
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "It's done",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "It's done",
+          "x": 260,
+          "y": 146
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "back",
+          "onClick": {
+            "name": "Grinderconnectpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "back",
+          "x": 261,
+          "y": 193
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "menu",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "menu",
+          "x": 261,
+          "y": 171
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

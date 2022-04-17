@@ -1,0 +1,96 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 255,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "text": "revenir au shop",
+          "width": 103,
+          "height": 20,
+          "name": "revenir au shop",
+          "x": 91,
+          "y": 173
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Acheter",
+          "width": 61,
+          "height": 20,
+          "name": "Acheter",
+          "x": 273,
+          "y": 173
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Vous allez acheter",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Vous allez acheter",
+          "x": 93,
+          "y": 50
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:market_conf_name>",
+          "color": {
+            "value": -16764058,
+            "falpha": 0.0
+          },
+          "name": "<VAR:market_conf_name>",
+          "x": 195,
+          "y": 51
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "à <VAR:market_conf_price> $",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "à <VAR:market_conf_price> $",
+          "x": 92,
+          "y": 63
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Cette action est irréversible ",
+          "color": {
+            "value": -3407821,
+            "falpha": 0.0
+          },
+          "name": "Cette action est irréversible ",
+          "x": 144,
+          "y": 149
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

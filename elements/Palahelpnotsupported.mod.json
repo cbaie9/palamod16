@@ -1,0 +1,180 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 190,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "sad_ntsuport.png",
+          "use1Xscale": false,
+          "name": "sad_ntsuport.png",
+          "x": 133,
+          "y": 42
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "sad_ntsuport.png",
+          "use1Xscale": false,
+          "name": "sad_ntsuport.png",
+          "x": 262,
+          "y": 43
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "sad_ntsuport.png",
+          "use1Xscale": false,
+          "name": "sad_ntsuport.png",
+          "x": 133,
+          "y": 164
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "sad_ntsuport.png",
+          "use1Xscale": false,
+          "name": "sad_ntsuport.png",
+          "x": 262,
+          "y": 164
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "An error has been encountred",
+          "color": {
+            "value": -26368,
+            "falpha": 0.0
+          },
+          "name": "An error has been encountred",
+          "x": 133,
+          "y": 76
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Palahelp - error",
+          "color": {
+            "value": -65485,
+            "falpha": 0.0
+          },
+          "name": "Palahelp - error",
+          "x": 168,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Your language is not supported ",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Your language is not supported ",
+          "x": 131,
+          "y": 90
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Your can  help for translation",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Your can  help for translation",
+          "x": 124,
+          "y": 111
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "On Crowdin",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "On Crowdin",
+          "x": 123,
+          "y": 123
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Crowdin link",
+          "width": 87,
+          "height": 20,
+          "name": "Crowdin link",
+          "x": 169,
+          "y": 174
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Language",
+          "onClick": {
+            "name": "Forcechlanguage"
+          },
+          "width": 67,
+          "height": 20,
+          "name": "Language",
+          "x": 123,
+          "y": 140
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "exit",
+          "onClick": {
+            "name": "Closegui"
+          },
+          "width": 46,
+          "height": 20,
+          "name": "exit",
+          "x": 195,
+          "y": 140
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "back",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 46,
+          "height": 20,
+          "name": "back",
+          "x": 254,
+          "y": 140
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}
