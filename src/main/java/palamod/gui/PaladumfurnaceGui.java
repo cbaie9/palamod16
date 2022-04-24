@@ -3,8 +3,12 @@ package palamod.gui;
 
 import palamod.PalamodModElements;
 
+import palamod.PalamodMod;
+
+import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.fml.network.NetworkEvent;
 import net.minecraftforge.fml.network.IContainerFactory;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -16,12 +20,16 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.network.PacketBuffer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.inventory.container.Container;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.Entity;
 import net.minecraft.client.gui.ScreenManager;
 
 import java.util.function.Supplier;
@@ -73,7 +81,7 @@ public class PaladumfurnaceGui extends PalamodModElements.ModElement {
 			super(containerType, id);
 			this.entity = inv.player;
 			this.world = inv.player.world;
-			this.internal = new ItemStackHandler(0);
+			this.internal = new ItemStackHandler(4);
 			BlockPos pos = null;
 			if (extraData != null) {
 				pos = extraData.readBlockPos();
@@ -81,6 +89,55 @@ public class PaladumfurnaceGui extends PalamodModElements.ModElement {
 				this.y = pos.getY();
 				this.z = pos.getZ();
 			}
+			if (pos != null) {
+				if (extraData.readableBytes() == 1) { // bound to item
+					byte hand = extraData.readByte();
+					ItemStack itemstack;
+					if (hand == 0)
+						itemstack = this.entity.getHeldItemMainhand();
+					else
+						itemstack = this.entity.getHeldItemOffhand();
+					itemstack.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+						this.internal = capability;
+						this.bound = true;
+					});
+				} else if (extraData.readableBytes() > 1) {
+					extraData.readByte(); // drop padding
+					Entity entity = world.getEntityByID(extraData.readVarInt());
+					if (entity != null)
+						entity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							this.internal = capability;
+							this.bound = true;
+						});
+				} else { // might be bound to block
+					TileEntity ent = inv.player != null ? inv.player.world.getTileEntity(pos) : null;
+					if (ent != null) {
+						ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							this.internal = capability;
+							this.bound = true;
+						});
+					}
+				}
+			}
+			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 64, 22) {
+			}));
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 124, 29) {
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return false;
+				}
+			}));
+			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 64, 56) {
+			}));
+			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 10, 28) {
+			}));
+			int si;
+			int sj;
+			for (si = 0; si < 3; ++si)
+				for (sj = 0; sj < 9; ++sj)
+					this.addSlot(new Slot(inv, sj + (si + 1) * 9, 2 + 8 + sj * 18, 0 + 84 + si * 18));
+			for (si = 0; si < 9; ++si)
+				this.addSlot(new Slot(inv, si, 2 + 8 + si * 18, 0 + 142));
 		}
 
 		public Map<Integer, Slot> get() {
@@ -90,6 +147,145 @@ public class PaladumfurnaceGui extends PalamodModElements.ModElement {
 		@Override
 		public boolean canInteractWith(PlayerEntity player) {
 			return true;
+		}
+
+		@Override
+		public ItemStack transferStackInSlot(PlayerEntity playerIn, int index) {
+			ItemStack itemstack = ItemStack.EMPTY;
+			Slot slot = (Slot) this.inventorySlots.get(index);
+			if (slot != null && slot.getHasStack()) {
+				ItemStack itemstack1 = slot.getStack();
+				itemstack = itemstack1.copy();
+				if (index < 4) {
+					if (!this.mergeItemStack(itemstack1, 4, this.inventorySlots.size(), true)) {
+						return ItemStack.EMPTY;
+					}
+					slot.onSlotChange(itemstack1, itemstack);
+				} else if (!this.mergeItemStack(itemstack1, 0, 4, false)) {
+					if (index < 4 + 27) {
+						if (!this.mergeItemStack(itemstack1, 4 + 27, this.inventorySlots.size(), true)) {
+							return ItemStack.EMPTY;
+						}
+					} else {
+						if (!this.mergeItemStack(itemstack1, 4, 4 + 27, false)) {
+							return ItemStack.EMPTY;
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+				if (itemstack1.getCount() == 0) {
+					slot.putStack(ItemStack.EMPTY);
+				} else {
+					slot.onSlotChanged();
+				}
+				if (itemstack1.getCount() == itemstack.getCount()) {
+					return ItemStack.EMPTY;
+				}
+				slot.onTake(playerIn, itemstack1);
+			}
+			return itemstack;
+		}
+
+		@Override /** 
+					* Merges provided ItemStack with the first avaliable one in the container/player inventor between minIndex (included) and maxIndex (excluded). Args : stack, minIndex, maxIndex, negativDirection. /!\ the Container implementation do not check if the item is valid for the slot
+					*/
+		protected boolean mergeItemStack(ItemStack stack, int startIndex, int endIndex, boolean reverseDirection) {
+			boolean flag = false;
+			int i = startIndex;
+			if (reverseDirection) {
+				i = endIndex - 1;
+			}
+			if (stack.isStackable()) {
+				while (!stack.isEmpty()) {
+					if (reverseDirection) {
+						if (i < startIndex) {
+							break;
+						}
+					} else if (i >= endIndex) {
+						break;
+					}
+					Slot slot = this.inventorySlots.get(i);
+					ItemStack itemstack = slot.getStack();
+					if (slot.isItemValid(itemstack) && !itemstack.isEmpty() && areItemsAndTagsEqual(stack, itemstack)) {
+						int j = itemstack.getCount() + stack.getCount();
+						int maxSize = Math.min(slot.getSlotStackLimit(), stack.getMaxStackSize());
+						if (j <= maxSize) {
+							stack.setCount(0);
+							itemstack.setCount(j);
+							slot.putStack(itemstack);
+							flag = true;
+						} else if (itemstack.getCount() < maxSize) {
+							stack.shrink(maxSize - itemstack.getCount());
+							itemstack.setCount(maxSize);
+							slot.putStack(itemstack);
+							flag = true;
+						}
+					}
+					if (reverseDirection) {
+						--i;
+					} else {
+						++i;
+					}
+				}
+			}
+			if (!stack.isEmpty()) {
+				if (reverseDirection) {
+					i = endIndex - 1;
+				} else {
+					i = startIndex;
+				}
+				while (true) {
+					if (reverseDirection) {
+						if (i < startIndex) {
+							break;
+						}
+					} else if (i >= endIndex) {
+						break;
+					}
+					Slot slot1 = this.inventorySlots.get(i);
+					ItemStack itemstack1 = slot1.getStack();
+					if (itemstack1.isEmpty() && slot1.isItemValid(stack)) {
+						if (stack.getCount() > slot1.getSlotStackLimit()) {
+							slot1.putStack(stack.split(slot1.getSlotStackLimit()));
+						} else {
+							slot1.putStack(stack.split(stack.getCount()));
+						}
+						slot1.onSlotChanged();
+						flag = true;
+						break;
+					}
+					if (reverseDirection) {
+						--i;
+					} else {
+						++i;
+					}
+				}
+			}
+			return flag;
+		}
+
+		@Override
+		public void onContainerClosed(PlayerEntity playerIn) {
+			super.onContainerClosed(playerIn);
+			if (!bound && (playerIn instanceof ServerPlayerEntity)) {
+				if (!playerIn.isAlive() || playerIn instanceof ServerPlayerEntity && ((ServerPlayerEntity) playerIn).hasDisconnected()) {
+					for (int j = 0; j < internal.getSlots(); ++j) {
+						playerIn.dropItem(internal.extractItem(j, internal.getStackInSlot(j).getCount(), false), false);
+					}
+				} else {
+					for (int i = 0; i < internal.getSlots(); ++i) {
+						playerIn.inventory.placeItemBackInInventory(playerIn.world,
+								internal.extractItem(i, internal.getStackInSlot(i).getCount(), false));
+					}
+				}
+			}
+		}
+
+		private void slotChanged(int slotid, int ctype, int meta) {
+			if (this.world != null && this.world.isRemote()) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new GUISlotChangedMessage(slotid, x, y, z, ctype, meta));
+				handleSlotAction(entity, slotid, ctype, meta, x, y, z);
+			}
 		}
 	}
 

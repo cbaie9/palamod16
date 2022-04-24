@@ -5,7 +5,7 @@
     "commandName": "palahelp",
     "permissionLevel": "No requirement",
     "onCommandExecuted": {
-      "name": "Backpalahelp"
+      "name": "Opencheckssetuppalahelp"
     }
   }
 }

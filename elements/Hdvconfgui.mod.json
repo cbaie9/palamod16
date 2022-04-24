@@ -37,7 +37,7 @@
         "data": {
           "text": "Vous allez acheter",
           "color": {
-            "value": -12829636,
+            "value": -13369600,
             "falpha": 0.0
           },
           "name": "Vous allez acheter",
@@ -63,7 +63,7 @@
         "data": {
           "text": "à <VAR:market_conf_price> $",
           "color": {
-            "value": -12829636,
+            "value": -13369600,
             "falpha": 0.0
           },
           "name": "à <VAR:market_conf_price> $",
@@ -81,7 +81,7 @@
           },
           "name": "Cette action est irréversible ",
           "x": 144,
-          "y": 149
+          "y": 152
         }
       }
     ],

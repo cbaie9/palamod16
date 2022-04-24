@@ -31,6 +31,7 @@ public class PalamodModVariables {
 	public static double g_num = 0;
 	public static double Lucky_destroy = 0;
 	public static String lucky_name = "no";
+	public static String furnace_processing = "\"\"";
 
 	@SubscribeEvent
 	public void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {

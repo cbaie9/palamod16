@@ -2,8 +2,8 @@
   "_fv": 24,
   "_type": "gui",
   "definition": {
-    "type": 0,
-    "width": 176,
+    "type": 1,
+    "width": 180,
     "height": 166,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
@@ -19,8 +19,100 @@
             "falpha": 0.0
           },
           "name": "Paladium Furnace",
-          "x": 179,
-          "y": 43
+          "x": 170,
+          "y": 42
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #0",
+          "x": 187,
+          "y": 58
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:furnace_processing>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<VAR:furnace_processing>",
+          "x": 209,
+          "y": 72
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #1",
+          "x": 247,
+          "y": 65
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #2",
+          "x": 187,
+          "y": 92
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Inventory",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Inventory",
+          "x": 130,
+          "y": 108
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 3,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #3",
+          "x": 133,
+          "y": 64
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Upgardes",
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "name": "Upgardes",
+          "x": 127,
+          "y": 52
         }
       }
     ],

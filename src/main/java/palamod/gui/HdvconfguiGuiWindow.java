@@ -71,10 +71,10 @@ public class HdvconfguiGuiWindow extends ContainerScreen<HdvconfguiGui.GuiContai
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Vous allez acheter", 7, 13, -12829636);
+		this.font.drawString(ms, "Vous allez acheter", 7, 13, -13369600);
 		this.font.drawString(ms, "" + (PalamodModVariables.MapVariables.get(world).market_conf_name) + "", 109, 14, -16764058);
-		this.font.drawString(ms, "\u00E0 " + (PalamodModVariables.MapVariables.get(world).market_conf_price) + " $", 6, 26, -12829636);
-		this.font.drawString(ms, "Cette action est irr\u00E9versible ", 58, 112, -3407821);
+		this.font.drawString(ms, "\u00E0 " + (PalamodModVariables.MapVariables.get(world).market_conf_price) + " $", 6, 26, -13369600);
+		this.font.drawString(ms, "Cette action est irr\u00E9versible ", 58, 115, -3407821);
 	}
 
 	@Override

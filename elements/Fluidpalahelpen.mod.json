@@ -1,0 +1,148 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 240,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Fluid",
+          "color": {
+            "value": -13369345,
+            "falpha": 0.0
+          },
+          "name": "Fluid",
+          "x": 199,
+          "y": 25
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "6_fluid.png",
+          "use1Xscale": true,
+          "name": "6_fluid.png",
+          "x": 113,
+          "y": 50
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Fake water: a type of water witch",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Fake water: a type of water witch",
+          "x": 95,
+          "y": 74
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "make damage but it's the same as normal water",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "make damage but it's the same as normal water",
+          "x": 96,
+          "y": 84
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Damage can be stop by lengendary stone of ",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Damage can be stop by lengendary stone of ",
+          "x": 96,
+          "y": 95
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "7angel.png",
+          "use1Xscale": true,
+          "name": "7angel.png",
+          "x": 119,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Angelique water : healing water",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Angelique water : healing water",
+          "x": 118,
+          "y": 142
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "back",
+          "onClick": {
+            "name": "Blockback"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "back",
+          "x": 122,
+          "y": 185
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "menu",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "menu",
+          "x": 171,
+          "y": 185
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Power",
+          "color": {
+            "value": -3407872,
+            "falpha": 0.0
+          },
+          "name": "Power",
+          "x": 96,
+          "y": 103
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

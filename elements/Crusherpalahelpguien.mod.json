@@ -1,0 +1,291 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 425,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Paladium crusher wiki",
+          "color": {
+            "value": -65485,
+            "falpha": 0.0
+          },
+          "name": "Paladium crusher wiki",
+          "x": 115,
+          "y": 23
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "crusher_front.png",
+          "use1Xscale": false,
+          "name": "crusher_front.png",
+          "x": 20,
+          "y": 26
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "4crusher1.png",
+          "use1Xscale": true,
+          "name": "4crusher1.png",
+          "x": 251,
+          "y": 21
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "This is the crusher The machine can crusher",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "This is the crusher The machine can crusher",
+          "x": 16,
+          "y": 49
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "fruit for making rare item ( ore )",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "fruit for making rare item ( ore )",
+          "x": 15,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "and endium, the most powerful ingot in this",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "and endium, the most powerful ingot in this",
+          "x": 16,
+          "y": 74
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Mod For this you will need ore mixed coal",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Mod For this you will need ore mixed coal",
+          "x": 16,
+          "y": 86
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "for fuel. For exemple the endium need ",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "for fuel. For exemple the endium need ",
+          "x": 15,
+          "y": 98
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Palamixed coal, for paladium the titane",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Palamixed coal, for paladium the titane",
+          "x": 15,
+          "y": 109
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "The titane mixed coal, for titane the amethyst mixed coal and finally for",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "The titane mixed coal, for titane the amethyst mixed coal and finally for",
+          "x": 13,
+          "y": 121
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "amethyst the gold mixed coal Add fuel and fruits for add probabilites ",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "amethyst the gold mixed coal Add fuel and fruits for add probabilites ",
+          "x": 17,
+          "y": 133
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Fruit here",
+          "color": {
+            "value": -256,
+            "falpha": 0.0
+          },
+          "name": "Fruit here",
+          "x": 262,
+          "y": 79
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Résult here",
+          "color": {
+            "value": -16776961,
+            "falpha": 0.0
+          },
+          "name": "Résult here",
+          "x": 324,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "One times you are ready to lunch the process click on \"start fusion\"",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "One times you are ready to lunch the process click on \"start fusion\"",
+          "x": 16,
+          "y": 146
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "The endium will be creating with the previous items and the result  will appear",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "The endium will be creating with the previous items and the result  will appear",
+          "x": 6,
+          "y": 158
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Note : It not mandatory to put 128 fruit and mixed coal but you will not have",
+          "color": {
+            "value": -26368,
+            "falpha": 0.0
+          },
+          "name": "Note : It not mandatory to put 128 fruit and mixed coal but you will not have",
+          "x": 14,
+          "y": 169
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "100% Chance and could not have the result [ Check probabilities ] and 128 is",
+          "color": {
+            "value": -26368,
+            "falpha": 0.0
+          },
+          "name": "100% Chance and could not have the result [ Check probabilities ] and 128 is",
+          "x": 14,
+          "y": 178
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "equal to 100%",
+          "color": {
+            "value": -26368,
+            "falpha": 0.0
+          },
+          "name": "equal to 100%",
+          "x": 18,
+          "y": 188
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "back",
+          "onClick": {
+            "name": "Machineconnectpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "back",
+          "x": 200,
+          "y": 191
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "menu",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "menu",
+          "x": 251,
+          "y": 191
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "1/1 v1",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "1/1 v1",
+          "x": 378,
+          "y": 203
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

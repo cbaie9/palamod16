@@ -1,0 +1,161 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 200,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Xp bush ",
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "name": "Xp bush ",
+          "x": 186,
+          "y": 43
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Xp bush is a  plant who make ",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Xp bush is a  plant who make ",
+          "x": 116,
+          "y": 57
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": " xp berries and give you xp when you",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": " xp berries and give you xp when you",
+          "x": 113,
+          "y": 67
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "right click on it  You can even make",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "right click on it  You can even make",
+          "x": 117,
+          "y": 79
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Compressed xp berry for storage",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Compressed xp berry for storage",
+          "x": 115,
+          "y": 90
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "xp_berry.png",
+          "use1Xscale": false,
+          "name": "xp_berry.png",
+          "x": 118,
+          "y": 117
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "berry_xp_bush_fancy.png",
+          "use1Xscale": false,
+          "name": "berry_xp_bush_fancy.png",
+          "x": 118,
+          "y": 156
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "xp berry",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "xp berry",
+          "x": 152,
+          "y": 121
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "xp bush",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "xp bush",
+          "x": 157,
+          "y": 163
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "back",
+          "onClick": {
+            "name": "Connectitemmenu"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "back",
+          "x": 257,
+          "y": 162
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "menu",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "menu",
+          "x": 205,
+          "y": 162
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

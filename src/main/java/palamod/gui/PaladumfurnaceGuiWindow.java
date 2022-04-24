@@ -1,6 +1,8 @@
 
 package palamod.gui;
 
+import palamod.PalamodModVariables;
+
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -31,7 +33,7 @@ public class PaladumfurnaceGuiWindow extends ContainerScreen<PaladumfurnaceGui.G
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.xSize = 176;
+		this.xSize = 180;
 		this.ySize = 166;
 	}
 
@@ -72,7 +74,10 @@ public class PaladumfurnaceGuiWindow extends ContainerScreen<PaladumfurnaceGui.G
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Paladium Furnace", 53, 6, -12829636);
+		this.font.drawString(ms, "Paladium Furnace", 46, 5, -12829636);
+		this.font.drawString(ms, "" + (PalamodModVariables.furnace_processing) + "", 85, 35, -12829636);
+		this.font.drawString(ms, "Inventory", 6, 71, -12829636);
+		this.font.drawString(ms, "Upgardes", 3, 15, -65536);
 	}
 
 	@Override

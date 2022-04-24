@@ -9035,6 +9035,134 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "grinderpalahelp_2en"
+    },
+    {
+      "name": "Phcl",
+      "type": "command",
+      "sortid": 724,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phcl"
+    },
+    {
+      "name": "Palamachineguien",
+      "type": "gui",
+      "sortid": 725,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palamachineguien"
+    },
+    {
+      "name": "Forgepalahelpen",
+      "type": "gui",
+      "sortid": 726,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forgepalahelpen"
+    },
+    {
+      "name": "Fluidpalahelpen",
+      "type": "gui",
+      "sortid": 727,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fluidpalahelpen"
+    },
+    {
+      "name": "Legendarystoneen",
+      "type": "gui",
+      "sortid": 728,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "legendarystoneen_palahelp"
+    },
+    {
+      "name": "Xpbushpalahelpguien",
+      "type": "gui",
+      "sortid": 729,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xpbushpalahelpguien"
+    },
+    {
+      "name": "Crusherpalahelpguien",
+      "type": "gui",
+      "sortid": 730,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crusherpalahelpguien"
+    },
+    {
+      "name": "Ormixedcoal",
+      "type": "fuel",
+      "sortid": 731,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ormixedcoal"
+    },
+    {
+      "name": "Amethystmixedcoalfuel",
+      "type": "fuel",
+      "sortid": 732,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethystmixedcoalfuel"
+    },
+    {
+      "name": "Titanemixedcoalfuel",
+      "type": "fuel",
+      "sortid": 733,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titanemixedcoalfuel"
+    },
+    {
+      "name": "Palamixedcoalfuel",
+      "type": "fuel",
+      "sortid": 734,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palamixedcoalfuel"
+    },
+    {
+      "name": "Hdvtbuy",
+      "type": "procedure",
+      "sortid": 726,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hdvtbuy",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Furnaceupgrade",
+      "type": "item",
+      "sortid": 735,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "furnaceupgrade"
     }
   ],
   "variable_elements": [
@@ -9823,6 +9951,12 @@
       "type": "itemstack",
       "scope": "map",
       "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "furnace_processing",
+      "type": "string",
+      "scope": "global",
+      "value": "\"\""
     }
   ],
   "sound_elements": [
@@ -9842,7 +9976,7 @@
       "entity.palamod.paladiumdynamite": "Paladium dynamite",
       "item.palamod.endium_ingot": "Endium ingot",
       "item.palamod.titane_axe": "Titane Axe",
-      "advancements.avancementcoreloading.title": "Core is loading please wait ",
+      "advancements.avancementcoreloading.title": "core is loading, please wait",
       "block.palamod.amethyste_ore": "Amethyste Ore",
       "item.palamod.titane_shovel": "Titane Shovel",
       "advancements.palamodavancement.descr": "A new dimension of adventure",
@@ -9973,6 +10107,7 @@
       "block.palamod.findiumstairs": "Findium stairs",
       "block.palamod.truetresure": "True tresure",
       "block.palamod.paladiummachine": "Paladium machine",
+      "item.palamod.furnaceupgrade": "Furnace upgrade",
       "gamerule.logsall": "logs all",
       "block.palamod.eggplant_3": "Eggplant state",
       "block.palamod.eggplant_2": "Eggplant state 2",
@@ -10130,10 +10265,10 @@
       "block.palamod.diamondspike": "Diamond spike",
       "block.palamod.orangeblue_2": "Orangeblue state 2",
       "block.palamod.orangeblue_3": "Orangeblue state 3",
-      "block.palamod.ostrya_wood_planks": "Ostrya planks",
+      "block.palamod.ostrya_wood_planks": "Ostrya Planks",
       "item.palamod.luckybeta": "Lucky beta",
       "item.palamod.eggplant": "Eggplant",
-      "item.palamod.strenghtstick": "strenght stick",
+      "item.palamod.strenghtstick": "Strenght stick",
       "block.palamod.ostrya_wood_wood": "Ostrya Wood",
       "item.palamod.hyperjumpstick": "Hyper jump stick",
       "block.palamod.erable_slab": "Erable Slab",
@@ -10291,6 +10426,7 @@
       "block.palamod.findiumstairs": "Escalier en findium",
       "block.palamod.truetresure": "Vrai trésor",
       "block.palamod.paladiummachine": "Paladium machine",
+      "item.palamod.furnaceupgrade": "Furnace upgrade",
       "gamerule.logsall": "logs tout",
       "block.palamod.eggplant_3": "Eggplant state",
       "block.palamod.eggplant_2": "Eggplant state 2",
@@ -10480,7 +10616,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "palamod ",
-    "version": "beta 1 build 16a1  0043",
+    "version": "beta 1 build 16a1  0044",
     "description": "the palamod ... in 1.16",
     "author": "cb9",
     "websiteURL": "https://mcreator.net, https://paladium-pvp.fr",

@@ -34,7 +34,7 @@
     ],
     "name": "Titane Ore",
     "specialInfo": [],
-    "hardness": 15.0,
+    "hardness": 5.05,
     "resistance": 18.11949159194239,
     "hasGravity": false,
     "isWaterloggable": false,

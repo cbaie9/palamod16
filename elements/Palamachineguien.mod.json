@@ -1,0 +1,152 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 200,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Palamachine",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Palamachine",
+          "x": 183,
+          "y": 37
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "palamachine is a machine for crafting",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "palamachine is a machine for crafting",
+          "x": 117,
+          "y": 55
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Sticks which allow you to have some",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Sticks which allow you to have some",
+          "x": 117,
+          "y": 65
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "effets like heal, speed or jump ",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "effets like heal, speed or jump ",
+          "x": 118,
+          "y": 77
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "palam2.png",
+          "use1Xscale": true,
+          "name": "palam2.png",
+          "x": 127,
+          "y": 101
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "The gui is like this",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "The gui is like this",
+          "x": 115,
+          "y": 91
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "See Sticks for Crafts",
+          "color": {
+            "value": -3394816,
+            "falpha": 0.0
+          },
+          "name": "See Sticks for Crafts",
+          "x": 195,
+          "y": 203
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "back",
+          "onClick": {
+            "name": "Blockconnecthelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "back",
+          "x": 123,
+          "y": 27
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "menu",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "menu",
+          "x": 251,
+          "y": 27
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Sticks craft",
+          "onClick": {
+            "name": "Connectstickgui1"
+          },
+          "width": 82,
+          "height": 20,
+          "name": "Sticks craft",
+          "x": 118,
+          "y": 181
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

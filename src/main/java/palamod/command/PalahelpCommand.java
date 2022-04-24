@@ -1,7 +1,7 @@
 
 package palamod.command;
 
-import palamod.procedures.BackpalahelpProcedure;
+import palamod.procedures.OpencheckssetuppalahelpProcedure;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -49,7 +49,7 @@ public class PalahelpCommand {
 			index[0]++;
 		});
 
-		BackpalahelpProcedure.executeProcedure(Stream
+		OpencheckssetuppalahelpProcedure.executeProcedure(Stream
 				.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
 						new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
 				.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));

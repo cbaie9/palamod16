@@ -3,6 +3,8 @@ package palamod.block;
 
 import palamod.itemgroup.PalamodItemGroup;
 
+import palamod.item.FindiumItem;
+
 import palamod.PalamodModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
@@ -82,7 +84,7 @@ public class FindiumOreBlock extends PalamodModElements.ModElement {
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(this, 1));
+			return Collections.singletonList(new ItemStack(FindiumItem.block));
 		}
 
 		@OnlyIn(Dist.CLIENT)

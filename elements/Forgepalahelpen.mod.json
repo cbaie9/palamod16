@@ -1,0 +1,148 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 300,
+    "height": 175,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Paladium Forge",
+          "color": {
+            "value": -65485,
+            "falpha": 0.0
+          },
+          "name": "Paladium Forge",
+          "x": 69,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "5forge.png",
+          "use1Xscale": true,
+          "name": "5forge.png",
+          "x": 190,
+          "y": 34
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "The forge is a machine for recycling your tools",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "The forge is a machine for recycling your tools",
+          "x": 66,
+          "y": 129
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "forge_front_on.png",
+          "use1Xscale": false,
+          "name": "forge_front_on.png",
+          "x": 71,
+          "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "(amethyst , titane and paladium) and re-tranform in ingot",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "(amethyst , titane and paladium) and re-tranform in ingot",
+          "x": 63,
+          "y": 139
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "And for making this, you will need coal or palamixed coal",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "And for making this, you will need coal or palamixed coal",
+          "x": 66,
+          "y": 149
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "for better utilitie like a furnace and wait a little",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "for better utilitie like a furnace and wait a little",
+          "x": 65,
+          "y": 159
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "and it done : ]",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "and it done : ]",
+          "x": 66,
+          "y": 170
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "back",
+          "onClick": {
+            "name": "Machineconnectpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "back",
+          "x": 66,
+          "y": 47
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "menu",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "menu",
+          "x": 66,
+          "y": 68
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}
