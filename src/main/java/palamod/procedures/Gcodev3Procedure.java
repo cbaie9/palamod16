@@ -98,7 +98,7 @@ public class Gcodev3Procedure {
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "gpala_num"));
+		}.getValue(world, new BlockPos(x, y, z), "gpala_num"));
 		if ((new Object() {
 			public ItemStack getItemStack(int sltid) {
 				Entity _ent = entity;
@@ -131,7 +131,7 @@ public class Gcodev3Procedure {
 				PalamodMod.LOGGER.debug((entity + "Insert paladium ingot into grinder"));
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -142,7 +142,7 @@ public class Gcodev3Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "gpala_num") + 1));
+					}.getValue(world, new BlockPos(x, y, z), "gpala_num") + 1));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
@@ -179,7 +179,7 @@ public class Gcodev3Procedure {
 				PalamodMod.LOGGER.debug((entity + "Insert paladium block into grinder"));
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -190,7 +190,7 @@ public class Gcodev3Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "gpala_num") + 9));
+					}.getValue(world, new BlockPos(x, y, z), "gpala_num") + 9));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}

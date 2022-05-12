@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 28,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -131,12 +131,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Power : vous permet d'être protèger",
+          "text": "Power : vous permet d'ï¿½tre protï¿½ger",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Power : vous permet d'être protèger",
+          "name": "Power : vous permet d'ï¿½tre protï¿½ger",
           "x": 134,
           "y": 125
         }
@@ -167,12 +167,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Téléportation : vous tp alétorement",
+          "text": "Tï¿½lï¿½portation : vous tp alï¿½torement",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Téléportation : vous tp alétorement",
+          "name": "Tï¿½lï¿½portation : vous tp alï¿½torement",
           "x": 133,
           "y": 146
         }

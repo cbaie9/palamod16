@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 28,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -49,12 +49,12 @@
       {
         "type": "label",
         "data": {
-          "text": "vous fait des dégats Peut peut être",
+          "text": "vous fait des dï¿½gats Peut peut ï¿½tre",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "vous fait des dégats Peut peut être",
+          "name": "vous fait des dï¿½gats Peut peut ï¿½tre",
           "x": 116,
           "y": 96
         }
@@ -62,12 +62,12 @@
       {
         "type": "label",
         "data": {
-          "text": "êmpecher la legendary stone de power",
+          "text": "ï¿½mpecher la legendary stone de power",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "êmpecher la legendary stone de power",
+          "name": "ï¿½mpecher la legendary stone de power",
           "x": 118,
           "y": 106
         }

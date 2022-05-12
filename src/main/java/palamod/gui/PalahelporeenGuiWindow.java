@@ -99,7 +99,7 @@ public class PalahelporeenGuiWindow extends ContainerScreen<PalahelporeenGui.Gui
 		this.font.drawString(ms, "some other thing", 18, 97, -205);
 		this.font.drawString(ms, "Low cost ore, can be easily find ", 6, 157, -6750055);
 		this.font.drawString(ms, "Very good ore for your first tools in the mod", 24, 125, -12829636);
-		this.font.drawString(ms, "Am\u00E9thyste :", 24, 145, -6750055);
+		this.font.drawString(ms, "Am\uFFFDthyste :", 24, 145, -6750055);
 		this.font.drawString(ms, "Titane :", 23, 116, -12829636);
 		this.font.drawString(ms, "Findium : can be used for crafting cave block and", 20, 87, -205);
 		this.font.drawString(ms, "Green Paladium : Paladium but very very rare", 23, 51, -10027213);

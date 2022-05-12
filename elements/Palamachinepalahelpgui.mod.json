@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 28,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -39,12 +39,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Batôn qui vous permeteront d'avoir des",
+          "text": "Batï¿½n qui vous permeteront d'avoir des",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Batôn qui vous permeteront d'avoir des",
+          "name": "Batï¿½n qui vous permeteront d'avoir des",
           "x": 117,
           "y": 65
         }
@@ -52,12 +52,12 @@
       {
         "type": "label",
         "data": {
-          "text": "effets différent ( force, soin, santé,",
+          "text": "effets diffï¿½rent ( force, soin, santï¿½,",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "effets différent ( force, soin, santé,",
+          "name": "effets diffï¿½rent ( force, soin, santï¿½,",
           "x": 118,
           "y": 77
         }
@@ -65,12 +65,12 @@
       {
         "type": "label",
         "data": {
-          "text": "vitesse et dégats )",
+          "text": "vitesse et dï¿½gats )",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "vitesse et dégats )",
+          "name": "vitesse et dï¿½gats )",
           "x": 116,
           "y": 88
         }
@@ -101,12 +101,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Voir Bâton pour les craft",
+          "text": "Voir Bï¿½ton pour les craft",
           "color": {
             "value": -3394816,
             "falpha": 0.0
           },
-          "name": "Voir Bâton pour les craft",
+          "name": "Voir Bï¿½ton pour les craft",
           "x": 178,
           "y": 201
         }

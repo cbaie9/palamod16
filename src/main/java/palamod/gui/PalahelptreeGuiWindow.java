@@ -92,7 +92,7 @@ public class PalahelptreeGuiWindow extends ContainerScreen<PalahelptreeGui.GuiCo
 		this.font.drawString(ms, "Erable : permet de crafter le", 39, 5, -52480);
 		this.font.drawString(ms, "portail en paladium", 40, 17, -52480);
 		this.font.drawString(ms, "Jacaranda : permet de crafter", 38, 37, -6750055);
-		this.font.drawString(ms, "le portail en am\u00E9thyste", 39, 48, -6750055);
+		this.font.drawString(ms, "le portail en am\uFFFDthyste", 39, 48, -6750055);
 		this.font.drawString(ms, "Judeecercis : permet de", 37, 71, -12829636);
 		this.font.drawString(ms, "Crafter le portail en titane", 38, 84, -12829636);
 		this.font.drawString(ms, "Ostrya : permet de crafter le", 39, 101, -13434727);

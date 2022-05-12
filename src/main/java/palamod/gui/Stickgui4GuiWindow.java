@@ -89,7 +89,7 @@ public class Stickgui4GuiWindow extends ContainerScreen<Stickgui4Gui.GuiContaine
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Heal stick : vous donne soin instantan\u00E9e", 3, 33, -12829636);
+		this.font.drawString(ms, "Heal stick : vous donne soin instantan\uFFFDe", 3, 33, -12829636);
 		this.font.drawString(ms, "craft de la heal orb", 261, 62, -12829636);
 		this.font.drawString(ms, "(--", 341, 76, -12829636);
 	}
@@ -104,7 +104,7 @@ public class Stickgui4GuiWindow extends ContainerScreen<Stickgui4Gui.GuiContaine
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		this.addButton(new Button(this.guiLeft + 7, this.guiTop + 8, 100, 20, new StringTextComponent("stick précédant"), e -> {
+		this.addButton(new Button(this.guiLeft + 7, this.guiTop + 8, 100, 20, new StringTextComponent("stick prï¿½cï¿½dant"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new Stickgui4Gui.ButtonPressedMessage(0, x, y, z));
 				Stickgui4Gui.handleButtonAction(entity, 0, x, y, z);

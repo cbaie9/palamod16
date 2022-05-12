@@ -75,7 +75,7 @@ public class OstryasapdropProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Ostrya_woodLeavesBlock.block
+		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Ostrya_woodLeavesBlock.block
 				&& !(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 						.getItem() == Items.SHEARS)) {
 			if (Math.random() < 0.005) {

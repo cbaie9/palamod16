@@ -68,7 +68,7 @@ public class SafekeepcodeprocessProcedure {
 		Entity entity = (Entity) dependencies.get("entity");
 		HashMap guistate = (HashMap) dependencies.get("guistate");
 		if (!world.isRemote()) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			BlockPos _bp = new BlockPos(x, y, z);
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
@@ -94,7 +94,7 @@ public class SafekeepcodeprocessProcedure {
 			}
 		}.getValue()) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -104,7 +104,7 @@ public class SafekeepcodeprocessProcedure {
 			}
 		} else {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -118,7 +118,7 @@ public class SafekeepcodeprocessProcedure {
 		{
 			Entity _ent = entity;
 			if (_ent instanceof ServerPlayerEntity) {
-				BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bpos = new BlockPos(x, y, z);
 				NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 					@Override
 					public ITextComponent getDisplayName() {
@@ -133,7 +133,7 @@ public class SafekeepcodeprocessProcedure {
 			}
 		}
 		if (!world.isRemote()) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			BlockPos _bp = new BlockPos(x, y, z);
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
@@ -142,7 +142,7 @@ public class SafekeepcodeprocessProcedure {
 				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 		if (!world.isRemote()) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			BlockPos _bp = new BlockPos(x, y, z);
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)

@@ -92,7 +92,7 @@ public class PhonecodeProcedure {
 				return "";
 			}
 		}.getText()).contains("4009")) {
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), FakepaladiumoreBlock.block.getDefaultState(), 3);
+			world.setBlockState(new BlockPos(x, y, z), FakepaladiumoreBlock.block.getDefaultState(), 3);
 			entity.attackEntityFrom(DamageSource.GENERIC, (float) 1);
 			if (entity instanceof PlayerEntity)
 				((PlayerEntity) entity).closeScreen();

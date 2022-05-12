@@ -38,9 +38,11 @@ public class HdvsellguiGuiWindow extends ContainerScreen<HdvsellguiGui.GuiContai
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.xSize = 176;
-		this.ySize = 166;
+		this.xSize = 180;
+		this.ySize = 180;
 	}
+
+	private static final ResourceLocation texture = new ResourceLocation("palamod:textures/hdvsellgui.png");
 
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
@@ -56,10 +58,10 @@ public class HdvsellguiGuiWindow extends ContainerScreen<HdvsellguiGui.GuiContai
 		RenderSystem.color4f(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("palamod:textures/backgroun2d.png"));
-		this.blit(ms, this.guiLeft + -118, this.guiTop + -37, 0, 0, 400, 236, 400, 236);
-
+		Minecraft.getInstance().getTextureManager().bindTexture(texture);
+		int k = (this.width - this.xSize) / 2;
+		int l = (this.height - this.ySize) / 2;
+		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 		RenderSystem.disableBlend();
 	}
 
@@ -85,10 +87,10 @@ public class HdvsellguiGuiWindow extends ContainerScreen<HdvsellguiGui.GuiContai
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "alpha", 227, 16, -1);
-		this.font.drawString(ms, "Prix de vente", 61, 72, -1);
-		this.font.drawString(ms, "Nom de l'item", 60, 34, -1);
-		this.font.drawString(ms, "Item", 204, 40, -10066330);
+		this.font.drawString(ms, "alpha", 147, 3, -1);
+		this.font.drawString(ms, "Prix de vente", 2, 36, -1);
+		this.font.drawString(ms, "Nom de l'item", 3, 4, -1);
+		this.font.drawString(ms, "Item", 126, 21, -10066330);
 	}
 
 	@Override
@@ -101,7 +103,7 @@ public class HdvsellguiGuiWindow extends ContainerScreen<HdvsellguiGui.GuiContai
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		market_name = new TextFieldWidget(this.font, this.guiLeft + 60, this.guiTop + 49, 120, 20, new StringTextComponent("Nom de l'item")) {
+		market_name = new TextFieldWidget(this.font, this.guiLeft + 3, this.guiTop + 15, 120, 20, new StringTextComponent("Nom de l'item")) {
 			{
 				setSuggestion("Nom de l'item");
 			}
@@ -127,7 +129,7 @@ public class HdvsellguiGuiWindow extends ContainerScreen<HdvsellguiGui.GuiContai
 		guistate.put("text:market_name", market_name);
 		market_name.setMaxStringLength(32767);
 		this.children.add(this.market_name);
-		market_price = new TextFieldWidget(this.font, this.guiLeft + 60, this.guiTop + 87, 120, 20, new StringTextComponent("prix")) {
+		market_price = new TextFieldWidget(this.font, this.guiLeft + 3, this.guiTop + 47, 120, 20, new StringTextComponent("prix")) {
 			{
 				setSuggestion("prix");
 			}
@@ -153,7 +155,7 @@ public class HdvsellguiGuiWindow extends ContainerScreen<HdvsellguiGui.GuiContai
 		guistate.put("text:market_price", market_price);
 		market_price.setMaxStringLength(32767);
 		this.children.add(this.market_price);
-		this.addButton(new Button(this.guiLeft + 61, this.guiTop + 127, 56, 20, new StringTextComponent("vendre"), e -> {
+		this.addButton(new Button(this.guiLeft + 6, this.guiTop + 68, 56, 20, new StringTextComponent("vendre"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new HdvsellguiGui.ButtonPressedMessage(0, x, y, z));
 				HdvsellguiGui.handleButtonAction(entity, 0, x, y, z);

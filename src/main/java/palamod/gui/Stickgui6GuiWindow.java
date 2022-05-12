@@ -86,7 +86,7 @@ public class Stickgui6GuiWindow extends ContainerScreen<Stickgui6Gui.GuiContaine
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Stick of gods: vous donne soin, speed  force pendant 40 \u00E0 60 secondes", 2, 33, -12829636);
+		this.font.drawString(ms, "Stick of gods: vous donne soin, speed  force pendant 40 \uFFFD 60 secondes", 2, 33, -12829636);
 	}
 
 	@Override
@@ -99,7 +99,7 @@ public class Stickgui6GuiWindow extends ContainerScreen<Stickgui6Gui.GuiContaine
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		this.addButton(new Button(this.guiLeft + 1, this.guiTop + 7, 100, 20, new StringTextComponent("stick précédant"), e -> {
+		this.addButton(new Button(this.guiLeft + 1, this.guiTop + 7, 100, 20, new StringTextComponent("stick prï¿½cï¿½dant"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new Stickgui6Gui.ButtonPressedMessage(0, x, y, z));
 				Stickgui6Gui.handleButtonAction(entity, 0, x, y, z);

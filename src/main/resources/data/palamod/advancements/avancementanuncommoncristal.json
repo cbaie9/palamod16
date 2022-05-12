@@ -1,6 +1,5 @@
 {
   "display": {
-    "background": "palamod:textures/paladium_block.png",
     "icon": {
       "item": "palamod:amethyste"
     },
@@ -44,5 +43,6 @@
       "palamod:amethyste_armor_boots_recipe",
       "palamod:ametystemixedcoalcraft"
     ]
-  }
+  },
+  "parent": "palamod:palamodavancement"
 }

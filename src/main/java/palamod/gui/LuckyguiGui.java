@@ -223,7 +223,7 @@ public class LuckyguiGui extends PalamodModElements.ModElement {
 			for (si = 0; si < 9; ++si)
 				this.addSlot(new Slot(inv, si, 0 + 8 + si * 18, 15 + 142));
 
-			EnterluckyProcedure.executeProcedure(Collections.EMPTY_MAP);
+			EnterluckyProcedure.executeProcedure(Collections.emptyMap());
 		}
 
 		public Map<Integer, Slot> get() {

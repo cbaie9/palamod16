@@ -2,6 +2,7 @@
 package palamod.gui;
 
 import palamod.procedures.OpenhdvsellProcedure;
+import palamod.procedures.HdvguiThisGUIIsOpenedProcedure;
 import palamod.procedures.HdvbuyProcedure;
 import palamod.procedures.Hdvbuy3Procedure;
 import palamod.procedures.Hdvbuy2Procedure;
@@ -179,6 +180,10 @@ public class HdvguiGui extends PalamodModElements.ModElement {
 					this.addSlot(new Slot(inv, sj + (si + 1) * 9, 62 + 8 + sj * 18, 229 + 84 + si * 18));
 			for (si = 0; si < 9; ++si)
 				this.addSlot(new Slot(inv, si, 62 + 8 + si * 18, 229 + 142));
+
+			HdvguiThisGUIIsOpenedProcedure
+					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 
 		public Map<Integer, Slot> get() {

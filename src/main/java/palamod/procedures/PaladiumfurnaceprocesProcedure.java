@@ -65,7 +65,7 @@ public class PaladiumfurnaceprocesProcedure {
 		double fireHeight = 0;
 		double previousRecipe = 0;
 		if (!world.isRemote()) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			BlockPos _bp = new BlockPos(x, y, z);
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
@@ -80,7 +80,7 @@ public class PaladiumfurnaceprocesProcedure {
 					return tileEntity.getTileData().getString(tag);
 				return "";
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "furnace_process"));
+		}.getValue(world, new BlockPos(x, y, z), "furnace_process"));
 		if (new Object() {
 			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
@@ -88,9 +88,9 @@ public class PaladiumfurnaceprocesProcedure {
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "pf_fuel") != 0) {
+		}.getValue(world, new BlockPos(x, y, z), "pf_fuel") != 0) {
 			{
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				BlockState _bs = PaladiumfurnaceonBlock.block.getDefaultState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -120,7 +120,7 @@ public class PaladiumfurnaceprocesProcedure {
 			}
 		} else {
 			{
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				BlockState _bs = PaladiumfurnaceBlock.block.getDefaultState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -156,15 +156,15 @@ public class PaladiumfurnaceprocesProcedure {
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "pf_fuel") != 0) {
-			fireHeight = ((new Object() {
+		}.getValue(world, new BlockPos(x, y, z), "pf_fuel") != 0) {
+			fireHeight = (((new Object() {
 				public double getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
 						return tileEntity.getTileData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "pf_fuel")) / 100 * 0.0625);
+			}.getValue(world, new BlockPos(x, y, z), "pf_fuel")) / 100) * 0.0625);
 			if ((new Object() {
 				public Direction getDirection(BlockPos pos) {
 					try {
@@ -179,7 +179,7 @@ public class PaladiumfurnaceprocesProcedure {
 						return Direction.NORTH;
 					}
 				}
-			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.NORTH) {
+			}.getDirection(new BlockPos(x, y, z))) == Direction.NORTH) {
 				world.addParticle(ParticleTypes.FLAME, (x + 0.5), (y + 0.2), (z - 0.1), 0, fireHeight, 0);
 			} else if ((new Object() {
 				public Direction getDirection(BlockPos pos) {
@@ -195,7 +195,7 @@ public class PaladiumfurnaceprocesProcedure {
 						return Direction.NORTH;
 					}
 				}
-			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.SOUTH) {
+			}.getDirection(new BlockPos(x, y, z))) == Direction.SOUTH) {
 				world.addParticle(ParticleTypes.FLAME, (x + 0.5), (y + 0.2), (z + 1.1), 0, fireHeight, 0);
 			} else if ((new Object() {
 				public Direction getDirection(BlockPos pos) {
@@ -211,7 +211,7 @@ public class PaladiumfurnaceprocesProcedure {
 						return Direction.NORTH;
 					}
 				}
-			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.WEST) {
+			}.getDirection(new BlockPos(x, y, z))) == Direction.WEST) {
 				world.addParticle(ParticleTypes.FLAME, (x - 0.1), (y + 0.2), (z + 0.5), 0, fireHeight, 0);
 			} else if ((new Object() {
 				public Direction getDirection(BlockPos pos) {
@@ -227,12 +227,12 @@ public class PaladiumfurnaceprocesProcedure {
 						return Direction.NORTH;
 					}
 				}
-			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.EAST) {
+			}.getDirection(new BlockPos(x, y, z))) == Direction.EAST) {
 				world.addParticle(ParticleTypes.FLAME, (x + 1.1), (y + 0.2), (z + 0.5), 0, fireHeight, 0);
 			}
 			if (Math.random() < 0.2) {
 				if (world instanceof World && !world.isRemote()) {
-					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+					((World) world).playSound(null, new BlockPos(x, y, z),
 							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.furnace.fire_crackle")),
 							SoundCategory.BLOCKS, (float) 1, (float) 1);
 				} else {
@@ -249,7 +249,7 @@ public class PaladiumfurnaceprocesProcedure {
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "pf_fuel") > 0
+		}.getValue(world, new BlockPos(x, y, z), "pf_fuel") > 0
 				&& ((world instanceof World) ? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -261,7 +261,7 @@ public class PaladiumfurnaceprocesProcedure {
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0)))), (World) world).isPresent() : false) && ((new Object() {
+				}.getItemStack(new BlockPos(x, y, z), (int) (0)))), (World) world).isPresent() : false) && ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -272,7 +272,7 @@ public class PaladiumfurnaceprocesProcedure {
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == ((world instanceof World
+				}.getItemStack(new BlockPos(x, y, z), (int) (1))).getItem() == ((world instanceof World
 						&& ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -284,7 +284,7 @@ public class PaladiumfurnaceprocesProcedure {
 								}
 								return _retval.get();
 							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0)))), ((World) world)).isPresent())
+						}.getItemStack(new BlockPos(x, y, z), (int) (0)))), ((World) world)).isPresent())
 								? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -296,9 +296,9 @@ public class PaladiumfurnaceprocesProcedure {
 										}
 										return _retval.get();
 									}
-								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0)))), (World) world).get().getRecipeOutput().copy()
-								: ItemStack.EMPTY).getItem()
-						&& !(new Object() {
+								}.getItemStack(new BlockPos(x, y, z), (int) (0)))), (World) world).get().getRecipeOutput().copy()
+								: ItemStack.EMPTY)
+						.getItem() && !(new Object() {
 							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
@@ -309,7 +309,7 @@ public class PaladiumfurnaceprocesProcedure {
 								}
 								return _retval.get();
 							}
-						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (1)) <= 64) || new Object() {
+						}.getAmount(world, new BlockPos(x, y, z), (int) (1)) <= 64) || new Object() {
 							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
@@ -320,9 +320,9 @@ public class PaladiumfurnaceprocesProcedure {
 								}
 								return _retval.get();
 							}
-						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (1)) == 0)) {
+						}.getAmount(world, new BlockPos(x, y, z), (int) (1)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -333,7 +333,7 @@ public class PaladiumfurnaceprocesProcedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "timer_p0f") + 1));
+					}.getValue(world, new BlockPos(x, y, z), "timer_p0f") + 1));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
@@ -348,7 +348,7 @@ public class PaladiumfurnaceprocesProcedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (3))).getItem() == FurnaceupgradeItem.block && new Object() {
+			}.getItemStack(new BlockPos(x, y, z), (int) (3))).getItem() == FurnaceupgradeItem.block && new Object() {
 				public int getAmount(IWorld world, BlockPos pos, int sltid) {
 					AtomicInteger _retval = new AtomicInteger(0);
 					TileEntity _ent = world.getTileEntity(pos);
@@ -359,7 +359,7 @@ public class PaladiumfurnaceprocesProcedure {
 					}
 					return _retval.get();
 				}
-			}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3)) != 0) {
+			}.getAmount(world, new BlockPos(x, y, z), (int) (3)) != 0) {
 				if (new Object() {
 					public double getValue(IWorld world, BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
@@ -367,7 +367,7 @@ public class PaladiumfurnaceprocesProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "timer_p0f") == Math.ceil(190 / new Object() {
+				}.getValue(world, new BlockPos(x, y, z), "timer_p0f") == Math.ceil(190 / new Object() {
 					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -378,9 +378,9 @@ public class PaladiumfurnaceprocesProcedure {
 						}
 						return _retval.get();
 					}
-				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3)))) {
+				}.getAmount(world, new BlockPos(x, y, z), (int) (3)))) {
 					{
-						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+						TileEntity _ent = world.getTileEntity(new BlockPos(x, y, z));
 						if (_ent != null) {
 							final int _sltid = (int) (1);
 							final ItemStack _setstack = ((world instanceof World
@@ -395,7 +395,7 @@ public class PaladiumfurnaceprocesProcedure {
 											}
 											return _retval.get();
 										}
-									}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0)))), ((World) world)).isPresent())
+									}.getItemStack(new BlockPos(x, y, z), (int) (0)))), ((World) world)).isPresent())
 											? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new Object() {
 												public ItemStack getItemStack(BlockPos pos, int sltid) {
 													AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -408,8 +408,7 @@ public class PaladiumfurnaceprocesProcedure {
 													}
 													return _retval.get();
 												}
-											}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0)))), (World) world).get()
-													.getRecipeOutput().copy()
+											}.getItemStack(new BlockPos(x, y, z), (int) (0)))), (World) world).get().getRecipeOutput().copy()
 											: ItemStack.EMPTY);
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(IWorld world, BlockPos pos, int sltid) {
@@ -422,7 +421,7 @@ public class PaladiumfurnaceprocesProcedure {
 									}
 									return _retval.get();
 								}
-							}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (1)) + 1));
+							}.getAmount(world, new BlockPos(x, y, z), (int) (1)) + 1));
 							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 								if (capability instanceof IItemHandlerModifiable) {
 									((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -431,7 +430,7 @@ public class PaladiumfurnaceprocesProcedure {
 						}
 					}
 					if (!world.isRemote()) {
-						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+						BlockPos _bp = new BlockPos(x, y, z);
 						TileEntity _tileEntity = world.getTileEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
 						if (_tileEntity != null)
@@ -440,7 +439,7 @@ public class PaladiumfurnaceprocesProcedure {
 							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 					}
 					{
-						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+						TileEntity _ent = world.getTileEntity(new BlockPos(x, y, z));
 						if (_ent != null) {
 							final int _sltid = (int) (2);
 							final int _amount = (int) 1;
@@ -453,86 +452,138 @@ public class PaladiumfurnaceprocesProcedure {
 							});
 						}
 					}
-				}
-			} else if (new Object() {
-				public double getValue(IWorld world, BlockPos pos, String tag) {
-					TileEntity tileEntity = world.getTileEntity(pos);
-					if (tileEntity != null)
-						return tileEntity.getTileData().getDouble(tag);
-					return -1;
-				}
-			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "timer_p0f") == 190) {
-				{
-					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-					if (_ent != null) {
-						final int _sltid = (int) (1);
-						final ItemStack _setstack = ((world instanceof World
-								&& ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new Object() {
-									public ItemStack getItemStack(BlockPos pos, int sltid) {
-										AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-										TileEntity _ent = world.getTileEntity(pos);
-										if (_ent != null) {
-											_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-												_retval.set(capability.getStackInSlot(sltid).copy());
-											});
-										}
-										return _retval.get();
-									}
-								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0)))), ((World) world)).isPresent())
-										? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new Object() {
-											public ItemStack getItemStack(BlockPos pos, int sltid) {
-												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-												TileEntity _ent = world.getTileEntity(pos);
-												if (_ent != null) {
-													_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-														_retval.set(capability.getStackInSlot(sltid).copy());
-													});
-												}
-												return _retval.get();
-											}
-										}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0)))), (World) world).get().getRecipeOutput()
-												.copy()
-										: ItemStack.EMPTY);
-						_setstack.setCount((int) (new Object() {
-							public int getAmount(IWorld world, BlockPos pos, int sltid) {
-								AtomicInteger _retval = new AtomicInteger(0);
-								TileEntity _ent = world.getTileEntity(pos);
-								if (_ent != null) {
-									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-										_retval.set(capability.getStackInSlot(sltid).getCount());
-									});
+				} else {
+					if (!world.isRemote()) {
+						BlockPos _bp = new BlockPos(x, y, z);
+						TileEntity _tileEntity = world.getTileEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_tileEntity != null)
+							_tileEntity.getTileData().putDouble("timer_p0f", (new Object() {
+								public double getValue(IWorld world, BlockPos pos, String tag) {
+									TileEntity tileEntity = world.getTileEntity(pos);
+									if (tileEntity != null)
+										return tileEntity.getTileData().getDouble(tag);
+									return -1;
 								}
-								return _retval.get();
-							}
-						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (1)) + 1));
-						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-							if (capability instanceof IItemHandlerModifiable) {
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
-							}
-						});
+							}.getValue(world, new BlockPos(x, y, z), "timer_p0f") + 1));
+						if (world instanceof World)
+							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 					}
 				}
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putDouble("timer_p0f", 0);
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				{
-					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-					if (_ent != null) {
-						final int _sltid = (int) (2);
-						final int _amount = (int) 1;
-						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-							if (capability instanceof IItemHandlerModifiable) {
-								ItemStack _stk = capability.getStackInSlot(_sltid).copy();
-								_stk.shrink(_amount);
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
-							}
-						});
+			} else {
+				if (new Object() {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
+						TileEntity tileEntity = world.getTileEntity(pos);
+						if (tileEntity != null)
+							return tileEntity.getTileData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, new BlockPos(x, y, z), "timer_p0f") == 190) {
+					{
+						TileEntity _ent = world.getTileEntity(new BlockPos(x, y, z));
+						if (_ent != null) {
+							final int _sltid = (int) (1);
+							final ItemStack _setstack = ((world instanceof World
+									&& ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new Object() {
+										public ItemStack getItemStack(BlockPos pos, int sltid) {
+											AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+											TileEntity _ent = world.getTileEntity(pos);
+											if (_ent != null) {
+												_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+													_retval.set(capability.getStackInSlot(sltid).copy());
+												});
+											}
+											return _retval.get();
+										}
+									}.getItemStack(new BlockPos(x, y, z), (int) (0)))), ((World) world)).isPresent())
+											? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new Object() {
+												public ItemStack getItemStack(BlockPos pos, int sltid) {
+													AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+													TileEntity _ent = world.getTileEntity(pos);
+													if (_ent != null) {
+														_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+																.ifPresent(capability -> {
+																	_retval.set(capability.getStackInSlot(sltid).copy());
+																});
+													}
+													return _retval.get();
+												}
+											}.getItemStack(new BlockPos(x, y, z), (int) (0)))), (World) world).get().getRecipeOutput().copy()
+											: ItemStack.EMPTY);
+							_setstack.setCount((int) (new Object() {
+								public int getAmount(IWorld world, BlockPos pos, int sltid) {
+									AtomicInteger _retval = new AtomicInteger(0);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).getCount());
+										});
+									}
+									return _retval.get();
+								}
+							}.getAmount(world, new BlockPos(x, y, z), (int) (1)) + 1));
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								if (capability instanceof IItemHandlerModifiable) {
+									((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+								}
+							});
+						}
+					}
+					if (!world.isRemote()) {
+						BlockPos _bp = new BlockPos(x, y, z);
+						TileEntity _tileEntity = world.getTileEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_tileEntity != null)
+							_tileEntity.getTileData().putDouble("timer_p0f", 0);
+						if (world instanceof World)
+							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+					}
+					{
+						TileEntity _ent = world.getTileEntity(new BlockPos(x, y, z));
+						if (_ent != null) {
+							final int _sltid = (int) (2);
+							final int _amount = (int) 1;
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								if (capability instanceof IItemHandlerModifiable) {
+									ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+									_stk.shrink(_amount);
+									((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+								}
+							});
+						}
+					}
+					if (!world.isRemote()) {
+						BlockPos _bp = new BlockPos(x, y, z);
+						TileEntity _tileEntity = world.getTileEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_tileEntity != null)
+							_tileEntity.getTileData().putDouble("timer_p0f", (new Object() {
+								public double getValue(IWorld world, BlockPos pos, String tag) {
+									TileEntity tileEntity = world.getTileEntity(pos);
+									if (tileEntity != null)
+										return tileEntity.getTileData().getDouble(tag);
+									return -1;
+								}
+							}.getValue(world, new BlockPos(x, y, z), "timer_p0f") + 1));
+						if (world instanceof World)
+							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+					}
+				} else {
+					if (!world.isRemote()) {
+						BlockPos _bp = new BlockPos(x, y, z);
+						TileEntity _tileEntity = world.getTileEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_tileEntity != null)
+							_tileEntity.getTileData().putDouble("timer_p0f", (new Object() {
+								public double getValue(IWorld world, BlockPos pos, String tag) {
+									TileEntity tileEntity = world.getTileEntity(pos);
+									if (tileEntity != null)
+										return tileEntity.getTileData().getDouble(tag);
+									return -1;
+								}
+							}.getValue(world, new BlockPos(x, y, z), "timer_p0f") + 1));
+						if (world instanceof World)
+							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 					}
 				}
 			}
@@ -547,7 +598,7 @@ public class PaladiumfurnaceprocesProcedure {
 				}
 				return _retval.get();
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))) > 0
+		}.getItemStack(new BlockPos(x, y, z), (int) (2)))) > 0
 				&& ((world instanceof World) ? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -559,7 +610,7 @@ public class PaladiumfurnaceprocesProcedure {
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0)))), (World) world).isPresent() : false) && ((new Object() {
+				}.getItemStack(new BlockPos(x, y, z), (int) (0)))), (World) world).isPresent() : false) && ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -570,7 +621,7 @@ public class PaladiumfurnaceprocesProcedure {
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == ((world instanceof World
+				}.getItemStack(new BlockPos(x, y, z), (int) (1))).getItem() == ((world instanceof World
 						&& ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -582,7 +633,7 @@ public class PaladiumfurnaceprocesProcedure {
 								}
 								return _retval.get();
 							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0)))), ((World) world)).isPresent())
+						}.getItemStack(new BlockPos(x, y, z), (int) (0)))), ((World) world)).isPresent())
 								? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new Object() {
 									public ItemStack getItemStack(BlockPos pos, int sltid) {
 										AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -594,9 +645,9 @@ public class PaladiumfurnaceprocesProcedure {
 										}
 										return _retval.get();
 									}
-								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0)))), (World) world).get().getRecipeOutput().copy()
-								: ItemStack.EMPTY).getItem()
-						&& !(new Object() {
+								}.getItemStack(new BlockPos(x, y, z), (int) (0)))), (World) world).get().getRecipeOutput().copy()
+								: ItemStack.EMPTY)
+						.getItem() && !(new Object() {
 							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
@@ -607,7 +658,7 @@ public class PaladiumfurnaceprocesProcedure {
 								}
 								return _retval.get();
 							}
-						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (1)) <= 64) || new Object() {
+						}.getAmount(world, new BlockPos(x, y, z), (int) (1)) <= 64) || new Object() {
 							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
@@ -618,9 +669,9 @@ public class PaladiumfurnaceprocesProcedure {
 								}
 								return _retval.get();
 							}
-						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (1)) == 0)) {
+						}.getAmount(world, new BlockPos(x, y, z), (int) (1)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -631,7 +682,7 @@ public class PaladiumfurnaceprocesProcedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "pf_fuel") + ForgeHooks.getBurnTime((new Object() {
+					}.getValue(world, new BlockPos(x, y, z), "pf_fuel") + ForgeHooks.getBurnTime((new Object() {
 						public ItemStack getItemStack(BlockPos pos, int sltid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							TileEntity _ent = world.getTileEntity(pos);
@@ -642,12 +693,12 @@ public class PaladiumfurnaceprocesProcedure {
 							}
 							return _retval.get();
 						}
-					}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))))));
+					}.getItemStack(new BlockPos(x, y, z), (int) (2))))));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			{
-				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+				TileEntity _ent = world.getTileEntity(new BlockPos(x, y, z));
 				if (_ent != null) {
 					final int _sltid = (int) (2);
 					final int _amount = (int) 1;
@@ -668,14 +719,14 @@ public class PaladiumfurnaceprocesProcedure {
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "pf_fuel") > 0 && new Object() {
+		}.getValue(world, new BlockPos(x, y, z), "pf_fuel") > 0 && new Object() {
 			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "timer_p0f") == 0) {
+		}.getValue(world, new BlockPos(x, y, z), "timer_p0f") == 0) {
 			if (new Object() {
 				public boolean getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
@@ -683,9 +734,9 @@ public class PaladiumfurnaceprocesProcedure {
 						return tileEntity.getTileData().getBoolean(tag);
 					return false;
 				}
-			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "pfDown_check")) {
+			}.getValue(world, new BlockPos(x, y, z), "pfDown_check")) {
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					BlockPos _bp = new BlockPos(x, y, z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
@@ -696,12 +747,12 @@ public class PaladiumfurnaceprocesProcedure {
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "pf_fuel")) - 1));
+						}.getValue(world, new BlockPos(x, y, z), "pf_fuel")) - 1));
 					if (world instanceof World)
 						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					BlockPos _bp = new BlockPos(x, y, z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
@@ -711,7 +762,7 @@ public class PaladiumfurnaceprocesProcedure {
 				}
 			} else {
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					BlockPos _bp = new BlockPos(x, y, z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)

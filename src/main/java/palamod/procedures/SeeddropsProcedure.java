@@ -70,40 +70,40 @@ public class SeeddropsProcedure {
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.GRASS
-				|| (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.DEAD_BUSH
-				|| (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.TALL_GRASS
-				|| (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.LARGE_FERN) && Math.random() < 0.1) {
+		if (((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.GRASS
+				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.DEAD_BUSH
+				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.TALL_GRASS
+				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.LARGE_FERN) && Math.random() < 0.1) {
 			if (world instanceof World && !world.isRemote()) {
 				ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(EggplantseedItem.block));
 				entityToSpawn.setPickupDelay((int) 10);
 				world.addEntity(entityToSpawn);
 			}
 		}
-		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.GRASS
-				|| (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.DEAD_BUSH
-				|| (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.TALL_GRASS
-				|| (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.LARGE_FERN) && Math.random() < 0.05) {
+		if (((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.GRASS
+				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.DEAD_BUSH
+				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.TALL_GRASS
+				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.LARGE_FERN) && Math.random() < 0.05) {
 			if (world instanceof World && !world.isRemote()) {
 				ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(ChervilseedItem.block));
 				entityToSpawn.setPickupDelay((int) 10);
 				world.addEntity(entityToSpawn);
 			}
 		}
-		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.GRASS
-				|| (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.DEAD_BUSH
-				|| (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.TALL_GRASS
-				|| (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.LARGE_FERN) && Math.random() < 0.01) {
+		if (((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.GRASS
+				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.DEAD_BUSH
+				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.TALL_GRASS
+				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.LARGE_FERN) && Math.random() < 0.01) {
 			if (world instanceof World && !world.isRemote()) {
 				ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(KiwanoseedItem.block));
 				entityToSpawn.setPickupDelay((int) 10);
 				world.addEntity(entityToSpawn);
 			}
 		}
-		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.GRASS
-				|| (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.DEAD_BUSH
-				|| (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.TALL_GRASS
-				|| (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.LARGE_FERN) && Math.random() < 0.005) {
+		if (((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.GRASS
+				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.DEAD_BUSH
+				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.TALL_GRASS
+				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.LARGE_FERN) && Math.random() < 0.005) {
 			if (world instanceof World && !world.isRemote()) {
 				ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(OrangeblueseedItem.block));
 				entityToSpawn.setPickupDelay((int) 10);

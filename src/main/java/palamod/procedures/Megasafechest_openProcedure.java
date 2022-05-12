@@ -65,7 +65,7 @@ public class Megasafechest_openProcedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "is_setup")) == true) {
+		}.getValue(world, new BlockPos(x, y, z), "is_setup")) == true) {
 			if (new Object() {
 				public boolean getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
@@ -73,7 +73,7 @@ public class Megasafechest_openProcedure {
 						return tileEntity.getTileData().getBoolean(tag);
 					return false;
 				}
-			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "safe_link")) {
+			}.getValue(world, new BlockPos(x, y, z), "safe_link")) {
 				if ((entity.getUniqueID().toString()).equals(new Object() {
 					public String getValue(IWorld world, BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
@@ -81,11 +81,11 @@ public class Megasafechest_openProcedure {
 							return tileEntity.getTileData().getString(tag);
 						return "";
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "name_auth"))) {
+				}.getValue(world, new BlockPos(x, y, z), "name_auth"))) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
-							BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
+							BlockPos _bpos = new BlockPos(x, y, z);
 							NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 								@Override
 								public ITextComponent getDisplayName() {
@@ -103,7 +103,7 @@ public class Megasafechest_openProcedure {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
-							BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
+							BlockPos _bpos = new BlockPos(x, y, z);
 							NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 								@Override
 								public ITextComponent getDisplayName() {
@@ -123,7 +123,7 @@ public class Megasafechest_openProcedure {
 				{
 					Entity _ent = entity;
 					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
+						BlockPos _bpos = new BlockPos(x, y, z);
 						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 							@Override
 							public ITextComponent getDisplayName() {
@@ -142,7 +142,7 @@ public class Megasafechest_openProcedure {
 			{
 				Entity _ent = entity;
 				if (_ent instanceof ServerPlayerEntity) {
-					BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
+					BlockPos _bpos = new BlockPos(x, y, z);
 					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
 						public ITextComponent getDisplayName() {

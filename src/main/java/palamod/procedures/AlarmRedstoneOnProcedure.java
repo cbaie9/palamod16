@@ -43,9 +43,9 @@ public class AlarmRedstoneOnProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		for (int index0 = 0; index0 < (int) (1000); index0++) {
-			if ((world instanceof World) ? ((World) world).isBlockPowered(new BlockPos((int) x, (int) y, (int) z)) : false) {
+			if ((world instanceof World) ? ((World) world).isBlockPowered(new BlockPos(x, y, z)) : false) {
 				if (world instanceof World && !world.isRemote()) {
-					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+					((World) world).playSound(null, new BlockPos(x, y, z),
 							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.ender_dragon.death")),
 							SoundCategory.MASTER, (float) 10, (float) 10);
 				} else {

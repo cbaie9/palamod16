@@ -77,11 +77,11 @@ public class WipguiGuiWindow extends ContainerScreen<WipguiGui.GuiContainerMod> 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
 		this.font.drawString(ms, "Palamod - Not in working in progress", 45, 6, -3407872);
-		this.font.drawString(ms, "release\u00B2 / poisson d'avril", 5, 208, -12829636);
-		this.font.drawString(ms, "Vous croyer qu'en 1 semaine on peut cr\u00E9er un hdv", 11, 36, -12829636);
+		this.font.drawString(ms, "release\uFFFD / poisson d'avril", 5, 208, -12829636);
+		this.font.drawString(ms, "Vous croyer qu'en 1 semaine on peut cr\uFFFDer un hdv", 11, 36, -12829636);
 		this.font.drawString(ms, "BRUH", 11, 51, -12829636);
 		this.font.drawString(ms, "Ceci est un poisson d'avril ( sans blague )", 10, 64, -12829636);
-		this.font.drawString(ms, "Sinon serieux rendez-vous \u00E0 la fermeture de la ", 7, 81, -12829636);
+		this.font.drawString(ms, "Sinon serieux rendez-vous \uFFFD la fermeture de la ", 7, 81, -12829636);
 		this.font.drawString(ms, "v7.5", 250, 80, -26368);
 		this.font.drawString(ms, "Pour avoir une surprise ", 7, 92, -12829636);
 		this.font.drawString(ms, "Ps /palagift pour du bonus", 6, 120, -12829636);

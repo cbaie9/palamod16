@@ -84,15 +84,15 @@ public class GrinderpalahelpguiGuiWindow extends ContainerScreen<Grinderpalahelp
 		this.font.drawString(ms, "Le grinder est une machine permettant de", 3, 42, -12829636);
 		this.font.drawString(ms, "Certain outil dont le hammer,la fastsword", 0, 53, -12829636);
 		this.font.drawString(ms, "et la broadsword Vous pouvez y ajouter", 1, 66, -12829636);
-		this.font.drawString(ms, "des upgrade am\u00E9liorent les outils", 2, 78, -12829636);
+		this.font.drawString(ms, "des upgrade am\uFFFDliorent les outils", 2, 78, -12829636);
 		this.font.drawString(ms, "Fortune : permet de dupliquer les objet ", 2, 88, -256);
-		this.font.drawString(ms, "min\u00E9s -) hammer", 3, 97, -256);
-		this.font.drawString(ms, "Smelt : cuit les minerais min\u00E9s -) hammer", 2, 106, -8504309);
+		this.font.drawString(ms, "min\uFFFDs -) hammer", 3, 97, -256);
+		this.font.drawString(ms, "Smelt : cuit les minerais min\uFFFDs -) hammer", 2, 106, -8504309);
 		this.font.drawString(ms, "Speed : augmante la vitesse -) hammer", 2, 115, -816878);
 		this.font.drawString(ms, "", -5, 71, -12829636);
 		this.font.drawString(ms, "Flame : -) fire aspect pour fastsword et", 1, 125, -3335911);
 		this.font.drawString(ms, "Broadsword", 2, 133, -1826784);
-		this.font.drawString(ms, "Damage : augmante les d\u00E9gats -) fastsword", 1, 141, -12829636);
+		this.font.drawString(ms, "Damage : augmante les d\uFFFDgats -) fastsword", 1, 141, -12829636);
 		this.font.drawString(ms, "+ broadsword", 1, 150, -12829636);
 		this.font.drawString(ms, "2 min 1/2", 159, 4, -12829636);
 	}

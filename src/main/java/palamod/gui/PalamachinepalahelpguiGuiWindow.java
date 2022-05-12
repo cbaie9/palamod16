@@ -82,11 +82,11 @@ public class PalamachinepalahelpguiGuiWindow extends ContainerScreen<Palamachine
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
 		this.font.drawString(ms, "Palamachine", 69, 17, -12829636);
 		this.font.drawString(ms, "La palamachine permet de crafter", 16, 35, -12829636);
-		this.font.drawString(ms, "Bat\u00F4n qui vous permeteront d'avoir des", 3, 45, -12829636);
-		this.font.drawString(ms, "effets diff\u00E9rent ( force, soin, sant\u00E9,", 4, 57, -12829636);
-		this.font.drawString(ms, "vitesse et d\u00E9gats )", 2, 68, -12829636);
+		this.font.drawString(ms, "Bat\uFFFDn qui vous permeteront d'avoir des", 3, 45, -12829636);
+		this.font.drawString(ms, "effets diff\uFFFDrent ( force, soin, sant\uFFFD,", 4, 57, -12829636);
+		this.font.drawString(ms, "vitesse et d\uFFFDgats )", 2, 68, -12829636);
 		this.font.drawString(ms, "La palamachine se presente comme ceci", 4, 88, -12829636);
-		this.font.drawString(ms, "Voir B\u00E2ton pour les craft", 64, 181, -3394816);
+		this.font.drawString(ms, "Voir B\uFFFDton pour les craft", 64, 181, -3394816);
 	}
 
 	@Override

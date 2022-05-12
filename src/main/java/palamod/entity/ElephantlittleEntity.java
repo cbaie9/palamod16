@@ -124,8 +124,8 @@ public class ElephantlittleEntity extends PalamodModElements.ModElement {
 		protected void registerGoals() {
 			super.registerGoals();
 			this.goalSelector.addGoal(1, new TemptGoal(this, 1, Ingredient.fromItems(Blocks.BAMBOO.asItem()), false));
-			this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
-			this.targetSelector.addGoal(3, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
+			this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setCallsForHelp());
+			this.targetSelector.addGoal(3, new HurtByTargetGoal(this).setCallsForHelp());
 			this.goalSelector.addGoal(4, new RandomWalkingGoal(this, 1));
 			this.goalSelector.addGoal(5, new LookRandomlyGoal(this));
 			this.goalSelector.addGoal(6, new SwimGoal(this));

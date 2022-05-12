@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 28,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -13,12 +13,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Hôtel de vente",
+          "text": "Hï¿½tel de vente",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Hôtel de vente",
+          "name": "Hï¿½tel de vente",
           "x": 111,
           "y": 13
         }
@@ -159,7 +159,7 @@
       {
         "type": "textfield",
         "data": {
-          "placeholder": "rechercher quelque chose dans l' hôtel de vente",
+          "placeholder": "rechercher quelque chose dans l' hï¿½tel de vente",
           "width": 120,
           "height": 20,
           "name": "recs",
@@ -329,6 +329,9 @@
         }
       }
     ],
+    "onOpen": {
+      "name": "HdvguiThisGUIIsOpened"
+    },
     "gridSettings": {
       "sx": 18,
       "sy": 18,

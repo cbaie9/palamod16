@@ -123,15 +123,15 @@ public class HdvsellguiGui extends PalamodModElements.ModElement {
 					}
 				}
 			}
-			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 211, 59) {
+			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 128, 33) {
 			}));
 			int si;
 			int sj;
 			for (si = 0; si < 3; ++si)
 				for (sj = 0; sj < 9; ++sj)
-					this.addSlot(new Slot(inv, sj + (si + 1) * 9, 0 + 8 + sj * 18, 0 + 84 + si * 18));
+					this.addSlot(new Slot(inv, sj + (si + 1) * 9, 2 + 8 + sj * 18, 16 + 84 + si * 18));
 			for (si = 0; si < 9; ++si)
-				this.addSlot(new Slot(inv, si, 0 + 8 + si * 18, 0 + 142));
+				this.addSlot(new Slot(inv, si, 2 + 8 + si * 18, 16 + 142));
 		}
 
 		public Map<Integer, Slot> get() {
@@ -375,7 +375,8 @@ public class HdvsellguiGui extends PalamodModElements.ModElement {
 		if (buttonID == 0) {
 
 			Hdvsell0Procedure.executeProcedure(Stream
-					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity),
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity),
 							new AbstractMap.SimpleEntry<>("guistate", guistate))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}

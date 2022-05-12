@@ -105,7 +105,7 @@ public class ForgeprocessProcedure {
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe"));
+		}.getValue(world, new BlockPos(x, y, z), "recipe"));
 		if ((new Object() {
 			public ItemStack getItemStack(BlockPos pos, int sltid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -117,7 +117,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == AmethysteOreBlock.block.asItem() && ((new Object() {
+		}.getItemStack(new BlockPos(x, y, z), (int) (0))).getItem() == AmethysteOreBlock.block.asItem() && ((new Object() {
 			public ItemStack getItemStack(BlockPos pos, int sltid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -128,7 +128,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == AmethysteItem.block && new Object() {
+		}.getItemStack(new BlockPos(x, y, z), (int) (2))).getItem() == AmethysteItem.block && new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -139,7 +139,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 62 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 62 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -150,9 +150,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -174,7 +174,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == AmethysteSwordItem.block && ((new Object() {
+		}.getItemStack(new BlockPos(x, y, z), (int) (0))).getItem() == AmethysteSwordItem.block && ((new Object() {
 			public ItemStack getItemStack(BlockPos pos, int sltid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -185,7 +185,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == AmethysteItem.block && new Object() {
+		}.getItemStack(new BlockPos(x, y, z), (int) (2))).getItem() == AmethysteItem.block && new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -196,7 +196,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 62 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 62 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -207,9 +207,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -231,7 +231,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == TitaneOreBlock.block.asItem() && ((new Object() {
+		}.getItemStack(new BlockPos(x, y, z), (int) (0))).getItem() == TitaneOreBlock.block.asItem() && ((new Object() {
 			public ItemStack getItemStack(BlockPos pos, int sltid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -242,7 +242,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == TitaneIngotItem.block && new Object() {
+		}.getItemStack(new BlockPos(x, y, z), (int) (2))).getItem() == TitaneIngotItem.block && new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -253,7 +253,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 62 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 62 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -264,9 +264,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -288,7 +288,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == PaladiumOreBlock.block.asItem() && ((new Object() {
+		}.getItemStack(new BlockPos(x, y, z), (int) (0))).getItem() == PaladiumOreBlock.block.asItem() && ((new Object() {
 			public ItemStack getItemStack(BlockPos pos, int sltid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -299,7 +299,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == PaladiumIngotItem.block && new Object() {
+		}.getItemStack(new BlockPos(x, y, z), (int) (2))).getItem() == PaladiumIngotItem.block && new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -310,7 +310,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 62 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 62 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -321,9 +321,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -345,7 +345,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == FindiumOreBlock.block.asItem() && ((new Object() {
+		}.getItemStack(new BlockPos(x, y, z), (int) (0))).getItem() == FindiumOreBlock.block.asItem() && ((new Object() {
 			public ItemStack getItemStack(BlockPos pos, int sltid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -356,7 +356,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == FindiumItem.block && new Object() {
+		}.getItemStack(new BlockPos(x, y, z), (int) (2))).getItem() == FindiumItem.block && new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -367,7 +367,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 62 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 62 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -378,9 +378,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -402,7 +402,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == PaladiumGreenoreBlock.block.asItem() && ((new Object() {
+		}.getItemStack(new BlockPos(x, y, z), (int) (0))).getItem() == PaladiumGreenoreBlock.block.asItem() && ((new Object() {
 			public ItemStack getItemStack(BlockPos pos, int sltid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -413,7 +413,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == PaladiumGreeningotItem.block && new Object() {
+		}.getItemStack(new BlockPos(x, y, z), (int) (2))).getItem() == PaladiumGreeningotItem.block && new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -424,7 +424,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 62 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 62 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -435,9 +435,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -487,7 +487,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 61 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 61 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -498,9 +498,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -550,7 +550,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 63 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 63 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -561,9 +561,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -613,7 +613,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 60 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 60 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -624,9 +624,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -676,7 +676,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 62 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 62 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -687,9 +687,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -739,7 +739,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 58 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 58 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -750,9 +750,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -802,7 +802,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 62 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 62 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -813,9 +813,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -865,7 +865,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 58 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 58 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -876,9 +876,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -928,7 +928,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 58 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 58 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -939,9 +939,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1005,7 +1005,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 61 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 61 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -1016,9 +1016,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1082,7 +1082,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 62 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 62 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -1093,9 +1093,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1145,7 +1145,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 62 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 62 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -1156,9 +1156,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1208,7 +1208,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 60 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 60 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -1219,9 +1219,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1271,7 +1271,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 62 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 62 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -1282,9 +1282,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1334,7 +1334,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 55 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 55 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -1345,9 +1345,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1397,7 +1397,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 61 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 61 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -1408,9 +1408,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1460,7 +1460,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 58 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 58 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -1471,9 +1471,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1521,7 +1521,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 58 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 58 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -1532,9 +1532,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1584,7 +1584,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 56 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 56 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -1595,9 +1595,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1647,7 +1647,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 57 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 57 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -1658,9 +1658,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1710,7 +1710,7 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) <= 60 || new Object() {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) <= 60 || new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -1721,9 +1721,9 @@ public class ForgeprocessProcedure {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) == 0)) {
+		}.getAmount(world, new BlockPos(x, y, z), (int) (2)) == 0)) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1736,7 +1736,7 @@ public class ForgeprocessProcedure {
 			}
 		} else {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1752,9 +1752,9 @@ public class ForgeprocessProcedure {
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe")) {
+		}.getValue(world, new BlockPos(x, y, z), "recipe")) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1770,7 +1770,7 @@ public class ForgeprocessProcedure {
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") >= 0) {
+		}.getValue(world, new BlockPos(x, y, z), "recipe") >= 0) {
 			if (new Object() {
 				public double getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
@@ -1778,7 +1778,7 @@ public class ForgeprocessProcedure {
 						return tileEntity.getTileData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "timer") >= 100) {
+			}.getValue(world, new BlockPos(x, y, z), "timer") >= 100) {
 				if (new Object() {
 					public double getValue(IWorld world, BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
@@ -1786,7 +1786,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 0) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 0) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -1817,7 +1817,7 @@ public class ForgeprocessProcedure {
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 2));
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 2));
 								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -1830,7 +1830,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 1) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 1) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -1861,7 +1861,7 @@ public class ForgeprocessProcedure {
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 2));
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 2));
 								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -1874,7 +1874,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 2) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 2) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -1905,7 +1905,7 @@ public class ForgeprocessProcedure {
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 2));
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 2));
 								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -1918,7 +1918,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 3) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 3) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -1949,7 +1949,7 @@ public class ForgeprocessProcedure {
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 2));
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 2));
 								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -1962,7 +1962,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 4) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 4) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -1993,7 +1993,7 @@ public class ForgeprocessProcedure {
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 2));
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 2));
 								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -2006,7 +2006,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 5) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 5) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -2038,7 +2038,7 @@ public class ForgeprocessProcedure {
 											}
 											return _retval.get();
 										}
-									}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 2));
+									}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 2));
 									((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 									_current.detectAndSendChanges();
 								}
@@ -2064,7 +2064,7 @@ public class ForgeprocessProcedure {
 											}
 											return _retval.get();
 										}
-									}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 1));
+									}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 1));
 									((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 									_current.detectAndSendChanges();
 								}
@@ -2079,7 +2079,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 6) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 6) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -2110,7 +2110,7 @@ public class ForgeprocessProcedure {
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 3));
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 3));
 								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -2123,7 +2123,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 7) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 7) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -2154,7 +2154,7 @@ public class ForgeprocessProcedure {
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 1));
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 1));
 								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -2167,7 +2167,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 8) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 8) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -2198,7 +2198,7 @@ public class ForgeprocessProcedure {
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 4));
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 4));
 								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -2211,7 +2211,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 9) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 9) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -2242,7 +2242,7 @@ public class ForgeprocessProcedure {
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 2));
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 2));
 								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -2255,7 +2255,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 10) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 10) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -2286,7 +2286,7 @@ public class ForgeprocessProcedure {
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 6));
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 6));
 								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -2299,7 +2299,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 11) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 11) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -2330,7 +2330,7 @@ public class ForgeprocessProcedure {
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 2));
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 2));
 								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -2343,7 +2343,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 12) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 12) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -2374,7 +2374,7 @@ public class ForgeprocessProcedure {
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 6));
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 6));
 								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -2387,7 +2387,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 13) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 13) {
 					if (entity instanceof PlayerEntity) {
 						Container _current = ((PlayerEntity) entity).openContainer;
 						if (_current instanceof Supplier) {
@@ -2405,7 +2405,7 @@ public class ForgeprocessProcedure {
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 6));
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 6));
 								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -2431,51 +2431,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 14) {
-					{
-						Entity _ent = entity;
-						if (_ent instanceof ServerPlayerEntity) {
-							Container _current = ((ServerPlayerEntity) _ent).openContainer;
-							if (_current instanceof Supplier) {
-								Object invobj = ((Supplier) _current).get();
-								if (invobj instanceof Map) {
-									((Slot) ((Map) invobj).get((int) (0))).decrStackSize((int) (1));
-									_current.detectAndSendChanges();
-								}
-							}
-						}
-					}
-					if (entity instanceof PlayerEntity) {
-						Container _current = ((PlayerEntity) entity).openContainer;
-						if (_current instanceof Supplier) {
-							Object invobj = ((Supplier) _current).get();
-							if (invobj instanceof Map) {
-								ItemStack _setstack = new ItemStack(TitaneIngotItem.block);
-								_setstack.setCount((int) (new Object() {
-									public int getAmount(IWorld world, BlockPos pos, int sltid) {
-										AtomicInteger _retval = new AtomicInteger(0);
-										TileEntity _ent = world.getTileEntity(pos);
-										if (_ent != null) {
-											_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-												_retval.set(capability.getStackInSlot(sltid).getCount());
-											});
-										}
-										return _retval.get();
-									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 3));
-								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
-								_current.detectAndSendChanges();
-							}
-						}
-					}
-				} else if (new Object() {
-					public double getValue(IWorld world, BlockPos pos, String tag) {
-						TileEntity tileEntity = world.getTileEntity(pos);
-						if (tileEntity != null)
-							return tileEntity.getTileData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 15) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 14) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -2506,7 +2462,7 @@ public class ForgeprocessProcedure {
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 2));
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 3));
 								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -2519,7 +2475,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 16) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 15) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -2550,7 +2506,7 @@ public class ForgeprocessProcedure {
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 1));
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 2));
 								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -2563,7 +2519,51 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 17) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 16) {
+					{
+						Entity _ent = entity;
+						if (_ent instanceof ServerPlayerEntity) {
+							Container _current = ((ServerPlayerEntity) _ent).openContainer;
+							if (_current instanceof Supplier) {
+								Object invobj = ((Supplier) _current).get();
+								if (invobj instanceof Map) {
+									((Slot) ((Map) invobj).get((int) (0))).decrStackSize((int) (1));
+									_current.detectAndSendChanges();
+								}
+							}
+						}
+					}
+					if (entity instanceof PlayerEntity) {
+						Container _current = ((PlayerEntity) entity).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								ItemStack _setstack = new ItemStack(TitaneIngotItem.block);
+								_setstack.setCount((int) (new Object() {
+									public int getAmount(IWorld world, BlockPos pos, int sltid) {
+										AtomicInteger _retval = new AtomicInteger(0);
+										TileEntity _ent = world.getTileEntity(pos);
+										if (_ent != null) {
+											_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+												_retval.set(capability.getStackInSlot(sltid).getCount());
+											});
+										}
+										return _retval.get();
+									}
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 1));
+								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
+								_current.detectAndSendChanges();
+							}
+						}
+					}
+				} else if (new Object() {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
+						TileEntity tileEntity = world.getTileEntity(pos);
+						if (tileEntity != null)
+							return tileEntity.getTileData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 17) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -2594,7 +2594,7 @@ public class ForgeprocessProcedure {
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 2));
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 2));
 								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -2607,7 +2607,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 18) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 18) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -2638,7 +2638,7 @@ public class ForgeprocessProcedure {
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 9));
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 9));
 								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -2651,7 +2651,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 19) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 19) {
 					if (entity instanceof PlayerEntity) {
 						Container _current = ((PlayerEntity) entity).openContainer;
 						if (_current instanceof Supplier) {
@@ -2669,7 +2669,7 @@ public class ForgeprocessProcedure {
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 3));
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 3));
 								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -2695,51 +2695,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 20) {
-					{
-						Entity _ent = entity;
-						if (_ent instanceof ServerPlayerEntity) {
-							Container _current = ((ServerPlayerEntity) _ent).openContainer;
-							if (_current instanceof Supplier) {
-								Object invobj = ((Supplier) _current).get();
-								if (invobj instanceof Map) {
-									((Slot) ((Map) invobj).get((int) (0))).decrStackSize((int) (1));
-									_current.detectAndSendChanges();
-								}
-							}
-						}
-					}
-					if (entity instanceof PlayerEntity) {
-						Container _current = ((PlayerEntity) entity).openContainer;
-						if (_current instanceof Supplier) {
-							Object invobj = ((Supplier) _current).get();
-							if (invobj instanceof Map) {
-								ItemStack _setstack = new ItemStack(TitaneIngotItem.block);
-								_setstack.setCount((int) (new Object() {
-									public int getAmount(IWorld world, BlockPos pos, int sltid) {
-										AtomicInteger _retval = new AtomicInteger(0);
-										TileEntity _ent = world.getTileEntity(pos);
-										if (_ent != null) {
-											_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-												_retval.set(capability.getStackInSlot(sltid).getCount());
-											});
-										}
-										return _retval.get();
-									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 6));
-								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
-								_current.detectAndSendChanges();
-							}
-						}
-					}
-				} else if (new Object() {
-					public double getValue(IWorld world, BlockPos pos, String tag) {
-						TileEntity tileEntity = world.getTileEntity(pos);
-						if (tileEntity != null)
-							return tileEntity.getTileData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 21) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 20) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -2770,7 +2726,7 @@ public class ForgeprocessProcedure {
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 5));
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 6));
 								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -2783,7 +2739,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 22) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 21) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -2814,7 +2770,7 @@ public class ForgeprocessProcedure {
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 8));
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 5));
 								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -2827,7 +2783,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 23) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 22) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -2858,7 +2814,7 @@ public class ForgeprocessProcedure {
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 7));
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 8));
 								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -2871,7 +2827,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 24) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 23) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -2902,7 +2858,7 @@ public class ForgeprocessProcedure {
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 4));
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 7));
 								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -2915,7 +2871,20 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 25) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 24) {
+					{
+						Entity _ent = entity;
+						if (_ent instanceof ServerPlayerEntity) {
+							Container _current = ((ServerPlayerEntity) _ent).openContainer;
+							if (_current instanceof Supplier) {
+								Object invobj = ((Supplier) _current).get();
+								if (invobj instanceof Map) {
+									((Slot) ((Map) invobj).get((int) (0))).decrStackSize((int) (1));
+									_current.detectAndSendChanges();
+								}
+							}
+						}
+					}
 					if (entity instanceof PlayerEntity) {
 						Container _current = ((PlayerEntity) entity).openContainer;
 						if (_current instanceof Supplier) {
@@ -2933,7 +2902,38 @@ public class ForgeprocessProcedure {
 										}
 										return _retval.get();
 									}
-								}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2)) + 4));
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 4));
+								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
+								_current.detectAndSendChanges();
+							}
+						}
+					}
+				} else if (new Object() {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
+						TileEntity tileEntity = world.getTileEntity(pos);
+						if (tileEntity != null)
+							return tileEntity.getTileData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 25) {
+					if (entity instanceof PlayerEntity) {
+						Container _current = ((PlayerEntity) entity).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								ItemStack _setstack = new ItemStack(TitaneIngotItem.block);
+								_setstack.setCount((int) (new Object() {
+									public int getAmount(IWorld world, BlockPos pos, int sltid) {
+										AtomicInteger _retval = new AtomicInteger(0);
+										TileEntity _ent = world.getTileEntity(pos);
+										if (_ent != null) {
+											_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+												_retval.set(capability.getStackInSlot(sltid).getCount());
+											});
+										}
+										return _retval.get();
+									}
+								}.getAmount(world, new BlockPos(x, y, z), (int) (2)) + 4));
 								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
 								_current.detectAndSendChanges();
 							}
@@ -2959,7 +2959,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 26) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 26) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -2980,7 +2980,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 26) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 26) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -3001,7 +3001,7 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") == 27) {
+				}.getValue(world, new BlockPos(x, y, z), "recipe") == 27) {
 					{
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -3017,7 +3017,7 @@ public class ForgeprocessProcedure {
 					}
 				}
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					BlockPos _bp = new BlockPos(x, y, z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
@@ -3033,7 +3033,7 @@ public class ForgeprocessProcedure {
 						return tileEntity.getTileData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuel") == 0) {
+			}.getValue(world, new BlockPos(x, y, z), "fuel") == 0) {
 				if (new Object() {
 					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
@@ -3045,7 +3045,7 @@ public class ForgeprocessProcedure {
 						}
 						return _retval.get();
 					}
-				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (1)) > 0 && new Object() {
+				}.getAmount(world, new BlockPos(x, y, z), (int) (1)) > 0 && new Object() {
 					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -3056,7 +3056,7 @@ public class ForgeprocessProcedure {
 						}
 						return _retval.get();
 					}
-				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (0)) != 0) {
+				}.getAmount(world, new BlockPos(x, y, z), (int) (0)) != 0) {
 					if ((new Object() {
 						public ItemStack getItemStack(int sltid) {
 							Entity _ent = entity;
@@ -3073,7 +3073,7 @@ public class ForgeprocessProcedure {
 						}
 					}.getItemStack((int) (1))).getItem() == Blocks.COAL_BLOCK.asItem()) {
 						{
-							TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+							TileEntity _ent = world.getTileEntity(new BlockPos(x, y, z));
 							if (_ent != null) {
 								final int _sltid = (int) (1);
 								final int _amount = (int) 1;
@@ -3090,7 +3090,7 @@ public class ForgeprocessProcedure {
 							PalamodMod.LOGGER.debug((entity + "insert block of coal"));
 						}
 						if (!world.isRemote()) {
-							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+							BlockPos _bp = new BlockPos(x, y, z);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_tileEntity != null)
@@ -3099,7 +3099,7 @@ public class ForgeprocessProcedure {
 								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 						}
 						if (!world.isRemote()) {
-							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+							BlockPos _bp = new BlockPos(x, y, z);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_tileEntity != null)
@@ -3137,7 +3137,7 @@ public class ForgeprocessProcedure {
 						}
 					}.getItemStack((int) (1))).getItem() == Items.CHARCOAL) {
 						{
-							TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+							TileEntity _ent = world.getTileEntity(new BlockPos(x, y, z));
 							if (_ent != null) {
 								final int _sltid = (int) (1);
 								final int _amount = (int) 1;
@@ -3154,7 +3154,7 @@ public class ForgeprocessProcedure {
 							PalamodMod.LOGGER.debug((entity + "insert coal"));
 						}
 						if (!world.isRemote()) {
-							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+							BlockPos _bp = new BlockPos(x, y, z);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_tileEntity != null)
@@ -3163,7 +3163,7 @@ public class ForgeprocessProcedure {
 								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 						}
 						if (!world.isRemote()) {
-							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+							BlockPos _bp = new BlockPos(x, y, z);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_tileEntity != null)
@@ -3187,7 +3187,7 @@ public class ForgeprocessProcedure {
 						}
 					}.getItemStack((int) (1))).getItem() == PalamixedcharoalItem.block) {
 						{
-							TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+							TileEntity _ent = world.getTileEntity(new BlockPos(x, y, z));
 							if (_ent != null) {
 								final int _sltid = (int) (1);
 								final int _amount = (int) 1;
@@ -3204,7 +3204,7 @@ public class ForgeprocessProcedure {
 							PalamodMod.LOGGER.debug((entity + "insert palamixed coal"));
 						}
 						if (!world.isRemote()) {
-							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+							BlockPos _bp = new BlockPos(x, y, z);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_tileEntity != null)
@@ -3213,7 +3213,7 @@ public class ForgeprocessProcedure {
 								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 						}
 						if (!world.isRemote()) {
-							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+							BlockPos _bp = new BlockPos(x, y, z);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_tileEntity != null)
@@ -3237,7 +3237,7 @@ public class ForgeprocessProcedure {
 						}
 					}.getItemStack((int) (1))).getItem() == GoldmixedcoalItem.block) {
 						{
-							TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+							TileEntity _ent = world.getTileEntity(new BlockPos(x, y, z));
 							if (_ent != null) {
 								final int _sltid = (int) (1);
 								final int _amount = (int) 1;
@@ -3254,7 +3254,7 @@ public class ForgeprocessProcedure {
 							PalamodMod.LOGGER.debug((entity + "insert gold mixed coal"));
 						}
 						if (!world.isRemote()) {
-							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+							BlockPos _bp = new BlockPos(x, y, z);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_tileEntity != null)
@@ -3263,7 +3263,7 @@ public class ForgeprocessProcedure {
 								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 						}
 						if (!world.isRemote()) {
-							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+							BlockPos _bp = new BlockPos(x, y, z);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_tileEntity != null)
@@ -3287,7 +3287,7 @@ public class ForgeprocessProcedure {
 						}
 					}.getItemStack((int) (1))).getItem() == AmethystmixedcoalItem.block) {
 						{
-							TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+							TileEntity _ent = world.getTileEntity(new BlockPos(x, y, z));
 							if (_ent != null) {
 								final int _sltid = (int) (1);
 								final int _amount = (int) 1;
@@ -3304,7 +3304,7 @@ public class ForgeprocessProcedure {
 							PalamodMod.LOGGER.debug((entity + "insert amethyst mixed coal"));
 						}
 						if (!world.isRemote()) {
-							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+							BlockPos _bp = new BlockPos(x, y, z);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_tileEntity != null)
@@ -3313,7 +3313,7 @@ public class ForgeprocessProcedure {
 								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 						}
 						if (!world.isRemote()) {
-							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+							BlockPos _bp = new BlockPos(x, y, z);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_tileEntity != null)
@@ -3337,7 +3337,7 @@ public class ForgeprocessProcedure {
 						}
 					}.getItemStack((int) (1))).getItem() == TitanemixedcoalItem.block) {
 						{
-							TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+							TileEntity _ent = world.getTileEntity(new BlockPos(x, y, z));
 							if (_ent != null) {
 								final int _sltid = (int) (1);
 								final int _amount = (int) 1;
@@ -3354,7 +3354,7 @@ public class ForgeprocessProcedure {
 							PalamodMod.LOGGER.debug((entity + "insert titane mixed coal"));
 						}
 						if (!world.isRemote()) {
-							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+							BlockPos _bp = new BlockPos(x, y, z);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_tileEntity != null)
@@ -3363,7 +3363,7 @@ public class ForgeprocessProcedure {
 								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 						}
 						if (!world.isRemote()) {
-							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+							BlockPos _bp = new BlockPos(x, y, z);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_tileEntity != null)
@@ -3374,7 +3374,7 @@ public class ForgeprocessProcedure {
 					}
 				} else {
 					if (!world.isRemote()) {
-						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+						BlockPos _bp = new BlockPos(x, y, z);
 						TileEntity _tileEntity = world.getTileEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
 						if (_tileEntity != null)
@@ -3392,9 +3392,9 @@ public class ForgeprocessProcedure {
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuel") > 0) {
+		}.getValue(world, new BlockPos(x, y, z), "fuel") > 0) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3405,7 +3405,7 @@ public class ForgeprocessProcedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuel")) - 1));
+					}.getValue(world, new BlockPos(x, y, z), "fuel")) - 1));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
@@ -3416,9 +3416,9 @@ public class ForgeprocessProcedure {
 						return tileEntity.getTileData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "recipe") >= 0) {
+			}.getValue(world, new BlockPos(x, y, z), "recipe") >= 0) {
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					BlockPos _bp = new BlockPos(x, y, z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
@@ -3429,7 +3429,7 @@ public class ForgeprocessProcedure {
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "timer") + 1));
+						}.getValue(world, new BlockPos(x, y, z), "timer") + 1));
 					if (world instanceof World)
 						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
@@ -3441,16 +3441,16 @@ public class ForgeprocessProcedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuel") > 0 && new Object() {
+					}.getValue(world, new BlockPos(x, y, z), "fuel") > 0 && new Object() {
 						public double getValue(IWorld world, BlockPos pos, String tag) {
 							TileEntity tileEntity = world.getTileEntity(pos);
 							if (tileEntity != null)
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "timer") < 20) {
+					}.getValue(world, new BlockPos(x, y, z), "timer") < 20) {
 						if (!world.isRemote()) {
-							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+							BlockPos _bp = new BlockPos(x, y, z);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_tileEntity != null)
@@ -3461,7 +3461,7 @@ public class ForgeprocessProcedure {
 											return tileEntity.getTileData().getDouble(tag);
 										return -1;
 									}
-								}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "timer") + 1));
+								}.getValue(world, new BlockPos(x, y, z), "timer") + 1));
 							if (world instanceof World)
 								((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 						}
@@ -3472,7 +3472,7 @@ public class ForgeprocessProcedure {
 			}
 		}
 		if (!world.isRemote()) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			BlockPos _bp = new BlockPos(x, y, z);
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
@@ -3483,14 +3483,14 @@ public class ForgeprocessProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "fuel")) / (new Object() {
+				}.getValue(world, new BlockPos(x, y, z), "fuel")) / (new Object() {
 					public double getValue(IWorld world, BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
 						if (tileEntity != null)
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "maxFuel"))) * 100));
+				}.getValue(world, new BlockPos(x, y, z), "maxFuel"))) * 100));
 			if (world instanceof World)
 				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}

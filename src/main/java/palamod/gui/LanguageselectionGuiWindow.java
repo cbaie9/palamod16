@@ -96,7 +96,7 @@ public class LanguageselectionGuiWindow extends ContainerScreen<Languageselectio
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		this.addButton(new Button(this.guiLeft + 28, this.guiTop + 64, 67, 20, new StringTextComponent("français"), e -> {
+		this.addButton(new Button(this.guiLeft + 28, this.guiTop + 64, 67, 20, new StringTextComponent("franï¿½ais"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new LanguageselectionGui.ButtonPressedMessage(0, x, y, z));
 				LanguageselectionGui.handleButtonAction(entity, 0, x, y, z);

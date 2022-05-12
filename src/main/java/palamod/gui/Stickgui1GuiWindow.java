@@ -90,8 +90,8 @@ public class Stickgui1GuiWindow extends ContainerScreen<Stickgui1Gui.GuiContaine
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
 		this.font.drawString(ms, "Sticks", 173, 4, -12829636);
-		this.font.drawString(ms, "Les stick ( b\u00E2ton) de craftent dans la palamachine.Il en existe de plusieures", 8, 15, -12829636);
-		this.font.drawString(ms, "types diff\u00E9rent", 7, 28, -12829636);
+		this.font.drawString(ms, "Les stick ( b\uFFFDton) de craftent dans la palamachine.Il en existe de plusieures", 8, 15, -12829636);
+		this.font.drawString(ms, "types diff\uFFFDrent", 7, 28, -12829636);
 		this.font.drawString(ms, "Speed stick : vous permet d'avoir un speed 3 pendant 10 secondes", 5, 83, -12829636);
 		this.font.drawString(ms, "Craft de la speed orb", 257, 124, -12829636);
 		this.font.drawString(ms, "(-", 343, 137, -12829636);

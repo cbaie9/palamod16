@@ -73,15 +73,15 @@ public class StatusdevnoteGuiWindow extends ContainerScreen<StatusdevnoteGui.Gui
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
 		this.font.drawString(ms, "Dev log #0001 build 0040  v16a1", 3, 5, -12829636);
-		this.font.drawString(ms, "Probl\u00E8me de market", 2, 26, -12829636);
+		this.font.drawString(ms, "Probl\uFFFDme de market", 2, 26, -12829636);
 		this.font.drawString(ms, "- Stokage de l'item en tant que nbt ", 9, 39, -12829636);
 		this.font.drawString(ms, "autre", 6, 54, -12829636);
-		this.font.drawString(ms, "Retard indermin\u00E9e des commande type /f", 5, 65, -12829636);
+		this.font.drawString(ms, "Retard indermin\uFFFDe des commande type /f", 5, 65, -12829636);
 		this.font.drawString(ms, "A cause de refont, + maj moteur  arguments prochianment", 4, 76, -12829636);
 		this.font.drawString(ms, "11/04/2022", 240, 7, -12829636);
 		this.font.drawString(ms, "Info rapide : Le Market sera de 100 slots extensibles", 8, 116, -12829636);
 		this.font.drawString(ms, "Par les maj : system de copier coller relais", 6, 129, -12829636);
-		this.font.drawString(ms, "Au faite l'adminshop sortira rapidement apr\u00E8s la snapshot", 1, 150, -12829636);
+		this.font.drawString(ms, "Au faite l'adminshop sortira rapidement apr\uFFFDs la snapshot", 1, 150, -12829636);
 		this.font.drawString(ms, "Du market ; system similaire", 1, 161, -12829636);
 	}
 

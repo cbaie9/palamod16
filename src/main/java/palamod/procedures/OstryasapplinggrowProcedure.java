@@ -73,133 +73,84 @@ public class OstryasapplinggrowProcedure {
 		} else {
 			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.BONE_MEAL
 					&& Math.random() < 0.5) {
-				if ((world.getBlockState(new BlockPos((int) x, (int) (Math.floor(y) + 1), (int) z))).getBlock() == Blocks.AIR
-						&& (world.getBlockState(new BlockPos((int) x, (int) (Math.floor(y) + 2), (int) z))).getBlock() == Blocks.AIR
-						&& (world.getBlockState(new BlockPos((int) x, (int) (Math.floor(y) + 3), (int) z))).getBlock() == Blocks.AIR
-						&& (world.getBlockState(new BlockPos((int) x, (int) (Math.floor(y) + 4), (int) z))).getBlock() == Blocks.AIR
-						&& (world.getBlockState(new BlockPos((int) x, (int) (Math.floor(y) + 5), (int) z))).getBlock() == Blocks.AIR
-						&& (world.getBlockState(new BlockPos((int) x, (int) (Math.floor(y) + 6), (int) z))).getBlock() == Blocks.AIR
-						&& (world.getBlockState(new BlockPos((int) (Math.floor(x) + 1), (int) (Math.floor(y) + 4), (int) z))).getBlock() == Blocks.AIR
-						&& (world.getBlockState(new BlockPos((int) (Math.floor(x) + 1), (int) (Math.floor(y) + 5), (int) z))).getBlock() == Blocks.AIR
-						&& (world.getBlockState(new BlockPos((int) (Math.floor(x) - 1), (int) (Math.floor(y) + 4), (int) z))).getBlock() == Blocks.AIR
-						&& (world.getBlockState(new BlockPos((int) (Math.floor(x) - 1), (int) (Math.floor(y) + 5), (int) z))).getBlock() == Blocks.AIR
-						|| (world.getBlockState(new BlockPos((int) x, (int) (Math.floor(y) + 1), (int) z))).getBlock() == Blocks.CAVE_AIR
-								&& (world.getBlockState(new BlockPos((int) x, (int) (Math.floor(y) + 2), (int) z))).getBlock() == Blocks.CAVE_AIR
-								&& (world.getBlockState(new BlockPos((int) x, (int) (Math.floor(y) + 3), (int) z))).getBlock() == Blocks.CAVE_AIR
-								&& (world.getBlockState(new BlockPos((int) x, (int) (Math.floor(y) + 4), (int) z))).getBlock() == Blocks.CAVE_AIR
-								&& (world.getBlockState(new BlockPos((int) x, (int) (Math.floor(y) + 5), (int) z))).getBlock() == Blocks.CAVE_AIR
-								&& (world.getBlockState(new BlockPos((int) x, (int) (Math.floor(y) + 6), (int) z))).getBlock() == Blocks.CAVE_AIR
-								&& (world.getBlockState(new BlockPos((int) (Math.floor(x) + 1), (int) (Math.floor(y) + 4), (int) z)))
-										.getBlock() == Blocks.CAVE_AIR
-								&& (world.getBlockState(new BlockPos((int) (Math.floor(x) + 1), (int) (Math.floor(y) + 5), (int) z)))
-										.getBlock() == Blocks.CAVE_AIR
-								&& (world.getBlockState(new BlockPos((int) (Math.floor(x) - 1), (int) (Math.floor(y) + 4), (int) z)))
-										.getBlock() == Blocks.CAVE_AIR
-								&& (world.getBlockState(new BlockPos((int) (Math.floor(x) - 1), (int) (Math.floor(y) + 5), (int) z)))
-										.getBlock() == Blocks.CAVE_AIR) {
+				if ((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock() == Blocks.AIR
+						&& (world.getBlockState(new BlockPos(x, y + 2, z))).getBlock() == Blocks.AIR
+						&& (world.getBlockState(new BlockPos(x, y + 3, z))).getBlock() == Blocks.AIR
+						&& (world.getBlockState(new BlockPos(x, y + 4, z))).getBlock() == Blocks.AIR
+						&& (world.getBlockState(new BlockPos(x, y + 5, z))).getBlock() == Blocks.AIR
+						&& (world.getBlockState(new BlockPos(x, y + 6, z))).getBlock() == Blocks.AIR
+						&& (world.getBlockState(new BlockPos(x + 1, y + 4, z))).getBlock() == Blocks.AIR
+						&& (world.getBlockState(new BlockPos(x + 1, y + 5, z))).getBlock() == Blocks.AIR
+						&& (world.getBlockState(new BlockPos(x - 1, y + 4, z))).getBlock() == Blocks.AIR
+						&& (world.getBlockState(new BlockPos(x - 1, y + 5, z))).getBlock() == Blocks.AIR
+						|| (world.getBlockState(new BlockPos(x, y + 1, z))).getBlock() == Blocks.CAVE_AIR
+								&& (world.getBlockState(new BlockPos(x, y + 2, z))).getBlock() == Blocks.CAVE_AIR
+								&& (world.getBlockState(new BlockPos(x, y + 3, z))).getBlock() == Blocks.CAVE_AIR
+								&& (world.getBlockState(new BlockPos(x, y + 4, z))).getBlock() == Blocks.CAVE_AIR
+								&& (world.getBlockState(new BlockPos(x, y + 5, z))).getBlock() == Blocks.CAVE_AIR
+								&& (world.getBlockState(new BlockPos(x, y + 6, z))).getBlock() == Blocks.CAVE_AIR
+								&& (world.getBlockState(new BlockPos(x + 1, y + 4, z))).getBlock() == Blocks.CAVE_AIR
+								&& (world.getBlockState(new BlockPos(x + 1, y + 5, z))).getBlock() == Blocks.CAVE_AIR
+								&& (world.getBlockState(new BlockPos(x - 1, y + 4, z))).getBlock() == Blocks.CAVE_AIR
+								&& (world.getBlockState(new BlockPos(x - 1, y + 5, z))).getBlock() == Blocks.CAVE_AIR) {
 					world.addParticle(ParticleTypes.SPIT, x, y, z, 0, 1, 0);
 					{
-						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+						BlockPos _bp = new BlockPos(x, y, z);
 						BlockState _bs = Ostrya_woodLogBlock.block.getDefaultState();
 						world.setBlockState(_bp, _bs, 3);
 					}
-					world.setBlockState(new BlockPos((int) x, (int) (Math.floor(y) + 1), (int) z), Ostrya_woodLogBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) x, (int) (Math.floor(y) + 2), (int) z), Ostrya_woodLogBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) x, (int) (Math.floor(y) + 3), (int) z), Ostrya_woodLogBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) x, (int) (Math.floor(y) + 4), (int) z), Ostrya_woodLogBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) x, (int) (Math.floor(y) + 5), (int) z), Ostrya_woodLogBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) x, (int) (Math.floor(y) + 6), (int) z), Ostrya_woodLogBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) x, (int) (Math.floor(y) + 7), (int) z), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) - 1), (int) (Math.floor(y) + 3), (int) (Math.floor(z) + 0)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) + 1), (int) (Math.floor(y) + 3), (int) (Math.floor(z) + 0)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) + 0), (int) (Math.floor(y) + 3), (int) (Math.floor(z) + 1)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) + 0), (int) (Math.floor(y) + 3), (int) (Math.floor(z) - 1)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) - 1), (int) (Math.floor(y) + 3), (int) (Math.floor(z) - 1)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) + 1), (int) (Math.floor(y) + 3), (int) (Math.floor(z) + 1)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) + 0), (int) (Math.floor(y) + 3), (int) (Math.floor(z) + 2)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) + 0), (int) (Math.floor(y) + 3), (int) (Math.floor(z) + 2)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) + 0), (int) (Math.floor(y) + 3), (int) (Math.floor(z) - 2)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) + 1), (int) (Math.floor(y) + 3), (int) (Math.floor(z) - 2)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) - 1), (int) (Math.floor(y) + 3), (int) (Math.floor(z) - 2)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) - 2), (int) (Math.floor(y) + 3), (int) (Math.floor(z) - 2)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) + 2), (int) (Math.floor(y) + 3), (int) (Math.floor(z) - 2)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) + 2), (int) (Math.floor(y) + 3), (int) (Math.floor(z) + 2)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) - 2), (int) (Math.floor(y) + 3), (int) (Math.floor(z) + 2)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) - 1), (int) (Math.floor(y) + 3), (int) (Math.floor(z) + 2)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) + 1), (int) (Math.floor(y) + 3), (int) (Math.floor(z) + 2)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) + 2), (int) (Math.floor(y) + 3), (int) (Math.floor(z) + 1)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) + 2), (int) (Math.floor(y) + 3), (int) (Math.floor(z) - 1)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) + 2), (int) (Math.floor(y) + 3), (int) (Math.floor(z) - 1)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) - 2), (int) (Math.floor(y) + 3), (int) (Math.floor(z) - 1)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) - 2), (int) (Math.floor(y) + 3), (int) (Math.floor(z) - 0)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) + 2), (int) (Math.floor(y) + 3), (int) (Math.floor(z) - 0)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) + 0), (int) (Math.floor(y) + 3), (int) (Math.floor(z) - 2)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) + 0), (int) (Math.floor(y) + 3), (int) (Math.floor(z) + 2)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) - 1), (int) (Math.floor(y) + 3), (int) (Math.floor(z) + 1)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) - 2), (int) (Math.floor(y) + 3), (int) (Math.floor(z) + 1)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) + 0), (int) (Math.floor(y) + 4), (int) (Math.floor(z) - 1)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) + 0), (int) (Math.floor(y) + 4), (int) (Math.floor(z) + 1)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) + 1), (int) (Math.floor(y) + 4), (int) (Math.floor(z) + 1)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) - 1), (int) (Math.floor(y) + 4), (int) (Math.floor(z) + 1)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) + 1), (int) (Math.floor(y) + 4), (int) (Math.floor(z) - 1)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) - 1), (int) (Math.floor(y) + 4), (int) (Math.floor(z) - 1)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) - 1), (int) (Math.floor(y) + 4), (int) (Math.floor(z) - 1)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) - 1), (int) (Math.floor(y) + 4), (int) (Math.floor(z) - 1)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) - 1), (int) (Math.floor(y) + 4), (int) (Math.floor(z) + 0)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) + 1), (int) (Math.floor(y) + 4), (int) (Math.floor(z) + 0)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) + 1), (int) (Math.floor(y) + 5), (int) (Math.floor(z) + 0)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) - 1), (int) (Math.floor(y) + 5), (int) (Math.floor(z) + 0)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) - 0), (int) (Math.floor(y) + 5), (int) (Math.floor(z) + 1)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) - 0), (int) (Math.floor(y) + 5), (int) (Math.floor(z) - 1)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) + 1), (int) (Math.floor(y) + 6), (int) (Math.floor(z) + 0)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) - 1), (int) (Math.floor(y) + 6), (int) (Math.floor(z) + 0)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) - 0), (int) (Math.floor(y) + 6), (int) (Math.floor(z) + 1)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
-					world.setBlockState(new BlockPos((int) (Math.floor(x) - 0), (int) (Math.floor(y) + 6), (int) (Math.floor(z) - 1)),
-							Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x, y + 1, z), Ostrya_woodLogBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x, y + 2, z), Ostrya_woodLogBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x, y + 3, z), Ostrya_woodLogBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x, y + 4, z), Ostrya_woodLogBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x, y + 5, z), Ostrya_woodLogBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x, y + 6, z), Ostrya_woodLogBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x, y + 7, z), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x - 1, y + 3, z + 0), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x + 1, y + 3, z + 0), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x + 0, y + 3, z + 1), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x + 0, y + 3, z - 1), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x - 1, y + 3, z - 1), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x + 1, y + 3, z + 1), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x + 0, y + 3, z + 2), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x + 0, y + 3, z + 2), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x + 0, y + 3, z - 2), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x + 1, y + 3, z - 2), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x - 1, y + 3, z - 2), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x - 2, y + 3, z - 2), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x + 2, y + 3, z - 2), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x + 2, y + 3, z + 2), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x - 2, y + 3, z + 2), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x - 1, y + 3, z + 2), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x + 1, y + 3, z + 2), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x + 2, y + 3, z + 1), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x + 2, y + 3, z - 1), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x + 2, y + 3, z - 1), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x - 2, y + 3, z - 1), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x - 2, y + 3, z - 0), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x + 2, y + 3, z - 0), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x + 0, y + 3, z - 2), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x + 0, y + 3, z + 2), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x - 1, y + 3, z + 1), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x - 2, y + 3, z + 1), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x + 0, y + 4, z - 1), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x + 0, y + 4, z + 1), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x + 1, y + 4, z + 1), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x - 1, y + 4, z + 1), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x + 1, y + 4, z - 1), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x - 1, y + 4, z - 1), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x - 1, y + 4, z - 1), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x - 1, y + 4, z - 1), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x - 1, y + 4, z + 0), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x + 1, y + 4, z + 0), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x + 1, y + 5, z + 0), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x - 1, y + 5, z + 0), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x - 0, y + 5, z + 1), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x - 0, y + 5, z - 1), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x + 1, y + 6, z + 0), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x - 1, y + 6, z + 0), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x - 0, y + 6, z + 1), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos(x - 0, y + 6, z - 1), Ostrya_woodLeavesBlock.block.getDefaultState(), 3);
 				}
 			}
 		}

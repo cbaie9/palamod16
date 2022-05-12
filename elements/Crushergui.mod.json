@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 28,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -86,12 +86,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Probabilité : <VAR:integer:crusher_num_var_seen> %",
+          "text": "Probabilitï¿½ : <VAR:integer:crusher_num_var_seen> %",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Probabilité : <VAR:integer:crusher_num_var_seen> %",
+          "name": "Probabilitï¿½ : <VAR:integer:crusher_num_var_seen> %",
           "x": 216,
           "y": 62
         }

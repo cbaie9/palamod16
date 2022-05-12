@@ -85,9 +85,9 @@ public class Boots20Procedure {
 		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.FEET) : ItemStack.EMPTY)
 				.getItem() == WeightedItem.boots && entity.getMotion().getY() >= 0.25
 				&& BlockTags.getCollection().getTagByID(new ResourceLocation("forge:destructable"))
-						.contains((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock())) {
+						.contains((world.getBlockState(new BlockPos(x, y, z))).getBlock())) {
 			{
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				BlockState _bs = Blocks.AIR.getDefaultState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -101,9 +101,9 @@ public class Boots20Procedure {
 				world.setBlockState(_bp, _bs, 3);
 			}
 			if (BlockTags.getCollection().getTagByID(new ResourceLocation("forge:destructable"))
-					.contains((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock())) {
+					.contains((world.getBlockState(new BlockPos(x - 1, y, z))).getBlock())) {
 				{
-					BlockPos _bp = new BlockPos((int) (x - 1), (int) y, (int) z);
+					BlockPos _bp = new BlockPos(x - 1, y, z);
 					BlockState _bs = Blocks.AIR.getDefaultState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -118,9 +118,9 @@ public class Boots20Procedure {
 				}
 			}
 			if (BlockTags.getCollection().getTagByID(new ResourceLocation("forge:destructable"))
-					.contains((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock())) {
+					.contains((world.getBlockState(new BlockPos(x, y, z - 1))).getBlock())) {
 				{
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z - 1));
+					BlockPos _bp = new BlockPos(x, y, z - 1);
 					BlockState _bs = Blocks.AIR.getDefaultState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -135,9 +135,9 @@ public class Boots20Procedure {
 				}
 			}
 			if (BlockTags.getCollection().getTagByID(new ResourceLocation("forge:destructable"))
-					.contains((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock())) {
+					.contains((world.getBlockState(new BlockPos(x, y, z + 1))).getBlock())) {
 				{
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z + 1));
+					BlockPos _bp = new BlockPos(x, y, z + 1);
 					BlockState _bs = Blocks.AIR.getDefaultState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -152,9 +152,9 @@ public class Boots20Procedure {
 				}
 			}
 			if (BlockTags.getCollection().getTagByID(new ResourceLocation("forge:destructable"))
-					.contains((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock())) {
+					.contains((world.getBlockState(new BlockPos(x + 1, y, z))).getBlock())) {
 				{
-					BlockPos _bp = new BlockPos((int) (x + 1), (int) y, (int) z);
+					BlockPos _bp = new BlockPos(x + 1, y, z);
 					BlockState _bs = Blocks.AIR.getDefaultState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -169,9 +169,9 @@ public class Boots20Procedure {
 				}
 			}
 			if (BlockTags.getCollection().getTagByID(new ResourceLocation("forge:destructable"))
-					.contains((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z + 1)))).getBlock())) {
+					.contains((world.getBlockState(new BlockPos(x + 1, y, z + 1))).getBlock())) {
 				{
-					BlockPos _bp = new BlockPos((int) (x + 1), (int) y, (int) (z + 1));
+					BlockPos _bp = new BlockPos(x + 1, y, z + 1);
 					BlockState _bs = Blocks.AIR.getDefaultState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -186,9 +186,9 @@ public class Boots20Procedure {
 				}
 			}
 			if (BlockTags.getCollection().getTagByID(new ResourceLocation("forge:destructable"))
-					.contains((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)))).getBlock())) {
+					.contains((world.getBlockState(new BlockPos(x + 1, y, z - 1))).getBlock())) {
 				{
-					BlockPos _bp = new BlockPos((int) (x + 1), (int) y, (int) (z - 1));
+					BlockPos _bp = new BlockPos(x + 1, y, z - 1);
 					BlockState _bs = Blocks.AIR.getDefaultState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -203,9 +203,9 @@ public class Boots20Procedure {
 				}
 			}
 			if (BlockTags.getCollection().getTagByID(new ResourceLocation("forge:destructable"))
-					.contains((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z - 1)))).getBlock())) {
+					.contains((world.getBlockState(new BlockPos(x - 1, y, z - 1))).getBlock())) {
 				{
-					BlockPos _bp = new BlockPos((int) (x - 1), (int) y, (int) (z - 1));
+					BlockPos _bp = new BlockPos(x - 1, y, z - 1);
 					BlockState _bs = Blocks.AIR.getDefaultState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -220,9 +220,9 @@ public class Boots20Procedure {
 				}
 			}
 			if (BlockTags.getCollection().getTagByID(new ResourceLocation("forge:destructable"))
-					.contains((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)))).getBlock())) {
+					.contains((world.getBlockState(new BlockPos(x - 1, y, z + 1))).getBlock())) {
 				{
-					BlockPos _bp = new BlockPos((int) (x - 1), (int) y, (int) (z + 1));
+					BlockPos _bp = new BlockPos(x - 1, y, z + 1);
 					BlockState _bs = Blocks.AIR.getDefaultState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {

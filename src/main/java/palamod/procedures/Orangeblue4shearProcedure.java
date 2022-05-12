@@ -52,7 +52,7 @@ public class Orangeblue4shearProcedure {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
 		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.SHEARS) {
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Orangeblue0Block.block.getDefaultState(), 3);
+			world.setBlockState(new BlockPos(x, y, z), Orangeblue0Block.block.getDefaultState(), 3);
 			if (world instanceof World && !world.isRemote()) {
 				ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(OrangeblueItem.block));
 				entityToSpawn.setPickupDelay((int) 10);

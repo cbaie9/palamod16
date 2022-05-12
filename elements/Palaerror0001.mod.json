@@ -1,0 +1,75 @@
+{
+  "_fv": 28,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 190,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Pala error - 0001",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Pala error - 0001",
+          "x": 167,
+          "y": 42
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "The hdv is locked for organisation",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "The hdv is locked for organisation",
+          "x": 125,
+          "y": 63
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Try later",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Try later",
+          "x": 185,
+          "y": 75
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Reconnect to hdv",
+          "onClick": {
+            "name": "Hdv_open"
+          },
+          "width": 108,
+          "height": 20,
+          "name": "Reconnect to hdv",
+          "x": 159,
+          "y": 155
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

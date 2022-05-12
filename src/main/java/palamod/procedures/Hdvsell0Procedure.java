@@ -1,15 +1,27 @@
 package palamod.procedures;
 
+import palamod.gui.PalaerrorGui;
+
+import palamod.PalamodModVariables;
+
 import palamod.PalamodMod;
+
+import net.minecraftforge.fml.network.NetworkHooks;
 
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.network.PacketBuffer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.container.Slot;
+import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.gui.widget.TextFieldWidget;
 import net.minecraft.block.BlockState;
@@ -18,12 +30,29 @@ import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
+import io.netty.buffer.Unpooled;
+
 public class Hdvsell0Procedure {
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
 				PalamodMod.LOGGER.warn("Failed to load dependency world for procedure Hdvsell0!");
+			return;
+		}
+		if (dependencies.get("x") == null) {
+			if (!dependencies.containsKey("x"))
+				PalamodMod.LOGGER.warn("Failed to load dependency x for procedure Hdvsell0!");
+			return;
+		}
+		if (dependencies.get("y") == null) {
+			if (!dependencies.containsKey("y"))
+				PalamodMod.LOGGER.warn("Failed to load dependency y for procedure Hdvsell0!");
+			return;
+		}
+		if (dependencies.get("z") == null) {
+			if (!dependencies.containsKey("z"))
+				PalamodMod.LOGGER.warn("Failed to load dependency z for procedure Hdvsell0!");
 			return;
 		}
 		if (dependencies.get("entity") == null) {
@@ -37,8 +66,13 @@ public class Hdvsell0Procedure {
 			return;
 		}
 		IWorld world = (IWorld) dependencies.get("world");
+		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
+		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
+		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
 		HashMap guistate = (HashMap) dependencies.get("guistate");
+		boolean t1c = false;
+		boolean t2c = false;
 		if ((new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
@@ -46,9 +80,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed0")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed0")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -57,7 +91,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -74,7 +108,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -96,8 +130,24 @@ public class Hdvsell0Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+			PalamodModVariables.MapVariables.get(world).market_item0 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -122,7 +172,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -180,9 +230,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed1")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed1")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -191,7 +241,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -208,7 +258,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -230,8 +280,24 @@ public class Hdvsell0Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+			PalamodModVariables.MapVariables.get(world).market_item1 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -256,7 +322,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -314,9 +380,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed2")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed2")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -340,7 +406,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -349,7 +415,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -366,7 +432,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -388,8 +454,24 @@ public class Hdvsell0Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+			PalamodModVariables.MapVariables.get(world).market_item2 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -448,9 +530,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed3")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed3")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -474,7 +556,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -483,7 +565,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -500,7 +582,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -522,8 +604,24 @@ public class Hdvsell0Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+			PalamodModVariables.MapVariables.get(world).market_item3 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -582,9 +680,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed4")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed4")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -593,7 +691,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -610,7 +708,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -632,8 +730,24 @@ public class Hdvsell0Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+			PalamodModVariables.MapVariables.get(world).market_item4 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -658,7 +772,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -716,9 +830,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed5")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed5")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -727,7 +841,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -744,7 +858,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -766,8 +880,24 @@ public class Hdvsell0Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+			PalamodModVariables.MapVariables.get(world).market_item5 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -791,7 +921,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -850,9 +980,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed6")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed6")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -861,7 +991,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -878,7 +1008,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -900,8 +1030,24 @@ public class Hdvsell0Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+			PalamodModVariables.MapVariables.get(world).market_item6 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -926,7 +1072,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -984,9 +1130,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed7")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed7")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -995,7 +1141,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1012,7 +1158,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1034,8 +1180,24 @@ public class Hdvsell0Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+			PalamodModVariables.MapVariables.get(world).market_item7 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1059,7 +1221,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1118,9 +1280,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed8")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed8")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1129,7 +1291,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1146,7 +1308,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1168,8 +1330,24 @@ public class Hdvsell0Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+			PalamodModVariables.MapVariables.get(world).market_item8 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1193,7 +1371,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1252,9 +1430,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed9")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed9")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1263,7 +1441,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1280,7 +1458,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1302,8 +1480,24 @@ public class Hdvsell0Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+			PalamodModVariables.MapVariables.get(world).market_item9 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1327,7 +1521,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1386,9 +1580,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed10")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed10")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1397,7 +1591,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1414,7 +1608,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1436,8 +1630,24 @@ public class Hdvsell0Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+			PalamodModVariables.MapVariables.get(world).market_item10 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1461,7 +1671,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1520,9 +1730,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed11")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed11")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1531,7 +1741,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1547,8 +1757,24 @@ public class Hdvsell0Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+			PalamodModVariables.MapVariables.get(world).market_item11 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1571,7 +1797,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1595,7 +1821,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1654,9 +1880,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed12")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed12")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1679,7 +1905,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1695,8 +1921,24 @@ public class Hdvsell0Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+			PalamodModVariables.MapVariables.get(world).market_item12 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1720,7 +1962,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1729,7 +1971,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1788,9 +2030,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed13")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed13")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1814,7 +2056,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1839,7 +2081,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1847,8 +2089,24 @@ public class Hdvsell0Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+			PalamodModVariables.MapVariables.get(world).market_item13 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1865,7 +2123,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1922,9 +2180,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed14")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed14")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1948,7 +2206,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1956,8 +2214,24 @@ public class Hdvsell0Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+			PalamodModVariables.MapVariables.get(world).market_item14 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1974,7 +2248,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1997,7 +2271,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2056,9 +2330,25 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed15")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed15")) == true) {
+			PalamodModVariables.MapVariables.get(world).market_item15 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2081,7 +2371,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2098,7 +2388,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2107,7 +2397,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2131,7 +2421,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2190,9 +2480,25 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed16")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed16")) == true) {
+			PalamodModVariables.MapVariables.get(world).market_item16 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2215,7 +2521,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2224,7 +2530,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2241,7 +2547,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2265,7 +2571,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2324,9 +2630,25 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed17")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed17")) == true) {
+			PalamodModVariables.MapVariables.get(world).market_item17 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2349,7 +2671,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2358,7 +2680,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2375,7 +2697,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2399,7 +2721,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2458,9 +2780,25 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed18")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed18")) == true) {
+			PalamodModVariables.MapVariables.get(world).market_item18 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2483,7 +2821,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2492,7 +2830,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2509,7 +2847,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2533,7 +2871,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2592,9 +2930,25 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed19")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed19")) == true) {
+			PalamodModVariables.MapVariables.get(world).market_item19 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2611,7 +2965,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2620,7 +2974,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2643,7 +2997,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2667,7 +3021,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2726,9 +3080,25 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed20")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed20")) == true) {
+			PalamodModVariables.MapVariables.get(world).market_item20 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2751,7 +3121,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2760,7 +3130,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2777,7 +3147,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2801,7 +3171,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2860,9 +3230,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed21")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed21")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2879,7 +3249,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2888,7 +3258,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2911,7 +3281,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2935,7 +3305,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2959,6 +3329,22 @@ public class Hdvsell0Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+			PalamodModVariables.MapVariables.get(world).market_item21 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			{
 				Entity _ent = entity;
 				if (_ent instanceof ServerPlayerEntity) {
@@ -2994,9 +3380,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed22")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed22")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3013,7 +3399,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3022,7 +3408,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3045,7 +3431,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3069,7 +3455,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3093,6 +3479,22 @@ public class Hdvsell0Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+			PalamodModVariables.MapVariables.get(world).market_item22 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			{
 				Entity _ent = entity;
 				if (_ent instanceof ServerPlayerEntity) {
@@ -3128,9 +3530,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed23")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed23")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3153,7 +3555,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3162,7 +3564,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3179,7 +3581,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3203,7 +3605,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3227,6 +3629,22 @@ public class Hdvsell0Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+			PalamodModVariables.MapVariables.get(world).market_item23 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			{
 				Entity _ent = entity;
 				if (_ent instanceof ServerPlayerEntity) {
@@ -3262,9 +3680,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed24")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed24")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3287,7 +3705,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3296,7 +3714,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3320,7 +3738,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3336,8 +3754,24 @@ public class Hdvsell0Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+			PalamodModVariables.MapVariables.get(world).market_item25 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3396,9 +3830,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed25")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed25")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3421,7 +3855,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3430,7 +3864,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3446,8 +3880,24 @@ public class Hdvsell0Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+			PalamodModVariables.MapVariables.get(world).market_item25 = (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0)));
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3471,7 +3921,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3530,9 +3980,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed26")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed26")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3555,7 +4005,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3564,7 +4014,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3581,7 +4031,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3605,7 +4055,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3664,9 +4114,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed27")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed27")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3689,7 +4139,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3698,7 +4148,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3715,7 +4165,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3739,7 +4189,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3798,9 +4248,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed28")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed28")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3823,7 +4273,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3832,7 +4282,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3849,7 +4299,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3873,7 +4323,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3932,9 +4382,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed29")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed29")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3951,7 +4401,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3960,7 +4410,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3983,7 +4433,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4007,7 +4457,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4066,9 +4516,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed30")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed30")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4085,7 +4535,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4094,7 +4544,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4117,7 +4567,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4141,7 +4591,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4172,7 +4622,7 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed31")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed31")) == true) {
 			{
 				Entity _ent = entity;
 				if (_ent instanceof ServerPlayerEntity) {
@@ -4202,7 +4652,7 @@ public class Hdvsell0Procedure {
 				}
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4219,7 +4669,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4228,7 +4678,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4251,7 +4701,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4275,7 +4725,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4334,9 +4784,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed32")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed32")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4353,7 +4803,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4362,7 +4812,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4385,7 +4835,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4409,7 +4859,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4468,9 +4918,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed33")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed33")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4487,7 +4937,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4496,7 +4946,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4519,7 +4969,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4544,7 +4994,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4602,9 +5052,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed34")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed34")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4621,7 +5071,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4630,7 +5080,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4653,7 +5103,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4678,7 +5128,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4708,7 +5158,7 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed35")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed35")) == true) {
 			{
 				Entity _ent = entity;
 				if (_ent instanceof ServerPlayerEntity) {
@@ -4738,7 +5188,7 @@ public class Hdvsell0Procedure {
 				}
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4755,7 +5205,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4764,7 +5214,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4787,7 +5237,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4811,7 +5261,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4870,9 +5320,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed36")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed36")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4889,7 +5339,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4898,7 +5348,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4921,7 +5371,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -4945,7 +5395,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5004,9 +5454,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed37")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed37")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5023,7 +5473,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5032,7 +5482,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5055,7 +5505,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5079,7 +5529,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5138,9 +5588,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed38")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed38")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5157,7 +5607,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5166,7 +5616,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5189,7 +5639,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5213,7 +5663,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5272,9 +5722,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed39")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed39")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5291,7 +5741,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5300,7 +5750,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5323,7 +5773,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5347,7 +5797,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5406,9 +5856,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed40")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed40")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5425,7 +5875,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5434,7 +5884,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5457,7 +5907,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5481,7 +5931,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5540,9 +5990,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed41")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed41")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5559,7 +6009,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5568,7 +6018,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5591,7 +6041,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5615,7 +6065,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5674,9 +6124,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed42")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed42")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5693,7 +6143,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5702,7 +6152,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5725,7 +6175,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5749,7 +6199,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5808,9 +6258,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed43")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed43")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5827,7 +6277,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5836,7 +6286,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5859,7 +6309,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5883,7 +6333,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5942,9 +6392,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed44")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed44")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5961,7 +6411,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5970,7 +6420,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -5993,7 +6443,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6017,7 +6467,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6076,9 +6526,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed45")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed45")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6095,7 +6545,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6104,7 +6554,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6127,7 +6577,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6152,7 +6602,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6210,9 +6660,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed46")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed46")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6229,7 +6679,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6238,7 +6688,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6261,7 +6711,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6286,7 +6736,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6316,9 +6766,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed47")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed47")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6335,7 +6785,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6344,7 +6794,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6367,7 +6817,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6392,7 +6842,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6450,9 +6900,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed48")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed48")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6469,7 +6919,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6478,7 +6928,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6501,7 +6951,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6526,7 +6976,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6584,9 +7034,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed49")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed49")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6595,7 +7045,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6618,7 +7068,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6643,7 +7093,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6667,7 +7117,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6718,9 +7168,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed50")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed50")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6737,7 +7187,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6746,7 +7196,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6769,7 +7219,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6794,7 +7244,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6845,6 +7295,8 @@ public class Hdvsell0Procedure {
 					}
 				}
 			}
+		} else {
+			t1c = (true);
 		}
 		if ((new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
@@ -6853,9 +7305,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed51")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed51")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6864,7 +7316,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6881,7 +7333,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6904,7 +7356,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6929,7 +7381,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6987,9 +7439,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed52")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed52")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -6998,7 +7450,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7015,7 +7467,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7038,7 +7490,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7063,7 +7515,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7121,9 +7573,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed53")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed53")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7147,7 +7599,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7156,7 +7608,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7173,7 +7625,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7196,7 +7648,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7255,9 +7707,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed54")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed54")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7281,7 +7733,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7290,7 +7742,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7307,7 +7759,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7330,7 +7782,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7389,9 +7841,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed55")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed55")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7400,7 +7852,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7417,7 +7869,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7440,7 +7892,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7465,7 +7917,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7523,9 +7975,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed56")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed56")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7534,7 +7986,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7551,7 +8003,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7574,7 +8026,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7598,7 +8050,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7657,9 +8109,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed57")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed57")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7668,7 +8120,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7685,7 +8137,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7708,7 +8160,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7733,7 +8185,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7791,9 +8243,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed58")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed58")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7802,7 +8254,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7819,7 +8271,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7842,7 +8294,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7866,7 +8318,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7925,9 +8377,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed59")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed59")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7936,7 +8388,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7953,7 +8405,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -7976,7 +8428,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8000,7 +8452,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8059,9 +8511,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed60")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed60")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8070,7 +8522,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8087,7 +8539,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8110,7 +8562,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8134,7 +8586,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8193,9 +8645,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed61")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed61")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8204,7 +8656,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8221,7 +8673,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8244,7 +8696,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8268,7 +8720,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8327,9 +8779,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed62")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed62")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8338,7 +8790,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8355,7 +8807,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8378,7 +8830,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8402,7 +8854,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8461,9 +8913,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed63")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed63")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8486,7 +8938,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8503,7 +8955,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8527,7 +8979,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8536,7 +8988,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8595,9 +9047,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed64")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed64")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8621,7 +9073,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8646,7 +9098,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8655,7 +9107,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8672,7 +9124,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8729,9 +9181,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed65")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed65")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8755,7 +9207,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8764,7 +9216,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8781,7 +9233,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8804,7 +9256,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8863,9 +9315,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed66")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed66")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8888,7 +9340,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8905,7 +9357,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8914,7 +9366,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8938,7 +9390,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -8997,9 +9449,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed67")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed67")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9022,7 +9474,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9031,7 +9483,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9048,7 +9500,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9072,7 +9524,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9131,9 +9583,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed68")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed68")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9156,7 +9608,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9165,7 +9617,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9182,7 +9634,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9206,7 +9658,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9265,9 +9717,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed69")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed69")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9290,7 +9742,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9299,7 +9751,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9316,7 +9768,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9340,7 +9792,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9399,9 +9851,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed70")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed70")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9418,7 +9870,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9427,7 +9879,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9450,7 +9902,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9474,7 +9926,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9533,9 +9985,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed71")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed71")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9558,7 +10010,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9567,7 +10019,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9584,7 +10036,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9608,7 +10060,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9667,9 +10119,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed72")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed72")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9686,7 +10138,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9695,7 +10147,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9718,7 +10170,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9742,7 +10194,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9801,9 +10253,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed73")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed73")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9820,7 +10272,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9829,7 +10281,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9852,7 +10304,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9876,7 +10328,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9935,9 +10387,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed74")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed74")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9960,7 +10412,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9969,7 +10421,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -9986,7 +10438,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10010,7 +10462,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10069,9 +10521,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed75")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed75")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10094,7 +10546,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10103,7 +10555,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10127,7 +10579,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10144,7 +10596,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10203,9 +10655,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed76")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed76")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10228,7 +10680,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10237,7 +10689,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10254,7 +10706,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10278,7 +10730,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10337,9 +10789,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed77")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed77")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10362,7 +10814,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10371,7 +10823,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10388,7 +10840,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10412,7 +10864,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10471,9 +10923,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed78")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed78")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10496,7 +10948,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10505,7 +10957,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10522,7 +10974,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10546,7 +10998,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10605,9 +11057,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed79")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed79")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10630,7 +11082,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10639,7 +11091,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10656,7 +11108,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10680,7 +11132,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10739,9 +11191,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed80")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed80")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10764,7 +11216,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10788,7 +11240,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10841,7 +11293,7 @@ public class Hdvsell0Procedure {
 				}
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10858,7 +11310,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10873,9 +11325,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed81")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed81")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10898,7 +11350,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10922,7 +11374,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10975,7 +11427,7 @@ public class Hdvsell0Procedure {
 				}
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -10992,7 +11444,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11007,9 +11459,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed82")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed82")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11032,7 +11484,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11056,7 +11508,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11109,7 +11561,7 @@ public class Hdvsell0Procedure {
 				}
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11126,7 +11578,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11141,9 +11593,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed83")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed83")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11166,7 +11618,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11190,7 +11642,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11243,7 +11695,7 @@ public class Hdvsell0Procedure {
 				}
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11260,7 +11712,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11275,9 +11727,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed84")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed84")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11300,7 +11752,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11325,7 +11777,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11377,7 +11829,7 @@ public class Hdvsell0Procedure {
 				}
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11394,7 +11846,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11409,9 +11861,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed85")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed85")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11434,7 +11886,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11459,7 +11911,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11511,7 +11963,7 @@ public class Hdvsell0Procedure {
 				}
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11528,7 +11980,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11543,9 +11995,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed86")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed86")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11554,7 +12006,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11577,7 +12029,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11601,7 +12053,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11626,7 +12078,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11677,9 +12129,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed87")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed87")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11696,7 +12148,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11705,7 +12157,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11728,7 +12180,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11752,7 +12204,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11811,9 +12263,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed88")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed88")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11830,7 +12282,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11839,7 +12291,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11862,7 +12314,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11886,7 +12338,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11945,9 +12397,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed89")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed89")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11964,7 +12416,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11973,7 +12425,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -11996,7 +12448,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12020,7 +12472,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12079,9 +12531,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed90")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed90")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12098,7 +12550,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12107,7 +12559,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12130,7 +12582,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12154,7 +12606,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12213,9 +12665,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed91")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed91")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12232,7 +12684,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12241,7 +12693,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12264,7 +12716,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12288,7 +12740,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12347,9 +12799,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed93")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed93")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12366,7 +12818,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12375,7 +12827,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12398,7 +12850,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12422,7 +12874,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12481,9 +12933,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed92")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed92")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12500,7 +12952,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12509,7 +12961,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12532,7 +12984,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12556,7 +13008,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12615,9 +13067,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed94")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed94")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12634,7 +13086,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12643,7 +13095,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12666,7 +13118,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12690,7 +13142,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12749,9 +13201,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed95")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed95")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12768,7 +13220,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12777,7 +13229,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12800,7 +13252,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12824,7 +13276,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12883,9 +13335,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed96")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed96")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12902,7 +13354,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12911,7 +13363,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12934,7 +13386,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -12959,7 +13411,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13017,9 +13469,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed97")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed97")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13036,7 +13488,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13045,7 +13497,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13068,7 +13520,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13093,7 +13545,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13151,9 +13603,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed98")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed98")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13170,7 +13622,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13179,7 +13631,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13202,7 +13654,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13227,7 +13679,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13285,9 +13737,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed99")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed99")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13304,7 +13756,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13313,7 +13765,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13336,7 +13788,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13361,7 +13813,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13419,9 +13871,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed100")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed100")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13438,7 +13890,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13447,7 +13899,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13470,7 +13922,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13495,7 +13947,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13553,9 +14005,9 @@ public class Hdvsell0Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed101")) == true) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed101")) == true) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13572,7 +14024,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13581,7 +14033,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13604,7 +14056,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13629,7 +14081,7 @@ public class Hdvsell0Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -13678,6 +14130,29 @@ public class Hdvsell0Procedure {
 							_current.detectAndSendChanges();
 						}
 					}
+				}
+			}
+		} else {
+			t2c = (true);
+		}
+		if (t1c == true && t2c == true) {
+			if (entity instanceof PlayerEntity)
+				((PlayerEntity) entity).closeScreen();
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("Palaerror");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new PalaerrorGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
 				}
 			}
 		}

@@ -120,7 +120,7 @@ public class ItemmenupalahelpGuiWindow extends ContainerScreen<ItemmenupalahelpG
 				ItemmenupalahelpGui.handleButtonAction(entity, 1, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 115, this.guiTop + 47, 50, 20, new StringTextComponent("Bâtons"), e -> {
+		this.addButton(new Button(this.guiLeft + 115, this.guiTop + 47, 50, 20, new StringTextComponent("Bï¿½tons"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new ItemmenupalahelpGui.ButtonPressedMessage(2, x, y, z));
 				ItemmenupalahelpGui.handleButtonAction(entity, 2, x, y, z);

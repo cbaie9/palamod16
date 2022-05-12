@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 28,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -59,12 +59,12 @@
       {
         "type": "label",
         "data": {
-          "text": "en améthyste, titane , paladium et... endium pour les",
+          "text": "en amï¿½thyste, titane , paladium et... endium pour les",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "en améthyste, titane , paladium et... endium pour les",
+          "name": "en amï¿½thyste, titane , paladium et... endium pour les",
           "x": 66,
           "y": 139
         }
@@ -72,12 +72,12 @@
       {
         "type": "label",
         "data": {
-          "text": "pour les transformés en minerais pour les ré-utilisés",
+          "text": "pour les transformï¿½s en minerais pour les rï¿½-utilisï¿½s",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "pour les transformés en minerais pour les ré-utilisés",
+          "name": "pour les transformï¿½s en minerais pour les rï¿½-utilisï¿½s",
           "x": 66,
           "y": 149
         }
@@ -85,12 +85,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Pour cela il suffi d'insèré du charbon ou du palamixed coal",
+          "text": "Pour cela il suffi d'insï¿½rï¿½ du charbon ou du palamixed coal",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Pour cela il suffi d'insèré du charbon ou du palamixed coal",
+          "name": "Pour cela il suffi d'insï¿½rï¿½ du charbon ou du palamixed coal",
           "x": 65,
           "y": 159
         }

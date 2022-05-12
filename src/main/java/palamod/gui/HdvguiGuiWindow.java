@@ -84,7 +84,7 @@ public class HdvguiGuiWindow extends ContainerScreen<HdvguiGui.GuiContainerMod> 
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "H\u00F4tel de vente", 47, 5, -12829636);
+		this.font.drawString(ms, "H\uFFFDtel de vente", 47, 5, -12829636);
 		this.font.drawString(ms, "Wip build 0031", 220, 4, -12829636);
 		this.font.drawString(ms, "Premium ", 7, 59, -26368);
 		this.font.drawString(ms, "" + (PalamodModVariables.MapVariables.get(world).market_name_0) + "", 50, 76, -12829636);
@@ -133,16 +133,16 @@ public class HdvguiGuiWindow extends ContainerScreen<HdvguiGui.GuiContainerMod> 
 			}
 		}));
 		recs = new TextFieldWidget(this.font, this.guiLeft + 9, this.guiTop + 31, 120, 20,
-				new StringTextComponent("rechercher quelque chose dans l' hôtel de vente")) {
+				new StringTextComponent("rechercher quelque chose dans l' hï¿½tel de vente")) {
 			{
-				setSuggestion("rechercher quelque chose dans l' hôtel de vente");
+				setSuggestion("rechercher quelque chose dans l' hï¿½tel de vente");
 			}
 
 			@Override
 			public void writeText(String text) {
 				super.writeText(text);
 				if (getText().isEmpty())
-					setSuggestion("rechercher quelque chose dans l' hôtel de vente");
+					setSuggestion("rechercher quelque chose dans l' hï¿½tel de vente");
 				else
 					setSuggestion(null);
 			}
@@ -151,7 +151,7 @@ public class HdvguiGuiWindow extends ContainerScreen<HdvguiGui.GuiContainerMod> 
 			public void setCursorPosition(int pos) {
 				super.setCursorPosition(pos);
 				if (getText().isEmpty())
-					setSuggestion("rechercher quelque chose dans l' hôtel de vente");
+					setSuggestion("rechercher quelque chose dans l' hï¿½tel de vente");
 				else
 					setSuggestion(null);
 			}

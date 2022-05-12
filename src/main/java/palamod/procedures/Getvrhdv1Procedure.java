@@ -68,7 +68,7 @@ public class Getvrhdv1Procedure {
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market"));
+		}.getValue(world, new BlockPos(0, 10, 0), "market"));
 		PalamodModVariables.MapVariables.get(world).syncData(world);
 		PalamodModVariables.MapVariables.get(world).market_name_0 = (new Object() {
 			public String getValue(IWorld world, BlockPos pos, String tag) {
@@ -77,12 +77,12 @@ public class Getvrhdv1Procedure {
 					return tileEntity.getTileData().getString(tag);
 				return "";
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name0"));
+		}.getValue(world, new BlockPos(0, 10, 0), "market_name0"));
 		PalamodModVariables.MapVariables.get(world).syncData(world);
 		{
 			Entity _ent = entity;
 			if (_ent instanceof ServerPlayerEntity) {
-				BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bpos = new BlockPos(x, y, z);
 				NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 					@Override
 					public ITextComponent getDisplayName() {
@@ -123,7 +123,7 @@ public class Getvrhdv1Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num0")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num0")));
 					((Slot) ((Map) invobj).get((int) (0))).putStack(_setstack);
 					_current.detectAndSendChanges();
 				}

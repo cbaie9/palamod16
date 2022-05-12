@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 28,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -26,12 +26,12 @@
       {
         "type": "label",
         "data": {
-          "text": "release² / poisson d'avril",
+          "text": "releaseï¿½ / poisson d'avril",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "release² / poisson d'avril",
+          "name": "releaseï¿½ / poisson d'avril",
           "x": 81,
           "y": 216
         }
@@ -39,12 +39,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Vous croyer qu'en 1 semaine on peut créer un hdv",
+          "text": "Vous croyer qu'en 1 semaine on peut crï¿½er un hdv",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Vous croyer qu'en 1 semaine on peut créer un hdv",
+          "name": "Vous croyer qu'en 1 semaine on peut crï¿½er un hdv",
           "x": 87,
           "y": 44
         }
@@ -78,12 +78,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Sinon serieux rendez-vous à la fermeture de la ",
+          "text": "Sinon serieux rendez-vous ï¿½ la fermeture de la ",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Sinon serieux rendez-vous à la fermeture de la ",
+          "name": "Sinon serieux rendez-vous ï¿½ la fermeture de la ",
           "x": 83,
           "y": 89
         }

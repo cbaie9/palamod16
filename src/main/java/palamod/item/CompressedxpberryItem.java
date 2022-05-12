@@ -14,6 +14,7 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ActionResult;
+import net.minecraft.item.UseAction;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
@@ -45,6 +46,11 @@ public class CompressedxpberryItem extends PalamodModElements.ModElement {
 		public ItemCustom() {
 			super(new Item.Properties().group(PalamodItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("compressedxpberry");
+		}
+
+		@Override
+		public UseAction getUseAction(ItemStack itemstack) {
+			return UseAction.EAT;
 		}
 
 		@Override

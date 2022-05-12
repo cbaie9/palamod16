@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 28,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -39,12 +39,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Très rare sert a quelque craft",
+          "text": "Trï¿½s rare sert a quelque craft",
           "color": {
             "value": -205,
             "falpha": 0.0
           },
-          "name": "Très rare sert a quelque craft",
+          "name": "Trï¿½s rare sert a quelque craft",
           "x": 122,
           "y": 119
         }
@@ -131,12 +131,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Resitant,très bon pour ses premiers",
+          "text": "Resitant,trï¿½s bon pour ses premiers",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Resitant,très bon pour ses premiers",
+          "name": "Resitant,trï¿½s bon pour ses premiers",
           "x": 128,
           "y": 151
         }
@@ -185,12 +185,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Améthyste :",
+          "text": "Amï¿½thyste :",
           "color": {
             "value": -6750055,
             "falpha": 0.0
           },
-          "name": "Améthyste :",
+          "name": "Amï¿½thyste :",
           "x": 130,
           "y": 173
         }
@@ -234,12 +234,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Paladium vert : équivalent en plus rare",
+          "text": "Paladium vert : ï¿½quivalent en plus rare",
           "color": {
             "value": -10027213,
             "falpha": 0.0
           },
-          "name": "Paladium vert : équivalent en plus rare",
+          "name": "Paladium vert : ï¿½quivalent en plus rare",
           "x": 126,
           "y": 72
         }

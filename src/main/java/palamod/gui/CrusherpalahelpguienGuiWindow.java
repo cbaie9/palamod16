@@ -93,7 +93,7 @@ public class CrusherpalahelpguienGuiWindow extends ContainerScreen<Crusherpalahe
 		this.font.drawString(ms, "The titane mixed coal, for titane the amethyst mixed coal and finally for", 12, 101, -12829636);
 		this.font.drawString(ms, "amethyst the gold mixed coal Add fuel and fruits for add probabilites ", 16, 113, -12829636);
 		this.font.drawString(ms, "Fruit here", 261, 59, -256);
-		this.font.drawString(ms, "R\u00E9sult here", 323, 60, -16776961);
+		this.font.drawString(ms, "R\uFFFDsult here", 323, 60, -16776961);
 		this.font.drawString(ms, "One times you are ready to lunch the process click on \"start fusion\"", 15, 126, -12829636);
 		this.font.drawString(ms, "The endium will be creating with the previous items and the result  will appear", 5, 138, -12829636);
 		this.font.drawString(ms, "Note : It not mandatory to put 128 fruit and mixed coal but you will not have", 13, 149, -26368);

@@ -1,0 +1,87 @@
+{
+  "_fv": 28,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 200,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "ERROR",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "ERROR",
+          "x": 195,
+          "y": 42
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Market 0002 - full or not setup",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Market 0002 - full or not setup",
+          "x": 135,
+          "y": 55
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Is not the case for the description",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Is not the case for the description",
+          "x": 123,
+          "y": 66
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Please report on the discord the bug",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Please report on the discord the bug",
+          "x": 122,
+          "y": 77
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Palamod renew - beta 0051",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Palamod renew - beta 0051",
+          "x": 118,
+          "y": 179
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

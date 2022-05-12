@@ -49,439 +49,439 @@ public class SmelthProcedure {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
 		if (entity.rotationPitch > 40 || entity.rotationPitch < -40) {
-			if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == Blocks.BEDROCK)) {
+			if ((world.getBlockState(new BlockPos(x + 1, y, z))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x + 1, y, z))).getBlock() == Blocks.BEDROCK)) {
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-							((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-									new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock()))),
-									((World) world)).isPresent())
-											? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-													(new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock()))),
-													(World) world).get().getRecipeOutput().copy()
-											: ItemStack.EMPTY));
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, ((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x + 1, y, z), Blocks.AIR.getDefaultState(), 3);
 			}
-			if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == Blocks.BEDROCK)) {
+			if ((world.getBlockState(new BlockPos(x - 1, y, z))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x - 1, y, z))).getBlock() == Blocks.BEDROCK)) {
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-							((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-									new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock()))),
-									((World) world)).isPresent())
-											? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-													(new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock()))),
-													(World) world).get().getRecipeOutput().copy()
-											: ItemStack.EMPTY));
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, ((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x - 1, y, z), Blocks.AIR.getDefaultState(), 3);
 			}
-			if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z + 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z + 1)))).getBlock() == Blocks.BEDROCK)) {
+			if ((world.getBlockState(new BlockPos(x + 1, y, z + 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x + 1, y, z + 1))).getBlock() == Blocks.BEDROCK)) {
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-							((world instanceof World && ((World) world).getRecipeManager()
-									.getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z + 1)))).getBlock()))),
-											((World) world))
-									.isPresent())
-											? ((World) world).getRecipeManager()
-													.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z + 1)))).getBlock()))),
-															(World) world)
-													.get().getRecipeOutput().copy()
-											: ItemStack.EMPTY));
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, ((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z + 1))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z + 1))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z + 1)), Blocks.AIR.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x + 1, y, z + 1), Blocks.AIR.getDefaultState(), 3);
 			}
-			if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)))).getBlock() == Blocks.BEDROCK)) {
+			if ((world.getBlockState(new BlockPos(x + 1, y, z - 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x + 1, y, z - 1))).getBlock() == Blocks.BEDROCK)) {
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-							((world instanceof World && ((World) world).getRecipeManager()
-									.getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)))).getBlock()))),
-											((World) world))
-									.isPresent())
-											? ((World) world).getRecipeManager()
-													.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)))).getBlock()))),
-															(World) world)
-													.get().getRecipeOutput().copy()
-											: ItemStack.EMPTY));
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, ((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z - 1))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z - 1))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)), Blocks.AIR.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x + 1, y, z - 1), Blocks.AIR.getDefaultState(), 3);
 			}
-			if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z - 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z - 1)))).getBlock() == Blocks.BEDROCK)) {
+			if ((world.getBlockState(new BlockPos(x - 1, y, z - 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x - 1, y, z - 1))).getBlock() == Blocks.BEDROCK)) {
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-							((world instanceof World && ((World) world).getRecipeManager()
-									.getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z - 1)))).getBlock()))),
-											((World) world))
-									.isPresent())
-											? ((World) world).getRecipeManager()
-													.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z - 1)))).getBlock()))),
-															(World) world)
-													.get().getRecipeOutput().copy()
-											: ItemStack.EMPTY));
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, ((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z - 1))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z - 1))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z - 1)), Blocks.AIR.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x - 1, y, z - 1), Blocks.AIR.getDefaultState(), 3);
 			}
-			if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)))).getBlock() == Blocks.BEDROCK)) {
+			if ((world.getBlockState(new BlockPos(x - 1, y, z + 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x - 1, y, z + 1))).getBlock() == Blocks.BEDROCK)) {
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-							((world instanceof World && ((World) world).getRecipeManager()
-									.getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)))).getBlock()))),
-											((World) world))
-									.isPresent())
-											? ((World) world).getRecipeManager()
-													.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)))).getBlock()))),
-															(World) world)
-													.get().getRecipeOutput().copy()
-											: ItemStack.EMPTY));
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, ((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z + 1))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z + 1))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)), Blocks.AIR.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x - 1, y, z + 1), Blocks.AIR.getDefaultState(), 3);
 			}
-			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.BEDROCK)) {
+			if ((world.getBlockState(new BlockPos(x, y, z + 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x, y, z + 1))).getBlock() == Blocks.BEDROCK)) {
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-							((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-									new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock()))),
-									((World) world)).isPresent())
-											? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-													(new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock()))),
-													(World) world).get().getRecipeOutput().copy()
-											: ItemStack.EMPTY));
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, ((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y, z + 1))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y, z + 1))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)), Blocks.AIR.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x, y, z + 1), Blocks.AIR.getDefaultState(), 3);
 			}
-			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.BEDROCK)) {
+			if ((world.getBlockState(new BlockPos(x, y, z - 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x, y, z - 1))).getBlock() == Blocks.BEDROCK)) {
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-							((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-									new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock()))),
-									((World) world)).isPresent())
-											? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-													(new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock()))),
-													(World) world).get().getRecipeOutput().copy()
-											: ItemStack.EMPTY));
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, ((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y, z - 1))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y, z - 1))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)), Blocks.AIR.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x, y, z - 1), Blocks.AIR.getDefaultState(), 3);
 			}
 		} else if ((entity.getHorizontalFacing()) == Direction.NORTH || (entity.getHorizontalFacing()) == Direction.SOUTH) {
-			if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == Blocks.BEDROCK)) {
+			if ((world.getBlockState(new BlockPos(x + 1, y, z))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x + 1, y, z))).getBlock() == Blocks.BEDROCK)) {
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-							((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-									new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock()))),
-									((World) world)).isPresent())
-											? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-													(new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock()))),
-													(World) world).get().getRecipeOutput().copy()
-											: ItemStack.EMPTY));
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, ((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x - 1, y, z), Blocks.AIR.getDefaultState(), 3);
 			}
-			if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == Blocks.BEDROCK)) {
+			if ((world.getBlockState(new BlockPos(x - 1, y, z))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x - 1, y, z))).getBlock() == Blocks.BEDROCK)) {
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-							((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-									new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock()))),
-									((World) world)).isPresent())
-											? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-													(new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock()))),
-													(World) world).get().getRecipeOutput().copy()
-											: ItemStack.EMPTY));
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, ((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x - 1, y, z), Blocks.AIR.getDefaultState(), 3);
 			}
-			if ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) z))).getBlock() == Blocks.BEDROCK)) {
+			if ((world.getBlockState(new BlockPos(x + 1, y + 1, z))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x + 1, y + 1, z))).getBlock() == Blocks.BEDROCK)) {
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-							((world instanceof World && ((World) world).getRecipeManager()
-									.getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) z))).getBlock()))),
-											((World) world))
-									.isPresent())
-											? ((World) world).getRecipeManager()
-													.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) z))).getBlock()))),
-															(World) world)
-													.get().getRecipeOutput().copy()
-											: ItemStack.EMPTY));
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, ((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y + 1, z))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y + 1, z))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				world.setBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) z), Blocks.AIR.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x + 1, y + 1, z), Blocks.AIR.getDefaultState(), 3);
 			}
-			if ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y - 1), (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x + 1), (int) (y - 1), (int) z))).getBlock() == Blocks.BEDROCK)) {
+			if ((world.getBlockState(new BlockPos(x + 1, y - 1, z))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x + 1, y - 1, z))).getBlock() == Blocks.BEDROCK)) {
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-							((world instanceof World && ((World) world).getRecipeManager()
-									.getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) (y - 1), (int) z))).getBlock()))),
-											((World) world))
-									.isPresent())
-											? ((World) world).getRecipeManager()
-													.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x + 1), (int) (y - 1), (int) z))).getBlock()))),
-															(World) world)
-													.get().getRecipeOutput().copy()
-											: ItemStack.EMPTY));
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, ((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y - 1, z))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y - 1, z))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				world.setBlockState(new BlockPos((int) (x + 1), (int) (y - 1), (int) z), Blocks.AIR.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x + 1, y - 1, z), Blocks.AIR.getDefaultState(), 3);
 			}
-			if ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) z))).getBlock() == Blocks.BEDROCK)) {
+			if ((world.getBlockState(new BlockPos(x - 1, y - 1, z))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x - 1, y - 1, z))).getBlock() == Blocks.BEDROCK)) {
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-							((world instanceof World && ((World) world).getRecipeManager()
-									.getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) z))).getBlock()))),
-											((World) world))
-									.isPresent())
-											? ((World) world).getRecipeManager()
-													.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) z))).getBlock()))),
-															(World) world)
-													.get().getRecipeOutput().copy()
-											: ItemStack.EMPTY));
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, ((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y - 1, z))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y - 1, z))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				world.setBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) z), Blocks.AIR.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x - 1, y - 1, z), Blocks.AIR.getDefaultState(), 3);
 			}
-			if ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) z))).getBlock() == Blocks.BEDROCK)) {
+			if ((world.getBlockState(new BlockPos(x - 1, y + 1, z))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x - 1, y + 1, z))).getBlock() == Blocks.BEDROCK)) {
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-							((world instanceof World && ((World) world).getRecipeManager()
-									.getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) z))).getBlock()))),
-											((World) world))
-									.isPresent())
-											? ((World) world).getRecipeManager()
-													.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) z))).getBlock()))),
-															(World) world)
-													.get().getRecipeOutput().copy()
-											: ItemStack.EMPTY));
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, ((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y + 1, z))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y + 1, z))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				world.setBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) z), Blocks.AIR.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x - 1, y + 1, z), Blocks.AIR.getDefaultState(), 3);
 			}
-			if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.BEDROCK)) {
+			if ((world.getBlockState(new BlockPos(x, y + 1, z))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock() == Blocks.BEDROCK)) {
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-							((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-									new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock()))),
-									((World) world)).isPresent())
-											? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-													(new ItemStack((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock()))),
-													(World) world).get().getRecipeOutput().copy()
-											: ItemStack.EMPTY));
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, ((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), Blocks.AIR.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x, y + 1, z), Blocks.AIR.getDefaultState(), 3);
 			}
-			if ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == Blocks.BEDROCK)) {
+			if ((world.getBlockState(new BlockPos(x, y - 1, z))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x, y - 1, z))).getBlock() == Blocks.BEDROCK)) {
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-							((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-									new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock()))),
-									((World) world)).isPresent())
-											? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-													(new ItemStack((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock()))),
-													(World) world).get().getRecipeOutput().copy()
-											: ItemStack.EMPTY));
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, ((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y - 1, z))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y - 1, z))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), Blocks.AIR.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x, y - 1, z), Blocks.AIR.getDefaultState(), 3);
 			}
 		} else if ((entity.getHorizontalFacing()) == Direction.WEST || (entity.getHorizontalFacing()) == Direction.EAST) {
-			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.BEDROCK)) {
+			if ((world.getBlockState(new BlockPos(x, y, z + 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x, y, z + 1))).getBlock() == Blocks.BEDROCK)) {
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-							((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-									new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock()))),
-									((World) world)).isPresent())
-											? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-													(new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock()))),
-													(World) world).get().getRecipeOutput().copy()
-											: ItemStack.EMPTY));
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, ((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y, z + 1))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y, z + 1))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)), Blocks.AIR.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x, y, z + 1), Blocks.AIR.getDefaultState(), 3);
 			}
-			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.BEDROCK)) {
+			if ((world.getBlockState(new BlockPos(x, y, z - 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x, y, z - 1))).getBlock() == Blocks.BEDROCK)) {
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-							((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-									new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock()))),
-									((World) world)).isPresent())
-											? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-													(new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock()))),
-													(World) world).get().getRecipeOutput().copy()
-											: ItemStack.EMPTY));
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, ((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y, z - 1))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y, z - 1))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)), Blocks.AIR.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x, y, z - 1), Blocks.AIR.getDefaultState(), 3);
 			}
-			if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z + 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z + 1)))).getBlock() == Blocks.BEDROCK)) {
+			if ((world.getBlockState(new BlockPos(x, y + 1, z + 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x, y + 1, z + 1))).getBlock() == Blocks.BEDROCK)) {
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-							((world instanceof World && ((World) world).getRecipeManager()
-									.getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z + 1)))).getBlock()))),
-											((World) world))
-									.isPresent())
-											? ((World) world).getRecipeManager()
-													.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z + 1)))).getBlock()))),
-															(World) world)
-													.get().getRecipeOutput().copy()
-											: ItemStack.EMPTY));
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, ((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y + 1, z + 1))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y + 1, z + 1))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z + 1)), Blocks.AIR.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x, y + 1, z + 1), Blocks.AIR.getDefaultState(), 3);
 			}
-			if ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) (z + 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) (z + 1)))).getBlock() == Blocks.BEDROCK)) {
+			if ((world.getBlockState(new BlockPos(x, y - 1, z + 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x, y - 1, z + 1))).getBlock() == Blocks.BEDROCK)) {
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-							((world instanceof World && ((World) world).getRecipeManager()
-									.getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) (z + 1)))).getBlock()))),
-											((World) world))
-									.isPresent())
-											? ((World) world).getRecipeManager()
-													.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) (z + 1)))).getBlock()))),
-															(World) world)
-													.get().getRecipeOutput().copy()
-											: ItemStack.EMPTY));
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, ((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y - 1, z + 1))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y - 1, z + 1))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) (z + 1)), Blocks.AIR.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x, y - 1, z + 1), Blocks.AIR.getDefaultState(), 3);
 			}
-			if ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) (z - 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) (z - 1)))).getBlock() == Blocks.BEDROCK)) {
+			if ((world.getBlockState(new BlockPos(x, y - 1, z - 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x, y - 1, z - 1))).getBlock() == Blocks.BEDROCK)) {
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-							((world instanceof World && ((World) world).getRecipeManager()
-									.getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) (z - 1)))).getBlock()))),
-											((World) world))
-									.isPresent())
-											? ((World) world).getRecipeManager()
-													.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) (z - 1)))).getBlock()))),
-															(World) world)
-													.get().getRecipeOutput().copy()
-											: ItemStack.EMPTY));
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, ((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y - 1, z - 1))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y - 1, z - 1))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) (z - 1)), Blocks.AIR.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x, y - 1, z - 1), Blocks.AIR.getDefaultState(), 3);
 			}
-			if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z - 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z - 1)))).getBlock() == Blocks.BEDROCK)) {
+			if ((world.getBlockState(new BlockPos(x, y + 1, z - 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x, y + 1, z - 1))).getBlock() == Blocks.BEDROCK)) {
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-							((world instanceof World && ((World) world).getRecipeManager()
-									.getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z - 1)))).getBlock()))),
-											((World) world))
-									.isPresent())
-											? ((World) world).getRecipeManager()
-													.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z - 1)))).getBlock()))),
-															(World) world)
-													.get().getRecipeOutput().copy()
-											: ItemStack.EMPTY));
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, ((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y + 1, z - 1))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y + 1, z - 1))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z - 1)), Blocks.AIR.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x, y + 1, z - 1), Blocks.AIR.getDefaultState(), 3);
 			}
-			if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.BEDROCK)) {
+			if ((world.getBlockState(new BlockPos(x, y + 1, z))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock() == Blocks.BEDROCK)) {
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-							((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-									new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock()))),
-									((World) world)).isPresent())
-											? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-													(new ItemStack((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock()))),
-													(World) world).get().getRecipeOutput().copy()
-											: ItemStack.EMPTY));
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, ((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), Blocks.AIR.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x, y + 1, z), Blocks.AIR.getDefaultState(), 3);
 			}
-			if ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == Blocks.BEDROCK)) {
+			if ((world.getBlockState(new BlockPos(x, y - 1, z))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x, y - 1, z))).getBlock() == Blocks.BEDROCK)) {
 				if (world instanceof World && !world.isRemote()) {
-					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-							((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-									new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock()))),
-									((World) world)).isPresent())
-											? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-													(new ItemStack((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock()))),
-													(World) world).get().getRecipeOutput().copy()
-											: ItemStack.EMPTY));
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, ((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y - 1, z))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y - 1, z))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
-				world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), Blocks.AIR.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x, y - 1, z), Blocks.AIR.getDefaultState(), 3);
 			}
 		}
 	}

@@ -104,7 +104,7 @@ public class Stickgui2GuiWindow extends ContainerScreen<Stickgui2Gui.GuiContaine
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		this.addButton(new Button(this.guiLeft + 7, this.guiTop + 8, 100, 20, new StringTextComponent("stick précédant"), e -> {
+		this.addButton(new Button(this.guiLeft + 7, this.guiTop + 8, 100, 20, new StringTextComponent("stick prï¿½cï¿½dant"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new Stickgui2Gui.ButtonPressedMessage(0, x, y, z));
 				Stickgui2Gui.handleButtonAction(entity, 0, x, y, z);

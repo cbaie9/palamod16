@@ -1,6 +1,8 @@
 
 package palamod.gui;
 
+import palamod.item.FurnaceupgradeItem;
+
 import palamod.PalamodModElements;
 
 import palamod.PalamodMod;
@@ -119,17 +121,21 @@ public class PaladumfurnaceGui extends PalamodModElements.ModElement {
 					}
 				}
 			}
-			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 64, 22) {
+			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 61, 22) {
 			}));
-			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 124, 29) {
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 127, 40) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 64, 56) {
+			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 61, 58) {
 			}));
-			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 10, 28) {
+			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 8, 31) {
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return (FurnaceupgradeItem.block == stack.getItem());
+				}
 			}));
 			int si;
 			int sj;
@@ -270,10 +276,26 @@ public class PaladumfurnaceGui extends PalamodModElements.ModElement {
 			if (!bound && (playerIn instanceof ServerPlayerEntity)) {
 				if (!playerIn.isAlive() || playerIn instanceof ServerPlayerEntity && ((ServerPlayerEntity) playerIn).hasDisconnected()) {
 					for (int j = 0; j < internal.getSlots(); ++j) {
+						if (j == 0)
+							continue;
+						if (j == 1)
+							continue;
+						if (j == 2)
+							continue;
+						if (j == 3)
+							continue;
 						playerIn.dropItem(internal.extractItem(j, internal.getStackInSlot(j).getCount(), false), false);
 					}
 				} else {
 					for (int i = 0; i < internal.getSlots(); ++i) {
+						if (i == 0)
+							continue;
+						if (i == 1)
+							continue;
+						if (i == 2)
+							continue;
+						if (i == 3)
+							continue;
 						playerIn.inventory.placeItemBackInInventory(playerIn.world,
 								internal.extractItem(i, internal.getStackInSlot(i).getCount(), false));
 					}

@@ -4,6 +4,7 @@ import palamod.PalamodMod;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.projectile.ArrowEntity;
+import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
@@ -28,10 +29,10 @@ public class DamagestickprocessProcedure {
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
 		for (int index0 = 0; index0 < (int) (25); index0++) {
 			if (entity instanceof LivingEntity) {
-				Entity _ent = entity;
+				LivingEntity _ent = (LivingEntity) entity;
 				if (!_ent.world.isRemote()) {
-					ArrowEntity entityToSpawn = new ArrowEntity(_ent.world, (LivingEntity) entity);
-					entityToSpawn.shoot(entity.getLookVec().x, entity.getLookVec().y, entity.getLookVec().z, (float) 2, 0);
+					AbstractArrowEntity entityToSpawn = new ArrowEntity(_ent.world, _ent);
+					entityToSpawn.shoot(_ent.getLookVec().x, _ent.getLookVec().y, _ent.getLookVec().z, 2, 0);
 					entityToSpawn.setDamage((float) 0.25);
 					entityToSpawn.setKnockbackStrength((int) 7.5);
 					_ent.world.addEntity(entityToSpawn);

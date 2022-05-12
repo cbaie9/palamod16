@@ -101,9 +101,9 @@ public class LegendarystonepalahelpGuiWindow extends ContainerScreen<Legendaryst
 		this.font.drawString(ms, "note :utilisable une fois par jour", 14, 17, -3407872);
 		this.font.drawString(ms, "Invisible : vous rend invisible", 25, 69, -12829636);
 		this.font.drawString(ms, "Jobs :vous donne de l'xp ", 26, 88, -12829636);
-		this.font.drawString(ms, "Power : vous permet d'\u00EAtre prot\u00E8ger", 20, 105, -12829636);
+		this.font.drawString(ms, "Power : vous permet d'\uFFFDtre prot\uFFFDger", 20, 105, -12829636);
 		this.font.drawString(ms, "contre la fake water", 6, 115, -12829636);
-		this.font.drawString(ms, "T\u00E9l\u00E9portation : vous tp al\u00E9torement", 19, 126, -12829636);
+		this.font.drawString(ms, "T\uFFFDl\uFFFDportation : vous tp al\uFFFDtorement", 19, 126, -12829636);
 		this.font.drawString(ms, "sur la map", 4, 138, -12829636);
 		this.font.drawString(ms, "random : vous donne une des 5 pierre ", 16, 153, -12829636);
 		this.font.drawString(ms, "au dessus", 3, 164, -12829636);

@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 28,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -26,12 +26,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Problème de market",
+          "text": "Problï¿½me de market",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Problème de market",
+          "name": "Problï¿½me de market",
           "x": 66,
           "y": 46
         }
@@ -65,12 +65,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Retard inderminée des commande type /f",
+          "text": "Retard inderminï¿½e des commande type /f",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Retard inderminée des commande type /f",
+          "name": "Retard inderminï¿½e des commande type /f",
           "x": 69,
           "y": 85
         }
@@ -130,12 +130,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Au faite l'adminshop sortira rapidement après la snapshot",
+          "text": "Au faite l'adminshop sortira rapidement aprï¿½s la snapshot",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Au faite l'adminshop sortira rapidement après la snapshot",
+          "name": "Au faite l'adminshop sortira rapidement aprï¿½s la snapshot",
           "x": 65,
           "y": 170
         }

@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 28,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -75,12 +75,12 @@
       {
         "type": "label",
         "data": {
-          "text": "des upgrade améliorent les outils",
+          "text": "des upgrade amï¿½liorent les outils",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "des upgrade améliorent les outils",
+          "name": "des upgrade amï¿½liorent les outils",
           "x": 111,
           "y": 106
         }
@@ -101,12 +101,12 @@
       {
         "type": "label",
         "data": {
-          "text": "minés -) hammer",
+          "text": "minï¿½s -) hammer",
           "color": {
             "value": -256,
             "falpha": 0.0
           },
-          "name": "minés -) hammer",
+          "name": "minï¿½s -) hammer",
           "x": 112,
           "y": 125
         }
@@ -114,12 +114,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Smelt : cuit les minerais minés -) hammer",
+          "text": "Smelt : cuit les minerais minï¿½s -) hammer",
           "color": {
             "value": -8504309,
             "falpha": 0.0
           },
-          "name": "Smelt : cuit les minerais minés -) hammer",
+          "name": "Smelt : cuit les minerais minï¿½s -) hammer",
           "x": 111,
           "y": 134
         }
@@ -179,12 +179,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Damage : augmante les dégats -) fastsword",
+          "text": "Damage : augmante les dï¿½gats -) fastsword",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Damage : augmante les dégats -) fastsword",
+          "name": "Damage : augmante les dï¿½gats -) fastsword",
           "x": 110,
           "y": 169
         }

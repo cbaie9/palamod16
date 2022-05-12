@@ -48,10 +48,10 @@ public class ChervilseedprocessProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.FARMLAND
-				&& ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.CAVE_AIR
-						|| (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.AIR)) {
-			world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), Chervil0Block.block.getDefaultState(), 3);
+		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.FARMLAND
+				&& ((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock() == Blocks.CAVE_AIR
+						|| (world.getBlockState(new BlockPos(x, y + 1, z))).getBlock() == Blocks.AIR)) {
+			world.setBlockState(new BlockPos(x, y + 1, z), Chervil0Block.block.getDefaultState(), 3);
 			if (entity instanceof PlayerEntity) {
 				ItemStack _stktoremove = new ItemStack(ChervilseedItem.block);
 				((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,

@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 28,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -114,13 +114,13 @@
       {
         "type": "button",
         "data": {
-          "text": "Bâtons",
+          "text": "Bï¿½tons",
           "onClick": {
             "name": "Connectstickgui1"
           },
           "width": 50,
           "height": 20,
-          "name": "Bâtons",
+          "name": "Bï¿½tons",
           "x": 241,
           "y": 84
         }

@@ -66,9 +66,9 @@ public class SetspawnprocessProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
-		if (!((world.getBlockState(new BlockPos((int) 0, (int) 10, (int) 0))).getBlock() == NbtblockBlock.block)) {
+		if (!((world.getBlockState(new BlockPos(0, 10, 0))).getBlock() == NbtblockBlock.block)) {
 			{
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				BlockState _bs = NbtblockBlock.block.getDefaultState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -97,16 +97,16 @@ public class SetspawnprocessProcedure {
 				}
 			}
 		}
-		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.AIR
-				|| (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.VOID_AIR
-				|| (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.CAVE_AIR)
-				&& ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.AIR
-						|| (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.VOID_AIR
-						|| (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.CAVE_AIR)
+		if (((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.AIR
+				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.VOID_AIR
+				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.CAVE_AIR)
+				&& ((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock() == Blocks.AIR
+						|| (world.getBlockState(new BlockPos(x, y + 1, z))).getBlock() == Blocks.VOID_AIR
+						|| (world.getBlockState(new BlockPos(x, y + 1, z))).getBlock() == Blocks.CAVE_AIR)
 				|| entity.getPersistentData().getBoolean("spawn_warn")) {
 			if ((entity.world.getDimensionKey()) == (World.OVERWORLD)) {
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+					BlockPos _bp = new BlockPos(0, 10, 0);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
@@ -115,7 +115,7 @@ public class SetspawnprocessProcedure {
 						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+					BlockPos _bp = new BlockPos(0, 10, 0);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
@@ -124,7 +124,7 @@ public class SetspawnprocessProcedure {
 						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+					BlockPos _bp = new BlockPos(0, 10, 0);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
@@ -136,11 +136,11 @@ public class SetspawnprocessProcedure {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-							"msg @a [serveur] Le spawn a \u00E9t\u00E9 chang\u00E9 ");
+							"msg @a [serveur] Le spawn a \uFFFDt\uFFFD chang\uFFFD ");
 				}
 				entity.getPersistentData().putBoolean("spawn_warn", (false));
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+					BlockPos _bp = new BlockPos(0, 10, 0);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
@@ -191,7 +191,7 @@ public class SetspawnprocessProcedure {
 							}
 						}
 						{
-							BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+							BlockPos _bp = new BlockPos(0, 10, 0);
 							BlockState _bs = NbtblockBlock.block.getDefaultState();
 							BlockState _bso = world.getBlockState(_bp);
 							TileEntity _te = world.getTileEntity(_bp);
@@ -212,7 +212,7 @@ public class SetspawnprocessProcedure {
 							}
 						}
 						if (!world.isRemote()) {
-							BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+							BlockPos _bp = new BlockPos(0, 10, 0);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_tileEntity != null)
@@ -264,7 +264,7 @@ public class SetspawnprocessProcedure {
 									}
 								}
 								{
-									BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+									BlockPos _bp = new BlockPos(0, 10, 0);
 									BlockState _bs = NbtblockBlock.block.getDefaultState();
 									BlockState _bso = world.getBlockState(_bp);
 									TileEntity _te = world.getTileEntity(_bp);
@@ -285,7 +285,7 @@ public class SetspawnprocessProcedure {
 									}
 								}
 								if (!world.isRemote()) {
-									BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+									BlockPos _bp = new BlockPos(0, 10, 0);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_tileEntity != null)
@@ -323,7 +323,7 @@ public class SetspawnprocessProcedure {
 				}.start(world, (int) 20);
 			} else if ((entity.world.getDimensionKey()) == (World.THE_NETHER)) {
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+					BlockPos _bp = new BlockPos(0, 10, 0);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
@@ -332,7 +332,7 @@ public class SetspawnprocessProcedure {
 						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+					BlockPos _bp = new BlockPos(0, 10, 0);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
@@ -341,7 +341,7 @@ public class SetspawnprocessProcedure {
 						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+					BlockPos _bp = new BlockPos(0, 10, 0);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
@@ -353,11 +353,11 @@ public class SetspawnprocessProcedure {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-							"msg @a [serveur] Le spawn a \u00E9t\u00E9 chang\u00E9 ");
+							"msg @a [serveur] Le spawn a \uFFFDt\uFFFD chang\uFFFD ");
 				}
 				entity.getPersistentData().putBoolean("spawn_warn", (false));
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+					BlockPos _bp = new BlockPos(0, 10, 0);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
@@ -408,7 +408,7 @@ public class SetspawnprocessProcedure {
 							}
 						}
 						{
-							BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+							BlockPos _bp = new BlockPos(0, 10, 0);
 							BlockState _bs = NbtblockBlock.block.getDefaultState();
 							BlockState _bso = world.getBlockState(_bp);
 							TileEntity _te = world.getTileEntity(_bp);
@@ -429,7 +429,7 @@ public class SetspawnprocessProcedure {
 							}
 						}
 						if (!world.isRemote()) {
-							BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+							BlockPos _bp = new BlockPos(0, 10, 0);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_tileEntity != null)
@@ -481,7 +481,7 @@ public class SetspawnprocessProcedure {
 									}
 								}
 								{
-									BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+									BlockPos _bp = new BlockPos(0, 10, 0);
 									BlockState _bs = NbtblockBlock.block.getDefaultState();
 									BlockState _bso = world.getBlockState(_bp);
 									TileEntity _te = world.getTileEntity(_bp);
@@ -502,7 +502,7 @@ public class SetspawnprocessProcedure {
 									}
 								}
 								if (!world.isRemote()) {
-									BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+									BlockPos _bp = new BlockPos(0, 10, 0);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_tileEntity != null)
@@ -540,7 +540,7 @@ public class SetspawnprocessProcedure {
 				}.start(world, (int) 20);
 			} else {
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+					BlockPos _bp = new BlockPos(0, 10, 0);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
@@ -549,7 +549,7 @@ public class SetspawnprocessProcedure {
 						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+					BlockPos _bp = new BlockPos(0, 10, 0);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
@@ -558,7 +558,7 @@ public class SetspawnprocessProcedure {
 						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+					BlockPos _bp = new BlockPos(0, 10, 0);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
@@ -570,11 +570,11 @@ public class SetspawnprocessProcedure {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-							"msg @a [serveur] Le spawn a \u00E9t\u00E9 chang\u00E9 ");
+							"msg @a [serveur] Le spawn a \uFFFDt\uFFFD chang\uFFFD ");
 				}
 				entity.getPersistentData().putBoolean("spawn_warn", (false));
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+					BlockPos _bp = new BlockPos(0, 10, 0);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
@@ -625,7 +625,7 @@ public class SetspawnprocessProcedure {
 							}
 						}
 						{
-							BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+							BlockPos _bp = new BlockPos(0, 10, 0);
 							BlockState _bs = NbtblockBlock.block.getDefaultState();
 							BlockState _bso = world.getBlockState(_bp);
 							TileEntity _te = world.getTileEntity(_bp);
@@ -646,7 +646,7 @@ public class SetspawnprocessProcedure {
 							}
 						}
 						if (!world.isRemote()) {
-							BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+							BlockPos _bp = new BlockPos(0, 10, 0);
 							TileEntity _tileEntity = world.getTileEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_tileEntity != null)
@@ -698,7 +698,7 @@ public class SetspawnprocessProcedure {
 									}
 								}
 								if (!world.isRemote()) {
-									BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+									BlockPos _bp = new BlockPos(0, 10, 0);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_tileEntity != null)
@@ -707,7 +707,7 @@ public class SetspawnprocessProcedure {
 										((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 								}
 								{
-									BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+									BlockPos _bp = new BlockPos(0, 10, 0);
 									BlockState _bs = NbtblockBlock.block.getDefaultState();
 									BlockState _bso = world.getBlockState(_bp);
 									TileEntity _te = world.getTileEntity(_bp);
@@ -740,7 +740,7 @@ public class SetspawnprocessProcedure {
 				((World) world).getServer().getCommandManager().handleCommand(
 						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-						"msg @p [warn] Le spawn semble obsru\u00E9e veuill\u00E9 recommencer la commande pour confimer");
+						"msg @p [warn] Le spawn semble obsru\uFFFDe veuill\uFFFD recommencer la commande pour confimer");
 			}
 		}
 	}

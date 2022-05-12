@@ -85,8 +85,8 @@ public class FluidpalahelpGuiWindow extends ContainerScreen<FluidpalahelpGui.Gui
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
 		this.font.drawString(ms, "Fluid", 85, 5, -13369345);
 		this.font.drawString(ms, "fake water: un type d'eau invisible qui", 2, 63, -12829636);
-		this.font.drawString(ms, "vous fait des d\u00E9gats Peut peut \u00EAtre", 2, 76, -12829636);
-		this.font.drawString(ms, "\u00EAmpecher la legendary stone de power", 4, 86, -12829636);
+		this.font.drawString(ms, "vous fait des d\uFFFDgats Peut peut \uFFFDtre", 2, 76, -12829636);
+		this.font.drawString(ms, "\uFFFDmpecher la legendary stone de power", 4, 86, -12829636);
 		this.font.drawString(ms, "Angelique water : type d'eau qui vous", 4, 122, -12829636);
 		this.font.drawString(ms, "soigne", 3, 132, -12829636);
 	}

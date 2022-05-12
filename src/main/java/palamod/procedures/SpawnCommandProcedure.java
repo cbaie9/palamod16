@@ -70,7 +70,7 @@ public class SpawnCommandProcedure {
 		} else {
 			dim = 3;
 		}
-		if ((dim == 0 || dim == 2 || dim == 1) && (world.getBlockState(new BlockPos((int) 0, (int) 10, (int) 0))).getBlock() == NbtblockBlock.block) {
+		if ((dim == 0 || dim == 2 || dim == 1) && (world.getBlockState(new BlockPos(0, 10, 0))).getBlock() == NbtblockBlock.block) {
 			dim_id = (new Object() {
 				public String getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
@@ -78,7 +78,7 @@ public class SpawnCommandProcedure {
 						return tileEntity.getTileData().getString(tag);
 					return "";
 				}
-			}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_dim_id"));
+			}.getValue(world, new BlockPos(0, 10, 0), "spawn_dim_id"));
 			if ((dim_id).equals("0")) {
 				if (!((entity.world.getDimensionKey()) == (World.OVERWORLD))) {
 					{
@@ -110,21 +110,21 @@ public class SpawnCommandProcedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_x")), (new Object() {
+					}.getValue(world, new BlockPos(0, 10, 0), "spawn_x")), (new Object() {
 						public double getValue(IWorld world, BlockPos pos, String tag) {
 							TileEntity tileEntity = world.getTileEntity(pos);
 							if (tileEntity != null)
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_y")), (new Object() {
+					}.getValue(world, new BlockPos(0, 10, 0), "spawn_y")), (new Object() {
 						public double getValue(IWorld world, BlockPos pos, String tag) {
 							TileEntity tileEntity = world.getTileEntity(pos);
 							if (tileEntity != null)
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_z")));
+					}.getValue(world, new BlockPos(0, 10, 0), "spawn_z")));
 					if (_ent instanceof ServerPlayerEntity) {
 						((ServerPlayerEntity) _ent).connection.setPlayerLocation((new Object() {
 							public double getValue(IWorld world, BlockPos pos, String tag) {
@@ -133,22 +133,21 @@ public class SpawnCommandProcedure {
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_x")), (new Object() {
+						}.getValue(world, new BlockPos(0, 10, 0), "spawn_x")), (new Object() {
 							public double getValue(IWorld world, BlockPos pos, String tag) {
 								TileEntity tileEntity = world.getTileEntity(pos);
 								if (tileEntity != null)
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_y")), (new Object() {
+						}.getValue(world, new BlockPos(0, 10, 0), "spawn_y")), (new Object() {
 							public double getValue(IWorld world, BlockPos pos, String tag) {
 								TileEntity tileEntity = world.getTileEntity(pos);
 								if (tileEntity != null)
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_z")), _ent.rotationYaw, _ent.rotationPitch,
-								Collections.emptySet());
+						}.getValue(world, new BlockPos(0, 10, 0), "spawn_z")), _ent.rotationYaw, _ent.rotationPitch, Collections.emptySet());
 					}
 				}
 			} else if ((dim_id).equals("1")) {
@@ -162,21 +161,21 @@ public class SpawnCommandProcedure {
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_x")), (new Object() {
+						}.getValue(world, new BlockPos(0, 10, 0), "spawn_x")), (new Object() {
 							public double getValue(IWorld world, BlockPos pos, String tag) {
 								TileEntity tileEntity = world.getTileEntity(pos);
 								if (tileEntity != null)
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_y")), (new Object() {
+						}.getValue(world, new BlockPos(0, 10, 0), "spawn_y")), (new Object() {
 							public double getValue(IWorld world, BlockPos pos, String tag) {
 								TileEntity tileEntity = world.getTileEntity(pos);
 								if (tileEntity != null)
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_z")));
+						}.getValue(world, new BlockPos(0, 10, 0), "spawn_z")));
 						if (_ent instanceof ServerPlayerEntity) {
 							((ServerPlayerEntity) _ent).connection.setPlayerLocation((new Object() {
 								public double getValue(IWorld world, BlockPos pos, String tag) {
@@ -185,22 +184,21 @@ public class SpawnCommandProcedure {
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_x")), (new Object() {
+							}.getValue(world, new BlockPos(0, 10, 0), "spawn_x")), (new Object() {
 								public double getValue(IWorld world, BlockPos pos, String tag) {
 									TileEntity tileEntity = world.getTileEntity(pos);
 									if (tileEntity != null)
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_y")), (new Object() {
+							}.getValue(world, new BlockPos(0, 10, 0), "spawn_y")), (new Object() {
 								public double getValue(IWorld world, BlockPos pos, String tag) {
 									TileEntity tileEntity = world.getTileEntity(pos);
 									if (tileEntity != null)
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_z")), _ent.rotationYaw, _ent.rotationPitch,
-									Collections.emptySet());
+							}.getValue(world, new BlockPos(0, 10, 0), "spawn_z")), _ent.rotationYaw, _ent.rotationPitch, Collections.emptySet());
 						}
 					}
 				} else {
@@ -232,21 +230,21 @@ public class SpawnCommandProcedure {
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_x")), (new Object() {
+						}.getValue(world, new BlockPos(0, 10, 0), "spawn_x")), (new Object() {
 							public double getValue(IWorld world, BlockPos pos, String tag) {
 								TileEntity tileEntity = world.getTileEntity(pos);
 								if (tileEntity != null)
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_y")), (new Object() {
+						}.getValue(world, new BlockPos(0, 10, 0), "spawn_y")), (new Object() {
 							public double getValue(IWorld world, BlockPos pos, String tag) {
 								TileEntity tileEntity = world.getTileEntity(pos);
 								if (tileEntity != null)
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_z")));
+						}.getValue(world, new BlockPos(0, 10, 0), "spawn_z")));
 						if (_ent instanceof ServerPlayerEntity) {
 							((ServerPlayerEntity) _ent).connection.setPlayerLocation((new Object() {
 								public double getValue(IWorld world, BlockPos pos, String tag) {
@@ -255,22 +253,21 @@ public class SpawnCommandProcedure {
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_x")), (new Object() {
+							}.getValue(world, new BlockPos(0, 10, 0), "spawn_x")), (new Object() {
 								public double getValue(IWorld world, BlockPos pos, String tag) {
 									TileEntity tileEntity = world.getTileEntity(pos);
 									if (tileEntity != null)
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_y")), (new Object() {
+							}.getValue(world, new BlockPos(0, 10, 0), "spawn_y")), (new Object() {
 								public double getValue(IWorld world, BlockPos pos, String tag) {
 									TileEntity tileEntity = world.getTileEntity(pos);
 									if (tileEntity != null)
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_z")), _ent.rotationYaw, _ent.rotationPitch,
-									Collections.emptySet());
+							}.getValue(world, new BlockPos(0, 10, 0), "spawn_z")), _ent.rotationYaw, _ent.rotationPitch, Collections.emptySet());
 						}
 					}
 				}
@@ -285,21 +282,21 @@ public class SpawnCommandProcedure {
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_x")), (new Object() {
+						}.getValue(world, new BlockPos(0, 10, 0), "spawn_x")), (new Object() {
 							public double getValue(IWorld world, BlockPos pos, String tag) {
 								TileEntity tileEntity = world.getTileEntity(pos);
 								if (tileEntity != null)
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_y")), (new Object() {
+						}.getValue(world, new BlockPos(0, 10, 0), "spawn_y")), (new Object() {
 							public double getValue(IWorld world, BlockPos pos, String tag) {
 								TileEntity tileEntity = world.getTileEntity(pos);
 								if (tileEntity != null)
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_z")));
+						}.getValue(world, new BlockPos(0, 10, 0), "spawn_z")));
 						if (_ent instanceof ServerPlayerEntity) {
 							((ServerPlayerEntity) _ent).connection.setPlayerLocation((new Object() {
 								public double getValue(IWorld world, BlockPos pos, String tag) {
@@ -308,22 +305,21 @@ public class SpawnCommandProcedure {
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_x")), (new Object() {
+							}.getValue(world, new BlockPos(0, 10, 0), "spawn_x")), (new Object() {
 								public double getValue(IWorld world, BlockPos pos, String tag) {
 									TileEntity tileEntity = world.getTileEntity(pos);
 									if (tileEntity != null)
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_y")), (new Object() {
+							}.getValue(world, new BlockPos(0, 10, 0), "spawn_y")), (new Object() {
 								public double getValue(IWorld world, BlockPos pos, String tag) {
 									TileEntity tileEntity = world.getTileEntity(pos);
 									if (tileEntity != null)
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_z")), _ent.rotationYaw, _ent.rotationPitch,
-									Collections.emptySet());
+							}.getValue(world, new BlockPos(0, 10, 0), "spawn_z")), _ent.rotationYaw, _ent.rotationPitch, Collections.emptySet());
 						}
 					}
 				} else {
@@ -355,21 +351,21 @@ public class SpawnCommandProcedure {
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_x")), (new Object() {
+						}.getValue(world, new BlockPos(0, 10, 0), "spawn_x")), (new Object() {
 							public double getValue(IWorld world, BlockPos pos, String tag) {
 								TileEntity tileEntity = world.getTileEntity(pos);
 								if (tileEntity != null)
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_y")), (new Object() {
+						}.getValue(world, new BlockPos(0, 10, 0), "spawn_y")), (new Object() {
 							public double getValue(IWorld world, BlockPos pos, String tag) {
 								TileEntity tileEntity = world.getTileEntity(pos);
 								if (tileEntity != null)
 									return tileEntity.getTileData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_z")));
+						}.getValue(world, new BlockPos(0, 10, 0), "spawn_z")));
 						if (_ent instanceof ServerPlayerEntity) {
 							((ServerPlayerEntity) _ent).connection.setPlayerLocation((new Object() {
 								public double getValue(IWorld world, BlockPos pos, String tag) {
@@ -378,22 +374,21 @@ public class SpawnCommandProcedure {
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_x")), (new Object() {
+							}.getValue(world, new BlockPos(0, 10, 0), "spawn_x")), (new Object() {
 								public double getValue(IWorld world, BlockPos pos, String tag) {
 									TileEntity tileEntity = world.getTileEntity(pos);
 									if (tileEntity != null)
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_y")), (new Object() {
+							}.getValue(world, new BlockPos(0, 10, 0), "spawn_y")), (new Object() {
 								public double getValue(IWorld world, BlockPos pos, String tag) {
 									TileEntity tileEntity = world.getTileEntity(pos);
 									if (tileEntity != null)
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "spawn_z")), _ent.rotationYaw, _ent.rotationPitch,
-									Collections.emptySet());
+							}.getValue(world, new BlockPos(0, 10, 0), "spawn_z")), _ent.rotationYaw, _ent.rotationPitch, Collections.emptySet());
 						}
 					}
 				}

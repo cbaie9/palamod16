@@ -43,6 +43,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureAttribute;
+import net.minecraft.entity.AreaEffectCloudEntity;
 
 import javax.annotation.Nullable;
 
@@ -169,7 +170,7 @@ public class BigdynamiteentityEntity extends PalamodModElements.ModElement {
 				return false;
 			if (source.getImmediateSource() instanceof PlayerEntity)
 				return false;
-			if (source.getImmediateSource() instanceof PotionEntity)
+			if (source.getImmediateSource() instanceof PotionEntity || source.getImmediateSource() instanceof AreaEffectCloudEntity)
 				return false;
 			if (source == DamageSource.FALL)
 				return false;

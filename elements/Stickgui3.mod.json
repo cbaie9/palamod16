@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 28,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -72,13 +72,13 @@
       {
         "type": "button",
         "data": {
-          "text": "stick précédant",
+          "text": "stick prï¿½cï¿½dant",
           "onClick": {
             "name": "Connectstickgui2"
           },
           "width": 100,
           "height": 20,
-          "name": "stick précédant",
+          "name": "stick prï¿½cï¿½dant",
           "x": 21,
           "y": 45
         }

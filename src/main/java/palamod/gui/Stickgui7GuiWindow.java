@@ -89,7 +89,7 @@ public class Stickgui7GuiWindow extends ContainerScreen<Stickgui7Gui.GuiContaine
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Damage stick : cr\u00E9e un effet de knockback autout de vous", 3, 33, -12829636);
+		this.font.drawString(ms, "Damage stick : cr\uFFFDe un effet de knockback autout de vous", 3, 33, -12829636);
 		this.font.drawString(ms, "craft du spike en paladium", 264, 60, -12829636);
 		this.font.drawString(ms, "(--", 349, 73, -12829636);
 	}
@@ -104,7 +104,7 @@ public class Stickgui7GuiWindow extends ContainerScreen<Stickgui7Gui.GuiContaine
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		this.addButton(new Button(this.guiLeft + 7, this.guiTop + 8, 100, 20, new StringTextComponent("stick précédant"), e -> {
+		this.addButton(new Button(this.guiLeft + 7, this.guiTop + 8, 100, 20, new StringTextComponent("stick prï¿½cï¿½dant"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new Stickgui7Gui.ButtonPressedMessage(0, x, y, z));
 				Stickgui7Gui.handleButtonAction(entity, 0, x, y, z);

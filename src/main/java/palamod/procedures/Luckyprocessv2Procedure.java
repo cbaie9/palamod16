@@ -103,7 +103,7 @@ public class Luckyprocessv2Procedure {
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "Random_lucky"));
+		}.getValue(world, new BlockPos(x, y, z), "Random_lucky"));
 		if (Random >= 164000 && Random <= 164500) {
 			PalamodModVariables.lucky_name = "Double Xp";
 			if (entity instanceof PlayerEntity) {
@@ -145,7 +145,7 @@ public class Luckyprocessv2Procedure {
 			if (entity instanceof PlayerEntity)
 				((PlayerEntity) entity).addExperienceLevel((int) ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0));
 			if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu l'event aux Lucky Block " + " Double Xp"));
+				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu l'event aux Lucky Block " + " Double Xp"));
 			}
 			PalamodModVariables.Lucky_destroy = 1;
 		}
@@ -202,7 +202,7 @@ public class Luckyprocessv2Procedure {
 				}
 			}
 			if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu l'event aux Lucky Block " + " Duplicata"));
+				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu l'event aux Lucky Block " + " Duplicata"));
 			}
 			PalamodModVariables.Lucky_destroy = 1;
 			illegal_operation_check = (true);
@@ -263,7 +263,7 @@ public class Luckyprocessv2Procedure {
 				}
 			}
 			if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu l'event aux Lucky Block " + " End"));
+				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu l'event aux Lucky Block " + " End"));
 			}
 			PalamodModVariables.Lucky_destroy = 1;
 			illegal_operation_check = (true);
@@ -324,9 +324,9 @@ public class Luckyprocessv2Procedure {
 								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 						"fill ~-1 ~2 ~1 ~1 ~2 ~-1 minecraft:lapis_block");
 			}
-			world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), Blocks.BEACON.getDefaultState(), 3);
+			world.setBlockState(new BlockPos(x, y + 1, z), Blocks.BEACON.getDefaultState(), 3);
 			if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu l'event aux Lucky Block " + " Endium beacon"));
+				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu l'event aux Lucky Block " + " Endium beacon"));
 			}
 			PalamodModVariables.Lucky_destroy = 2;
 			illegal_operation_check = (false);
@@ -376,7 +376,7 @@ public class Luckyprocessv2Procedure {
 			}
 			if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
 				PalamodMod.LOGGER
-						.info((entity.getDisplayName().getString() + " \u00E0 eu l'event aux Lucky Block " + " Endium \"Grade\" ( core beta v1 )"));
+						.info((entity.getDisplayName().getString() + " \uFFFD eu l'event aux Lucky Block " + " Endium \"Grade\" ( core beta v1 )"));
 			}
 			PalamodModVariables.Lucky_destroy = 1;
 			illegal_operation_check = (false);
@@ -425,13 +425,13 @@ public class Luckyprocessv2Procedure {
 				ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 			}
 			if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu l'event aux Lucky Block " + " Endium Block"));
+				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu l'event aux Lucky Block " + " Endium Block"));
 			}
 			PalamodModVariables.Lucky_destroy = 1;
 			illegal_operation_check = (true);
 		}
 		if (Random >= 168200 && Random <= 191200) {
-			PalamodModVariables.lucky_name = "Enferm\u00E9";
+			PalamodModVariables.lucky_name = "Enferm\uFFFD";
 			if (entity instanceof PlayerEntity) {
 				Container _current = ((PlayerEntity) entity).openContainer;
 				if (_current instanceof Supplier) {
@@ -475,7 +475,7 @@ public class Luckyprocessv2Procedure {
 						"fill ~-3 ~ ~3 ~3 ~ ~-3 minecraft:obsidian");
 			}
 			{
-				BlockPos _bp = new BlockPos((int) (x + 1), (int) (y + 1), (int) z);
+				BlockPos _bp = new BlockPos(x + 1, y + 1, z);
 				BlockState _bs = RenforcedobsidianBlock.block.getDefaultState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -489,7 +489,7 @@ public class Luckyprocessv2Procedure {
 				world.setBlockState(_bp, _bs, 3);
 			}
 			{
-				BlockPos _bp = new BlockPos((int) (x + 1), (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x + 1, y, z);
 				BlockState _bs = RenforcedobsidianBlock.block.getDefaultState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -503,7 +503,7 @@ public class Luckyprocessv2Procedure {
 				world.setBlockState(_bp, _bs, 3);
 			}
 			{
-				BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 1), (int) z);
+				BlockPos _bp = new BlockPos(x - 1, y + 1, z);
 				BlockState _bs = RenforcedobsidianBlock.block.getDefaultState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -517,7 +517,7 @@ public class Luckyprocessv2Procedure {
 				world.setBlockState(_bp, _bs, 3);
 			}
 			{
-				BlockPos _bp = new BlockPos((int) (x - 1), (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x - 1, y, z);
 				BlockState _bs = RenforcedobsidianBlock.block.getDefaultState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -531,7 +531,7 @@ public class Luckyprocessv2Procedure {
 				world.setBlockState(_bp, _bs, 3);
 			}
 			{
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z + 1));
+				BlockPos _bp = new BlockPos(x, y, z + 1);
 				BlockState _bs = RenforcedobsidianBlock.block.getDefaultState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -545,7 +545,7 @@ public class Luckyprocessv2Procedure {
 				world.setBlockState(_bp, _bs, 3);
 			}
 			{
-				BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) (z + 1));
+				BlockPos _bp = new BlockPos(x, y + 1, z + 1);
 				BlockState _bs = RenforcedobsidianBlock.block.getDefaultState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -559,7 +559,7 @@ public class Luckyprocessv2Procedure {
 				world.setBlockState(_bp, _bs, 3);
 			}
 			{
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) (z - 1));
+				BlockPos _bp = new BlockPos(x, y, z - 1);
 				BlockState _bs = RenforcedobsidianBlock.block.getDefaultState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -573,7 +573,7 @@ public class Luckyprocessv2Procedure {
 				world.setBlockState(_bp, _bs, 3);
 			}
 			{
-				BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) (z - 1));
+				BlockPos _bp = new BlockPos(x, y + 1, z - 1);
 				BlockState _bs = RenforcedobsidianBlock.block.getDefaultState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -587,7 +587,7 @@ public class Luckyprocessv2Procedure {
 				world.setBlockState(_bp, _bs, 3);
 			}
 			{
-				BlockPos _bp = new BlockPos((int) x, (int) (y + 2), (int) z);
+				BlockPos _bp = new BlockPos(x, y + 2, z);
 				BlockState _bs = RenforcedobsidianBlock.block.getDefaultState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -601,7 +601,7 @@ public class Luckyprocessv2Procedure {
 				world.setBlockState(_bp, _bs, 3);
 			}
 			if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu l'event aux Lucky Block " + " Enferm\u00E9"));
+				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu l'event aux Lucky Block " + " Enferm\uFFFD"));
 			}
 			PalamodModVariables.Lucky_destroy = 1;
 			illegal_operation_check = (false);
@@ -662,7 +662,7 @@ public class Luckyprocessv2Procedure {
 						"Title title In current devloppement");
 			}
 			if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu l'event aux Lucky Block " + " Et Les Phant"));
+				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu l'event aux Lucky Block " + " Et Les Phant"));
 			}
 			PalamodModVariables.Lucky_destroy = 1;
 			illegal_operation_check = (false);
@@ -711,7 +711,7 @@ public class Luckyprocessv2Procedure {
 				ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 			}
 			if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu l'event aux Lucky Block " + " Et paf des sous"));
+				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu l'event aux Lucky Block " + " Et paf des sous"));
 			}
 			PalamodModVariables.Lucky_destroy = 1;
 			illegal_operation_check = (false);
@@ -762,7 +762,7 @@ public class Luckyprocessv2Procedure {
 				}
 			}
 			if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu l'event aux Lucky Block " + " Et paf plus de sous"));
+				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu l'event aux Lucky Block " + " Et paf plus de sous"));
 			}
 			PalamodModVariables.Lucky_destroy = 1;
 			illegal_operation_check = (false);
@@ -840,21 +840,21 @@ public class Luckyprocessv2Procedure {
 				}.start(world, (int) 6);
 			}
 			if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu l'event aux Lucky Block " + "Ex-pala-osion"));
+				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu l'event aux Lucky Block " + "Ex-pala-osion"));
 			}
 			PalamodModVariables.Lucky_destroy = 1;
 			illegal_operation_check = (false);
 		}
 		if (Random >= 193700 && Random <= 198300) {
-			PalamodModVariables.lucky_name = "Coordonn\u00E9 de Fuze";
+			PalamodModVariables.lucky_name = "Coordonn\uFFFD de Fuze";
 			if (world instanceof ServerWorld) {
 				((World) world).getServer().getCommandManager().handleCommand(
 						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-						"/give @p written_book{pages:['{\"text\":\"Voici Les coordonn\u00E9es de Fuze et des r\u00E9compences \\n\\nCalcule la page \\n(( 3 + 90 / 3 + 6 ) / 3 + 2 ) / 5\\n\\nBonne chance ;)\"}','[\"\",{\"text\":\"1 : Coordonn\u00E9es\\n\\n\"},{\"selector\":\"https://youtu.be/3Y7aWLpuxA4\"}]','[\"\",{\"text\":\"2 Coordonn\u00E9 de fuze\\n\\n\"},{\"selector\":\"https://youtu.be/ajlkhFnz8eo?list=TLPQMTcwMjIwMjI29uqOA1D3sQ&t=4\"}]','[\"\",{\"text\":\"3 Coordonn\u00E9es de Fuze \\n\\n\"},{\"selector\":\"https://youtu.be/GPXkjtpGCFI?t=7\"}]','[\"\",{\"text\":\"4 Coordonn\u00E9es de fuze \\n\\n\"},{\"selector\":\"https://youtu.be/O91DT1pR1ew\"}]'],title:\"Ma base\",author:Fuzay,display:{Lore:[\"Les Coo de ma base\"]}}");
+						"/give @p written_book{pages:['{\"text\":\"Voici Les coordonn\uFFFDes de Fuze et des r\uFFFDcompences \\n\\nCalcule la page \\n(( 3 + 90 / 3 + 6 ) / 3 + 2 ) / 5\\n\\nBonne chance ;)\"}','[\"\",{\"text\":\"1 : Coordonn\uFFFDes\\n\\n\"},{\"selector\":\"https://youtu.be/3Y7aWLpuxA4\"}]','[\"\",{\"text\":\"2 Coordonn\uFFFD de fuze\\n\\n\"},{\"selector\":\"https://youtu.be/ajlkhFnz8eo?list=TLPQMTcwMjIwMjI29uqOA1D3sQ&t=4\"}]','[\"\",{\"text\":\"3 Coordonn\uFFFDes de Fuze \\n\\n\"},{\"selector\":\"https://youtu.be/GPXkjtpGCFI?t=7\"}]','[\"\",{\"text\":\"4 Coordonn\uFFFDes de fuze \\n\\n\"},{\"selector\":\"https://youtu.be/O91DT1pR1ew\"}]'],title:\"Ma base\",author:Fuzay,display:{Lore:[\"Les Coo de ma base\"]}}");
 			}
 			if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu l'event aux Lucky Block " + "Coordonn\u00E9 de fuze"));
+				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu l'event aux Lucky Block " + "Coordonn\uFFFD de fuze"));
 			}
 			PalamodModVariables.Lucky_destroy = 1;
 			illegal_operation_check = (false);

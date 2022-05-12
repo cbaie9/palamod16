@@ -55,6 +55,40 @@ public class PaladumfurnaceGuiWindow extends ContainerScreen<PaladumfurnaceGui.G
 		int k = (this.width - this.xSize) / 2;
 		int l = (this.height - this.ySize) / 2;
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("palamod:textures/big_slot.png"));
+		this.blit(ms, this.guiLeft + 122, this.guiTop + 35, 0, 0, 26, 26, 26, 26);
+
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("palamod:textures/fire.png"));
+		this.blit(ms, this.guiLeft + 58, this.guiTop + 42, 0, 0, 17, 14, 17, 14);
+
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("palamod:textures/fire01.png"));
+		this.blit(ms, this.guiLeft + 58, this.guiTop + 40, 0, 0, 21, 17, 21, 17);
+
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("palamod:textures/fire02.png"));
+		this.blit(ms, this.guiLeft + 61, this.guiTop + 41, 0, 0, 18, 16, 18, 16);
+
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("palamod:textures/fire03.png"));
+		this.blit(ms, this.guiLeft + 61, this.guiTop + 41, 0, 0, 17, 15, 17, 15);
+
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("palamod:textures/fire04.png"));
+		this.blit(ms, this.guiLeft + 60, this.guiTop + 43, 0, 0, 17, 13, 17, 13);
+
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("palamod:textures/fire05.png"));
+		this.blit(ms, this.guiLeft + 60, this.guiTop + 43, 0, 0, 20, 16, 20, 16);
+
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("palamod:textures/fire06.png"));
+		this.blit(ms, this.guiLeft + 60, this.guiTop + 39, 0, 0, 19, 18, 19, 18);
+
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("palamod:textures/fire07.png"));
+		this.blit(ms, this.guiLeft + 60, this.guiTop + 41, 0, 0, 18, 17, 18, 17);
+
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("palamod:textures/fire08.png"));
+		this.blit(ms, this.guiLeft + 60, this.guiTop + 43, 0, 0, 16, 14, 16, 14);
+
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("palamod:textures/fire09.png"));
+		this.blit(ms, this.guiLeft + 61, this.guiTop + 41, 0, 0, 16, 16, 16, 16);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -75,9 +109,9 @@ public class PaladumfurnaceGuiWindow extends ContainerScreen<PaladumfurnaceGui.G
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
 		this.font.drawString(ms, "Paladium Furnace", 46, 5, -12829636);
-		this.font.drawString(ms, "" + (PalamodModVariables.furnace_processing) + "", 85, 35, -12829636);
-		this.font.drawString(ms, "Inventory", 6, 71, -12829636);
-		this.font.drawString(ms, "Upgardes", 3, 15, -65536);
+		this.font.drawString(ms, "Inventory", 7, 73, -12829636);
+		this.font.drawString(ms, "Upgrades", 2, 16, -65536);
+		this.font.drawString(ms, "" + (PalamodModVariables.g_num) + "", 111, 66, -12829636);
 	}
 
 	@Override

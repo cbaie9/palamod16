@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 28,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -133,12 +133,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Améthyste :",
+          "text": "Amï¿½thyste :",
           "color": {
             "value": -6750055,
             "falpha": 0.0
           },
-          "name": "Améthyste :",
+          "name": "Amï¿½thyste :",
           "x": 98,
           "y": 165
         }

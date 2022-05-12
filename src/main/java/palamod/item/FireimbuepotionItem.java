@@ -16,6 +16,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.block.BlockState;
 
 import java.util.stream.Stream;
 import java.util.Map;
@@ -28,16 +29,16 @@ public class FireimbuepotionItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public FireimbuepotionItem(PalamodModElements instance) {
-		super(instance, 190);
+		super(instance, 743);
 	}
 
 	@Override
 	public void initElements() {
-		elements.items.add(() -> new FoodItemCustom());
+		elements.items.add(() -> new ItemCustom());
 	}
 
-	public static class FoodItemCustom extends Item {
-		public FoodItemCustom() {
+	public static class ItemCustom extends Item {
+		public ItemCustom() {
 			super(new Item.Properties().group(PalamodItemGroup.tab).maxStackSize(1).rarity(Rarity.COMMON)
 					.food((new Food.Builder()).hunger(0).saturation(0.3f)
 
@@ -53,6 +54,21 @@ public class FireimbuepotionItem extends PalamodModElements.ModElement {
 		@Override
 		public net.minecraft.util.SoundEvent getEatSound() {
 			return net.minecraft.util.SoundEvents.ENTITY_GENERIC_DRINK;
+		}
+
+		@Override
+		public int getItemEnchantability() {
+			return 0;
+		}
+
+		@Override
+		public int getUseDuration(ItemStack itemstack) {
+			return 32;
+		}
+
+		@Override
+		public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
+			return 0F;
 		}
 
 		@Override

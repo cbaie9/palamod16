@@ -28,16 +28,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed19")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed19")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed20")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed20")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -48,12 +48,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name20")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name20")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -64,12 +64,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item20")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item20")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -80,12 +80,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price20")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price20")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -96,12 +96,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr20")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr20")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -112,12 +112,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num20")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num20")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -126,7 +126,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -143,16 +143,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed63")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed63")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed64")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed64")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -163,12 +163,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num64")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num64")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -179,12 +179,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name64")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name64")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -195,12 +195,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item64")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item64")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -211,12 +211,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price64")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price64")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -227,12 +227,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr64")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr64")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -241,7 +241,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -258,16 +258,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed72")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed72")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed73")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed73")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -278,12 +278,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name73")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name73")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -294,12 +294,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item73")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item73")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -310,12 +310,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price73")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price73")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -326,12 +326,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr73")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr73")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -342,12 +342,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num73")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num73")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -356,7 +356,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -373,16 +373,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed73")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed73")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed74")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed74")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -393,12 +393,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name74")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name74")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -409,12 +409,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item74")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item74")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -425,12 +425,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr74")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr74")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -441,12 +441,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price74")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price74")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -457,12 +457,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num74")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num74")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -471,7 +471,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -488,16 +488,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed74")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed74")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed75")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed75")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -508,12 +508,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name75")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name75")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -524,12 +524,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item75")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item75")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -540,12 +540,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr75")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr75")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -556,12 +556,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price75")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price75")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -572,12 +572,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num75")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num75")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -586,7 +586,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -603,16 +603,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed75")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed75")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed76")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed76")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -623,12 +623,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name76")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name76")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -639,12 +639,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item76")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item76")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -655,12 +655,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr76")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr76")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -671,12 +671,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price76")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price76")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -687,12 +687,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num76")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num76")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -701,7 +701,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -718,16 +718,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed76")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed76")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed77")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed77")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -738,12 +738,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name77")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name77")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -754,12 +754,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item77")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item77")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -770,12 +770,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr77")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr77")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -786,12 +786,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price77")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price77")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -802,12 +802,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num77")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num77")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -816,7 +816,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -833,16 +833,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed77")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed77")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed78")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed78")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -853,12 +853,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name78")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name78")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -869,12 +869,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item78")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item78")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -885,12 +885,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr78")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr78")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -901,12 +901,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price78")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price78")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -917,12 +917,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num78")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num78")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -931,7 +931,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -948,16 +948,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed78")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed78")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed79")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed79")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -968,12 +968,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr79")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr79")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -984,12 +984,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item79")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item79")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1000,12 +1000,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name79")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name79")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1016,12 +1016,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price79")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price79")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1032,12 +1032,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num79")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num79")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1046,7 +1046,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1063,16 +1063,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed79")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed79")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed80")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed80")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1083,12 +1083,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr80")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr80")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1099,12 +1099,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item80")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item80")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1115,12 +1115,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name80")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name80")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1131,12 +1131,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price80")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price80")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1147,12 +1147,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num80")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num80")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1161,7 +1161,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1178,16 +1178,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed80")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed80")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed81")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed81")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1198,12 +1198,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr81")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr81")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1214,12 +1214,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item81")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item81")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1230,12 +1230,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name81")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name81")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1246,12 +1246,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price81")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price81")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1262,12 +1262,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num81")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num81")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1276,7 +1276,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1293,16 +1293,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed81")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed81")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed82")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed82")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1313,12 +1313,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr82")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr82")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1329,12 +1329,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item82")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item82")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1345,12 +1345,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name82")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name82")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1361,12 +1361,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price82")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price82")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1377,12 +1377,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num82")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num82")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1391,7 +1391,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1408,16 +1408,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed82")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed82")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed83")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed83")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1428,12 +1428,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr83")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr83")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1444,12 +1444,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price83")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price83")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1460,12 +1460,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item83")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item83")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1476,12 +1476,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name83")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name83")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1492,12 +1492,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num83")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num83")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1506,7 +1506,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1523,16 +1523,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed83")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed83")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed84")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed84")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1543,12 +1543,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr84")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr84")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1559,12 +1559,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item84")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item84")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1575,12 +1575,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name84")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name84")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1591,12 +1591,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price84")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price84")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1607,12 +1607,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num84")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num84")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1621,7 +1621,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1638,16 +1638,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed84")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed84")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed85")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed85")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1658,12 +1658,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr85")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr85")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1674,12 +1674,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price85")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price85")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1690,12 +1690,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name85")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name85")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1706,12 +1706,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item85")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item85")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1722,12 +1722,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num85")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num85")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1736,7 +1736,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1753,16 +1753,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed85")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed85")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed86")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed86")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1773,12 +1773,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr86")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr86")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1789,12 +1789,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price86")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price86")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1805,12 +1805,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name86")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name86")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1821,12 +1821,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item86")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item86")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1837,12 +1837,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num86")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num86")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1851,7 +1851,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1868,16 +1868,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed86")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed86")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed87")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed87")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1888,12 +1888,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr87")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr87")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1904,12 +1904,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price87")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price87")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1920,12 +1920,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item87")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item87")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1936,12 +1936,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name87")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name87")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1952,12 +1952,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num87")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num87")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1966,7 +1966,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -1983,16 +1983,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed87")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed87")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed88")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed88")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2003,12 +2003,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr88")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr88")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2019,12 +2019,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name88")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name88")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2035,12 +2035,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item88")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item88")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2051,12 +2051,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price88")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price88")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2067,12 +2067,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num88")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num88")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2081,7 +2081,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2098,16 +2098,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed88")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed88")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed89")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed89")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2118,12 +2118,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr89")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr89")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2134,12 +2134,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price89")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price89")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2150,12 +2150,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item89")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item89")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2166,12 +2166,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name89")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name89")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2182,12 +2182,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num89")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num89")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2196,7 +2196,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2213,16 +2213,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed89")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed89")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed90")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed90")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2233,12 +2233,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price90")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price90")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2249,12 +2249,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name90")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name90")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2265,12 +2265,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item90")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item90")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2281,12 +2281,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr90")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr90")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2297,12 +2297,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num90")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num90")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2311,7 +2311,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2328,16 +2328,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed90")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed90")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed91")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed91")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2348,12 +2348,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item91")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item91")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2364,12 +2364,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name91")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name91")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2380,12 +2380,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price91")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price91")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2396,12 +2396,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num91")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num91")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2412,12 +2412,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr91")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr91")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2426,7 +2426,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2443,16 +2443,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed91")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed91")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed92")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed92")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2463,12 +2463,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr92")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr92")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2479,12 +2479,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name92")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name92")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2495,12 +2495,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price92")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price92")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2511,12 +2511,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item92")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item92")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2527,12 +2527,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num92")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num92")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2541,7 +2541,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2558,16 +2558,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed92")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed92")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed93")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed93")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2578,12 +2578,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item93")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item93")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2594,12 +2594,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price93")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price93")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2610,12 +2610,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr93")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr93")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2626,12 +2626,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num93")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num93")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2642,12 +2642,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name93")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name93")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2656,7 +2656,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2673,16 +2673,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed93")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed93")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed94")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed94")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2693,12 +2693,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name94")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name94")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2709,12 +2709,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr94")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr94")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2725,12 +2725,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num94")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num94")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2741,12 +2741,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item94")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item94")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2757,12 +2757,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price94")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price94")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2771,7 +2771,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2788,16 +2788,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed94")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed94")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed95")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed95")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2808,12 +2808,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name95")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name95")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2824,12 +2824,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item95")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item95")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2840,12 +2840,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr95")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr95")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2856,12 +2856,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price95")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price95")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2872,12 +2872,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num95")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num95")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2886,7 +2886,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2903,16 +2903,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed95")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed95")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed96")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed96")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2923,12 +2923,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item96")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item96")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2939,12 +2939,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name96")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name96")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2955,12 +2955,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr96")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr96")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2971,12 +2971,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num96")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num96")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -2987,12 +2987,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price96")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price96")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3001,7 +3001,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3018,16 +3018,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed97")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed97")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed98")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed98")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3038,12 +3038,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num98")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num98")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3054,12 +3054,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price98")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price98")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3070,12 +3070,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name98")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name98")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3086,12 +3086,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr98")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr98")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3102,12 +3102,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item98")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item98")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3116,7 +3116,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3133,16 +3133,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed98")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed98")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed99")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed99")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3153,12 +3153,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr99")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr99")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3169,12 +3169,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item99")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item99")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3185,12 +3185,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name99")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name99")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3201,12 +3201,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price99")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price99")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3217,12 +3217,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num99")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num99")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3231,7 +3231,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3248,16 +3248,16 @@ public class Optihdvpart21Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed99")) == true && (new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed99")) == true && (new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_buyed100")) == false) {
+		}.getValue(world, new BlockPos(0, 10, 0), "market_buyed100")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3268,12 +3268,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_num100")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_num100")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3284,12 +3284,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_pr100")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_pr100")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3300,12 +3300,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_name100")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_name100")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3316,12 +3316,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_price100")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_price100")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 10, (int) 0);
+				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3332,12 +3332,12 @@ public class Optihdvpart21Procedure {
 								return tileEntity.getTileData().getString(tag);
 							return "";
 						}
-					}.getValue(world, new BlockPos((int) 0, (int) 10, (int) 0), "market_item100")));
+					}.getValue(world, new BlockPos(0, 10, 0), "market_item100")));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -3346,7 +3346,7 @@ public class Optihdvpart21Procedure {
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) 0, (int) 0, (int) 0);
+				BlockPos _bp = new BlockPos(0, 0, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)

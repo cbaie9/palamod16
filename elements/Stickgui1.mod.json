@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 28,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -26,12 +26,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Les stick ( bâton) de craftent dans la palamachine.Il en existe de plusieures",
+          "text": "Les stick ( bï¿½ton) de craftent dans la palamachine.Il en existe de plusieures",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Les stick ( bâton) de craftent dans la palamachine.Il en existe de plusieures",
+          "name": "Les stick ( bï¿½ton) de craftent dans la palamachine.Il en existe de plusieures",
           "x": 22,
           "y": 23
         }
@@ -39,12 +39,12 @@
       {
         "type": "label",
         "data": {
-          "text": "types différent",
+          "text": "types diffï¿½rent",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "types différent",
+          "name": "types diffï¿½rent",
           "x": 21,
           "y": 36
         }

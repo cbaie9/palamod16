@@ -111,9 +111,9 @@ public class Luckyprocessv1Procedure {
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "Lucky_lock")) == false) {
+		}.getValue(world, new BlockPos(x, y, z), "Lucky_lock")) == false) {
 			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
@@ -123,7 +123,7 @@ public class Luckyprocessv1Procedure {
 			}
 			Random = (new Random().nextInt(198300 + 1));
 			if (Random >= 1 && Random <= 11600) {
-				PalamodModVariables.lucky_name = "0 + 0 = La t\u00EAte \u00E0 Toto";
+				PalamodModVariables.lucky_name = "0 + 0 = La t\uFFFDte \uFFFD Toto";
 				new Object() {
 					private int ticks = 0;
 					private float waitTicks;
@@ -148,8 +148,8 @@ public class Luckyprocessv1Procedure {
 						if (entity instanceof PlayerEntity)
 							((PlayerEntity) entity).addExperienceLevel(-((int) 10000));
 						if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event"
-									+ "0 + 0 = La t\u00EAte \u00E0 Toto"));
+							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event"
+									+ "0 + 0 = La t\uFFFDte \uFFFD Toto"));
 						}
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
@@ -224,18 +224,18 @@ public class Luckyprocessv1Procedure {
 					}
 				}.start(world, (int) 100);
 				if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event" + " 20 000 Lieux"));
+					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + " 20 000 Lieux"));
 				}
 				PalamodModVariables.Lucky_destroy = 1;
 			}
 			if (Random >= 11600 && Random <= 14700) {
 				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent(
-							"Vous avez eu un event non impl\u00E9ment\u00E9 ( Adieu Faction ) ( N\u00E9gatif ) Vous avez le droit \u00E0 un deuxi\u00E8me essai"),
+							"Vous avez eu un event non impl\uFFFDment\uFFFD ( Adieu Faction ) ( N\uFFFDgatif ) Vous avez le droit \uFFFD un deuxi\uFFFDme essai"),
 							(true));
 				}
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					BlockPos _bp = new BlockPos(x, y, z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
@@ -244,8 +244,8 @@ public class Luckyprocessv1Procedure {
 						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
 				if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event"
-							+ "Adieu Faction ( Non impl\u00E9ment\u00E9 )"));
+					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event"
+							+ "Adieu Faction ( Non impl\uFFFDment\uFFFD )"));
 				}
 				PalamodModVariables.Lucky_destroy = 2;
 			}
@@ -321,7 +321,7 @@ public class Luckyprocessv1Procedure {
 									"fill ~-5 ~ ~5 ~5 ~ ~-5 minecraft:fire");
 						}
 						if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event" + "Allumer le feu"));
+							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Allumer le feu"));
 						}
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
@@ -405,9 +405,9 @@ public class Luckyprocessv1Procedure {
 											new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 									"fill ~-1 ~2 ~1 ~1 ~2 ~-1 palamod:amethyste_block");
 						}
-						world.setBlockState(new BlockPos((int) x, (int) (y + 2), (int) z), Blocks.BEACON.getDefaultState(), 3);
+						world.setBlockState(new BlockPos(x, y + 2, z), Blocks.BEACON.getDefaultState(), 3);
 						if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event" + "Amethyste beacon"));
+							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Amethyste beacon"));
 						}
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
@@ -417,7 +417,7 @@ public class Luckyprocessv1Procedure {
 			if (Random >= 27500 && Random <= 14700) {
 				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent(
-							"Vous avez eu un event non impl\u00E9ment\u00E9 ( Analyste ) ( N\u00E9gatif ) Vous avez le droit \u00E0 un deuxi\u00E8me essai"),
+							"Vous avez eu un event non impl\uFFFDment\uFFFD ( Analyste ) ( N\uFFFDgatif ) Vous avez le droit \uFFFD un deuxi\uFFFDme essai"),
 							(true));
 				}
 				if (entity instanceof PlayerEntity) {
@@ -457,7 +457,7 @@ public class Luckyprocessv1Procedure {
 					}
 				}
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					BlockPos _bp = new BlockPos(x, y, z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
@@ -467,7 +467,7 @@ public class Luckyprocessv1Procedure {
 				}
 				if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
 					PalamodMod.LOGGER.info(
-							(entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event" + "Analyste ( Non impl\u00E9ment\u00E9 )"));
+							(entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Analyste ( Non impl\uFFFDment\uFFFD )"));
 				}
 				Random = 2;
 			}
@@ -543,7 +543,7 @@ public class Luckyprocessv1Procedure {
 									"fill ~-5 ~ ~5 ~5 ~ ~-5 minecraft:cobweb");
 						}
 						if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event" + "Aracno- trap"));
+							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Aracno- trap"));
 						}
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
@@ -621,7 +621,7 @@ public class Luckyprocessv1Procedure {
 
 					private void run() {
 						if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event" + "Batman Nerveux"));
+							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Batman Nerveux"));
 						}
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
@@ -699,7 +699,7 @@ public class Luckyprocessv1Procedure {
 
 					private void run() {
 						if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event" + "Body guard"));
+							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Body guard"));
 						}
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
@@ -777,7 +777,7 @@ public class Luckyprocessv1Procedure {
 
 					private void run() {
 						if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event" + "Boom"));
+							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Boom"));
 						}
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
@@ -855,7 +855,7 @@ public class Luckyprocessv1Procedure {
 
 					private void run() {
 						if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event" + "BOOM"));
+							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "BOOM"));
 						}
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
@@ -900,14 +900,13 @@ public class Luckyprocessv1Procedure {
 						}
 					}
 				}
-				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.BAMBOO_SAPLING.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x, y, z), Blocks.BAMBOO_SAPLING.getDefaultState(), 3);
 				for (int index4 = 0; index4 < (int) (5); index4++) {
 					if (world instanceof World) {
-						if (BoneMealItem.applyBonemeal(new ItemStack(Items.BONE_MEAL), (World) world, new BlockPos((int) x, (int) y, (int) z))
-								|| BoneMealItem.growSeagrass(new ItemStack(Items.BONE_MEAL), (World) world, new BlockPos((int) x, (int) y, (int) z),
-										(Direction) null)) {
+						if (BoneMealItem.applyBonemeal(new ItemStack(Items.BONE_MEAL), (World) world, new BlockPos(x, y, z)) || BoneMealItem
+								.growSeagrass(new ItemStack(Items.BONE_MEAL), (World) world, new BlockPos(x, y, z), (Direction) null)) {
 							if (!world.isRemote())
-								((World) world).playEvent(2005, new BlockPos((int) x, (int) y, (int) z), 0);
+								((World) world).playEvent(2005, new BlockPos(x, y, z), 0);
 						}
 					}
 				}
@@ -933,7 +932,7 @@ public class Luckyprocessv1Procedure {
 
 					private void run() {
 						if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event" + "Boo-Ban"));
+							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Boo-Ban"));
 						}
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
@@ -1034,7 +1033,7 @@ public class Luckyprocessv1Procedure {
 
 					private void run() {
 						if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event" + "Bunny life"));
+							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Bunny life"));
 						}
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
@@ -1042,7 +1041,7 @@ public class Luckyprocessv1Procedure {
 				PalamodModVariables.Lucky_destroy = 1;
 			}
 			if (Random >= 139000 && Random <= 143600) {
-				PalamodModVariables.lucky_name = "C'est pas pass\u00E9 loin";
+				PalamodModVariables.lucky_name = "C'est pas pass\uFFFD loin";
 				if (entity instanceof LivingEntity)
 					((LivingEntity) entity).setHealth((float) 1);
 				if (entity instanceof PlayerEntity) {
@@ -1104,7 +1103,7 @@ public class Luckyprocessv1Procedure {
 					private void run() {
 						if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
 							PalamodMod.LOGGER.info(
-									(entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event" + "\"C'est pas pass\u00E9 loin\""));
+									(entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "\"C'est pas pass\uFFFD loin\""));
 						}
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
@@ -1112,7 +1111,7 @@ public class Luckyprocessv1Procedure {
 				PalamodModVariables.Lucky_destroy = 1;
 			}
 			if (Random >= 143600 && Random <= 145100) {
-				PalamodModVariables.lucky_name = "C'est tr\u00E8s haut non ?";
+				PalamodModVariables.lucky_name = "C'est tr\uFFFDs haut non ?";
 				if (entity instanceof PlayerEntity) {
 					Container _current = ((PlayerEntity) entity).openContainer;
 					if (_current instanceof Supplier) {
@@ -1180,7 +1179,7 @@ public class Luckyprocessv1Procedure {
 					private void run() {
 						if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
 							PalamodMod.LOGGER.info(
-									(entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event" + "\"C'est tr\u00E8s haut non ?\""));
+									(entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "\"C'est tr\uFFFDs haut non ?\""));
 						}
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
@@ -1262,7 +1261,7 @@ public class Luckyprocessv1Procedure {
 					private void run() {
 						if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
 							PalamodMod.LOGGER
-									.info((entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event" + "Caballo de la muerte"));
+									.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Caballo de la muerte"));
 						}
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
@@ -1270,8 +1269,8 @@ public class Luckyprocessv1Procedure {
 				PalamodModVariables.Lucky_destroy = 1;
 			}
 			if (Random >= 145100 && Random <= 147400) {
-				PalamodModVariables.lucky_name = "Carte au tr\u00E9sor";
-				world.setBlockState(new BlockPos((int) 21000, (int) 255, (int) 100), TruetresureBlock.block.getDefaultState(), 3);
+				PalamodModVariables.lucky_name = "Carte au tr\uFFFDsor";
+				world.setBlockState(new BlockPos(21000, 255, 100), TruetresureBlock.block.getDefaultState(), 3);
 				if (entity instanceof PlayerEntity) {
 					Container _current = ((PlayerEntity) entity).openContainer;
 					if (_current instanceof Supplier) {
@@ -1312,7 +1311,7 @@ public class Luckyprocessv1Procedure {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-							"msg @s Le coffre au tr\u00E9sor  est a X:21000 Y:255 Z:100");
+							"msg @s Le coffre au tr\uFFFDsor  est a X:21000 Y:255 Z:100");
 				}
 				new Object() {
 					private int ticks = 0;
@@ -1336,8 +1335,8 @@ public class Luckyprocessv1Procedure {
 
 					private void run() {
 						if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event"
-									+ "carte au tr\u00E9sor (\u00E0$\u00F9$"));
+							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event"
+									+ "carte au tr\uFFFDsor (\uFFFD$\uFFFD$"));
 						}
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
@@ -1345,8 +1344,8 @@ public class Luckyprocessv1Procedure {
 				PalamodModVariables.Lucky_destroy = 1;
 			}
 			if (Random >= 147400 && Random <= 149700) {
-				PalamodModVariables.lucky_name = "Carte au tr\u00E9sor";
-				world.setBlockState(new BlockPos((int) 21000, (int) 255, (int) 100), FalsetresureBlock.block.getDefaultState(), 3);
+				PalamodModVariables.lucky_name = "Carte au tr\uFFFDsor";
+				world.setBlockState(new BlockPos(21000, 255, 100), FalsetresureBlock.block.getDefaultState(), 3);
 				if (entity instanceof PlayerEntity) {
 					Container _current = ((PlayerEntity) entity).openContainer;
 					if (_current instanceof Supplier) {
@@ -1387,7 +1386,7 @@ public class Luckyprocessv1Procedure {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-							"msg @s Le coffre au tr\u00E9sor  est a X:21000 Y:255 Z:100");
+							"msg @s Le coffre au tr\uFFFDsor  est a X:21000 Y:255 Z:100");
 				}
 				new Object() {
 					private int ticks = 0;
@@ -1412,7 +1411,7 @@ public class Luckyprocessv1Procedure {
 					private void run() {
 						if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
 							PalamodMod.LOGGER.info(
-									(entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event" + "carte au tr\u00E9sor $\u00F9$"));
+									(entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "carte au tr\uFFFDsor $\uFFFD$"));
 						}
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
@@ -1421,7 +1420,7 @@ public class Luckyprocessv1Procedure {
 			}
 			if (Random >= 149700 && Random <= 151200) {
 				PalamodModVariables.lucky_name = "Au voleur";
-				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), AlarmBlock.block.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x, y, z), AlarmBlock.block.getDefaultState(), 3);
 				if (entity instanceof PlayerEntity) {
 					Container _current = ((PlayerEntity) entity).openContainer;
 					if (_current instanceof Supplier) {
@@ -1480,7 +1479,7 @@ public class Luckyprocessv1Procedure {
 
 					private void run() {
 						if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event" + "Au voleur"));
+							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Au voleur"));
 						}
 						PalamodModVariables.Lucky_destroy = 1;
 						MinecraftForge.EVENT_BUS.unregister(this);
@@ -1489,7 +1488,7 @@ public class Luckyprocessv1Procedure {
 			}
 			if (Random >= 151200 && Random <= 152100) {
 				PalamodModVariables.lucky_name = "Coffre fort ";
-				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), MegasafechestBlock.block.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x, y, z), MegasafechestBlock.block.getDefaultState(), 3);
 				if (entity instanceof PlayerEntity) {
 					Container _current = ((PlayerEntity) entity).openContainer;
 					if (_current instanceof Supplier) {
@@ -1548,7 +1547,7 @@ public class Luckyprocessv1Procedure {
 
 					private void run() {
 						if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event" + "Coffre fort"));
+							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Coffre fort"));
 						}
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
@@ -1557,7 +1556,7 @@ public class Luckyprocessv1Procedure {
 			}
 			if (Random >= 152100 && Random <= 156700) {
 				PalamodModVariables.lucky_name = "Colorful lamp";
-				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), ColoredlampBlock.block.getDefaultState(), 3);
+				world.setBlockState(new BlockPos(x, y, z), ColoredlampBlock.block.getDefaultState(), 3);
 				if (entity instanceof PlayerEntity) {
 					Container _current = ((PlayerEntity) entity).openContainer;
 					if (_current instanceof Supplier) {
@@ -1616,7 +1615,7 @@ public class Luckyprocessv1Procedure {
 
 					private void run() {
 						if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event" + "Colorful lamp"));
+							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Colorful lamp"));
 						}
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
@@ -1624,7 +1623,7 @@ public class Luckyprocessv1Procedure {
 				PalamodModVariables.Lucky_destroy = 2;
 			}
 			if (Random >= 156700 && Random <= 157200) {
-				PalamodModVariables.lucky_name = " Comment t'a eu \u00E7a";
+				PalamodModVariables.lucky_name = " Comment t'a eu \uFFFDa";
 				if (entity instanceof PlayerEntity) {
 					ItemStack _setstack = new ItemStack(OrangeblueseedItem.block);
 					_setstack.setCount((int) 12);
@@ -1689,7 +1688,7 @@ public class Luckyprocessv1Procedure {
 					private void run() {
 						if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
 							PalamodMod.LOGGER
-									.info((entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event" + "Comment t'a eu \u00E7a"));
+									.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Comment t'a eu \uFFFDa"));
 						}
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
@@ -1740,7 +1739,7 @@ public class Luckyprocessv1Procedure {
 					}
 				}
 				if (world instanceof World && !world.isRemote()) {
-					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+					((World) world).playSound(null, new BlockPos(x, y, z),
 							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.fall")),
 							SoundCategory.MASTER, (float) 2, (float) 1);
 				} else {
@@ -1770,7 +1769,7 @@ public class Luckyprocessv1Procedure {
 
 					private void run() {
 						if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event" + "Consolation"));
+							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Consolation"));
 						}
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
@@ -1818,7 +1817,7 @@ public class Luckyprocessv1Procedure {
 											new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 									"fill ~-1 ~2 ~1 ~1 ~2 ~-1 minecraft:diamond_block");
 						}
-						world.setBlockState(new BlockPos((int) x, (int) (y + 2), (int) z), Blocks.BEACON.getDefaultState(), 3);
+						world.setBlockState(new BlockPos(x, y + 2, z), Blocks.BEACON.getDefaultState(), 3);
 						if (entity instanceof PlayerEntity) {
 							Container _current = ((PlayerEntity) entity).openContainer;
 							if (_current instanceof Supplier) {
@@ -1856,7 +1855,7 @@ public class Luckyprocessv1Procedure {
 							}
 						}
 						if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event" + "Diamond beacon"));
+							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Diamond beacon"));
 						}
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
@@ -1940,9 +1939,9 @@ public class Luckyprocessv1Procedure {
 											new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 									"fill ~-1 ~2 ~1 ~1 ~2 ~-1 minecraft:diamond_block");
 						}
-						world.setBlockState(new BlockPos((int) x, (int) (y + 2), (int) z), Blocks.BEACON.getDefaultState(), 3);
+						world.setBlockState(new BlockPos(x, y + 2, z), Blocks.BEACON.getDefaultState(), 3);
 						if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
-							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \u00E0 eu aux lucky block l'event" + "Diamond beacon"));
+							PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Diamond beacon"));
 						}
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
@@ -1951,7 +1950,7 @@ public class Luckyprocessv1Procedure {
 			}
 			if (Random > 164000) {
 				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					BlockPos _bp = new BlockPos(x, y, z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
@@ -1987,7 +1986,7 @@ public class Luckyprocessv1Procedure {
 
 						private void run() {
 							{
-								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								BlockPos _bp = new BlockPos(x, y, z);
 								BlockState _bs = Blocks.AIR.getDefaultState();
 								BlockState _bso = world.getBlockState(_bp);
 								for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {

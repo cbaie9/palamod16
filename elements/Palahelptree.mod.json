@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 28,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -72,12 +72,12 @@
       {
         "type": "label",
         "data": {
-          "text": "le portail en améthyste",
+          "text": "le portail en amï¿½thyste",
           "color": {
             "value": -6750055,
             "falpha": 0.0
           },
-          "name": "le portail en améthyste",
+          "name": "le portail en amï¿½thyste",
           "x": 158,
           "y": 85
         }

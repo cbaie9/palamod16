@@ -12,6 +12,7 @@ import net.minecraftforge.registries.ObjectHolder;
 import net.minecraft.world.World;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ActionResult;
+import net.minecraft.item.UseAction;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
@@ -41,6 +42,11 @@ public class XpberryItem extends PalamodModElements.ModElement {
 		public ItemCustom() {
 			super(new Item.Properties().group(PalamodItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("xpberry");
+		}
+
+		@Override
+		public UseAction getUseAction(ItemStack itemstack) {
+			return UseAction.EAT;
 		}
 
 		@Override

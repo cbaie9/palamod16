@@ -1,13 +1,13 @@
 {
-  "_fv": 24,
+  "_fv": 28,
   "_type": "gui",
   "definition": {
     "type": 1,
-    "width": 176,
-    "height": 166,
+    "width": 180,
+    "height": 180,
     "inventoryOffsetX": 0,
-    "inventoryOffsetY": 0,
-    "renderBgLayer": false,
+    "inventoryOffsetY": 9,
+    "renderBgLayer": true,
     "doesPauseGame": false,
     "components": [
       {
@@ -24,8 +24,8 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #0",
-          "x": 336,
-          "y": 95
+          "x": 251,
+          "y": 62
         }
       },
       {
@@ -37,8 +37,8 @@
             "falpha": 0.0
           },
           "name": "alpha",
-          "x": 353,
-          "y": 53
+          "x": 271,
+          "y": 33
         }
       },
       {
@@ -48,8 +48,8 @@
           "width": 120,
           "height": 20,
           "name": "market_name",
-          "x": 186,
-          "y": 86
+          "x": 127,
+          "y": 45
         }
       },
       {
@@ -59,8 +59,8 @@
           "width": 120,
           "height": 20,
           "name": "market_price",
-          "x": 186,
-          "y": 124
+          "x": 127,
+          "y": 77
         }
       },
       {
@@ -72,8 +72,8 @@
             "falpha": 0.0
           },
           "name": "Prix de vente",
-          "x": 187,
-          "y": 109
+          "x": 126,
+          "y": 66
         }
       },
       {
@@ -85,18 +85,8 @@
             "falpha": 0.0
           },
           "name": "Nom de l'item",
-          "x": 186,
-          "y": 71
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "backgroun2d.png",
-          "use1Xscale": true,
-          "name": "backgroun2d.png",
-          "x": 7,
-          "y": 0
+          "x": 127,
+          "y": 34
         }
       },
       {
@@ -108,8 +98,8 @@
             "falpha": 0.0
           },
           "name": "Item",
-          "x": 330,
-          "y": 77
+          "x": 250,
+          "y": 51
         }
       },
       {
@@ -122,8 +112,8 @@
           "width": 56,
           "height": 20,
           "name": "vendre",
-          "x": 187,
-          "y": 164
+          "x": 130,
+          "y": 98
         }
       }
     ],

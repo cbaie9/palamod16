@@ -52,7 +52,7 @@ public class LuckyexitProcedure {
 		double destroy = 0;
 		if (PalamodModVariables.Lucky_destroy == 1) {
 			{
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				BlockPos _bp = new BlockPos(x, y, z);
 				BlockState _bs = Blocks.AIR.getDefaultState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
@@ -67,11 +67,11 @@ public class LuckyexitProcedure {
 			}
 			if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule) == true) {
 				PalamodMod.LOGGER.info(
-						("(" + entity.getDisplayName().getString() + " ) Fermeture de l'interface lucky block apr\u00E8s ouverture [ code 1 ]"));
+						("(" + entity.getDisplayName().getString() + " ) Fermeture de l'interface lucky block apr\uFFFDs ouverture [ code 1 ]"));
 			}
 		} else if (PalamodModVariables.Lucky_destroy == 2) {
 			if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule) == true) {
-				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + "Ferme un lucky block ( Event non Ajout\u00E9 ) [ code 2 ]"));
+				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + "Ferme un lucky block ( Event non Ajout\uFFFD ) [ code 2 ]"));
 			}
 		} else if (PalamodModVariables.Lucky_destroy == 0) {
 			if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule) == true) {
@@ -80,7 +80,7 @@ public class LuckyexitProcedure {
 		} else {
 			if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule) == true) {
 				PalamodMod.LOGGER.info(("(" + entity.getDisplayName().getString()
-						+ " ) Fermeture de l'interface lucky block apr\u00E8s ouverture sans renplacement [ code 3 ]"));
+						+ " ) Fermeture de l'interface lucky block apr\uFFFDs ouverture sans renplacement [ code 3 ]"));
 			}
 		}
 		if (entity instanceof PlayerEntity)

@@ -38,7 +38,7 @@ public class FakeobsidianprocessProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		{
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+			BlockPos _bp = new BlockPos(x, y, z);
 			BlockState _bs = FakewaterBlock.block.getDefaultState();
 			world.setBlockState(_bp, _bs, 3);
 		}

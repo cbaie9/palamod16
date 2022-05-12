@@ -85,9 +85,9 @@ public class ForgepalahelpguiGuiWindow extends ContainerScreen<ForgepalahelpguiG
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
 		this.font.drawString(ms, "Paladium Forge", 5, 2, -65485);
 		this.font.drawString(ms, "La forge est un machine permettant de recycler ses outils", 2, 96, -12829636);
-		this.font.drawString(ms, "en am\u00E9thyste, titane , paladium et... endium pour les", 2, 106, -12829636);
-		this.font.drawString(ms, "pour les transform\u00E9s en minerais pour les r\u00E9-utilis\u00E9s", 2, 116, -12829636);
-		this.font.drawString(ms, "Pour cela il suffi d'ins\u00E8r\u00E9 du charbon ou du palamixed coal", 1, 126, -12829636);
+		this.font.drawString(ms, "en am\uFFFDthyste, titane , paladium et... endium pour les", 2, 106, -12829636);
+		this.font.drawString(ms, "pour les transform\uFFFDs en minerais pour les r\uFFFD-utilis\uFFFDs", 2, 116, -12829636);
+		this.font.drawString(ms, "Pour cela il suffi d'ins\uFFFDr\uFFFD du charbon ou du palamixed coal", 1, 126, -12829636);
 		this.font.drawString(ms, "dane le slot 1 et mettre les outil que vous voulez recycler", 1, 137, -12829636);
 		this.font.drawString(ms, "dans le slot 2, attendre un peu et c'est le minerais est", 2, 148, -12829636);
 		this.font.drawString(ms, "cuit :]", 3, 159, -12829636);

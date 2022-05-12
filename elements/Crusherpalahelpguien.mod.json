@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 28,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -163,12 +163,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Résult here",
+          "text": "Rï¿½sult here",
           "color": {
             "value": -16776961,
             "falpha": 0.0
           },
-          "name": "Résult here",
+          "name": "Rï¿½sult here",
           "x": 324,
           "y": 80
         }

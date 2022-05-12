@@ -81,7 +81,7 @@ public class CrusherguiGuiWindow extends ContainerScreen<CrusherguiGui.GuiContai
 		this.font.drawString(ms, "Paladium crusher", 49, 4, -3407821);
 		this.font.drawString(ms, "Inventaire", 4, 88, -12829636);
 		this.font.drawString(ms, "mode : " + (PalamodModVariables.crusher_mode) + "", 89, 18, -12829636);
-		this.font.drawString(ms, "Probabilit\u00E9 : " + (int) (PalamodModVariables.crusher_num_var_seen) + " %", 90, 34, -12829636);
+		this.font.drawString(ms, "Probabilit\uFFFD : " + (int) (PalamodModVariables.crusher_num_var_seen) + " %", 90, 34, -12829636);
 		this.font.drawString(ms, "fuel", 28, 27, -3394816);
 	}
 

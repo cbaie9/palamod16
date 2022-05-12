@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 28,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -31,23 +31,10 @@
           },
           "id": 0,
           "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "name": "Slot #0",
-          "x": 187,
+          "x": 184,
           "y": 58
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "text": "<VAR:furnace_processing>",
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "name": "<VAR:furnace_processing>",
-          "x": 209,
-          "y": 72
         }
       },
       {
@@ -55,10 +42,10 @@
         "data": {
           "id": 1,
           "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "name": "Slot #1",
-          "x": 247,
-          "y": 65
+          "x": 250,
+          "y": 76
         }
       },
       {
@@ -69,10 +56,10 @@
           },
           "id": 2,
           "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "name": "Slot #2",
-          "x": 187,
-          "y": 92
+          "x": 184,
+          "y": 94
         }
       },
       {
@@ -84,35 +71,158 @@
             "falpha": 0.0
           },
           "name": "Inventory",
-          "x": 130,
-          "y": 108
+          "x": 131,
+          "y": 110
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Upgrades",
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "name": "Upgrades",
+          "x": 126,
+          "y": 53
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "big_slot.png",
+          "use1Xscale": true,
+          "name": "big_slot.png",
+          "x": 246,
+          "y": 72
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire.png",
+          "use1Xscale": true,
+          "name": "fire.png",
+          "x": 182,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire01.png",
+          "use1Xscale": true,
+          "name": "fire01.png",
+          "x": 182,
+          "y": 77
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire02.png",
+          "use1Xscale": true,
+          "name": "fire02.png",
+          "x": 185,
+          "y": 78
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire03.png",
+          "use1Xscale": true,
+          "name": "fire03.png",
+          "x": 185,
+          "y": 78
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire04.png",
+          "use1Xscale": true,
+          "name": "fire04.png",
+          "x": 184,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire05.png",
+          "use1Xscale": true,
+          "name": "fire05.png",
+          "x": 184,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire06.png",
+          "use1Xscale": true,
+          "name": "fire06.png",
+          "x": 184,
+          "y": 76
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire07.png",
+          "use1Xscale": true,
+          "name": "fire07.png",
+          "x": 184,
+          "y": 78
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire08.png",
+          "use1Xscale": true,
+          "name": "fire08.png",
+          "x": 184,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire09.png",
+          "use1Xscale": true,
+          "name": "fire09.png",
+          "x": 185,
+          "y": 78
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:g_num>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<VAR:g_num>",
+          "x": 235,
+          "y": 103
         }
       },
       {
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": ""
+            "value": "CUSTOM:Furnaceupgrade"
           },
           "id": 3,
           "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "name": "Slot #3",
-          "x": 133,
-          "y": 64
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "text": "Upgardes",
-          "color": {
-            "value": -65536,
-            "falpha": 0.0
-          },
-          "name": "Upgardes",
-          "x": 127,
-          "y": 52
+          "x": 131,
+          "y": 67
         }
       }
     ],

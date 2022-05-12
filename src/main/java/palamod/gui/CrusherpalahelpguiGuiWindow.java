@@ -89,16 +89,16 @@ public class CrusherpalahelpguiGuiWindow extends ContainerScreen<Crusherpalahelp
 		this.font.drawString(ms, "l'endium entre autre. Le principe est simple", 2, 54, -12829636);
 		this.font.drawString(ms, "Il faut mettre du fuel* et des fruit dans le", 2, 66, -12829636);
 		this.font.drawString(ms, "crusher. Le fuel est soit le gold mixed coal,", 1, 78, -12829636);
-		this.font.drawString(ms, "( am\u00E9thyste ) soit l'am\u00E9thyste mixed coal,", 1, 89, -12829636);
+		this.font.drawString(ms, "( am\uFFFDthyste ) soit l'am\uFFFDthyste mixed coal,", 1, 89, -12829636);
 		this.font.drawString(ms, "( titane ) soit le titane mixed coal ( paladium) ou le palamixed coal pour", 0, 101, -12829636);
-		this.font.drawString(ms, "L'endium. Pour celui-ci il faudra ins\u00E9rer 128 palamixed et 128 orangeblue puis", 3, 113, -12829636);
+		this.font.drawString(ms, "L'endium. Pour celui-ci il faudra ins\uFFFDrer 128 palamixed et 128 orangeblue puis", 3, 113, -12829636);
 		this.font.drawString(ms, "Fruit ici", 248, 59, -256);
-		this.font.drawString(ms, "R\u00E9sultat ici", 307, 59, -16776961);
+		this.font.drawString(ms, "R\uFFFDsultat ici", 307, 59, -16776961);
 		this.font.drawString(ms, "Appuyer sur le bouton \"start fusion\" vous donnera 1 nugget quand tout les", 2, 126, -12829636);
-		this.font.drawString(ms, "\u00E9l\u00E9ment auront \u00E9t\u00E9 ins\u00E8r\u00E9s.", 1, 138, -12829636);
-		this.font.drawString(ms, "Note : vous n'\u00EAtes pas obliger d'ins\u00E8r\u00E8 128 de chaque mais il aura une chance", 3, 149, -26368);
-		this.font.drawString(ms, "que le nugget n'apparaise [ probabilit\u00E9 \u00E9tant la chance que le nugget appairaise", 0, 158, -26368);
-		this.font.drawString(ms, "et 128 \u00E9tant 100% de chance  ] pas", 4, 168, -26368);
+		this.font.drawString(ms, "\uFFFDl\uFFFDment auront \uFFFDt\uFFFD ins\uFFFDr\uFFFDs.", 1, 138, -12829636);
+		this.font.drawString(ms, "Note : vous n'\uFFFDtes pas obliger d'ins\uFFFDr\uFFFD 128 de chaque mais il aura une chance", 3, 149, -26368);
+		this.font.drawString(ms, "que le nugget n'apparaise [ probabilit\uFFFD \uFFFDtant la chance que le nugget appairaise", 0, 158, -26368);
+		this.font.drawString(ms, "et 128 \uFFFDtant 100% de chance  ] pas", 4, 168, -26368);
 		this.font.drawString(ms, "1/1 v1", 364, 183, -12829636);
 	}
 

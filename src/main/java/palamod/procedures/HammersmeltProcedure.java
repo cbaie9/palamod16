@@ -53,30 +53,32 @@ public class HammersmeltProcedure {
 		Entity entity = (Entity) dependencies.get("entity");
 		boolean removeBlock = false;
 		if (entity.rotationPitch > 40 || entity.rotationPitch < -40) {
-			if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z)))) == true) {
+			if ((world.getBlockState(new BlockPos(x + 1, y, z))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x + 1, y, z))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x + 1, y, z)))) == true) {
 					if (!(((world instanceof World && ((World) world).getRecipeManager()
 							.getRecipe(IRecipeType.SMELTING,
-									new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock()))),
-									((World) world))
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z))).getBlock()))), ((World) world))
 							.isPresent())
 									? ((World) world).getRecipeManager()
-											.getRecipe(IRecipeType.SMELTING, new Inventory(
-													(new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock()))),
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z))).getBlock()))),
 													(World) world)
 											.get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
 						if (world instanceof World && !world.isRemote()) {
 							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
 									((world instanceof World && ((World) world).getRecipeManager()
-											.getRecipe(IRecipeType.SMELTING, new Inventory(
-													(new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock()))),
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z))).getBlock()))),
 													((World) world))
 											.isPresent())
-													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock()))),
-															(World) world).get().getRecipeOutput().copy()
+													? ((World) world).getRecipeManager()
+															.getRecipe(IRecipeType.SMELTING, new Inventory(
+																	(new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z))).getBlock()))),
+																	(World) world)
+															.get().getRecipeOutput().copy()
 													: ItemStack.EMPTY));
 							entityToSpawn.setPickupDelay((int) 10);
 							world.addEntity(entityToSpawn);
@@ -86,40 +88,41 @@ public class HammersmeltProcedure {
 						removeBlock = (false);
 					}
 					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x + 1), (int) y, (int) z), false);
+						world.destroyBlock(new BlockPos(x + 1, y, z), false);
 					} else {
 						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z)), (World) world,
-									new BlockPos((int) (x + 1), (int) y, (int) z));
-							world.destroyBlock(new BlockPos((int) (x + 1), (int) y, (int) z), false);
+							Block.spawnDrops(world.getBlockState(new BlockPos(x + 1, y, z)), (World) world, new BlockPos(x + 1, y, z));
+							world.destroyBlock(new BlockPos(x + 1, y, z), false);
 						}
 					}
 				}
 			}
-			if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z)))) == true) {
+			if ((world.getBlockState(new BlockPos(x - 1, y, z))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x - 1, y, z))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x - 1, y, z)))) == true) {
 					if (!(((world instanceof World && ((World) world).getRecipeManager()
 							.getRecipe(IRecipeType.SMELTING,
-									new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock()))),
-									((World) world))
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z))).getBlock()))), ((World) world))
 							.isPresent())
 									? ((World) world).getRecipeManager()
-											.getRecipe(IRecipeType.SMELTING, new Inventory(
-													(new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock()))),
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z))).getBlock()))),
 													(World) world)
 											.get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
 						if (world instanceof World && !world.isRemote()) {
 							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
 									((world instanceof World && ((World) world).getRecipeManager()
-											.getRecipe(IRecipeType.SMELTING, new Inventory(
-													(new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock()))),
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z))).getBlock()))),
 													((World) world))
 											.isPresent())
-													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock()))),
-															(World) world).get().getRecipeOutput().copy()
+													? ((World) world).getRecipeManager()
+															.getRecipe(IRecipeType.SMELTING, new Inventory(
+																	(new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z))).getBlock()))),
+																	(World) world)
+															.get().getRecipeOutput().copy()
 													: ItemStack.EMPTY));
 							entityToSpawn.setPickupDelay((int) 10);
 							world.addEntity(entityToSpawn);
@@ -129,34 +132,41 @@ public class HammersmeltProcedure {
 						removeBlock = (false);
 					}
 					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x - 1), (int) y, (int) z), false);
+						world.destroyBlock(new BlockPos(x - 1, y, z), false);
 					} else {
 						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z)), (World) world,
-									new BlockPos((int) (x - 1), (int) y, (int) z));
-							world.destroyBlock(new BlockPos((int) (x - 1), (int) y, (int) z), false);
+							Block.spawnDrops(world.getBlockState(new BlockPos(x - 1, y, z)), (World) world, new BlockPos(x - 1, y, z));
+							world.destroyBlock(new BlockPos(x - 1, y, z), false);
 						}
 					}
 				}
 			}
-			if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z + 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z + 1)))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z + 1))))) == true) {
-					if (!(((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-							new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z + 1)))).getBlock()))),
-							((World) world)).isPresent())
-									? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z + 1)))).getBlock()))),
-											(World) world).get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+			if ((world.getBlockState(new BlockPos(x + 1, y, z + 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x + 1, y, z + 1))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x + 1, y, z + 1)))) == true) {
+					if (!(((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z + 1))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z + 1))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
 						if (world instanceof World && !world.isRemote()) {
 							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-									((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z + 1)))).getBlock()))),
-											((World) world)).isPresent())
-													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z + 1)))).getBlock()))),
-															(World) world).get().getRecipeOutput().copy()
+									((world instanceof World && ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z + 1))).getBlock()))),
+													((World) world))
+											.isPresent())
+													? ((World) world).getRecipeManager()
+															.getRecipe(IRecipeType.SMELTING, new Inventory(
+																	(new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z + 1))).getBlock()))),
+																	(World) world)
+															.get().getRecipeOutput().copy()
 													: ItemStack.EMPTY));
 							entityToSpawn.setPickupDelay((int) 10);
 							world.addEntity(entityToSpawn);
@@ -166,34 +176,41 @@ public class HammersmeltProcedure {
 						removeBlock = (false);
 					}
 					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x + 1), (int) y, (int) (z + 1)), false);
+						world.destroyBlock(new BlockPos(x + 1, y, z + 1), false);
 					} else {
 						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z + 1))), (World) world,
-									new BlockPos((int) (x + 1), (int) y, (int) (z + 1)));
-							world.destroyBlock(new BlockPos((int) (x + 1), (int) y, (int) (z + 1)), false);
+							Block.spawnDrops(world.getBlockState(new BlockPos(x + 1, y, z + 1)), (World) world, new BlockPos(x + 1, y, z + 1));
+							world.destroyBlock(new BlockPos(x + 1, y, z + 1), false);
 						}
 					}
 				}
 			}
-			if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1))))) == true) {
-					if (!(((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-							new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)))).getBlock()))),
-							((World) world)).isPresent())
-									? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)))).getBlock()))),
-											(World) world).get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+			if ((world.getBlockState(new BlockPos(x + 1, y, z - 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x + 1, y, z - 1))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x + 1, y, z - 1)))) == true) {
+					if (!(((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z - 1))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z - 1))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
 						if (world instanceof World && !world.isRemote()) {
 							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-									((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)))).getBlock()))),
-											((World) world)).isPresent())
-													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)))).getBlock()))),
-															(World) world).get().getRecipeOutput().copy()
+									((world instanceof World && ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z - 1))).getBlock()))),
+													((World) world))
+											.isPresent())
+													? ((World) world).getRecipeManager()
+															.getRecipe(IRecipeType.SMELTING, new Inventory(
+																	(new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z - 1))).getBlock()))),
+																	(World) world)
+															.get().getRecipeOutput().copy()
 													: ItemStack.EMPTY));
 							entityToSpawn.setPickupDelay((int) 10);
 							world.addEntity(entityToSpawn);
@@ -203,34 +220,41 @@ public class HammersmeltProcedure {
 						removeBlock = (false);
 					}
 					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)), false);
+						world.destroyBlock(new BlockPos(x + 1, y, z - 1), false);
 					} else {
 						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1))), (World) world,
-									new BlockPos((int) (x + 1), (int) y, (int) (z - 1)));
-							world.destroyBlock(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)), false);
+							Block.spawnDrops(world.getBlockState(new BlockPos(x + 1, y, z - 1)), (World) world, new BlockPos(x + 1, y, z - 1));
+							world.destroyBlock(new BlockPos(x + 1, y, z - 1), false);
 						}
 					}
 				}
 			}
-			if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z - 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z - 1)))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z - 1))))) == true) {
-					if (!(((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-							new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z - 1)))).getBlock()))),
-							((World) world)).isPresent())
-									? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z - 1)))).getBlock()))),
-											(World) world).get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+			if ((world.getBlockState(new BlockPos(x - 1, y, z - 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x - 1, y, z - 1))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x - 1, y, z - 1)))) == true) {
+					if (!(((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z - 1))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z - 1))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
 						if (world instanceof World && !world.isRemote()) {
 							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-									((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z - 1)))).getBlock()))),
-											((World) world)).isPresent())
-													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z - 1)))).getBlock()))),
-															(World) world).get().getRecipeOutput().copy()
+									((world instanceof World && ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z - 1))).getBlock()))),
+													((World) world))
+											.isPresent())
+													? ((World) world).getRecipeManager()
+															.getRecipe(IRecipeType.SMELTING, new Inventory(
+																	(new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z - 1))).getBlock()))),
+																	(World) world)
+															.get().getRecipeOutput().copy()
 													: ItemStack.EMPTY));
 							entityToSpawn.setPickupDelay((int) 10);
 							world.addEntity(entityToSpawn);
@@ -240,34 +264,41 @@ public class HammersmeltProcedure {
 						removeBlock = (false);
 					}
 					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x - 1), (int) y, (int) (z - 1)), false);
+						world.destroyBlock(new BlockPos(x - 1, y, z - 1), false);
 					} else {
 						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z - 1))), (World) world,
-									new BlockPos((int) (x - 1), (int) y, (int) (z - 1)));
-							world.destroyBlock(new BlockPos((int) (x - 1), (int) y, (int) (z - 1)), false);
+							Block.spawnDrops(world.getBlockState(new BlockPos(x - 1, y, z - 1)), (World) world, new BlockPos(x - 1, y, z - 1));
+							world.destroyBlock(new BlockPos(x - 1, y, z - 1), false);
 						}
 					}
 				}
 			}
-			if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1))))) == true) {
-					if (!(((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-							new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)))).getBlock()))),
-							((World) world)).isPresent())
-									? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)))).getBlock()))),
-											(World) world).get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+			if ((world.getBlockState(new BlockPos(x - 1, y, z + 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x - 1, y, z + 1))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x - 1, y, z + 1)))) == true) {
+					if (!(((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z + 1))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z + 1))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
 						if (world instanceof World && !world.isRemote()) {
 							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-									((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)))).getBlock()))),
-											((World) world)).isPresent())
-													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)))).getBlock()))),
-															(World) world).get().getRecipeOutput().copy()
+									((world instanceof World && ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z + 1))).getBlock()))),
+													((World) world))
+											.isPresent())
+													? ((World) world).getRecipeManager()
+															.getRecipe(IRecipeType.SMELTING, new Inventory(
+																	(new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z + 1))).getBlock()))),
+																	(World) world)
+															.get().getRecipeOutput().copy()
 													: ItemStack.EMPTY));
 							entityToSpawn.setPickupDelay((int) 10);
 							world.addEntity(entityToSpawn);
@@ -277,34 +308,41 @@ public class HammersmeltProcedure {
 						removeBlock = (false);
 					}
 					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)), false);
+						world.destroyBlock(new BlockPos(x - 1, y, z + 1), false);
 					} else {
 						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1))), (World) world,
-									new BlockPos((int) (x - 1), (int) y, (int) (z + 1)));
-							world.destroyBlock(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)), false);
+							Block.spawnDrops(world.getBlockState(new BlockPos(x - 1, y, z + 1)), (World) world, new BlockPos(x - 1, y, z + 1));
+							world.destroyBlock(new BlockPos(x - 1, y, z + 1), false);
 						}
 					}
 				}
 			}
-			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z + 1))))) == true) {
-					if (!(((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-							new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z + 1)))).getBlock()))),
-							((World) world)).isPresent())
-									? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z + 1)))).getBlock()))),
-											(World) world).get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+			if ((world.getBlockState(new BlockPos(x, y, z + 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x, y, z + 1))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x - 0, y, z + 1)))) == true) {
+					if (!(((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y, z + 1))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y, z + 1))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
 						if (world instanceof World && !world.isRemote()) {
 							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-									((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z + 1)))).getBlock()))),
-											((World) world)).isPresent())
-													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z + 1)))).getBlock()))),
-															(World) world).get().getRecipeOutput().copy()
+									((world instanceof World && ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y, z + 1))).getBlock()))),
+													((World) world))
+											.isPresent())
+													? ((World) world).getRecipeManager()
+															.getRecipe(IRecipeType.SMELTING, new Inventory(
+																	(new ItemStack((world.getBlockState(new BlockPos(x - 0, y, z + 1))).getBlock()))),
+																	(World) world)
+															.get().getRecipeOutput().copy()
 													: ItemStack.EMPTY));
 							entityToSpawn.setPickupDelay((int) 10);
 							world.addEntity(entityToSpawn);
@@ -314,34 +352,41 @@ public class HammersmeltProcedure {
 						removeBlock = (false);
 					}
 					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x - 0), (int) y, (int) (z + 1)), false);
+						world.destroyBlock(new BlockPos(x - 0, y, z + 1), false);
 					} else {
 						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z + 1))), (World) world,
-									new BlockPos((int) (x - 0), (int) y, (int) (z + 1)));
-							world.destroyBlock(new BlockPos((int) (x - 0), (int) y, (int) (z + 1)), false);
+							Block.spawnDrops(world.getBlockState(new BlockPos(x - 0, y, z + 1)), (World) world, new BlockPos(x - 0, y, z + 1));
+							world.destroyBlock(new BlockPos(x - 0, y, z + 1), false);
 						}
 					}
 				}
 			}
-			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z + 1))))) == true) {
-					if (!(((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-							new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z + 1)))).getBlock()))),
-							((World) world)).isPresent())
-									? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z + 1)))).getBlock()))),
-											(World) world).get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+			if ((world.getBlockState(new BlockPos(x, y, z - 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x, y, z - 1))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x - 0, y, z + 1)))) == true) {
+					if (!(((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y, z + 1))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y, z + 1))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
 						if (world instanceof World && !world.isRemote()) {
 							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-									((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z + 1)))).getBlock()))),
-											((World) world)).isPresent())
-													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z + 1)))).getBlock()))),
-															(World) world).get().getRecipeOutput().copy()
+									((world instanceof World && ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y, z + 1))).getBlock()))),
+													((World) world))
+											.isPresent())
+													? ((World) world).getRecipeManager()
+															.getRecipe(IRecipeType.SMELTING, new Inventory(
+																	(new ItemStack((world.getBlockState(new BlockPos(x - 0, y, z + 1))).getBlock()))),
+																	(World) world)
+															.get().getRecipeOutput().copy()
 													: ItemStack.EMPTY));
 							entityToSpawn.setPickupDelay((int) 10);
 							world.addEntity(entityToSpawn);
@@ -351,34 +396,41 @@ public class HammersmeltProcedure {
 						removeBlock = (false);
 					}
 					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x - 0), (int) y, (int) (z + 1)), false);
+						world.destroyBlock(new BlockPos(x - 0, y, z + 1), false);
 					} else {
 						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z + 1))), (World) world,
-									new BlockPos((int) (x - 0), (int) y, (int) (z + 1)));
-							world.destroyBlock(new BlockPos((int) (x - 0), (int) y, (int) (z + 1)), false);
+							Block.spawnDrops(world.getBlockState(new BlockPos(x - 0, y, z + 1)), (World) world, new BlockPos(x - 0, y, z + 1));
+							world.destroyBlock(new BlockPos(x - 0, y, z + 1), false);
 						}
 					}
 				}
 			}
-			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z + 1))))) == true) {
-					if (!(((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-							new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z + 1)))).getBlock()))),
-							((World) world)).isPresent())
-									? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z + 1)))).getBlock()))),
-											(World) world).get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+			if ((world.getBlockState(new BlockPos(x, y, z - 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x, y, z - 1))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x - 0, y, z + 1)))) == true) {
+					if (!(((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y, z + 1))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y, z + 1))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
 						if (world instanceof World && !world.isRemote()) {
 							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-									((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z + 1)))).getBlock()))),
-											((World) world)).isPresent())
-													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z + 1)))).getBlock()))),
-															(World) world).get().getRecipeOutput().copy()
+									((world instanceof World && ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y, z + 1))).getBlock()))),
+													((World) world))
+											.isPresent())
+													? ((World) world).getRecipeManager()
+															.getRecipe(IRecipeType.SMELTING, new Inventory(
+																	(new ItemStack((world.getBlockState(new BlockPos(x - 0, y, z + 1))).getBlock()))),
+																	(World) world)
+															.get().getRecipeOutput().copy()
 													: ItemStack.EMPTY));
 							entityToSpawn.setPickupDelay((int) 10);
 							world.addEntity(entityToSpawn);
@@ -388,34 +440,41 @@ public class HammersmeltProcedure {
 						removeBlock = (false);
 					}
 					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x - 0), (int) y, (int) (z + 1)), false);
+						world.destroyBlock(new BlockPos(x - 0, y, z + 1), false);
 					} else {
 						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z + 1))), (World) world,
-									new BlockPos((int) (x - 0), (int) y, (int) (z + 1)));
-							world.destroyBlock(new BlockPos((int) (x - 0), (int) y, (int) (z + 1)), false);
+							Block.spawnDrops(world.getBlockState(new BlockPos(x - 0, y, z + 1)), (World) world, new BlockPos(x - 0, y, z + 1));
+							world.destroyBlock(new BlockPos(x - 0, y, z + 1), false);
 						}
 					}
 				}
 			}
-			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z - 1))))) == true) {
-					if (!(((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-							new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z - 1)))).getBlock()))),
-							((World) world)).isPresent())
-									? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z - 1)))).getBlock()))),
-											(World) world).get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+			if ((world.getBlockState(new BlockPos(x, y, z - 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x, y, z - 1))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x - 0, y, z - 1)))) == true) {
+					if (!(((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y, z - 1))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y, z - 1))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
 						if (world instanceof World && !world.isRemote()) {
 							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-									((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z - 1)))).getBlock()))),
-											((World) world)).isPresent())
-													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z - 1)))).getBlock()))),
-															(World) world).get().getRecipeOutput().copy()
+									((world instanceof World && ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y, z - 1))).getBlock()))),
+													((World) world))
+											.isPresent())
+													? ((World) world).getRecipeManager()
+															.getRecipe(IRecipeType.SMELTING, new Inventory(
+																	(new ItemStack((world.getBlockState(new BlockPos(x - 0, y, z - 1))).getBlock()))),
+																	(World) world)
+															.get().getRecipeOutput().copy()
 													: ItemStack.EMPTY));
 							entityToSpawn.setPickupDelay((int) 10);
 							world.addEntity(entityToSpawn);
@@ -425,204 +484,40 @@ public class HammersmeltProcedure {
 						removeBlock = (false);
 					}
 					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x - 0), (int) y, (int) (z - 1)), false);
+						world.destroyBlock(new BlockPos(x - 0, y, z - 1), false);
 					} else {
 						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z - 1))), (World) world,
-									new BlockPos((int) (x - 0), (int) y, (int) (z - 1)));
-							world.destroyBlock(new BlockPos((int) (x - 0), (int) y, (int) (z - 1)), false);
+							Block.spawnDrops(world.getBlockState(new BlockPos(x - 0, y, z - 1)), (World) world, new BlockPos(x - 0, y, z - 1));
+							world.destroyBlock(new BlockPos(x - 0, y, z - 1), false);
 						}
 					}
 				}
 			}
 		} else if ((entity.getHorizontalFacing()) == Direction.NORTH || (entity.getHorizontalFacing()) == Direction.SOUTH) {
-			if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z)))) == true) {
+			if ((world.getBlockState(new BlockPos(x + 1, y, z))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x + 1, y, z))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x + 1, y, z)))) == true) {
 					if (!(((world instanceof World && ((World) world).getRecipeManager()
 							.getRecipe(IRecipeType.SMELTING,
-									new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock()))),
-									((World) world))
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z))).getBlock()))), ((World) world))
 							.isPresent())
 									? ((World) world).getRecipeManager()
-											.getRecipe(IRecipeType.SMELTING, new Inventory(
-													(new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock()))),
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z))).getBlock()))),
 													(World) world)
 											.get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
 						if (world instanceof World && !world.isRemote()) {
 							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
 									((world instanceof World && ((World) world).getRecipeManager()
-											.getRecipe(IRecipeType.SMELTING, new Inventory(
-													(new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock()))),
-													((World) world))
-											.isPresent())
-													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock()))),
-															(World) world).get().getRecipeOutput().copy()
-													: ItemStack.EMPTY));
-							entityToSpawn.setPickupDelay((int) 10);
-							world.addEntity(entityToSpawn);
-						}
-						removeBlock = (true);
-					} else {
-						removeBlock = (false);
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x + 1), (int) y, (int) z), false);
-					} else {
-						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z)), (World) world,
-									new BlockPos((int) (x + 1), (int) y, (int) z));
-							world.destroyBlock(new BlockPos((int) (x + 1), (int) y, (int) z), false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z)))) == true) {
-					if (!(((world instanceof World && ((World) world).getRecipeManager()
-							.getRecipe(IRecipeType.SMELTING,
-									new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock()))),
-									((World) world))
-							.isPresent())
-									? ((World) world).getRecipeManager()
-											.getRecipe(IRecipeType.SMELTING, new Inventory(
-													(new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock()))),
-													(World) world)
-											.get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof World && !world.isRemote()) {
-							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-									((world instanceof World && ((World) world).getRecipeManager()
-											.getRecipe(IRecipeType.SMELTING, new Inventory(
-													(new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock()))),
-													((World) world))
-											.isPresent())
-													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock()))),
-															(World) world).get().getRecipeOutput().copy()
-													: ItemStack.EMPTY));
-							entityToSpawn.setPickupDelay((int) 10);
-							world.addEntity(entityToSpawn);
-						}
-						removeBlock = (true);
-					} else {
-						removeBlock = (false);
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x - 1), (int) y, (int) z), false);
-					} else {
-						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z)), (World) world,
-									new BlockPos((int) (x - 1), (int) y, (int) z));
-							world.destroyBlock(new BlockPos((int) (x - 1), (int) y, (int) z), false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) z))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) z)))) == true) {
-					if (!(((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-							new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) z))).getBlock()))),
-							((World) world)).isPresent())
-									? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) z))).getBlock()))),
-											(World) world).get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof World && !world.isRemote()) {
-							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-									((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) z))).getBlock()))),
-											((World) world)).isPresent())
-													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) z))).getBlock()))),
-															(World) world).get().getRecipeOutput().copy()
-													: ItemStack.EMPTY));
-							entityToSpawn.setPickupDelay((int) 10);
-							world.addEntity(entityToSpawn);
-						}
-						removeBlock = (true);
-					} else {
-						removeBlock = (false);
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x + 1), (int) (y + 1), (int) z), false);
-					} else {
-						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) z)), (World) world,
-									new BlockPos((int) (x + 1), (int) (y + 1), (int) z));
-							world.destroyBlock(new BlockPos((int) (x + 1), (int) (y + 1), (int) z), false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(new BlockPos((int) (x + 1), (int) (y - 1), (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x + 1), (int) (y - 1), (int) (z - 0)))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos((int) (x + 1), (int) (y - 1), (int) z)))) == true) {
-					if (!(((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-							new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) (y - 1), (int) z))).getBlock()))),
-							((World) world)).isPresent())
-									? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) (y - 1), (int) z))).getBlock()))),
-											(World) world).get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof World && !world.isRemote()) {
-							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-									((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) (y - 1), (int) z))).getBlock()))),
-											((World) world)).isPresent())
-													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x + 1), (int) (y - 1), (int) z))).getBlock()))),
-															(World) world).get().getRecipeOutput().copy()
-													: ItemStack.EMPTY));
-							entityToSpawn.setPickupDelay((int) 10);
-							world.addEntity(entityToSpawn);
-						}
-						removeBlock = (true);
-					} else {
-						removeBlock = (false);
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x + 1), (int) (y - 1), (int) (z - 0)), false);
-					} else {
-						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x + 1), (int) (y - 1), (int) (z - 0))), (World) world,
-									new BlockPos((int) (x + 1), (int) (y - 1), (int) (z - 0)));
-							world.destroyBlock(new BlockPos((int) (x + 1), (int) (y - 1), (int) (z - 0)), false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(new BlockPos((int) (x - 0), (int) (y + 1), (int) (z - 0))))
-					.getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x - 0), (int) (y + 1), (int) (z - 0)))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block
-						.canHarvestBlock((world.getBlockState(new BlockPos((int) (x - 0), (int) (y + 1), (int) (z - 0))))) == true) {
-					if (!(((world instanceof World && ((World) world).getRecipeManager()
-							.getRecipe(IRecipeType.SMELTING, new Inventory(
-									(new ItemStack((world.getBlockState(new BlockPos((int) (x - 0), (int) (y + 1), (int) (z - 0)))).getBlock()))),
-									((World) world))
-							.isPresent())
-									? ((World) world).getRecipeManager()
-											.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-													(world.getBlockState(new BlockPos((int) (x - 0), (int) (y + 1), (int) (z - 0)))).getBlock()))),
-													(World) world)
-											.get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof World && !world.isRemote()) {
-							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-									((world instanceof World && ((World) world).getRecipeManager()
-											.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-													(world.getBlockState(new BlockPos((int) (x - 0), (int) (y + 1), (int) (z - 0)))).getBlock()))),
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z))).getBlock()))),
 													((World) world))
 											.isPresent())
 													? ((World) world).getRecipeManager()
-															.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-																	(world.getBlockState(new BlockPos((int) (x - 0), (int) (y + 1), (int) (z - 0))))
-																			.getBlock()))),
+															.getRecipe(IRecipeType.SMELTING, new Inventory(
+																	(new ItemStack((world.getBlockState(new BlockPos(x + 1, y, z))).getBlock()))),
 																	(World) world)
 															.get().getRecipeOutput().copy()
 													: ItemStack.EMPTY));
@@ -634,117 +529,39 @@ public class HammersmeltProcedure {
 						removeBlock = (false);
 					}
 					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x - 0), (int) (y + 1), (int) (z - 0)), false);
+						world.destroyBlock(new BlockPos(x + 1, y, z), false);
 					} else {
 						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x - 0), (int) (y + 1), (int) (z - 0))), (World) world,
-									new BlockPos((int) (x - 0), (int) (y + 1), (int) (z - 0)));
-							world.destroyBlock(new BlockPos((int) (x - 0), (int) (y + 1), (int) (z - 0)), false);
+							Block.spawnDrops(world.getBlockState(new BlockPos(x + 1, y, z)), (World) world, new BlockPos(x + 1, y, z));
+							world.destroyBlock(new BlockPos(x + 1, y, z), false);
 						}
 					}
 				}
 			}
-			if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 0)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 0))))) == true) {
-					if (!(((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-							new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 0)))).getBlock()))),
-							((World) world)).isPresent())
-									? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 0)))).getBlock()))),
-											(World) world).get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof World && !world.isRemote()) {
-							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-									((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 0)))).getBlock()))),
-											((World) world)).isPresent())
-													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 0)))).getBlock()))),
-															(World) world).get().getRecipeOutput().copy()
-													: ItemStack.EMPTY));
-							entityToSpawn.setPickupDelay((int) 10);
-							world.addEntity(entityToSpawn);
-						}
-						removeBlock = (true);
-					} else {
-						removeBlock = (false);
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x - 1), (int) (y + 1), (int) (z + 0)), false);
-					} else {
-						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) (z + 0))), (World) world,
-									new BlockPos((int) (x - 1), (int) (y + 1), (int) (z + 0)));
-							world.destroyBlock(new BlockPos((int) (x - 1), (int) (y + 1), (int) (z + 0)), false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) (z - 0)))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) z)))) == true) {
-					if (!(((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-							new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) z))).getBlock()))),
-							((World) world)).isPresent())
-									? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) z))).getBlock()))),
-											(World) world).get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof World && !world.isRemote()) {
-							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-									((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) z))).getBlock()))),
-											((World) world)).isPresent())
-													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) z))).getBlock()))),
-															(World) world).get().getRecipeOutput().copy()
-													: ItemStack.EMPTY));
-							entityToSpawn.setPickupDelay((int) 10);
-							world.addEntity(entityToSpawn);
-						}
-						removeBlock = (true);
-					} else {
-						removeBlock = (false);
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x - 1), (int) (y + 1), (int) (z - 0)), false);
-					} else {
-						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) (z - 0))), (World) world,
-									new BlockPos((int) (x - 1), (int) (y + 1), (int) (z - 0)));
-							world.destroyBlock(new BlockPos((int) (x - 1), (int) (y + 1), (int) (z - 0)), false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) (z + 0))))
-					.getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) (z + 0)))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block
-						.canHarvestBlock((world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) (z + 0))))) == true) {
+			if ((world.getBlockState(new BlockPos(x - 1, y, z))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x - 1, y, z))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x - 1, y, z)))) == true) {
 					if (!(((world instanceof World && ((World) world).getRecipeManager()
-							.getRecipe(IRecipeType.SMELTING, new Inventory(
-									(new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) (z + 0)))).getBlock()))),
-									((World) world))
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z))).getBlock()))), ((World) world))
 							.isPresent())
 									? ((World) world).getRecipeManager()
-											.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-													(world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) (z + 0)))).getBlock()))),
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z))).getBlock()))),
 													(World) world)
 											.get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
 						if (world instanceof World && !world.isRemote()) {
 							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
 									((world instanceof World && ((World) world).getRecipeManager()
-											.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-													(world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) (z + 0)))).getBlock()))),
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z))).getBlock()))),
 													((World) world))
 											.isPresent())
 													? ((World) world).getRecipeManager()
-															.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-																	(world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) (z + 0))))
-																			.getBlock()))),
+															.getRecipe(IRecipeType.SMELTING, new Inventory(
+																	(new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z))).getBlock()))),
 																	(World) world)
 															.get().getRecipeOutput().copy()
 													: ItemStack.EMPTY));
@@ -756,33 +573,127 @@ public class HammersmeltProcedure {
 						removeBlock = (false);
 					}
 					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x - 1), (int) (y - 1), (int) z), false);
+						world.destroyBlock(new BlockPos(x - 1, y, z), false);
 					} else {
 						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) z)), (World) world,
-									new BlockPos((int) (x - 0), (int) y, (int) z));
-							world.destroyBlock(new BlockPos((int) (x - 1), (int) (y - 1), (int) z), false);
+							Block.spawnDrops(world.getBlockState(new BlockPos(x - 1, y, z)), (World) world, new BlockPos(x - 1, y, z));
+							world.destroyBlock(new BlockPos(x - 1, y, z), false);
 						}
 					}
 				}
 			}
-			if ((world.getBlockState(new BlockPos((int) (x - 0), (int) (y - 1), (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x - 0), (int) (y - 1), (int) z))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos((int) (x - 0), (int) (y - 1), (int) z)))) == true) {
-					if (!(((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-							new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) (x - 0), (int) (y - 1), (int) z))).getBlock()))),
-							((World) world)).isPresent())
-									? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 0), (int) (y - 1), (int) z))).getBlock()))),
-											(World) world).get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+			if ((world.getBlockState(new BlockPos(x + 1, y + 1, z))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x + 1, y + 1, z))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x + 1, y + 1, z)))) == true) {
+					if (!(((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y + 1, z))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y + 1, z))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
 						if (world instanceof World && !world.isRemote()) {
 							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-									((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 0), (int) (y - 1), (int) z))).getBlock()))),
+									((world instanceof World && ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y + 1, z))).getBlock()))),
+													((World) world))
+											.isPresent())
+													? ((World) world).getRecipeManager()
+															.getRecipe(IRecipeType.SMELTING, new Inventory(
+																	(new ItemStack((world.getBlockState(new BlockPos(x + 1, y + 1, z))).getBlock()))),
+																	(World) world)
+															.get().getRecipeOutput().copy()
+													: ItemStack.EMPTY));
+							entityToSpawn.setPickupDelay((int) 10);
+							world.addEntity(entityToSpawn);
+						}
+						removeBlock = (true);
+					} else {
+						removeBlock = (false);
+					}
+					if (removeBlock == true) {
+						world.destroyBlock(new BlockPos(x + 1, y + 1, z), false);
+					} else {
+						if (world instanceof World) {
+							Block.spawnDrops(world.getBlockState(new BlockPos(x + 1, y + 1, z)), (World) world, new BlockPos(x + 1, y + 1, z));
+							world.destroyBlock(new BlockPos(x + 1, y + 1, z), false);
+						}
+					}
+				}
+			}
+			if ((world.getBlockState(new BlockPos(x + 1, y - 1, z))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x + 1, y - 1, z - 0))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x + 1, y - 1, z)))) == true) {
+					if (!(((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y - 1, z))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y - 1, z))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
+						if (world instanceof World && !world.isRemote()) {
+							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
+									((world instanceof World && ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 1, y - 1, z))).getBlock()))),
+													((World) world))
+											.isPresent())
+													? ((World) world).getRecipeManager()
+															.getRecipe(IRecipeType.SMELTING, new Inventory(
+																	(new ItemStack((world.getBlockState(new BlockPos(x + 1, y - 1, z))).getBlock()))),
+																	(World) world)
+															.get().getRecipeOutput().copy()
+													: ItemStack.EMPTY));
+							entityToSpawn.setPickupDelay((int) 10);
+							world.addEntity(entityToSpawn);
+						}
+						removeBlock = (true);
+					} else {
+						removeBlock = (false);
+					}
+					if (removeBlock == true) {
+						world.destroyBlock(new BlockPos(x + 1, y - 1, z - 0), false);
+					} else {
+						if (world instanceof World) {
+							Block.spawnDrops(world.getBlockState(new BlockPos(x + 1, y - 1, z - 0)), (World) world,
+									new BlockPos(x + 1, y - 1, z - 0));
+							world.destroyBlock(new BlockPos(x + 1, y - 1, z - 0), false);
+						}
+					}
+				}
+			}
+			if ((world.getBlockState(new BlockPos(x - 0, y + 1, z - 0))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x - 0, y + 1, z - 0))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x - 0, y + 1, z - 0)))) == true) {
+					if (!(((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y + 1, z - 0))).getBlock()))),
+									((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory(
+															(new ItemStack((world.getBlockState(new BlockPos(x - 0, y + 1, z - 0))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
+						if (world instanceof World && !world.isRemote()) {
+							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
+									((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
+											new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y + 1, z - 0))).getBlock()))),
 											((World) world)).isPresent())
-													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x - 0), (int) (y - 1), (int) z))).getBlock()))),
+													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
+															(new ItemStack((world.getBlockState(new BlockPos(x - 0, y + 1, z - 0))).getBlock()))),
 															(World) world).get().getRecipeOutput().copy()
 													: ItemStack.EMPTY));
 							entityToSpawn.setPickupDelay((int) 10);
@@ -793,33 +704,129 @@ public class HammersmeltProcedure {
 						removeBlock = (false);
 					}
 					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x - 0), (int) (y - 1), (int) z), false);
+						world.destroyBlock(new BlockPos(x - 0, y + 1, z - 0), false);
 					} else {
 						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x - 0), (int) (y - 1), (int) z)), (World) world,
-									new BlockPos((int) (x - 0), (int) y, (int) z));
-							world.destroyBlock(new BlockPos((int) (x - 0), (int) (y - 1), (int) z), false);
+							Block.spawnDrops(world.getBlockState(new BlockPos(x - 0, y + 1, z - 0)), (World) world,
+									new BlockPos(x - 0, y + 1, z - 0));
+							world.destroyBlock(new BlockPos(x - 0, y + 1, z - 0), false);
 						}
 					}
 				}
 			}
-			if ((world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) (x - 0), (int) (y - 1), (int) z))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) z)))) == true) {
-					if (!(((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-							new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) z))).getBlock()))),
-							((World) world)).isPresent())
-									? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) z))).getBlock()))),
-											(World) world).get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+			if ((world.getBlockState(new BlockPos(x - 1, y, z + 0))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x - 1, y, z + 1))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x - 1, y, z + 0)))) == true) {
+					if (!(((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z + 0))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z + 0))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
 						if (world instanceof World && !world.isRemote()) {
 							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-									((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) z))).getBlock()))),
+									((world instanceof World && ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z + 0))).getBlock()))),
+													((World) world))
+											.isPresent())
+													? ((World) world).getRecipeManager()
+															.getRecipe(IRecipeType.SMELTING, new Inventory(
+																	(new ItemStack((world.getBlockState(new BlockPos(x - 1, y, z + 0))).getBlock()))),
+																	(World) world)
+															.get().getRecipeOutput().copy()
+													: ItemStack.EMPTY));
+							entityToSpawn.setPickupDelay((int) 10);
+							world.addEntity(entityToSpawn);
+						}
+						removeBlock = (true);
+					} else {
+						removeBlock = (false);
+					}
+					if (removeBlock == true) {
+						world.destroyBlock(new BlockPos(x - 1, y + 1, z + 0), false);
+					} else {
+						if (world instanceof World) {
+							Block.spawnDrops(world.getBlockState(new BlockPos(x - 1, y + 1, z + 0)), (World) world,
+									new BlockPos(x - 1, y + 1, z + 0));
+							world.destroyBlock(new BlockPos(x - 1, y + 1, z + 0), false);
+						}
+					}
+				}
+			}
+			if ((world.getBlockState(new BlockPos(x - 1, y + 1, z))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x - 1, y + 1, z - 0))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x - 1, y + 1, z)))) == true) {
+					if (!(((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y + 1, z))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y + 1, z))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
+						if (world instanceof World && !world.isRemote()) {
+							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
+									((world instanceof World && ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y + 1, z))).getBlock()))),
+													((World) world))
+											.isPresent())
+													? ((World) world).getRecipeManager()
+															.getRecipe(IRecipeType.SMELTING, new Inventory(
+																	(new ItemStack((world.getBlockState(new BlockPos(x - 1, y + 1, z))).getBlock()))),
+																	(World) world)
+															.get().getRecipeOutput().copy()
+													: ItemStack.EMPTY));
+							entityToSpawn.setPickupDelay((int) 10);
+							world.addEntity(entityToSpawn);
+						}
+						removeBlock = (true);
+					} else {
+						removeBlock = (false);
+					}
+					if (removeBlock == true) {
+						world.destroyBlock(new BlockPos(x - 1, y + 1, z - 0), false);
+					} else {
+						if (world instanceof World) {
+							Block.spawnDrops(world.getBlockState(new BlockPos(x - 1, y + 1, z - 0)), (World) world,
+									new BlockPos(x - 1, y + 1, z - 0));
+							world.destroyBlock(new BlockPos(x - 1, y + 1, z - 0), false);
+						}
+					}
+				}
+			}
+			if ((world.getBlockState(new BlockPos(x - 1, y - 1, z + 0))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x - 1, y - 1, z + 0))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x - 1, y - 1, z + 0)))) == true) {
+					if (!(((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y - 1, z + 0))).getBlock()))),
+									((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory(
+															(new ItemStack((world.getBlockState(new BlockPos(x - 1, y - 1, z + 0))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
+						if (world instanceof World && !world.isRemote()) {
+							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
+									((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
+											new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y - 1, z + 0))).getBlock()))),
 											((World) world)).isPresent())
-													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) z))).getBlock()))),
+													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
+															(new ItemStack((world.getBlockState(new BlockPos(x - 1, y - 1, z + 0))).getBlock()))),
 															(World) world).get().getRecipeOutput().copy()
 													: ItemStack.EMPTY));
 							entityToSpawn.setPickupDelay((int) 10);
@@ -830,34 +837,215 @@ public class HammersmeltProcedure {
 						removeBlock = (false);
 					}
 					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x - 1), (int) (y - 1), (int) z), false);
+						world.destroyBlock(new BlockPos(x - 1, y - 1, z), false);
 					} else {
 						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) z)), (World) world,
-									new BlockPos((int) (x - 0), (int) y, (int) z));
-							world.destroyBlock(new BlockPos((int) (x - 1), (int) (y - 1), (int) z), false);
+							Block.spawnDrops(world.getBlockState(new BlockPos(x - 1, y - 1, z)), (World) world, new BlockPos(x - 0, y, z));
+							world.destroyBlock(new BlockPos(x - 1, y - 1, z), false);
+						}
+					}
+				}
+			}
+			if ((world.getBlockState(new BlockPos(x - 0, y - 1, z))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x - 0, y - 1, z))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x - 0, y - 1, z)))) == true) {
+					if (!(((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y - 1, z))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y - 1, z))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
+						if (world instanceof World && !world.isRemote()) {
+							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
+									((world instanceof World && ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y - 1, z))).getBlock()))),
+													((World) world))
+											.isPresent())
+													? ((World) world).getRecipeManager()
+															.getRecipe(IRecipeType.SMELTING, new Inventory(
+																	(new ItemStack((world.getBlockState(new BlockPos(x - 0, y - 1, z))).getBlock()))),
+																	(World) world)
+															.get().getRecipeOutput().copy()
+													: ItemStack.EMPTY));
+							entityToSpawn.setPickupDelay((int) 10);
+							world.addEntity(entityToSpawn);
+						}
+						removeBlock = (true);
+					} else {
+						removeBlock = (false);
+					}
+					if (removeBlock == true) {
+						world.destroyBlock(new BlockPos(x - 0, y - 1, z), false);
+					} else {
+						if (world instanceof World) {
+							Block.spawnDrops(world.getBlockState(new BlockPos(x - 0, y - 1, z)), (World) world, new BlockPos(x - 0, y, z));
+							world.destroyBlock(new BlockPos(x - 0, y - 1, z), false);
+						}
+					}
+				}
+			}
+			if ((world.getBlockState(new BlockPos(x - 1, y - 1, z))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x - 0, y - 1, z))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x - 1, y - 1, z)))) == true) {
+					if (!(((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y - 1, z))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y - 1, z))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
+						if (world instanceof World && !world.isRemote()) {
+							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
+									((world instanceof World && ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 1, y - 1, z))).getBlock()))),
+													((World) world))
+											.isPresent())
+													? ((World) world).getRecipeManager()
+															.getRecipe(IRecipeType.SMELTING, new Inventory(
+																	(new ItemStack((world.getBlockState(new BlockPos(x - 1, y - 1, z))).getBlock()))),
+																	(World) world)
+															.get().getRecipeOutput().copy()
+													: ItemStack.EMPTY));
+							entityToSpawn.setPickupDelay((int) 10);
+							world.addEntity(entityToSpawn);
+						}
+						removeBlock = (true);
+					} else {
+						removeBlock = (false);
+					}
+					if (removeBlock == true) {
+						world.destroyBlock(new BlockPos(x - 1, y - 1, z), false);
+					} else {
+						if (world instanceof World) {
+							Block.spawnDrops(world.getBlockState(new BlockPos(x - 1, y - 1, z)), (World) world, new BlockPos(x - 0, y, z));
+							world.destroyBlock(new BlockPos(x - 1, y - 1, z), false);
 						}
 					}
 				}
 			}
 		} else if ((entity.getHorizontalFacing()) == Direction.WEST || (entity.getHorizontalFacing()) == Direction.EAST) {
-			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z + 1))))) == true) {
-					if (!(((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-							new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z + 1)))).getBlock()))),
-							((World) world)).isPresent())
-									? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z + 1)))).getBlock()))),
-											(World) world).get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+			if ((world.getBlockState(new BlockPos(x, y, z + 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x, y, z + 1))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x - 0, y, z + 1)))) == true) {
+					if (!(((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y, z + 1))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y, z + 1))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
 						if (world instanceof World && !world.isRemote()) {
 							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-									((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z + 1)))).getBlock()))),
+									((world instanceof World && ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y, z + 1))).getBlock()))),
+													((World) world))
+											.isPresent())
+													? ((World) world).getRecipeManager()
+															.getRecipe(IRecipeType.SMELTING, new Inventory(
+																	(new ItemStack((world.getBlockState(new BlockPos(x - 0, y, z + 1))).getBlock()))),
+																	(World) world)
+															.get().getRecipeOutput().copy()
+													: ItemStack.EMPTY));
+							entityToSpawn.setPickupDelay((int) 10);
+							world.addEntity(entityToSpawn);
+						}
+						removeBlock = (true);
+					} else {
+						removeBlock = (false);
+					}
+					if (removeBlock == true) {
+						world.destroyBlock(new BlockPos(x - 0, y, z + 1), false);
+					} else {
+						if (world instanceof World) {
+							Block.spawnDrops(world.getBlockState(new BlockPos(x - 0, y, z + 1)), (World) world, new BlockPos(x - 0, y, z + 1));
+							world.destroyBlock(new BlockPos(x - 0, y, z + 1), false);
+						}
+					}
+				}
+			}
+			if ((world.getBlockState(new BlockPos(x, y, z - 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x, y, z - 1))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x - 0, y, z - 1)))) == true) {
+					if (!(((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y, z - 1))).getBlock()))), ((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y, z - 1))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
+						if (world instanceof World && !world.isRemote()) {
+							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
+									((world instanceof World && ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y, z - 1))).getBlock()))),
+													((World) world))
+											.isPresent())
+													? ((World) world).getRecipeManager()
+															.getRecipe(IRecipeType.SMELTING, new Inventory(
+																	(new ItemStack((world.getBlockState(new BlockPos(x - 0, y, z - 1))).getBlock()))),
+																	(World) world)
+															.get().getRecipeOutput().copy()
+													: ItemStack.EMPTY));
+							entityToSpawn.setPickupDelay((int) 10);
+							world.addEntity(entityToSpawn);
+						}
+						removeBlock = (true);
+					} else {
+						removeBlock = (false);
+					}
+					if (removeBlock == true) {
+						world.destroyBlock(new BlockPos(x - 0, y, z - 1), false);
+					} else {
+						if (world instanceof World) {
+							Block.spawnDrops(world.getBlockState(new BlockPos(x - 0, y, z - 1)), (World) world, new BlockPos(x - 0, y, z - 1));
+							world.destroyBlock(new BlockPos(x - 0, y, z - 1), false);
+						}
+					}
+				}
+			}
+			if ((world.getBlockState(new BlockPos(x, y + 1, z + 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x, y + 1, z + 1))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x - 0, y + 1, z + 1)))) == true) {
+					if (!(((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 0, y + 1, z + 1))).getBlock()))),
+									((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory(
+															(new ItemStack((world.getBlockState(new BlockPos(x + 0, y + 1, z + 1))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
+						if (world instanceof World && !world.isRemote()) {
+							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
+									((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
+											new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 0, y + 1, z + 1))).getBlock()))),
 											((World) world)).isPresent())
-													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z + 1)))).getBlock()))),
+													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
+															(new ItemStack((world.getBlockState(new BlockPos(x + 0, y + 1, z + 1))).getBlock()))),
 															(World) world).get().getRecipeOutput().copy()
 													: ItemStack.EMPTY));
 							entityToSpawn.setPickupDelay((int) 10);
@@ -868,33 +1056,39 @@ public class HammersmeltProcedure {
 						removeBlock = (false);
 					}
 					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x - 0), (int) y, (int) (z + 1)), false);
+						world.destroyBlock(new BlockPos(x + 0, y + 1, z + 1), false);
 					} else {
 						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z + 1))), (World) world,
-									new BlockPos((int) (x - 0), (int) y, (int) (z + 1)));
-							world.destroyBlock(new BlockPos((int) (x - 0), (int) y, (int) (z + 1)), false);
+							Block.spawnDrops(world.getBlockState(new BlockPos(x - 0, y + 1, z + 1)), (World) world,
+									new BlockPos(x + 0, y + 1, z + 1));
+							world.destroyBlock(new BlockPos(x - 0, y + 1, z + 1), false);
 						}
 					}
 				}
 			}
-			if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z - 1))))) == true) {
-					if (!(((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
-							new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z - 1)))).getBlock()))),
-							((World) world)).isPresent())
-									? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z - 1)))).getBlock()))),
-											(World) world).get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+			if ((world.getBlockState(new BlockPos(x, y - 1, z + 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x, y - 1, z + 1))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x + 0, y - 1, z + 1)))) == true) {
+					if (!(((world instanceof World && ((World) world).getRecipeManager()
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 0, y - 1, z + 1))).getBlock()))),
+									((World) world))
+							.isPresent())
+									? ((World) world).getRecipeManager()
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory(
+															(new ItemStack((world.getBlockState(new BlockPos(x + 0, y - 1, z + 1))).getBlock()))),
+													(World) world)
+											.get().getRecipeOutput().copy()
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
 						if (world instanceof World && !world.isRemote()) {
 							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-									((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
-											(new ItemStack((world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z - 1)))).getBlock()))),
+									((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
+											new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 0, y - 1, z + 1))).getBlock()))),
 											((World) world)).isPresent())
-													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-															(world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z - 1)))).getBlock()))),
+													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
+															(new ItemStack((world.getBlockState(new BlockPos(x + 0, y - 1, z + 1))).getBlock()))),
 															(World) world).get().getRecipeOutput().copy()
 													: ItemStack.EMPTY));
 							entityToSpawn.setPickupDelay((int) 10);
@@ -905,44 +1099,40 @@ public class HammersmeltProcedure {
 						removeBlock = (false);
 					}
 					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x - 0), (int) y, (int) (z - 1)), false);
+						world.destroyBlock(new BlockPos(x + 0, y - 1, z + 1), false);
 					} else {
 						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x - 0), (int) y, (int) (z - 1))), (World) world,
-									new BlockPos((int) (x - 0), (int) y, (int) (z - 1)));
-							world.destroyBlock(new BlockPos((int) (x - 0), (int) y, (int) (z - 1)), false);
+							Block.spawnDrops(world.getBlockState(new BlockPos(x + 0, y - 1, z + 1)), (World) world,
+									new BlockPos(x + 1, y - 1, z + 1));
+							world.destroyBlock(new BlockPos(x + 0, y - 1, z + 1), false);
 						}
 					}
 				}
 			}
-			if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z + 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z + 1)))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block
-						.canHarvestBlock((world.getBlockState(new BlockPos((int) (x - 0), (int) (y + 1), (int) (z + 1))))) == true) {
+			if ((world.getBlockState(new BlockPos(x, y - 1, z - 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x, y - 1, z - 1))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x - 0, y - 1, z - 1)))) == true) {
 					if (!(((world instanceof World && ((World) world).getRecipeManager()
-							.getRecipe(IRecipeType.SMELTING, new Inventory(
-									(new ItemStack((world.getBlockState(new BlockPos((int) (x + 0), (int) (y + 1), (int) (z + 1)))).getBlock()))),
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y - 1, z - 1))).getBlock()))),
 									((World) world))
 							.isPresent())
 									? ((World) world).getRecipeManager()
-											.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-													(world.getBlockState(new BlockPos((int) (x + 0), (int) (y + 1), (int) (z + 1)))).getBlock()))),
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory(
+															(new ItemStack((world.getBlockState(new BlockPos(x - 0, y - 1, z - 1))).getBlock()))),
 													(World) world)
 											.get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
 						if (world instanceof World && !world.isRemote()) {
 							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-									((world instanceof World && ((World) world).getRecipeManager()
-											.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-													(world.getBlockState(new BlockPos((int) (x + 0), (int) (y + 1), (int) (z + 1)))).getBlock()))),
-													((World) world))
-											.isPresent())
-													? ((World) world).getRecipeManager()
-															.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-																	(world.getBlockState(new BlockPos((int) (x + 0), (int) (y + 1), (int) (z + 1))))
-																			.getBlock()))),
-																	(World) world)
-															.get().getRecipeOutput().copy()
+									((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
+											new Inventory((new ItemStack((world.getBlockState(new BlockPos(x - 0, y - 1, z - 1))).getBlock()))),
+											((World) world)).isPresent())
+													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
+															(new ItemStack((world.getBlockState(new BlockPos(x - 0, y - 1, z - 1))).getBlock()))),
+															(World) world).get().getRecipeOutput().copy()
 													: ItemStack.EMPTY));
 							entityToSpawn.setPickupDelay((int) 10);
 							world.addEntity(entityToSpawn);
@@ -952,44 +1142,40 @@ public class HammersmeltProcedure {
 						removeBlock = (false);
 					}
 					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x + 0), (int) (y + 1), (int) (z + 1)), false);
+						world.destroyBlock(new BlockPos(x - 0, y - 1, z - 1), false);
 					} else {
 						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x - 0), (int) (y + 1), (int) (z + 1))), (World) world,
-									new BlockPos((int) (x + 0), (int) (y + 1), (int) (z + 1)));
-							world.destroyBlock(new BlockPos((int) (x - 0), (int) (y + 1), (int) (z + 1)), false);
+							Block.spawnDrops(world.getBlockState(new BlockPos(x - 0, y - 1, z - 1)), (World) world,
+									new BlockPos(x - 0, y - 1, z - 1));
+							world.destroyBlock(new BlockPos(x - 0, y - 1, z - 1), false);
 						}
 					}
 				}
 			}
-			if ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) (z + 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) (z + 1)))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block
-						.canHarvestBlock((world.getBlockState(new BlockPos((int) (x + 0), (int) (y - 1), (int) (z + 1))))) == true) {
+			if ((world.getBlockState(new BlockPos(x, y + 1, z - 1))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x, y + 1, z - 1))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x + 0, y + 1, z - 1)))) == true) {
 					if (!(((world instanceof World && ((World) world).getRecipeManager()
-							.getRecipe(IRecipeType.SMELTING, new Inventory(
-									(new ItemStack((world.getBlockState(new BlockPos((int) (x + 0), (int) (y - 1), (int) (z + 1)))).getBlock()))),
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 0, y + 1, z - 1))).getBlock()))),
 									((World) world))
 							.isPresent())
 									? ((World) world).getRecipeManager()
-											.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-													(world.getBlockState(new BlockPos((int) (x + 0), (int) (y - 1), (int) (z + 1)))).getBlock()))),
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory(
+															(new ItemStack((world.getBlockState(new BlockPos(x + 0, y + 1, z - 1))).getBlock()))),
 													(World) world)
 											.get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
 						if (world instanceof World && !world.isRemote()) {
 							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-									((world instanceof World && ((World) world).getRecipeManager()
-											.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-													(world.getBlockState(new BlockPos((int) (x + 0), (int) (y - 1), (int) (z + 1)))).getBlock()))),
-													((World) world))
-											.isPresent())
-													? ((World) world).getRecipeManager()
-															.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-																	(world.getBlockState(new BlockPos((int) (x + 0), (int) (y - 1), (int) (z + 1))))
-																			.getBlock()))),
-																	(World) world)
-															.get().getRecipeOutput().copy()
+									((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
+											new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 0, y + 1, z - 1))).getBlock()))),
+											((World) world)).isPresent())
+													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
+															(new ItemStack((world.getBlockState(new BlockPos(x + 0, y + 1, z - 1))).getBlock()))),
+															(World) world).get().getRecipeOutput().copy()
 													: ItemStack.EMPTY));
 							entityToSpawn.setPickupDelay((int) 10);
 							world.addEntity(entityToSpawn);
@@ -999,44 +1185,40 @@ public class HammersmeltProcedure {
 						removeBlock = (false);
 					}
 					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x + 0), (int) (y - 1), (int) (z + 1)), false);
+						world.destroyBlock(new BlockPos(x + 0, y + 1, z - 1), false);
 					} else {
 						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x + 0), (int) (y - 1), (int) (z + 1))), (World) world,
-									new BlockPos((int) (x + 1), (int) (y - 1), (int) (z + 1)));
-							world.destroyBlock(new BlockPos((int) (x + 0), (int) (y - 1), (int) (z + 1)), false);
+							Block.spawnDrops(world.getBlockState(new BlockPos(x + 0, y + 1, z - 1)), (World) world,
+									new BlockPos(x + 1, y + 1, z - 1));
+							world.destroyBlock(new BlockPos(x + 0, y + 1, z - 1), false);
 						}
 					}
 				}
 			}
-			if ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) (z - 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) (z - 1)))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block
-						.canHarvestBlock((world.getBlockState(new BlockPos((int) (x - 0), (int) (y - 1), (int) (z - 1))))) == true) {
+			if ((world.getBlockState(new BlockPos(x, y + 1, z))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x, y + 1, z))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x + 0, y + 1, z - 0)))) == true) {
 					if (!(((world instanceof World && ((World) world).getRecipeManager()
-							.getRecipe(IRecipeType.SMELTING, new Inventory(
-									(new ItemStack((world.getBlockState(new BlockPos((int) (x - 0), (int) (y - 1), (int) (z - 1)))).getBlock()))),
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 0, y + 1, z - 0))).getBlock()))),
 									((World) world))
 							.isPresent())
 									? ((World) world).getRecipeManager()
-											.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-													(world.getBlockState(new BlockPos((int) (x - 0), (int) (y - 1), (int) (z - 1)))).getBlock()))),
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory(
+															(new ItemStack((world.getBlockState(new BlockPos(x + 0, y + 1, z - 0))).getBlock()))),
 													(World) world)
 											.get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
 						if (world instanceof World && !world.isRemote()) {
 							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-									((world instanceof World && ((World) world).getRecipeManager()
-											.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-													(world.getBlockState(new BlockPos((int) (x - 0), (int) (y - 1), (int) (z - 1)))).getBlock()))),
-													((World) world))
-											.isPresent())
-													? ((World) world).getRecipeManager()
-															.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-																	(world.getBlockState(new BlockPos((int) (x - 0), (int) (y - 1), (int) (z - 1))))
-																			.getBlock()))),
-																	(World) world)
-															.get().getRecipeOutput().copy()
+									((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
+											new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 0, y + 1, z - 0))).getBlock()))),
+											((World) world)).isPresent())
+													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
+															(new ItemStack((world.getBlockState(new BlockPos(x + 0, y + 1, z - 0))).getBlock()))),
+															(World) world).get().getRecipeOutput().copy()
 													: ItemStack.EMPTY));
 							entityToSpawn.setPickupDelay((int) 10);
 							world.addEntity(entityToSpawn);
@@ -1046,44 +1228,40 @@ public class HammersmeltProcedure {
 						removeBlock = (false);
 					}
 					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x - 0), (int) (y - 1), (int) (z - 1)), false);
+						world.destroyBlock(new BlockPos(x + 0, y + 1, z - 0), false);
 					} else {
 						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x - 0), (int) (y - 1), (int) (z - 1))), (World) world,
-									new BlockPos((int) (x - 0), (int) (y - 1), (int) (z - 1)));
-							world.destroyBlock(new BlockPos((int) (x - 0), (int) (y - 1), (int) (z - 1)), false);
+							Block.spawnDrops(world.getBlockState(new BlockPos(x + 0, y + 1, z - 0)), (World) world,
+									new BlockPos(x + 1, y + 1, z - 0));
+							world.destroyBlock(new BlockPos(x + 0, y + 1, z - 0), false);
 						}
 					}
 				}
 			}
-			if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z - 1)))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z - 1)))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block
-						.canHarvestBlock((world.getBlockState(new BlockPos((int) (x + 0), (int) (y + 1), (int) (z - 1))))) == true) {
+			if ((world.getBlockState(new BlockPos(x, y - 1, z))).getMaterial() == net.minecraft.block.material.Material.ROCK
+					&& !((world.getBlockState(new BlockPos(x, y - 1, z))).getBlock() == Blocks.BEDROCK)) {
+				if (PaladiumhammerItem.block.canHarvestBlock((world.getBlockState(new BlockPos(x + 0, y - 1, z - 0)))) == true) {
 					if (!(((world instanceof World && ((World) world).getRecipeManager()
-							.getRecipe(IRecipeType.SMELTING, new Inventory(
-									(new ItemStack((world.getBlockState(new BlockPos((int) (x + 0), (int) (y + 1), (int) (z - 1)))).getBlock()))),
+							.getRecipe(IRecipeType.SMELTING,
+									new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 0, y - 1, z - 0))).getBlock()))),
 									((World) world))
 							.isPresent())
 									? ((World) world).getRecipeManager()
-											.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-													(world.getBlockState(new BlockPos((int) (x + 0), (int) (y + 1), (int) (z - 1)))).getBlock()))),
+											.getRecipe(IRecipeType.SMELTING,
+													new Inventory(
+															(new ItemStack((world.getBlockState(new BlockPos(x + 0, y - 1, z - 0))).getBlock()))),
 													(World) world)
 											.get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+									: ItemStack.EMPTY)
+							.getItem() == Blocks.AIR.asItem())) {
 						if (world instanceof World && !world.isRemote()) {
 							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-									((world instanceof World && ((World) world).getRecipeManager()
-											.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-													(world.getBlockState(new BlockPos((int) (x + 0), (int) (y + 1), (int) (z - 1)))).getBlock()))),
-													((World) world))
-											.isPresent())
-													? ((World) world).getRecipeManager()
-															.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-																	(world.getBlockState(new BlockPos((int) (x + 0), (int) (y + 1), (int) (z - 1))))
-																			.getBlock()))),
-																	(World) world)
-															.get().getRecipeOutput().copy()
+									((world instanceof World && ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING,
+											new Inventory((new ItemStack((world.getBlockState(new BlockPos(x + 0, y - 1, z - 0))).getBlock()))),
+											((World) world)).isPresent())
+													? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(
+															(new ItemStack((world.getBlockState(new BlockPos(x + 0, y - 1, z - 0))).getBlock()))),
+															(World) world).get().getRecipeOutput().copy()
 													: ItemStack.EMPTY));
 							entityToSpawn.setPickupDelay((int) 10);
 							world.addEntity(entityToSpawn);
@@ -1093,106 +1271,12 @@ public class HammersmeltProcedure {
 						removeBlock = (false);
 					}
 					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x + 0), (int) (y + 1), (int) (z - 1)), false);
+						world.destroyBlock(new BlockPos(x + 0, y - 1, z - 0), false);
 					} else {
 						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x + 0), (int) (y + 1), (int) (z - 1))), (World) world,
-									new BlockPos((int) (x + 1), (int) (y + 1), (int) (z - 1)));
-							world.destroyBlock(new BlockPos((int) (x + 0), (int) (y + 1), (int) (z - 1)), false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block
-						.canHarvestBlock((world.getBlockState(new BlockPos((int) (x + 0), (int) (y + 1), (int) (z - 0))))) == true) {
-					if (!(((world instanceof World && ((World) world).getRecipeManager()
-							.getRecipe(IRecipeType.SMELTING, new Inventory(
-									(new ItemStack((world.getBlockState(new BlockPos((int) (x + 0), (int) (y + 1), (int) (z - 0)))).getBlock()))),
-									((World) world))
-							.isPresent())
-									? ((World) world).getRecipeManager()
-											.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-													(world.getBlockState(new BlockPos((int) (x + 0), (int) (y + 1), (int) (z - 0)))).getBlock()))),
-													(World) world)
-											.get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof World && !world.isRemote()) {
-							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-									((world instanceof World && ((World) world).getRecipeManager()
-											.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-													(world.getBlockState(new BlockPos((int) (x + 0), (int) (y + 1), (int) (z - 0)))).getBlock()))),
-													((World) world))
-											.isPresent())
-													? ((World) world).getRecipeManager()
-															.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-																	(world.getBlockState(new BlockPos((int) (x + 0), (int) (y + 1), (int) (z - 0))))
-																			.getBlock()))),
-																	(World) world)
-															.get().getRecipeOutput().copy()
-													: ItemStack.EMPTY));
-							entityToSpawn.setPickupDelay((int) 10);
-							world.addEntity(entityToSpawn);
-						}
-						removeBlock = (true);
-					} else {
-						removeBlock = (false);
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x + 0), (int) (y + 1), (int) (z - 0)), false);
-					} else {
-						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x + 0), (int) (y + 1), (int) (z - 0))), (World) world,
-									new BlockPos((int) (x + 1), (int) (y + 1), (int) (z - 0)));
-							world.destroyBlock(new BlockPos((int) (x + 0), (int) (y + 1), (int) (z - 0)), false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getMaterial() == net.minecraft.block.material.Material.ROCK
-					&& !((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == Blocks.BEDROCK)) {
-				if (PaladiumhammerItem.block
-						.canHarvestBlock((world.getBlockState(new BlockPos((int) (x + 0), (int) (y - 1), (int) (z - 0))))) == true) {
-					if (!(((world instanceof World && ((World) world).getRecipeManager()
-							.getRecipe(IRecipeType.SMELTING, new Inventory(
-									(new ItemStack((world.getBlockState(new BlockPos((int) (x + 0), (int) (y - 1), (int) (z - 0)))).getBlock()))),
-									((World) world))
-							.isPresent())
-									? ((World) world).getRecipeManager()
-											.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-													(world.getBlockState(new BlockPos((int) (x + 0), (int) (y - 1), (int) (z - 0)))).getBlock()))),
-													(World) world)
-											.get().getRecipeOutput().copy()
-									: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof World && !world.isRemote()) {
-							ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 0.5), (z + 0.5),
-									((world instanceof World && ((World) world).getRecipeManager()
-											.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-													(world.getBlockState(new BlockPos((int) (x + 0), (int) (y - 1), (int) (z - 0)))).getBlock()))),
-													((World) world))
-											.isPresent())
-													? ((World) world).getRecipeManager()
-															.getRecipe(IRecipeType.SMELTING, new Inventory((new ItemStack(
-																	(world.getBlockState(new BlockPos((int) (x + 0), (int) (y - 1), (int) (z - 0))))
-																			.getBlock()))),
-																	(World) world)
-															.get().getRecipeOutput().copy()
-													: ItemStack.EMPTY));
-							entityToSpawn.setPickupDelay((int) 10);
-							world.addEntity(entityToSpawn);
-						}
-						removeBlock = (true);
-					} else {
-						removeBlock = (false);
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(new BlockPos((int) (x + 0), (int) (y - 1), (int) (z - 0)), false);
-					} else {
-						if (world instanceof World) {
-							Block.spawnDrops(world.getBlockState(new BlockPos((int) (x + 0), (int) (y - 1), (int) (z - 0))), (World) world,
-									new BlockPos((int) (x + 1), (int) (y - 1), (int) (z - 0)));
-							world.destroyBlock(new BlockPos((int) (x + 0), (int) (y - 1), (int) (z - 0)), false);
+							Block.spawnDrops(world.getBlockState(new BlockPos(x + 0, y - 1, z - 0)), (World) world,
+									new BlockPos(x + 1, y - 1, z - 0));
+							world.destroyBlock(new BlockPos(x + 0, y - 1, z - 0), false);
 						}
 					}
 				}

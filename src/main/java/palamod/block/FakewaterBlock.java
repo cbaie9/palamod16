@@ -75,9 +75,10 @@ public class FakewaterBlock extends PalamodModElements.ModElement {
 				FluidAttributes.builder(new ResourceLocation("palamod:blocks/fakewater_still"), new ResourceLocation("palamod:blocks/fake_water"))
 						.luminosity(0).density(1000).viscosity(1000).temperature(300)
 
-						.rarity(Rarity.COMMON)).explosionResistance(100f)
+						.rarity(Rarity.COMMON))
+				.explosionResistance(100f)
 
-								.tickRate(5).levelDecreasePerBlock(1).slopeFindDistance(4).bucket(() -> bucket).block(() -> block);
+				.tickRate(5).levelDecreasePerBlock(1).slopeFindDistance(4).bucket(() -> bucket).block(() -> block);
 		still = (FlowingFluid) new ForgeFlowingFluid.Source(fluidproperties).setRegistryName("fakewater");
 		flowing = (FlowingFluid) new ForgeFlowingFluid.Flowing(fluidproperties).setRegistryName("fakewater_flowing");
 		elements.blocks
@@ -95,6 +96,6 @@ public class FakewaterBlock extends PalamodModElements.ModElement {
 				}.setRegistryName("fakewater"));
 		elements.items.add(() -> new BucketItem(still,
 				new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(PalamodItemGroup.tab).rarity(Rarity.COMMON))
-						.setRegistryName("fakewater_bucket"));
+				.setRegistryName("fakewater_bucket"));
 	}
 }

@@ -97,16 +97,16 @@ public class PalahelporeGuiWindow extends ContainerScreen<PalahelporeGui.GuiCont
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
 		this.font.drawString(ms, "Paladium :Le minerais le plus puissant", 23, 66, -52480);
 		this.font.drawString(ms, "minable", 25, 76, -52480);
-		this.font.drawString(ms, "Tr\u00E8s rare sert a quelque craft", 18, 99, -205);
+		this.font.drawString(ms, "Tr\uFFFDs rare sert a quelque craft", 18, 99, -205);
 		this.font.drawString(ms, "dont le cave block et le spawn finder", 5, 110, -205);
 		this.font.drawString(ms, "Minerais de bas niveau trouvable assez", 7, 168, -6750055);
 		this.font.drawString(ms, "facilement", 6, 178, -6750055);
-		this.font.drawString(ms, "Resitant,tr\u00E8s bon pour ses premiers", 24, 131, -12829636);
+		this.font.drawString(ms, "Resitant,tr\uFFFDs bon pour ses premiers", 24, 131, -12829636);
 		this.font.drawString(ms, "outils", 4, 140, -12829636);
-		this.font.drawString(ms, "Am\u00E9thyste :", 26, 153, -6750055);
+		this.font.drawString(ms, "Am\uFFFDthyste :", 26, 153, -6750055);
 		this.font.drawString(ms, "Titane :", 24, 121, -12829636);
 		this.font.drawString(ms, "Findium :", 21, 89, -205);
-		this.font.drawString(ms, "Paladium vert : \u00E9quivalent en plus rare", 22, 52, -10027213);
+		this.font.drawString(ms, "Paladium vert : \uFFFDquivalent en plus rare", 22, 52, -10027213);
 		this.font.drawString(ms, "Endium : Le materiau ultime obtenable", 24, 27, -13434727);
 		this.font.drawString(ms, "via le paladium crusher ( voir machine)", 19, 39, -13434727);
 	}

@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 28,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -111,12 +111,12 @@
       {
         "type": "label",
         "data": {
-          "text": "( améthyste ) soit l'améthyste mixed coal,",
+          "text": "( amï¿½thyste ) soit l'amï¿½thyste mixed coal,",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "( améthyste ) soit l'améthyste mixed coal,",
+          "name": "( amï¿½thyste ) soit l'amï¿½thyste mixed coal,",
           "x": 15,
           "y": 109
         }
@@ -137,12 +137,12 @@
       {
         "type": "label",
         "data": {
-          "text": "L'endium. Pour celui-ci il faudra insérer 128 palamixed et 128 orangeblue puis",
+          "text": "L'endium. Pour celui-ci il faudra insï¿½rer 128 palamixed et 128 orangeblue puis",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "L'endium. Pour celui-ci il faudra insérer 128 palamixed et 128 orangeblue puis",
+          "name": "L'endium. Pour celui-ci il faudra insï¿½rer 128 palamixed et 128 orangeblue puis",
           "x": 17,
           "y": 133
         }
@@ -163,12 +163,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Résultat ici",
+          "text": "Rï¿½sultat ici",
           "color": {
             "value": -16776961,
             "falpha": 0.0
           },
-          "name": "Résultat ici",
+          "name": "Rï¿½sultat ici",
           "x": 321,
           "y": 79
         }
@@ -189,12 +189,12 @@
       {
         "type": "label",
         "data": {
-          "text": "élément auront été insèrés.",
+          "text": "ï¿½lï¿½ment auront ï¿½tï¿½ insï¿½rï¿½s.",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "élément auront été insèrés.",
+          "name": "ï¿½lï¿½ment auront ï¿½tï¿½ insï¿½rï¿½s.",
           "x": 15,
           "y": 158
         }
@@ -202,12 +202,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Note : vous n'êtes pas obliger d'insèrè 128 de chaque mais il aura une chance",
+          "text": "Note : vous n'ï¿½tes pas obliger d'insï¿½rï¿½ 128 de chaque mais il aura une chance",
           "color": {
             "value": -26368,
             "falpha": 0.0
           },
-          "name": "Note : vous n'êtes pas obliger d'insèrè 128 de chaque mais il aura une chance",
+          "name": "Note : vous n'ï¿½tes pas obliger d'insï¿½rï¿½ 128 de chaque mais il aura une chance",
           "x": 17,
           "y": 169
         }
@@ -215,12 +215,12 @@
       {
         "type": "label",
         "data": {
-          "text": "que le nugget n'apparaise [ probabilité étant la chance que le nugget appairaise",
+          "text": "que le nugget n'apparaise [ probabilitï¿½ ï¿½tant la chance que le nugget appairaise",
           "color": {
             "value": -26368,
             "falpha": 0.0
           },
-          "name": "que le nugget n'apparaise [ probabilité étant la chance que le nugget appairaise",
+          "name": "que le nugget n'apparaise [ probabilitï¿½ ï¿½tant la chance que le nugget appairaise",
           "x": 14,
           "y": 178
         }
@@ -228,12 +228,12 @@
       {
         "type": "label",
         "data": {
-          "text": "et 128 étant 100% de chance  ] pas",
+          "text": "et 128 ï¿½tant 100% de chance  ] pas",
           "color": {
             "value": -26368,
             "falpha": 0.0
           },
-          "name": "et 128 étant 100% de chance  ] pas",
+          "name": "et 128 ï¿½tant 100% de chance  ] pas",
           "x": 18,
           "y": 188
         }
