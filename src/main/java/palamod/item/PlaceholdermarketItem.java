@@ -17,7 +17,7 @@ public class PlaceholdermarketItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public PlaceholdermarketItem(PalamodModElements instance) {
-		super(instance, 737);
+		super(instance, 757);
 	}
 
 	@Override

@@ -19,7 +19,7 @@ public class BroadswordheadItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public BroadswordheadItem(PalamodModElements instance) {
-		super(instance, 143);
+		super(instance, 142);
 	}
 
 	@Override

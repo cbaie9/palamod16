@@ -40,7 +40,7 @@ public class PalamachineguienGui extends PalamodModElements.ModElement {
 	private static ContainerType<GuiContainerMod> containerType = null;
 
 	public PalamachineguienGui(PalamodModElements instance) {
-		super(instance, 725);
+		super(instance, 745);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

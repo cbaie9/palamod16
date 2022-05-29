@@ -23,7 +23,7 @@ public class LuckybetaItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public LuckybetaItem(PalamodModElements instance) {
-		super(instance, 213);
+		super(instance, 616);
 	}
 
 	@Override

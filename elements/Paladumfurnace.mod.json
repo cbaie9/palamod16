@@ -19,8 +19,8 @@
             "falpha": 0.0
           },
           "name": "Paladium Furnace",
-          "x": 170,
-          "y": 42
+          "x": 162,
+          "y": 40
         }
       },
       {
@@ -32,34 +32,12 @@
           "id": 0,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "PFurnaceprocessv2"
+          },
           "name": "Slot #0",
           "x": 184,
           "y": 58
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 1,
-          "disableStackInteraction": false,
-          "dropItemsWhenNotBound": false,
-          "name": "Slot #1",
-          "x": 250,
-          "y": 76
-        }
-      },
-      {
-        "type": "inputslot",
-        "data": {
-          "inputLimit": {
-            "value": ""
-          },
-          "id": 2,
-          "disableStackInteraction": false,
-          "dropItemsWhenNotBound": false,
-          "name": "Slot #2",
-          "x": 184,
-          "y": 94
         }
       },
       {
@@ -94,8 +72,8 @@
           "image": "big_slot.png",
           "use1Xscale": true,
           "name": "big_slot.png",
-          "x": 246,
-          "y": 72
+          "x": 241,
+          "y": 70
         }
       },
       {
@@ -154,8 +132,8 @@
           "image": "fire05.png",
           "use1Xscale": true,
           "name": "fire05.png",
-          "x": 184,
-          "y": 80
+          "x": 183,
+          "y": 79
         }
       },
       {
@@ -201,13 +179,13 @@
       {
         "type": "label",
         "data": {
-          "text": "<VAR:g_num>",
+          "text": "<VAR:integer:g_num>",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<VAR:g_num>",
-          "x": 235,
+          "name": "<VAR:integer:g_num>",
+          "x": 213,
           "y": 103
         }
       },
@@ -223,6 +201,47 @@
           "name": "Slot #3",
           "x": 131,
           "y": 67
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "PFurnaceprocessv2"
+          },
+          "name": "Slot #1",
+          "x": 183,
+          "y": 96
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #2",
+          "x": 245,
+          "y": 75
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:Lucky_destroy>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<VAR:Lucky_destroy>",
+          "x": 216,
+          "y": 55
         }
       }
     ],

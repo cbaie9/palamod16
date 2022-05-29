@@ -50,7 +50,7 @@ public class FakewaterBlock extends PalamodModElements.ModElement {
 	private ForgeFlowingFluid.Properties fluidproperties = null;
 
 	public FakewaterBlock(PalamodModElements instance) {
-		super(instance, 161);
+		super(instance, 160);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FluidRegisterHandler());
 	}
 

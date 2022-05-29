@@ -19,7 +19,7 @@ public class FastswordheadItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public FastswordheadItem(PalamodModElements instance) {
-		super(instance, 142);
+		super(instance, 141);
 	}
 
 	@Override

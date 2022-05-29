@@ -18,7 +18,7 @@ public class HammerforturneEnchantment extends PalamodModElements.ModElement {
 	public static final Enchantment enchantment = null;
 
 	public HammerforturneEnchantment(PalamodModElements instance) {
-		super(instance, 436);
+		super(instance, 458);
 	}
 
 	@Override

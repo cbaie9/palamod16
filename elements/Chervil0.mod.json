@@ -82,6 +82,7 @@
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "patchSize": 32,
+    "generateAtAnyHeight": false,
     "onRandomUpdateEvent": {
       "name": "Chervil0up"
     }

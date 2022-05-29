@@ -19,7 +19,7 @@ public class DiamondstringItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public DiamondstringItem(PalamodModElements instance) {
-		super(instance, 619);
+		super(instance, 198);
 	}
 
 	@Override

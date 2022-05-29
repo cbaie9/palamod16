@@ -19,7 +19,7 @@ public class PickaxeheadItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public PickaxeheadItem(PalamodModElements instance) {
-		super(instance, 140);
+		super(instance, 139);
 	}
 
 	@Override

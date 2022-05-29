@@ -64,6 +64,14 @@ public class PaladiumfurnaceprocesProcedure {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		double fireHeight = 0;
 		double previousRecipe = 0;
+		PalamodModVariables.g_num = (new Object() {
+			public double getValue(IWorld world, BlockPos pos, String tag) {
+				TileEntity tileEntity = world.getTileEntity(pos);
+				if (tileEntity != null)
+					return tileEntity.getTileData().getDouble(tag);
+				return -1;
+			}
+		}.getValue(world, new BlockPos(x, y, z), "timer_p0f"));
 		if (!world.isRemote()) {
 			BlockPos _bp = new BlockPos(x, y, z);
 			TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -441,7 +449,7 @@ public class PaladiumfurnaceprocesProcedure {
 					{
 						TileEntity _ent = world.getTileEntity(new BlockPos(x, y, z));
 						if (_ent != null) {
-							final int _sltid = (int) (2);
+							final int _sltid = (int) (0);
 							final int _amount = (int) 1;
 							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 								if (capability instanceof IItemHandlerModifiable) {
@@ -541,7 +549,7 @@ public class PaladiumfurnaceprocesProcedure {
 					{
 						TileEntity _ent = world.getTileEntity(new BlockPos(x, y, z));
 						if (_ent != null) {
-							final int _sltid = (int) (2);
+							final int _sltid = (int) (0);
 							final int _amount = (int) 1;
 							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 								if (capability instanceof IItemHandlerModifiable) {
@@ -551,22 +559,6 @@ public class PaladiumfurnaceprocesProcedure {
 								}
 							});
 						}
-					}
-					if (!world.isRemote()) {
-						BlockPos _bp = new BlockPos(x, y, z);
-						TileEntity _tileEntity = world.getTileEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_tileEntity != null)
-							_tileEntity.getTileData().putDouble("timer_p0f", (new Object() {
-								public double getValue(IWorld world, BlockPos pos, String tag) {
-									TileEntity tileEntity = world.getTileEntity(pos);
-									if (tileEntity != null)
-										return tileEntity.getTileData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, new BlockPos(x, y, z), "timer_p0f") + 1));
-						if (world instanceof World)
-							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 					}
 				} else {
 					if (!world.isRemote()) {
@@ -709,66 +701,6 @@ public class PaladiumfurnaceprocesProcedure {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
 						}
 					});
-				}
-			}
-		}
-		if (new Object() {
-			public double getValue(IWorld world, BlockPos pos, String tag) {
-				TileEntity tileEntity = world.getTileEntity(pos);
-				if (tileEntity != null)
-					return tileEntity.getTileData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, new BlockPos(x, y, z), "pf_fuel") > 0 && new Object() {
-			public double getValue(IWorld world, BlockPos pos, String tag) {
-				TileEntity tileEntity = world.getTileEntity(pos);
-				if (tileEntity != null)
-					return tileEntity.getTileData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, new BlockPos(x, y, z), "timer_p0f") == 0) {
-			if (new Object() {
-				public boolean getValue(IWorld world, BlockPos pos, String tag) {
-					TileEntity tileEntity = world.getTileEntity(pos);
-					if (tileEntity != null)
-						return tileEntity.getTileData().getBoolean(tag);
-					return false;
-				}
-			}.getValue(world, new BlockPos(x, y, z), "pfDown_check")) {
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos(x, y, z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putDouble("pf_fuel", ((new Object() {
-							public double getValue(IWorld world, BlockPos pos, String tag) {
-								TileEntity tileEntity = world.getTileEntity(pos);
-								if (tileEntity != null)
-									return tileEntity.getTileData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, new BlockPos(x, y, z), "pf_fuel")) - 1));
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos(x, y, z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putBoolean("pfDown_check", (false));
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-				}
-			} else {
-				if (!world.isRemote()) {
-					BlockPos _bp = new BlockPos(x, y, z);
-					TileEntity _tileEntity = world.getTileEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_tileEntity != null)
-						_tileEntity.getTileData().putBoolean("pfDown_check", (true));
-					if (world instanceof World)
-						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
 			}
 		}

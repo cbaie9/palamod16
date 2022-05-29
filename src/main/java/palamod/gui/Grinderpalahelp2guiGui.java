@@ -39,7 +39,7 @@ public class Grinderpalahelp2guiGui extends PalamodModElements.ModElement {
 	private static ContainerType<GuiContainerMod> containerType = null;
 
 	public Grinderpalahelp2guiGui(PalamodModElements instance) {
-		super(instance, 520);
+		super(instance, 545);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

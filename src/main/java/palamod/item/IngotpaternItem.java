@@ -19,7 +19,7 @@ public class IngotpaternItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public IngotpaternItem(PalamodModElements instance) {
-		super(instance, 151);
+		super(instance, 150);
 	}
 
 	@Override

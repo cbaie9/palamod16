@@ -36,7 +36,7 @@ public class HdvguiThisGUIIsOpenedProcedure {
 			if (_current instanceof Supplier) {
 				Object invobj = ((Supplier) _current).get();
 				if (invobj instanceof Map) {
-					ItemStack _setstack = (PalamodModVariables.MapVariables.get(world).market_item0);
+					ItemStack _setstack = (PalamodModVariables.WorldVariables.get(world).market_item0);
 					_setstack.setCount((int) (new Object() {
 						public double getValue(IWorld world, BlockPos pos, String tag) {
 							TileEntity tileEntity = world.getTileEntity(pos);

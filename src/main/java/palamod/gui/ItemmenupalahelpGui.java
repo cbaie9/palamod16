@@ -41,7 +41,7 @@ public class ItemmenupalahelpGui extends PalamodModElements.ModElement {
 	private static ContainerType<GuiContainerMod> containerType = null;
 
 	public ItemmenupalahelpGui(PalamodModElements instance) {
-		super(instance, 531);
+		super(instance, 556);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

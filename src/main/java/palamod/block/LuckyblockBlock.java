@@ -69,7 +69,7 @@ public class LuckyblockBlock extends PalamodModElements.ModElement {
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 
 	public LuckyblockBlock(PalamodModElements instance) {
-		super(instance, 188);
+		super(instance, 184);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

@@ -32,7 +32,7 @@ public class PalaerrorGuiWindow extends ContainerScreen<PalaerrorGui.GuiContaine
 		this.z = container.z;
 		this.entity = container.entity;
 		this.xSize = 200;
-		this.ySize = 166;
+		this.ySize = 80;
 	}
 
 	private static final ResourceLocation texture = new ResourceLocation("palamod:textures/palaerror0002.png");
@@ -72,11 +72,11 @@ public class PalaerrorGuiWindow extends ContainerScreen<PalaerrorGui.GuiContaine
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "ERROR", 81, 5, -12829636);
-		this.font.drawString(ms, "Market 0002 - full or not setup", 21, 18, -12829636);
-		this.font.drawString(ms, "Is not the case for the description", 9, 29, -12829636);
-		this.font.drawString(ms, "Please report on the discord the bug", 8, 40, -12829636);
-		this.font.drawString(ms, "Palamod renew - beta 0051", 4, 142, -12829636);
+		this.font.drawString(ms, "ERROR", 80, 6, -12829636);
+		this.font.drawString(ms, "Market 0002 - full or not setup", 19, 20, -12829636);
+		this.font.drawString(ms, "Is not the case for the description", 11, 32, -12829636);
+		this.font.drawString(ms, "Please report on the discord the bug", 7, 44, -12829636);
+		this.font.drawString(ms, "Palamod renew - beta 0051", 4, 66, -12829636);
 	}
 
 	@Override

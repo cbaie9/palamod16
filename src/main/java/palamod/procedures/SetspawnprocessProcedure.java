@@ -136,7 +136,7 @@ public class SetspawnprocessProcedure {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-							"msg @a [serveur] Le spawn a \uFFFDt\uFFFD chang\uFFFD ");
+							"msg @a [serveur] Le spawn a \u00E9t\u00E9 chang\u00E9");
 				}
 				entity.getPersistentData().putBoolean("spawn_warn", (false));
 				if (!world.isRemote()) {

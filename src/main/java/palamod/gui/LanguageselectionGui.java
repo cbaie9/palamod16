@@ -39,7 +39,7 @@ public class LanguageselectionGui extends PalamodModElements.ModElement {
 	private static ContainerType<GuiContainerMod> containerType = null;
 
 	public LanguageselectionGui(PalamodModElements instance) {
-		super(instance, 715);
+		super(instance, 734);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

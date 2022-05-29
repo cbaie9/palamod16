@@ -34,7 +34,7 @@ public class Loadblock1tBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public Loadblock1tBlock(PalamodModElements instance) {
-		super(instance, 174);
+		super(instance, 173);
 	}
 
 	@Override

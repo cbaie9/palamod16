@@ -55,7 +55,7 @@ public class Eggplant3Block extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public Eggplant3Block(PalamodModElements instance) {
-		super(instance, 186);
+		super(instance, 182);
 	}
 
 	@Override

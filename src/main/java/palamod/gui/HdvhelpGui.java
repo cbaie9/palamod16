@@ -34,7 +34,7 @@ public class HdvhelpGui extends PalamodModElements.ModElement {
 	private static ContainerType<GuiContainerMod> containerType = null;
 
 	public HdvhelpGui(PalamodModElements instance) {
-		super(instance, 682);
+		super(instance, 699);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

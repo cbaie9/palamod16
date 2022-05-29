@@ -25,7 +25,7 @@ public class GoldmixedcoalItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public GoldmixedcoalItem(PalamodModElements instance) {
-		super(instance, 170);
+		super(instance, 169);
 	}
 
 	@Override

@@ -39,7 +39,7 @@ public class FalsetresureBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public FalsetresureBlock(PalamodModElements instance) {
-		super(instance, 594);
+		super(instance, 189);
 	}
 
 	@Override

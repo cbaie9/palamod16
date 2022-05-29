@@ -19,7 +19,7 @@ public class KnockbackorbItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public KnockbackorbItem(PalamodModElements instance) {
-		super(instance, 211);
+		super(instance, 187);
 	}
 
 	@Override

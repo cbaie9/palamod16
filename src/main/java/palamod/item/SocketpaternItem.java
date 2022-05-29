@@ -19,7 +19,7 @@ public class SocketpaternItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public SocketpaternItem(PalamodModElements instance) {
-		super(instance, 155);
+		super(instance, 154);
 	}
 
 	@Override

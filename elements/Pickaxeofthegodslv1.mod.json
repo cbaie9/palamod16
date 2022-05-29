@@ -1,0 +1,35 @@
+{
+  "_fv": 28,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "pickaxeofthegod",
+    "customModelName": "Normal",
+    "name": "Pickaxe of the gods lv 1",
+    "specialInfo": [
+      "Level 1"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:Pickaxeofgodstab"
+    },
+    "toolType": "Pickaxe",
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 2,
+    "damageVsEntity": 4.0,
+    "usageCount": 0,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onItemInUseTick": {
+      "name": "Moucepotg"
+    },
+    "onBlockDestroyedWithTool": {
+      "name": "Upgradepotgv2"
+    }
+  }
+}

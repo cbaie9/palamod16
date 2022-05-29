@@ -19,7 +19,7 @@ public class ShovelpaternItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public ShovelpaternItem(PalamodModElements instance) {
-		super(instance, 154);
+		super(instance, 153);
 	}
 
 	@Override

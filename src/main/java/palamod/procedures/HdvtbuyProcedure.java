@@ -36,7 +36,7 @@ public class HdvtbuyProcedure {
 		Entity entity = (Entity) dependencies.get("entity");
 		if (entity.getPersistentData().getDouble("temp_market_slot") == 1) {
 			if (entity instanceof PlayerEntity) {
-				ItemStack _setstack = (PalamodModVariables.MapVariables.get(world).market_item0);
+				ItemStack _setstack = (PalamodModVariables.WorldVariables.get(world).market_item0);
 				_setstack.setCount((int) (new Object() {
 					public double getValue(IWorld world, BlockPos pos, String tag) {
 						TileEntity tileEntity = world.getTileEntity(pos);
@@ -123,8 +123,8 @@ public class HdvtbuyProcedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
-			PalamodModVariables.MapVariables.get(world).market_item0 = new ItemStack(PlaceholdermarketItem.block);
-			PalamodModVariables.MapVariables.get(world).syncData(world);
+			PalamodModVariables.WorldVariables.get(world).market_item0 = new ItemStack(PlaceholdermarketItem.block);
+			PalamodModVariables.WorldVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);

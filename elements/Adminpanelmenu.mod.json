@@ -1,0 +1,105 @@
+{
+  "_fv": 28,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Admin Panel",
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "name": "Admin Panel",
+          "x": 178,
+          "y": 42
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Hdv Stocks Panel",
+          "onClick": {
+            "name": "Hdvstocksopen"
+          },
+          "width": 108,
+          "height": 20,
+          "name": "Hdv Stocks Panel",
+          "x": 156,
+          "y": 61
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Money Panel",
+          "onClick": {
+            "name": "Moneypanelchange"
+          },
+          "width": 82,
+          "height": 20,
+          "name": "Money Panel",
+          "x": 169,
+          "y": 88
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Spawn Panel",
+          "onClick": {
+            "name": "Spawnpanelconnect"
+          },
+          "width": 82,
+          "height": 20,
+          "name": "Spawn Panel",
+          "x": 169,
+          "y": 115
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Trixium Panel",
+          "onClick": {
+            "name": "Palaerror6connect"
+          },
+          "width": 93,
+          "height": 20,
+          "name": "Trixium Panel",
+          "x": 164,
+          "y": 145
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Jobs Panel",
+          "onClick": {
+            "name": "Palaerror6connect"
+          },
+          "width": 77,
+          "height": 20,
+          "name": "Jobs Panel",
+          "x": 174,
+          "y": 172
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

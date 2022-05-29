@@ -38,7 +38,7 @@ public class CompactedobsidianBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public CompactedobsidianBlock(PalamodModElements instance) {
-		super(instance, 159);
+		super(instance, 158);
 	}
 
 	@Override

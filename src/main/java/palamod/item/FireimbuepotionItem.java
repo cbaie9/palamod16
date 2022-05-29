@@ -29,7 +29,7 @@ public class FireimbuepotionItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public FireimbuepotionItem(PalamodModElements instance) {
-		super(instance, 743);
+		super(instance, 213);
 	}
 
 	@Override

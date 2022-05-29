@@ -29,7 +29,7 @@ public class FakepaladiumoreBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public FakepaladiumoreBlock(PalamodModElements instance) {
-		super(instance, 629);
+		super(instance, 203);
 	}
 
 	@Override

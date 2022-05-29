@@ -3,6 +3,8 @@ package palamod.block;
 
 import palamod.itemgroup.PalamodItemGroup;
 
+import palamod.gui.StockhdvGui;
+
 import palamod.PalamodModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
@@ -29,6 +31,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.LockableLootTileEntity;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.network.play.server.SUpdateTileEntityPacket;
+import net.minecraft.network.PacketBuffer;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.loot.LootContext;
@@ -37,7 +40,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.inventory.container.Container;
-import net.minecraft.inventory.container.ChestContainer;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.inventory.ISidedInventory;
@@ -55,6 +57,8 @@ import java.util.stream.IntStream;
 import java.util.Random;
 import java.util.List;
 import java.util.Collections;
+
+import io.netty.buffer.Unpooled;
 
 @PalamodModElements.ModElement.Tag
 public class NbtblockBlock extends PalamodModElements.ModElement {
@@ -173,7 +177,7 @@ public class NbtblockBlock extends PalamodModElements.ModElement {
 	}
 
 	public static class CustomTileEntity extends LockableLootTileEntity implements ISidedInventory {
-		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(9, ItemStack.EMPTY);
+		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(69, ItemStack.EMPTY);
 
 		protected CustomTileEntity() {
 			super(tileEntityType);
@@ -237,7 +241,7 @@ public class NbtblockBlock extends PalamodModElements.ModElement {
 
 		@Override
 		public Container createMenu(int id, PlayerInventory player) {
-			return ChestContainer.createGeneric9X3(id, player, this);
+			return new StockhdvGui.GuiContainerMod(id, player, new PacketBuffer(Unpooled.buffer()).writeBlockPos(this.getPos()));
 		}
 
 		@Override

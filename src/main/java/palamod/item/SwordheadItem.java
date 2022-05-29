@@ -19,7 +19,7 @@ public class SwordheadItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public SwordheadItem(PalamodModElements instance) {
-		super(instance, 145);
+		super(instance, 144);
 	}
 
 	@Override

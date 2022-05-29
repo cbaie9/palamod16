@@ -31,7 +31,7 @@ public class TrixiumnbtblockBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public TrixiumnbtblockBlock(PalamodModElements instance) {
-		super(instance, 666);
+		super(instance, 690);
 	}
 
 	@Override

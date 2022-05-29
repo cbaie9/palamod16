@@ -19,7 +19,7 @@ public class HammerheadItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public HammerheadItem(PalamodModElements instance) {
-		super(instance, 141);
+		super(instance, 140);
 	}
 
 	@Override

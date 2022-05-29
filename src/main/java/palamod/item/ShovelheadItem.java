@@ -19,7 +19,7 @@ public class ShovelheadItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public ShovelheadItem(PalamodModElements instance) {
-		super(instance, 144);
+		super(instance, 143);
 	}
 
 	@Override

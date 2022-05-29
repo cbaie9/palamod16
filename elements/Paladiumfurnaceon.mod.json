@@ -107,7 +107,7 @@
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
     "hasInventory": true,
-    "guiBoundTo": "Paladumfurnace",
+    "guiBoundTo": "Palafurnacegui",
     "openGUIOnRightClick": true,
     "inventorySize": 4,
     "inventoryStackSize": 64,
@@ -129,6 +129,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onTickUpdate": {
+      "name": "PFurnaceprocessv2"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

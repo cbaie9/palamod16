@@ -1,11 +1,12 @@
 
 package palamod.block;
 
-import palamod.procedures.PaladiumfurnaceprocesProcedure;
+import palamod.procedures.PfurnaceplaceProcedure;
+import palamod.procedures.PFurnaceprocessv2Procedure;
 
 import palamod.itemgroup.PalamodItemGroup;
 
-import palamod.gui.PaladumfurnaceGui;
+import palamod.gui.PalafurnaceguiGui;
 
 import palamod.PalamodModElements;
 
@@ -131,6 +132,11 @@ public class PaladiumfurnaceBlock extends PalamodModElements.ModElement {
 			int y = pos.getY();
 			int z = pos.getZ();
 			world.getPendingBlockTicks().scheduleTick(pos, this, 10);
+
+			PfurnaceplaceProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 
 		@Override
@@ -140,7 +146,7 @@ public class PaladiumfurnaceBlock extends PalamodModElements.ModElement {
 			int y = pos.getY();
 			int z = pos.getZ();
 
-			PaladiumfurnaceprocesProcedure.executeProcedure(Stream
+			PFurnaceprocessv2Procedure.executeProcedure(Stream
 					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
 							new AbstractMap.SimpleEntry<>("z", z))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
@@ -163,7 +169,7 @@ public class PaladiumfurnaceBlock extends PalamodModElements.ModElement {
 
 					@Override
 					public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-						return new PaladumfurnaceGui.GuiContainerMod(id, inventory,
+						return new PalafurnaceguiGui.GuiContainerMod(id, inventory,
 								new PacketBuffer(Unpooled.buffer()).writeBlockPos(new BlockPos(x, y, z)));
 					}
 				}, new BlockPos(x, y, z));
@@ -287,7 +293,7 @@ public class PaladiumfurnaceBlock extends PalamodModElements.ModElement {
 
 		@Override
 		public Container createMenu(int id, PlayerInventory player) {
-			return new PaladumfurnaceGui.GuiContainerMod(id, player, new PacketBuffer(Unpooled.buffer()).writeBlockPos(this.getPos()));
+			return new PalafurnaceguiGui.GuiContainerMod(id, player, new PacketBuffer(Unpooled.buffer()).writeBlockPos(this.getPos()));
 		}
 
 		@Override
@@ -309,7 +315,7 @@ public class PaladiumfurnaceBlock extends PalamodModElements.ModElement {
 		public boolean isItemValidForSlot(int index, ItemStack stack) {
 			if (index == 3)
 				return false;
-			if (index == 1)
+			if (index == 2)
 				return false;
 			return true;
 		}
@@ -328,7 +334,7 @@ public class PaladiumfurnaceBlock extends PalamodModElements.ModElement {
 		public boolean canExtractItem(int index, ItemStack stack, Direction direction) {
 			if (index == 0)
 				return false;
-			if (index == 2)
+			if (index == 1)
 				return false;
 			return true;
 		}

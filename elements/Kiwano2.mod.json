@@ -82,6 +82,7 @@
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "patchSize": 64,
+    "generateAtAnyHeight": false,
     "onRandomUpdateEvent": {
       "name": "Kiwano2up"
     }

@@ -19,7 +19,7 @@ public class TrixiumItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public TrixiumItem(PalamodModElements instance) {
-		super(instance, 667);
+		super(instance, 204);
 	}
 
 	@Override

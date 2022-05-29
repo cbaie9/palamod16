@@ -107,7 +107,7 @@
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
     "hasInventory": true,
-    "guiBoundTo": "Paladumfurnace",
+    "guiBoundTo": "Palafurnacegui",
     "openGUIOnRightClick": true,
     "inventorySize": 4,
     "inventoryStackSize": 64,
@@ -115,11 +115,11 @@
     "inventoryComparatorPower": true,
     "inventoryOutSlotIDs": [
       3,
-      1
+      2
     ],
     "inventoryInSlotIDs": [
       0,
-      2
+      1
     ],
     "hasEnergyStorage": false,
     "energyInitial": 0,
@@ -129,8 +129,11 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onBlockAdded": {
+      "name": "Pfurnaceplace"
+    },
     "onTickUpdate": {
-      "name": "Paladiumfurnaceproces"
+      "name": "PFurnaceprocessv2"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

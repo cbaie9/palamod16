@@ -51,7 +51,7 @@ public class ElephantlittleEntity extends PalamodModElements.ModElement {
 			.size(0.6f, 1.8f)).build("elephantlittle").setRegistryName("elephantlittle");
 
 	public ElephantlittleEntity(PalamodModElements instance) {
-		super(instance, 625);
+		super(instance, 200);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ElephantlittleRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);

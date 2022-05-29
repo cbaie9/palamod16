@@ -39,7 +39,7 @@ public class AlarmBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public AlarmBlock(PalamodModElements instance) {
-		super(instance, 596);
+		super(instance, 191);
 	}
 
 	@Override

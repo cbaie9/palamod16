@@ -52,7 +52,7 @@ public class SpikegoldBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public SpikegoldBlock(PalamodModElements instance) {
-		super(instance, 164);
+		super(instance, 163);
 	}
 
 	@Override

@@ -27,7 +27,7 @@ public class PaladiumstairsBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public PaladiumstairsBlock(PalamodModElements instance) {
-		super(instance, 673);
+		super(instance, 207);
 	}
 
 	@Override

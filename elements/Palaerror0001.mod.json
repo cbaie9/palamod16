@@ -4,7 +4,7 @@
   "definition": {
     "type": 0,
     "width": 190,
-    "height": 166,
+    "height": 75,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
@@ -20,7 +20,7 @@
           },
           "name": "Pala error - 0001",
           "x": 167,
-          "y": 42
+          "y": 86
         }
       },
       {
@@ -33,7 +33,7 @@
           },
           "name": "The hdv is locked for organisation",
           "x": 125,
-          "y": 63
+          "y": 101
         }
       },
       {
@@ -45,8 +45,8 @@
             "falpha": 0.0
           },
           "name": "Try later",
-          "x": 185,
-          "y": 75
+          "x": 186,
+          "y": 111
         }
       },
       {
@@ -60,7 +60,7 @@
           "height": 20,
           "name": "Reconnect to hdv",
           "x": 159,
-          "y": 155
+          "y": 129
         }
       }
     ],

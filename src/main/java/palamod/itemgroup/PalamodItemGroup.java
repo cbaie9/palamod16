@@ -14,7 +14,7 @@ import net.minecraft.item.ItemGroup;
 @PalamodModElements.ModElement.Tag
 public class PalamodItemGroup extends PalamodModElements.ModElement {
 	public PalamodItemGroup(PalamodModElements instance) {
-		super(instance, 247);
+		super(instance, 269);
 	}
 
 	@Override

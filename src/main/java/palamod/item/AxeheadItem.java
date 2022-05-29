@@ -19,7 +19,7 @@ public class AxeheadItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public AxeheadItem(PalamodModElements instance) {
-		super(instance, 139);
+		super(instance, 138);
 	}
 
 	@Override

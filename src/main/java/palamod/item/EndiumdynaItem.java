@@ -34,7 +34,7 @@ public class EndiumdynaItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public EndiumdynaItem(PalamodModElements instance) {
-		super(instance, 611);
+		super(instance, 196);
 	}
 
 	@Override

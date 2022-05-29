@@ -1,0 +1,75 @@
+{
+  "_fv": 28,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 70,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Err0r 0003 - Hdv",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Err0r 0003 - Hdv",
+          "x": 165,
+          "y": 88
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "You don't have the required",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "You don't have the required",
+          "x": 132,
+          "y": 99
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Money for buying this Item",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Money for buying this Item",
+          "x": 130,
+          "y": 110
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Return to Hdv",
+          "onClick": {
+            "name": "Hdv_open"
+          },
+          "width": 92,
+          "height": 20,
+          "name": "Return to Hdv",
+          "x": 166,
+          "y": 126
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

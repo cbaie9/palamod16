@@ -1,6 +1,8 @@
 
 package palamod.gui;
 
+import palamod.procedures.PFurnaceprocessv2Procedure;
+
 import palamod.item.FurnaceupgradeItem;
 
 import palamod.PalamodModElements;
@@ -34,9 +36,11 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.gui.ScreenManager;
 
+import java.util.stream.Stream;
 import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.AbstractMap;
 
 @PalamodModElements.ModElement.Tag
 public class PaladumfurnaceGui extends PalamodModElements.ModElement {
@@ -44,7 +48,7 @@ public class PaladumfurnaceGui extends PalamodModElements.ModElement {
 	private static ContainerType<GuiContainerMod> containerType = null;
 
 	public PaladumfurnaceGui(PalamodModElements instance) {
-		super(instance, 580);
+		super(instance, 614);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
@@ -122,19 +126,29 @@ public class PaladumfurnaceGui extends PalamodModElements.ModElement {
 				}
 			}
 			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 61, 22) {
-			}));
-			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 127, 40) {
 				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return false;
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(0, 0, 0);
 				}
-			}));
-			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 61, 58) {
 			}));
 			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 8, 31) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (FurnaceupgradeItem.block == stack.getItem());
+				}
+			}));
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 60, 60) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(1, 0, 0);
+				}
+			}));
+			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 122, 39) {
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return false;
 				}
 			}));
 			int si;
@@ -278,10 +292,6 @@ public class PaladumfurnaceGui extends PalamodModElements.ModElement {
 					for (int j = 0; j < internal.getSlots(); ++j) {
 						if (j == 0)
 							continue;
-						if (j == 1)
-							continue;
-						if (j == 2)
-							continue;
 						if (j == 3)
 							continue;
 						playerIn.dropItem(internal.extractItem(j, internal.getStackInSlot(j).getCount(), false), false);
@@ -289,10 +299,6 @@ public class PaladumfurnaceGui extends PalamodModElements.ModElement {
 				} else {
 					for (int i = 0; i < internal.getSlots(); ++i) {
 						if (i == 0)
-							continue;
-						if (i == 1)
-							continue;
-						if (i == 2)
 							continue;
 						if (i == 3)
 							continue;
@@ -407,5 +413,19 @@ public class PaladumfurnaceGui extends PalamodModElements.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
+		if (slotID == 0 && changeType == 0) {
+
+			PFurnaceprocessv2Procedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
+		if (slotID == 1 && changeType == 0) {
+
+			PFurnaceprocessv2Procedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
 	}
 }

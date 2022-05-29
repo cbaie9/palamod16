@@ -36,7 +36,7 @@ public class Palaerror0001GuiWindow extends ContainerScreen<Palaerror0001Gui.Gui
 		this.z = container.z;
 		this.entity = container.entity;
 		this.xSize = 190;
-		this.ySize = 166;
+		this.ySize = 75;
 	}
 
 	private static final ResourceLocation texture = new ResourceLocation("palamod:textures/palaerror_0001.png");
@@ -76,9 +76,9 @@ public class Palaerror0001GuiWindow extends ContainerScreen<Palaerror0001Gui.Gui
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Pala error - 0001", 48, 5, -12829636);
-		this.font.drawString(ms, "The hdv is locked for organisation", 6, 26, -12829636);
-		this.font.drawString(ms, "Try later", 66, 38, -12829636);
+		this.font.drawString(ms, "Pala error - 0001", 48, 3, -12829636);
+		this.font.drawString(ms, "The hdv is locked for organisation", 6, 18, -12829636);
+		this.font.drawString(ms, "Try later", 67, 28, -12829636);
 	}
 
 	@Override
@@ -91,7 +91,7 @@ public class Palaerror0001GuiWindow extends ContainerScreen<Palaerror0001Gui.Gui
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		this.addButton(new Button(this.guiLeft + 40, this.guiTop + 118, 108, 20, new StringTextComponent("Reconnect to hdv"), e -> {
+		this.addButton(new Button(this.guiLeft + 40, this.guiTop + 46, 108, 20, new StringTextComponent("Reconnect to hdv"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new Palaerror0001Gui.ButtonPressedMessage(0, x, y, z));
 				Palaerror0001Gui.handleButtonAction(entity, 0, x, y, z);

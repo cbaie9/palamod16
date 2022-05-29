@@ -53,7 +53,7 @@ public class PaladiumdynamiteEntity extends PalamodModElements.ModElement {
 			.size(0.6f, 1.8f)).build("paladiumdynamite").setRegistryName("paladiumdynamite");
 
 	public PaladiumdynamiteEntity(PalamodModElements instance) {
-		super(instance, 607);
+		super(instance, 635);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new PaladiumdynamiteRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 	}

@@ -19,7 +19,7 @@ public class SpeedEnchantment extends PalamodModElements.ModElement {
 	public static final Enchantment enchantment = null;
 
 	public SpeedEnchantment(PalamodModElements instance) {
-		super(instance, 456);
+		super(instance, 478);
 	}
 
 	@Override

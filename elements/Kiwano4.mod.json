@@ -82,6 +82,7 @@
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "patchSize": 64,
+    "generateAtAnyHeight": false,
     "onDestroyedByPlayer": {
       "name": "Kiwano3drop"
     },

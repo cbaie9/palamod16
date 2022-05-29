@@ -132,8 +132,8 @@ public class Optihdv3Procedure {
 					if (world instanceof World)
 						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
-				PalamodModVariables.MapVariables.get(world).market_item0 = (PalamodModVariables.MapVariables.get(world).market_item1);
-				PalamodModVariables.MapVariables.get(world).syncData(world);
+				PalamodModVariables.WorldVariables.get(world).market_item0 = (PalamodModVariables.MapVariables.get(world).market_item1);
+				PalamodModVariables.WorldVariables.get(world).syncData(world);
 			} else if ((new Object() {
 				public boolean getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);

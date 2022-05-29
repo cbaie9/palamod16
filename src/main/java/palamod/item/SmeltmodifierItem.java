@@ -19,7 +19,7 @@ public class SmeltmodifierItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public SmeltmodifierItem(PalamodModElements instance) {
-		super(instance, 175);
+		super(instance, 174);
 	}
 
 	@Override

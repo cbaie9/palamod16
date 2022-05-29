@@ -27,7 +27,7 @@ public class RenforcedobsidianBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public RenforcedobsidianBlock(PalamodModElements instance) {
-		super(instance, 157);
+		super(instance, 156);
 	}
 
 	@Override

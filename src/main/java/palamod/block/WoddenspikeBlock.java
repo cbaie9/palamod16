@@ -56,7 +56,7 @@ public class WoddenspikeBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public WoddenspikeBlock(PalamodModElements instance) {
-		super(instance, 169);
+		super(instance, 168);
 	}
 
 	@Override

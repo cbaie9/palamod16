@@ -28,7 +28,7 @@ public class PaladiumslabBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public PaladiumslabBlock(PalamodModElements instance) {
-		super(instance, 674);
+		super(instance, 208);
 	}
 
 	@Override

@@ -75,7 +75,7 @@ public class PaladiumforgeBlock extends PalamodModElements.ModElement {
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 
 	public PaladiumforgeBlock(PalamodModElements instance) {
-		super(instance, 173);
+		super(instance, 172);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

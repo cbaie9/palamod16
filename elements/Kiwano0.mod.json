@@ -81,6 +81,7 @@
     "frequencyOnChunks": 1,
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
-    "patchSize": 8
+    "patchSize": 8,
+    "generateAtAnyHeight": false
   }
 }

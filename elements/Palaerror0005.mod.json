@@ -1,0 +1,75 @@
+{
+  "_fv": 28,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 180,
+    "height": 80,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Pala Err0r 0005",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Pala Err0r 0005",
+          "x": 171,
+          "y": 84
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "You don't have the permission to",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "You don't have the permission to",
+          "x": 129,
+          "y": 106
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "do that action ",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "do that action ",
+          "x": 129,
+          "y": 116
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "quit",
+          "onClick": {
+            "name": "Closegui"
+          },
+          "width": 46,
+          "height": 20,
+          "name": "quit",
+          "x": 192,
+          "y": 133
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

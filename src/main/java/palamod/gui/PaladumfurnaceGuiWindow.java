@@ -57,7 +57,7 @@ public class PaladumfurnaceGuiWindow extends ContainerScreen<PaladumfurnaceGui.G
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("palamod:textures/big_slot.png"));
-		this.blit(ms, this.guiLeft + 122, this.guiTop + 35, 0, 0, 26, 26, 26, 26);
+		this.blit(ms, this.guiLeft + 117, this.guiTop + 33, 0, 0, 26, 26, 26, 26);
 
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("palamod:textures/fire.png"));
 		this.blit(ms, this.guiLeft + 58, this.guiTop + 42, 0, 0, 17, 14, 17, 14);
@@ -75,7 +75,7 @@ public class PaladumfurnaceGuiWindow extends ContainerScreen<PaladumfurnaceGui.G
 		this.blit(ms, this.guiLeft + 60, this.guiTop + 43, 0, 0, 17, 13, 17, 13);
 
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("palamod:textures/fire05.png"));
-		this.blit(ms, this.guiLeft + 60, this.guiTop + 43, 0, 0, 20, 16, 20, 16);
+		this.blit(ms, this.guiLeft + 59, this.guiTop + 42, 0, 0, 20, 16, 20, 16);
 
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("palamod:textures/fire06.png"));
 		this.blit(ms, this.guiLeft + 60, this.guiTop + 39, 0, 0, 19, 18, 19, 18);
@@ -108,10 +108,11 @@ public class PaladumfurnaceGuiWindow extends ContainerScreen<PaladumfurnaceGui.G
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Paladium Furnace", 46, 5, -12829636);
+		this.font.drawString(ms, "Paladium Furnace", 38, 3, -12829636);
 		this.font.drawString(ms, "Inventory", 7, 73, -12829636);
 		this.font.drawString(ms, "Upgrades", 2, 16, -65536);
-		this.font.drawString(ms, "" + (PalamodModVariables.g_num) + "", 111, 66, -12829636);
+		this.font.drawString(ms, "" + (int) (PalamodModVariables.g_num) + "", 89, 66, -12829636);
+		this.font.drawString(ms, "" + (PalamodModVariables.Lucky_destroy) + "", 92, 18, -12829636);
 	}
 
 	@Override

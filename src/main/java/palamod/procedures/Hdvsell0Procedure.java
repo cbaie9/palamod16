@@ -73,6 +73,7 @@ public class Hdvsell0Procedure {
 		HashMap guistate = (HashMap) dependencies.get("guistate");
 		boolean t1c = false;
 		boolean t2c = false;
+		ItemStack Itemstam = ItemStack.EMPTY;
 		if ((new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
@@ -130,7 +131,7 @@ public class Hdvsell0Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
-			PalamodModVariables.MapVariables.get(world).market_item0 = (new Object() {
+			Itemstam = (new Object() {
 				public ItemStack getItemStack(int sltid) {
 					Entity _ent = entity;
 					if (_ent instanceof ServerPlayerEntity) {
@@ -145,7 +146,6 @@ public class Hdvsell0Procedure {
 					return ItemStack.EMPTY;
 				}
 			}.getItemStack((int) (0)));
-			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -280,7 +280,7 @@ public class Hdvsell0Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
-			PalamodModVariables.MapVariables.get(world).market_item1 = (new Object() {
+			Itemstam = (new Object() {
 				public ItemStack getItemStack(int sltid) {
 					Entity _ent = entity;
 					if (_ent instanceof ServerPlayerEntity) {
@@ -295,7 +295,6 @@ public class Hdvsell0Procedure {
 					return ItemStack.EMPTY;
 				}
 			}.getItemStack((int) (0)));
-			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -454,7 +453,7 @@ public class Hdvsell0Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
-			PalamodModVariables.MapVariables.get(world).market_item2 = (new Object() {
+			Itemstam = (new Object() {
 				public ItemStack getItemStack(int sltid) {
 					Entity _ent = entity;
 					if (_ent instanceof ServerPlayerEntity) {
@@ -469,7 +468,6 @@ public class Hdvsell0Procedure {
 					return ItemStack.EMPTY;
 				}
 			}.getItemStack((int) (0)));
-			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -604,7 +602,7 @@ public class Hdvsell0Procedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
-			PalamodModVariables.MapVariables.get(world).market_item3 = (new Object() {
+			Itemstam = (new Object() {
 				public ItemStack getItemStack(int sltid) {
 					Entity _ent = entity;
 					if (_ent instanceof ServerPlayerEntity) {
@@ -619,7 +617,6 @@ public class Hdvsell0Procedure {
 					return ItemStack.EMPTY;
 				}
 			}.getItemStack((int) (0)));
-			PalamodModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos(0, 10, 0);
 				TileEntity _tileEntity = world.getTileEntity(_bp);

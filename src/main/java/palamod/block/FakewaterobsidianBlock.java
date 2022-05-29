@@ -38,7 +38,7 @@ public class FakewaterobsidianBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public FakewaterobsidianBlock(PalamodModElements instance) {
-		super(instance, 160);
+		super(instance, 159);
 	}
 
 	@Override

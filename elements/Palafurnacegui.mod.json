@@ -1,0 +1,137 @@
+{
+  "_fv": 28,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "PFurnaceprocessv2"
+          },
+          "name": "Slot #0",
+          "x": 188,
+          "y": 50
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #1",
+          "x": 188,
+          "y": 89
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #2",
+          "x": 247,
+          "y": 63
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 3,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #3",
+          "x": 137,
+          "y": 67
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "test",
+          "onClick": {
+            "name": "PFurnaceprocessv2"
+          },
+          "width": 46,
+          "height": 20,
+          "name": "test",
+          "x": 231,
+          "y": 95
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Inventory",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Inventory",
+          "x": 132,
+          "y": 108
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Paladium Furnace",
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "name": "Paladium Furnace",
+          "x": 214,
+          "y": 43
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:g_num>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<VAR:g_num>",
+          "x": 222,
+          "y": 82
+        }
+      }
+    ],
+    "onOpen": {
+      "name": "Ftrprocess"
+    },
+    "onTick": {
+      "name": "PFurnaceprocessv2"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

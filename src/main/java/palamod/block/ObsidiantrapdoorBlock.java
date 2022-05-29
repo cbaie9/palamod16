@@ -32,7 +32,7 @@ public class ObsidiantrapdoorBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public ObsidiantrapdoorBlock(PalamodModElements instance) {
-		super(instance, 156);
+		super(instance, 155);
 	}
 
 	@Override

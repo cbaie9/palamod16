@@ -51,7 +51,7 @@ public class TrxiumoreBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public TrxiumoreBlock(PalamodModElements instance) {
-		super(instance, 670);
+		super(instance, 206);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

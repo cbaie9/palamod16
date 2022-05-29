@@ -19,7 +19,7 @@ public class SwordpaternItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public SwordpaternItem(PalamodModElements instance) {
-		super(instance, 153);
+		super(instance, 152);
 	}
 
 	@Override

@@ -59,6 +59,7 @@ public class PalamodModVariables {
 
 	public static class WorldVariables extends WorldSavedData {
 		public static final String DATA_NAME = "palamod_worldvars";
+		public ItemStack market_item0 = ItemStack.EMPTY;
 
 		public WorldVariables() {
 			super(DATA_NAME);
@@ -70,10 +71,12 @@ public class PalamodModVariables {
 
 		@Override
 		public void read(CompoundNBT nbt) {
+			market_item0 = ItemStack.read(nbt.getCompound("market_item0"));
 		}
 
 		@Override
 		public CompoundNBT write(CompoundNBT nbt) {
+			nbt.put("market_item0", market_item0.write(new CompoundNBT()));
 			return nbt;
 		}
 
@@ -100,7 +103,6 @@ public class PalamodModVariables {
 		public String market_conf_name = "error:0notset";
 		public double market_conf_num = 0.0;
 		public double market_conf_price = 0.0;
-		public ItemStack market_item0 = ItemStack.EMPTY;
 		public ItemStack market_item1 = ItemStack.EMPTY;
 		public ItemStack market_item10 = ItemStack.EMPTY;
 		public ItemStack market_item11 = ItemStack.EMPTY;
@@ -220,6 +222,7 @@ public class PalamodModVariables {
 		public ItemStack market_item97 = ItemStack.EMPTY;
 		public ItemStack market_item98 = ItemStack.EMPTY;
 		public ItemStack market_item99 = ItemStack.EMPTY;
+		public String coor_spawn = "";
 
 		public MapVariables() {
 			super(DATA_NAME);
@@ -234,7 +237,6 @@ public class PalamodModVariables {
 			market_conf_name = nbt.getString("market_conf_name");
 			market_conf_num = nbt.getDouble("market_conf_num");
 			market_conf_price = nbt.getDouble("market_conf_price");
-			market_item0 = ItemStack.read(nbt.getCompound("market_item0"));
 			market_item1 = ItemStack.read(nbt.getCompound("market_item1"));
 			market_item10 = ItemStack.read(nbt.getCompound("market_item10"));
 			market_item11 = ItemStack.read(nbt.getCompound("market_item11"));
@@ -354,6 +356,7 @@ public class PalamodModVariables {
 			market_item97 = ItemStack.read(nbt.getCompound("market_item97"));
 			market_item98 = ItemStack.read(nbt.getCompound("market_item98"));
 			market_item99 = ItemStack.read(nbt.getCompound("market_item99"));
+			coor_spawn = nbt.getString("coor_spawn");
 		}
 
 		@Override
@@ -361,7 +364,6 @@ public class PalamodModVariables {
 			nbt.putString("market_conf_name", market_conf_name);
 			nbt.putDouble("market_conf_num", market_conf_num);
 			nbt.putDouble("market_conf_price", market_conf_price);
-			nbt.put("market_item0", market_item0.write(new CompoundNBT()));
 			nbt.put("market_item1", market_item1.write(new CompoundNBT()));
 			nbt.put("market_item10", market_item10.write(new CompoundNBT()));
 			nbt.put("market_item11", market_item11.write(new CompoundNBT()));
@@ -481,6 +483,7 @@ public class PalamodModVariables {
 			nbt.put("market_item97", market_item97.write(new CompoundNBT()));
 			nbt.put("market_item98", market_item98.write(new CompoundNBT()));
 			nbt.put("market_item99", market_item99.write(new CompoundNBT()));
+			nbt.putString("coor_spawn", coor_spawn);
 			return nbt;
 		}
 

@@ -27,7 +27,7 @@ public class AmethyststairsBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public AmethyststairsBlock(PalamodModElements instance) {
-		super(instance, 677);
+		super(instance, 209);
 	}
 
 	@Override

@@ -19,7 +19,7 @@ public class FurnaceupgradeItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public FurnaceupgradeItem(PalamodModElements instance) {
-		super(instance, 735);
+		super(instance, 211);
 	}
 
 	@Override

@@ -86,6 +86,7 @@
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "patchSize": 64,
+    "generateAtAnyHeight": false,
     "onDestroyedByPlayer": {
       "name": "Eggplant3drop"
     },

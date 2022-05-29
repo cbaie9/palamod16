@@ -28,7 +28,7 @@ public class Contructedgrinderlayer1Block extends PalamodModElements.ModElement 
 	public static final Block block = null;
 
 	public Contructedgrinderlayer1Block(PalamodModElements instance) {
-		super(instance, 137);
+		super(instance, 136);
 	}
 
 	@Override

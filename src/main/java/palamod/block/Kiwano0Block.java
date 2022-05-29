@@ -36,7 +36,7 @@ public class Kiwano0Block extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public Kiwano0Block(PalamodModElements instance) {
-		super(instance, 210);
+		super(instance, 591);
 	}
 
 	@Override

@@ -34,7 +34,7 @@ public class ColofullampBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public ColofullampBlock(PalamodModElements instance) {
-		super(instance, 600);
+		super(instance, 194);
 	}
 
 	@Override

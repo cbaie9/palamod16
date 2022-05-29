@@ -19,7 +19,7 @@ public class BlockpaternItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public BlockpaternItem(PalamodModElements instance) {
-		super(instance, 149);
+		super(instance, 148);
 	}
 
 	@Override

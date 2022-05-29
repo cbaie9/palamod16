@@ -26,7 +26,7 @@ public class MoneyotherItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public MoneyotherItem(PalamodModElements instance) {
-		super(instance, 630);
+		super(instance, 651);
 	}
 
 	@Override

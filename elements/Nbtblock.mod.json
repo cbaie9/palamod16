@@ -58,6 +58,9 @@
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
+    "emittedRedstonePower": {
+      "fixedValue": 15.0
+    },
     "colorOnMap": "DEFAULT",
     "creativePickItem": {
       "value": ""
@@ -76,6 +79,21 @@
     "soundOnStep": {
       "value": "STONE"
     },
+    "breakSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
     "luminance": 0,
     "unbreakable": true,
     "breakHarvestLevel": 1,
@@ -87,9 +105,9 @@
     "particleSpawningRadious": 1.0,
     "particleAmount": 10,
     "hasInventory": true,
-    "guiBoundTo": "<NONE>",
+    "guiBoundTo": "Stockhdv",
     "openGUIOnRightClick": false,
-    "inventorySize": 9,
+    "inventorySize": 69,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,

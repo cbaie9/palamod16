@@ -38,7 +38,7 @@ public class LavaobsidianBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public LavaobsidianBlock(PalamodModElements instance) {
-		super(instance, 162);
+		super(instance, 161);
 	}
 
 	@Override
