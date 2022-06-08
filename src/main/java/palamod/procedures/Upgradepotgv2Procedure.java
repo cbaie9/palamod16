@@ -19,21 +19,36 @@ import palamod.item.Pickaxeofthegodslv13Item;
 import palamod.item.Pickaxeofthegodslv12Item;
 import palamod.item.Pickaxeofthegodslv11Item;
 import palamod.item.Pickaxeofthegodslv10Item;
+import palamod.item.PalamixedcharoalItem;
+
+import palamod.enchantment.BigholeEnchantment;
+import palamod.enchantment.AutosmeltpotgEnchantment;
 
 import palamod.PalamodMod;
 
+import net.minecraft.world.server.ServerWorld;
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Hand;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.particles.ParticleTypes;
+import net.minecraft.item.crafting.IRecipeType;
 import net.minecraft.item.ItemStack;
+import net.minecraft.inventory.Inventory;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.block.Blocks;
 
+import java.util.stream.Stream;
 import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
 
 public class Upgradepotgv2Procedure {
 
@@ -63,11 +78,19 @@ public class Upgradepotgv2Procedure {
 				PalamodMod.LOGGER.warn("Failed to load dependency entity for procedure Upgradepotgv2!");
 			return;
 		}
+		if (dependencies.get("itemstack") == null) {
+			if (!dependencies.containsKey("itemstack"))
+				PalamodMod.LOGGER.warn("Failed to load dependency itemstack for procedure Upgradepotgv2!");
+			return;
+		}
 		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
+		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
+		boolean auto_smelt = false;
+		double big_hole = 0;
 		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.STONE
 				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.GRANITE
 				|| (world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.DIORITE
@@ -78,6 +101,11 @@ public class Upgradepotgv2Procedure {
 						.getTagByID(new ResourceLocation("forge:stone")).contains((world.getBlockState(new BlockPos(x, y, z))).getBlock())) {
 			entity.getPersistentData().putDouble("Pickaxe_stone", (entity.getPersistentData().getDouble("Pickaxe_stone") + 1));
 			if (entity.getPersistentData().getDouble("Pickaxe_stone") >= 2000000) {
+				if ((EnchantmentHelper.getEnchantmentLevel(AutosmeltpotgEnchantment.enchantment, itemstack) != 0)) {
+					auto_smelt = (true);
+				} else if ((EnchantmentHelper.getEnchantmentLevel(BigholeEnchantment.enchantment, itemstack) != 0)) {
+					big_hole = (EnchantmentHelper.getEnchantmentLevel(BigholeEnchantment.enchantment, itemstack));
+				}
 				if (entity instanceof LivingEntity) {
 					ItemStack _setstack = new ItemStack(Pickaxeofthegodslv20Item.block);
 					_setstack.setCount((int) 1);
@@ -85,7 +113,17 @@ public class Upgradepotgv2Procedure {
 					if (entity instanceof ServerPlayerEntity)
 						((ServerPlayerEntity) entity).inventory.markDirty();
 				}
+				if (auto_smelt) {
+					(itemstack).addEnchantment(AutosmeltpotgEnchantment.enchantment, (int) 1);
+				} else if (0 < big_hole) {
+					(itemstack).addEnchantment(BigholeEnchantment.enchantment, (int) big_hole);
+				}
 			} else if (entity.getPersistentData().getDouble("Pickaxe_stone") >= 1000000) {
+				if ((EnchantmentHelper.getEnchantmentLevel(AutosmeltpotgEnchantment.enchantment, itemstack) != 0)) {
+					auto_smelt = (true);
+				} else if ((EnchantmentHelper.getEnchantmentLevel(BigholeEnchantment.enchantment, itemstack) != 0)) {
+					big_hole = (EnchantmentHelper.getEnchantmentLevel(BigholeEnchantment.enchantment, itemstack));
+				}
 				if (entity instanceof LivingEntity) {
 					ItemStack _setstack = new ItemStack(Pickaxeofthegodslv19Item.block);
 					_setstack.setCount((int) 1);
@@ -93,7 +131,17 @@ public class Upgradepotgv2Procedure {
 					if (entity instanceof ServerPlayerEntity)
 						((ServerPlayerEntity) entity).inventory.markDirty();
 				}
+				if (auto_smelt) {
+					(itemstack).addEnchantment(AutosmeltpotgEnchantment.enchantment, (int) 1);
+				} else if (0 < big_hole) {
+					(itemstack).addEnchantment(BigholeEnchantment.enchantment, (int) big_hole);
+				}
 			} else if (entity.getPersistentData().getDouble("Pickaxe_stone") >= 800000) {
+				if ((EnchantmentHelper.getEnchantmentLevel(AutosmeltpotgEnchantment.enchantment, itemstack) != 0)) {
+					auto_smelt = (true);
+				} else if ((EnchantmentHelper.getEnchantmentLevel(BigholeEnchantment.enchantment, itemstack) != 0)) {
+					big_hole = (EnchantmentHelper.getEnchantmentLevel(BigholeEnchantment.enchantment, itemstack));
+				}
 				if (entity instanceof LivingEntity) {
 					ItemStack _setstack = new ItemStack(Pickaxeofthegodslv18Item.block);
 					_setstack.setCount((int) 1);
@@ -101,13 +149,28 @@ public class Upgradepotgv2Procedure {
 					if (entity instanceof ServerPlayerEntity)
 						((ServerPlayerEntity) entity).inventory.markDirty();
 				}
+				if (auto_smelt) {
+					(itemstack).addEnchantment(AutosmeltpotgEnchantment.enchantment, (int) 1);
+				} else if (0 < big_hole) {
+					(itemstack).addEnchantment(BigholeEnchantment.enchantment, (int) big_hole);
+				}
 			} else if (entity.getPersistentData().getDouble("Pickaxe_stone") >= 700000) {
+				if ((EnchantmentHelper.getEnchantmentLevel(AutosmeltpotgEnchantment.enchantment, itemstack) != 0)) {
+					auto_smelt = (true);
+				} else if ((EnchantmentHelper.getEnchantmentLevel(BigholeEnchantment.enchantment, itemstack) != 0)) {
+					big_hole = (EnchantmentHelper.getEnchantmentLevel(BigholeEnchantment.enchantment, itemstack));
+				}
 				if (entity instanceof LivingEntity) {
 					ItemStack _setstack = new ItemStack(Pickaxeofthegodslv17Item.block);
 					_setstack.setCount((int) 1);
 					((LivingEntity) entity).setHeldItem(Hand.MAIN_HAND, _setstack);
 					if (entity instanceof ServerPlayerEntity)
 						((ServerPlayerEntity) entity).inventory.markDirty();
+				}
+				if (auto_smelt) {
+					(itemstack).addEnchantment(AutosmeltpotgEnchantment.enchantment, (int) 1);
+				} else if (0 < big_hole) {
+					(itemstack).addEnchantment(BigholeEnchantment.enchantment, (int) big_hole);
 				}
 			} else if (entity.getPersistentData().getDouble("Pickaxe_stone") >= 600000) {
 				if (entity instanceof LivingEntity) {
@@ -230,6 +293,47 @@ public class Upgradepotgv2Procedure {
 						((ServerPlayerEntity) entity).inventory.markDirty();
 				}
 			}
+		}
+		if ((EnchantmentHelper.getEnchantmentLevel(BigholeEnchantment.enchantment, itemstack) != 0) && (((entity instanceof PlayerEntity)
+				? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(PalamixedcharoalItem.block))
+				: false) || 0 < itemstack.getOrCreateTag().getDouble("potg_fuel"))) {
+			if (world instanceof ServerWorld) {
+				((ServerWorld) world).spawnParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, x, y, z, (int) 5, 3, 3, 3, 1);
+			}
+			HammernormalProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity),
+							new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+			if (0 < itemstack.getOrCreateTag().getDouble("potg_fuel")) {
+				itemstack.getOrCreateTag().putDouble("potg_fuel", (itemstack.getOrCreateTag().getDouble("potg_fuel") - 1));
+			} else {
+				if (entity instanceof PlayerEntity) {
+					ItemStack _stktoremove = new ItemStack(PalamixedcharoalItem.block);
+					((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+							((PlayerEntity) entity).container.func_234641_j_());
+				}
+				itemstack.getOrCreateTag().putDouble("potg_fuel", (itemstack.getOrCreateTag().getDouble("potg_fuel") + 2500));
+			}
+		}
+		if ((EnchantmentHelper.getEnchantmentLevel(AutosmeltpotgEnchantment.enchantment, itemstack) != 0) && ((world instanceof World)
+				? ((World) world).getRecipeManager().getRecipe(IRecipeType.SMELTING, new Inventory(itemstack), (World) world).isPresent()
+				: false)) {
+			if (world instanceof World && !world.isRemote()) {
+				ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
+						((world instanceof World && ((World) world).getRecipeManager()
+								.getRecipe(IRecipeType.SMELTING,
+										new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y, z))).getBlock()))), ((World) world))
+								.isPresent())
+										? ((World) world).getRecipeManager()
+												.getRecipe(IRecipeType.SMELTING,
+														new Inventory((new ItemStack((world.getBlockState(new BlockPos(x, y, z))).getBlock()))),
+														(World) world)
+												.get().getRecipeOutput().copy()
+										: ItemStack.EMPTY));
+				entityToSpawn.setPickupDelay((int) 10);
+				world.addEntity(entityToSpawn);
+			}
+			world.setBlockState(new BlockPos(x, y, z), Blocks.AIR.getDefaultState(), 3);
 		}
 	}
 }

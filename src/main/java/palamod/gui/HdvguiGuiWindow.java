@@ -84,7 +84,7 @@ public class HdvguiGuiWindow extends ContainerScreen<HdvguiGui.GuiContainerMod> 
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "H\uFFFDtel de vente", 47, 5, -12829636);
+		this.font.drawString(ms, "H\u00F4tel de vente", 47, 5, -12829636);
 		this.font.drawString(ms, "Wip build 0031", 220, 4, -12829636);
 		this.font.drawString(ms, "Premium ", 7, 59, -26368);
 		this.font.drawString(ms, "" + (PalamodModVariables.MapVariables.get(world).market_name_0) + "", 50, 76, -12829636);
@@ -108,13 +108,13 @@ public class HdvguiGuiWindow extends ContainerScreen<HdvguiGui.GuiContainerMod> 
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		this.addButton(new Button(this.guiLeft + 233, this.guiTop + 196, 61, 20, new StringTextComponent("suivant"), e -> {
+		this.addButton(new Button(this.guiLeft + 234, this.guiTop + 194, 61, 20, new StringTextComponent("suivant"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new HdvguiGui.ButtonPressedMessage(0, x, y, z));
 				HdvguiGui.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 178, this.guiTop + 195, 46, 20, new StringTextComponent("aide"), e -> {
+		this.addButton(new Button(this.guiLeft + 178, this.guiTop + 194, 46, 20, new StringTextComponent("aide"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new HdvguiGui.ButtonPressedMessage(1, x, y, z));
 				HdvguiGui.handleButtonAction(entity, 1, x, y, z);
@@ -132,33 +132,6 @@ public class HdvguiGuiWindow extends ContainerScreen<HdvguiGui.GuiContainerMod> 
 				HdvguiGui.handleButtonAction(entity, 3, x, y, z);
 			}
 		}));
-		recs = new TextFieldWidget(this.font, this.guiLeft + 9, this.guiTop + 31, 120, 20,
-				new StringTextComponent("rechercher quelque chose dans l' h�tel de vente")) {
-			{
-				setSuggestion("rechercher quelque chose dans l' h�tel de vente");
-			}
-
-			@Override
-			public void writeText(String text) {
-				super.writeText(text);
-				if (getText().isEmpty())
-					setSuggestion("rechercher quelque chose dans l' h�tel de vente");
-				else
-					setSuggestion(null);
-			}
-
-			@Override
-			public void setCursorPosition(int pos) {
-				super.setCursorPosition(pos);
-				if (getText().isEmpty())
-					setSuggestion("rechercher quelque chose dans l' h�tel de vente");
-				else
-					setSuggestion(null);
-			}
-		};
-		guistate.put("text:recs", recs);
-		recs.setMaxStringLength(32767);
-		this.children.add(this.recs);
 		this.addButton(new Button(this.guiLeft + 234, this.guiTop + 94, 40, 20, new StringTextComponent("buy"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new HdvguiGui.ButtonPressedMessage(4, x, y, z));
@@ -177,5 +150,32 @@ public class HdvguiGuiWindow extends ContainerScreen<HdvguiGui.GuiContainerMod> 
 				HdvguiGui.handleButtonAction(entity, 6, x, y, z);
 			}
 		}));
+		recs = new TextFieldWidget(this.font, this.guiLeft + 7, this.guiTop + 33, 120, 20,
+				new StringTextComponent("que veut tu rechercher ajourd'hui")) {
+			{
+				setSuggestion("que veut tu rechercher ajourd'hui");
+			}
+
+			@Override
+			public void writeText(String text) {
+				super.writeText(text);
+				if (getText().isEmpty())
+					setSuggestion("que veut tu rechercher ajourd'hui");
+				else
+					setSuggestion(null);
+			}
+
+			@Override
+			public void setCursorPosition(int pos) {
+				super.setCursorPosition(pos);
+				if (getText().isEmpty())
+					setSuggestion("que veut tu rechercher ajourd'hui");
+				else
+					setSuggestion(null);
+			}
+		};
+		guistate.put("text:recs", recs);
+		recs.setMaxStringLength(32767);
+		this.children.add(this.recs);
 	}
 }

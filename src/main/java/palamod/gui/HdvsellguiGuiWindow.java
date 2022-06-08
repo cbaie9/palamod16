@@ -155,7 +155,7 @@ public class HdvsellguiGuiWindow extends ContainerScreen<HdvsellguiGui.GuiContai
 		guistate.put("text:market_price", market_price);
 		market_price.setMaxStringLength(32767);
 		this.children.add(this.market_price);
-		this.addButton(new Button(this.guiLeft + 6, this.guiTop + 68, 56, 20, new StringTextComponent("vendre"), e -> {
+		this.addButton(new Button(this.guiLeft + 7, this.guiTop + 73, 56, 20, new StringTextComponent("vendre"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new HdvsellguiGui.ButtonPressedMessage(0, x, y, z));
 				HdvsellguiGui.handleButtonAction(entity, 0, x, y, z);

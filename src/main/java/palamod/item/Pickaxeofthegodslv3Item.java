@@ -4,7 +4,7 @@ package palamod.item;
 import palamod.procedures.Upgradepotgv2Procedure;
 import palamod.procedures.MoucepotgProcedure;
 
-import palamod.itemgroup.PalamodItemGroup;
+import palamod.itemgroup.PickaxeofgodstabItemGroup;
 
 import palamod.PalamodModElements;
 
@@ -32,7 +32,7 @@ public class Pickaxeofthegodslv3Item extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public Pickaxeofthegodslv3Item(PalamodModElements instance) {
-		super(instance, 216);
+		super(instance, 218);
 	}
 
 	@Override
@@ -61,7 +61,7 @@ public class Pickaxeofthegodslv3Item extends PalamodModElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.EMPTY;
 			}
-		}, 1, -2.7999999999999998f, new Item.Properties().group(PalamodItemGroup.tab)) {
+		}, 1, -2.7999999999999998f, new Item.Properties().group(PickaxeofgodstabItemGroup.tab)) {
 			@Override
 			public boolean onBlockDestroyed(ItemStack itemstack, World world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
 				boolean retval = super.onBlockDestroyed(itemstack, world, blockstate, pos, entity);
@@ -72,7 +72,7 @@ public class Pickaxeofthegodslv3Item extends PalamodModElements.ModElement {
 				Upgradepotgv2Procedure.executeProcedure(Stream
 						.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
 								new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
-								new AbstractMap.SimpleEntry<>("entity", entity))
+								new AbstractMap.SimpleEntry<>("entity", entity), new AbstractMap.SimpleEntry<>("itemstack", itemstack))
 						.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 				return retval;
 			}

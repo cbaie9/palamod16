@@ -3,7 +3,7 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 250,
+    "width": 280,
     "height": 200,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
@@ -13,12 +13,12 @@
       {
         "type": "label",
         "data": {
-          "text": "H�tel de vente - aide",
+          "text": "Hôtel de vente - aide",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "H�tel de vente - aide",
+          "name": "Hôtel de vente - aide",
           "x": 93,
           "y": 24
         }
@@ -26,12 +26,12 @@
       {
         "type": "label",
         "data": {
-          "text": "L'h�tel de vente est un endroit o� les joueurs",
+          "text": "L'hôtel de vente est un endroit où les joueurs",
           "color": {
             "value": -10066330,
             "falpha": 0.0
           },
-          "name": "L'h�tel de vente est un endroit o� les joueurs",
+          "name": "L'hôtel de vente est un endroit où les joueurs",
           "x": 92,
           "y": 47
         }
@@ -39,12 +39,12 @@
       {
         "type": "label",
         "data": {
-          "text": "vendent et s'ach�tent  des items de diff�rente",
+          "text": "vendent et s'achètent  des items de différente",
           "color": {
             "value": -10066330,
             "falpha": 0.0
           },
-          "name": "vendent et s'ach�tent  des items de diff�rente",
+          "name": "vendent et s'achètent  des items de différente",
           "x": 93,
           "y": 57
         }
@@ -52,12 +52,12 @@
       {
         "type": "label",
         "data": {
-          "text": "valeur de fa�on s�curis� sans interaction entre",
+          "text": "valeur de façon sécurisé sans interaction direct",
           "color": {
             "value": -10066330,
             "falpha": 0.0
           },
-          "name": "valeur de fa�on s�curis� sans interaction entre",
+          "name": "valeur de façon sécurisé sans interaction direct",
           "x": 90,
           "y": 67
         }
@@ -65,12 +65,12 @@
       {
         "type": "label",
         "data": {
-          "text": "joueur directe ",
+          "text": "entre les joueurs",
           "color": {
             "value": -10066330,
             "falpha": 0.0
           },
-          "name": "joueur directe ",
+          "name": "entre les joueurs",
           "x": 91,
           "y": 77
         }
@@ -91,12 +91,12 @@
       {
         "type": "label",
         "data": {
-          "text": "l'onglet correspondant mettez l'item � vendre ",
+          "text": "l'onglet correspondant mettez l'item à vendre ",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "l'onglet correspondant mettez l'item � vendre ",
+          "name": "l'onglet correspondant mettez l'item à vendre ",
           "x": 92,
           "y": 108
         }
@@ -104,12 +104,12 @@
       {
         "type": "label",
         "data": {
-          "text": "dans le slot puis selectionn� le prix et le",
+          "text": "dans le slot puis sélèctionné le prix et le",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "dans le slot puis selectionn� le prix et le",
+          "name": "dans le slot puis sélèctionné le prix et le",
           "x": 92,
           "y": 118
         }
@@ -117,12 +117,12 @@
       {
         "type": "label",
         "data": {
-          "text": "nom qui sera afficher",
+          "text": "nom qui sera affiché",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "nom qui sera afficher",
+          "name": "nom qui sera affiché",
           "x": 92,
           "y": 129
         }
@@ -208,12 +208,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Bug Les exploite sont souvent des mods non",
+          "text": "Bug Les exploit sont souvent des mods ou hack non",
           "color": {
             "value": -16777012,
             "falpha": 0.0
           },
-          "name": "Bug Les exploite sont souvent des mods non",
+          "name": "Bug Les exploit sont souvent des mods ou hack non",
           "x": 90,
           "y": 196
         }
@@ -221,12 +221,12 @@
       {
         "type": "label",
         "data": {
-          "text": "pr�vue Soyez prudent",
+          "text": "prévue Soyez prudent",
           "color": {
             "value": -16777012,
             "falpha": 0.0
           },
-          "name": "pr�vue Soyez prudent",
+          "name": "prévue Soyez prudent",
           "x": 91,
           "y": 205
         }

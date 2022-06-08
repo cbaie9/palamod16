@@ -34,7 +34,7 @@ public class HdvtbuyProcedure {
 		}
 		IWorld world = (IWorld) dependencies.get("world");
 		Entity entity = (Entity) dependencies.get("entity");
-		if (entity.getPersistentData().getDouble("temp_market_slot") == 1) {
+		if (entity.getPersistentData().getDouble("") == 1) {
 			if (entity instanceof PlayerEntity) {
 				ItemStack _setstack = (PalamodModVariables.WorldVariables.get(world).market_item0);
 				_setstack.setCount((int) (new Object() {

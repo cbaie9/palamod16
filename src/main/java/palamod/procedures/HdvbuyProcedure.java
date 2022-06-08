@@ -8,7 +8,6 @@ import palamod.PalamodMod;
 
 import net.minecraftforge.fml.network.NetworkHooks;
 
-import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
@@ -21,7 +20,6 @@ import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
-import net.minecraft.block.BlockState;
 
 import java.util.Map;
 
@@ -79,38 +77,24 @@ public class HdvbuyProcedure {
 				return -1;
 			}
 		}.getValue(world, new BlockPos(0, 10, 0), "market_num0")));
-		if (!world.isRemote()) {
-			BlockPos _bp = new BlockPos(0, 10, 0);
-			TileEntity _tileEntity = world.getTileEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_tileEntity != null)
-				_tileEntity.getTileData().putString("temp_market_name", (new Object() {
-					public String getValue(IWorld world, BlockPos pos, String tag) {
-						TileEntity tileEntity = world.getTileEntity(pos);
-						if (tileEntity != null)
-							return tileEntity.getTileData().getString(tag);
-						return "";
-					}
-				}.getValue(world, new BlockPos(0, 10, 0), "market_name0")));
-			if (world instanceof World)
-				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-		}
-		if (!world.isRemote()) {
-			BlockPos _bp = new BlockPos(0, 10, 0);
-			TileEntity _tileEntity = world.getTileEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_tileEntity != null)
-				_tileEntity.getTileData().putString("temp_market_item", (new Object() {
-					public String getValue(IWorld world, BlockPos pos, String tag) {
-						TileEntity tileEntity = world.getTileEntity(pos);
-						if (tileEntity != null)
-							return tileEntity.getTileData().getString(tag);
-						return "";
-					}
-				}.getValue(world, new BlockPos(0, 10, 0), "market_item0")));
-			if (world instanceof World)
-				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-		}
+		entity.getPersistentData().putDouble("temp_market_hash", (new Object() {
+			public double getValue(IWorld world, BlockPos pos, String tag) {
+				TileEntity tileEntity = world.getTileEntity(pos);
+				if (tileEntity != null)
+					return tileEntity.getTileData().getDouble(tag);
+				return -1;
+			}
+		}.getValue(world, new BlockPos(0, 10, 0), "market_hash0")));
+		entity.getPersistentData().putString("temp_marke_name", (new Object() {
+			public String getValue(IWorld world, BlockPos pos, String tag) {
+				TileEntity tileEntity = world.getTileEntity(pos);
+				if (tileEntity != null)
+					return tileEntity.getTileData().getString(tag);
+				return "";
+			}
+		}.getValue(world, new BlockPos(0, 10, 0), "market_name0")));
+		if (entity instanceof PlayerEntity)
+			((PlayerEntity) entity).closeScreen();
 		{
 			Entity _ent = entity;
 			if (_ent instanceof ServerPlayerEntity) {

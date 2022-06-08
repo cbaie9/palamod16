@@ -3,7 +3,7 @@ package palamod.gui;
 
 import palamod.procedures.SpawnpanelconnectProcedure;
 import palamod.procedures.Palaerror6connectProcedure;
-import palamod.procedures.MoneypanelchangeProcedure;
+import palamod.procedures.MoneypanelconnectProcedure;
 import palamod.procedures.HdvstocksopenProcedure;
 
 import palamod.PalamodModElements;
@@ -197,10 +197,9 @@ public class AdminpanelmenuGui extends PalamodModElements.ModElement {
 		}
 		if (buttonID == 1) {
 
-			MoneypanelchangeProcedure.executeProcedure(Stream
+			MoneypanelconnectProcedure.executeProcedure(Stream
 					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
-							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity),
-							new AbstractMap.SimpleEntry<>("guistate", guistate))
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 		if (buttonID == 2) {

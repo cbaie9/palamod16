@@ -31,7 +31,7 @@ public class HdvhelpGuiWindow extends ContainerScreen<HdvhelpGui.GuiContainerMod
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.xSize = 250;
+		this.xSize = 280;
 		this.ySize = 200;
 	}
 
@@ -72,23 +72,23 @@ public class HdvhelpGuiWindow extends ContainerScreen<HdvhelpGui.GuiContainerMod
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "H\uFFFDtel de vente - aide", 4, 4, -12829636);
-		this.font.drawString(ms, "L'h\uFFFDtel de vente est un endroit o\uFFFD les joueurs", 3, 27, -10066330);
-		this.font.drawString(ms, "vendent et s'ach\uFFFDtent  des items de diff\uFFFDrente", 4, 37, -10066330);
-		this.font.drawString(ms, "valeur de fa\uFFFDon s\uFFFDcuris\uFFFD sans interaction entre", 1, 47, -10066330);
-		this.font.drawString(ms, "joueur directe ", 2, 57, -10066330);
-		this.font.drawString(ms, "Pour mettre en vente un objet cliquez sur ", 3, 77, -12829636);
-		this.font.drawString(ms, "l'onglet correspondant mettez l'item \uFFFD vendre ", 3, 88, -12829636);
-		this.font.drawString(ms, "dans le slot puis selectionn\uFFFD le prix et le", 3, 98, -12829636);
-		this.font.drawString(ms, "nom qui sera afficher", 3, 109, -12829636);
-		this.font.drawString(ms, "Pour acheter, trouvez un item interessant puis,", 2, 135, -12829636);
-		this.font.drawString(ms, "appuyer le bouton 'buy' puis confimer votre", 2, 144, -12829636);
-		this.font.drawString(ms, "choix", 3, 155, -12829636);
-		this.font.drawString(ms, "Vente", 2, 67, -16751104);
-		this.font.drawString(ms, "Achat", 1, 125, -3407821);
-		this.font.drawString(ms, "Toute anarque n'est pas de notre faute sauf si  ", 1, 168, -16777012);
-		this.font.drawString(ms, "Bug Les exploite sont souvent des mods non", 1, 176, -16777012);
-		this.font.drawString(ms, "pr\uFFFDvue Soyez prudent", 2, 185, -16777012);
+		this.font.drawString(ms, "H\u00F4tel de vente - aide", 19, 4, -12829636);
+		this.font.drawString(ms, "L'h\u00F4tel de vente est un endroit o\u00F9 les joueurs", 18, 27, -10066330);
+		this.font.drawString(ms, "vendent et s'ach\u00E8tent  des items de diff\u00E9rente", 19, 37, -10066330);
+		this.font.drawString(ms, "valeur de fa\u00E7on s\u00E9curis\u00E9 sans interaction direct", 16, 47, -10066330);
+		this.font.drawString(ms, "entre les joueurs", 17, 57, -10066330);
+		this.font.drawString(ms, "Pour mettre en vente un objet cliquez sur ", 18, 77, -12829636);
+		this.font.drawString(ms, "l'onglet correspondant mettez l'item \u00E0 vendre ", 18, 88, -12829636);
+		this.font.drawString(ms, "dans le slot puis s\u00E9l\u00E8ctionn\u00E9 le prix et le", 18, 98, -12829636);
+		this.font.drawString(ms, "nom qui sera affich\u00E9", 18, 109, -12829636);
+		this.font.drawString(ms, "Pour acheter, trouvez un item interessant puis,", 17, 135, -12829636);
+		this.font.drawString(ms, "appuyer le bouton 'buy' puis confimer votre", 17, 144, -12829636);
+		this.font.drawString(ms, "choix", 18, 155, -12829636);
+		this.font.drawString(ms, "Vente", 17, 67, -16751104);
+		this.font.drawString(ms, "Achat", 16, 125, -3407821);
+		this.font.drawString(ms, "Toute anarque n'est pas de notre faute sauf si  ", 16, 168, -16777012);
+		this.font.drawString(ms, "Bug Les exploit sont souvent des mods ou hack non", 16, 176, -16777012);
+		this.font.drawString(ms, "pr\u00E9vue Soyez prudent", 17, 185, -16777012);
 	}
 
 	@Override

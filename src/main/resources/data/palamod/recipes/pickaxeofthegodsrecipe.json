@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 4 ",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "palamod:amethyste_pickaxe"
+    },
+    "1": {
+      "item": "palamod:paladium_pickaxe"
+    },
+    "2": {
+      "item": "palamod:titane_pickaxe"
+    },
+    "4": {
+      "item": "palamod:paladiumstick"
+    },
+    "7": {
+      "item": "palamod:paladiumstick"
+    }
+  },
+  "result": {
+    "item": "palamod:pickaxeofthegodslv_1",
+    "count": 1
+  }
+}

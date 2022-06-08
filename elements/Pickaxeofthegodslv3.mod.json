@@ -8,7 +8,7 @@
     "name": "Pickaxe of the gods",
     "specialInfo": [],
     "creativeTab": {
-      "value": "CUSTOM:Palamod"
+      "value": "CUSTOM:Pickaxeofgodstab"
     },
     "toolType": "Pickaxe",
     "harvestLevel": 2,

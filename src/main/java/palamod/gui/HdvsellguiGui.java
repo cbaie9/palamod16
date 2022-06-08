@@ -1,7 +1,7 @@
 
 package palamod.gui;
 
-import palamod.procedures.Hdvsell0Procedure;
+import palamod.procedures.Hdvsellv2Procedure;
 
 import palamod.PalamodModElements;
 
@@ -123,7 +123,7 @@ public class HdvsellguiGui extends PalamodModElements.ModElement {
 					}
 				}
 			}
-			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 128, 33) {
+			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 136, 36) {
 			}));
 			int si;
 			int sj;
@@ -374,9 +374,8 @@ public class HdvsellguiGui extends PalamodModElements.ModElement {
 			return;
 		if (buttonID == 0) {
 
-			Hdvsell0Procedure.executeProcedure(Stream
-					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
-							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity),
+			Hdvsellv2Procedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity),
 							new AbstractMap.SimpleEntry<>("guistate", guistate))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}

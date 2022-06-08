@@ -4588,6 +4588,10 @@
             "type": "entity"
           },
           {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -8337,6 +8341,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -9475,7 +9483,7 @@
     {
       "name": "Pickaxeofthegodslv1",
       "type": "tool",
-      "sortid": 217,
+      "sortid": 216,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pickaxeofthegodslv_1"
@@ -9483,7 +9491,7 @@
     {
       "name": "Pickaxeofthegodslv2",
       "type": "tool",
-      "sortid": 218,
+      "sortid": 217,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pickaxeofthegodslv_2"
@@ -9499,7 +9507,7 @@
     {
       "name": "Pickaxeofthegodslv3",
       "type": "tool",
-      "sortid": 216,
+      "sortid": 218,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pickaxeofthegodslv_3"
@@ -9710,6 +9718,10 @@
             "type": "entity"
           },
           {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -9887,6 +9899,302 @@
           }
         ]
       }
+    },
+    {
+      "name": "Hdvreturnslot",
+      "type": "procedure",
+      "sortid": 789,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hdvreturnslot",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Hdvsellv2",
+      "type": "procedure",
+      "sortid": 790,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hdvsellv_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Hdvtruebuyv2",
+      "type": "procedure",
+      "sortid": 791,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hdvtruebuyv_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Return0",
+      "type": "procedure",
+      "sortid": 792,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_0",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Rtest",
+      "type": "command",
+      "sortid": 793,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rtest"
+    },
+    {
+      "name": "Amethystexacvator",
+      "type": "tool",
+      "sortid": 794,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethystexacvator"
+    },
+    {
+      "name": "Excavatorprocessamethyst",
+      "type": "procedure",
+      "sortid": 795,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "excavatorprocessamethyst",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Titaneexcavator",
+      "type": "tool",
+      "sortid": 796,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titaneexcavator"
+    },
+    {
+      "name": "Paladiumexcavator",
+      "type": "tool",
+      "sortid": 797,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiumexcavator"
+    },
+    {
+      "name": "Pickaxeofthegodsrecipe",
+      "type": "recipe",
+      "sortid": 798,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pickaxeofthegodsrecipe"
+    },
+    {
+      "name": "Bigholeupgrade",
+      "type": "item",
+      "sortid": 799,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bigholeupgrade"
+    },
+    {
+      "name": "Bighole",
+      "type": "enchantment",
+      "sortid": 800,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bighole"
+    },
+    {
+      "name": "Autosmeltpotg",
+      "type": "enchantment",
+      "sortid": 801,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "autosmeltpotg"
+    },
+    {
+      "name": "Voidstone",
+      "type": "item",
+      "sortid": 802,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voidstone"
+    },
+    {
+      "name": "Trashgui",
+      "type": "gui",
+      "sortid": 803,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trashgui"
+    },
+    {
+      "name": "Deleteall",
+      "type": "procedure",
+      "sortid": 804,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deleteall",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Connecttrashgui",
+      "type": "procedure",
+      "sortid": 805,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connecttrashgui",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Autosmeltupgradepotg",
+      "type": "item",
+      "sortid": 806,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "autosmeltupgradepotg"
+    },
+    {
+      "name": "Infernalknocker_akno",
+      "type": "procedure",
+      "sortid": 807,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infernalknocker_akno",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Infernalknocker",
+      "type": "tool",
+      "sortid": 807,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infernalknocker"
     }
   ],
   "variable_elements": [
@@ -10709,6 +11017,7 @@
       "advancements.avancementcoreloading.title": "core is loading, please wait",
       "block.palamod.amethyste_ore": "Amethyste Ore",
       "item.palamod.titane_shovel": "Titane Shovel",
+      "item.palamod.titaneexcavator": "Titane Exavator",
       "advancements.palamodavancement.descr": "A new dimension of adventure",
       "item.palamod.stickofgods": "Stick Of Gods",
       "block.palamod.jacaranda_wood": "Jacaranda Wood",
@@ -10770,6 +11079,7 @@
       "block.palamod.findiumslab": "Findium slab",
       "item.palamod.poisonimbuepotion": "Poison imbue potion",
       "block.palamod.coloredlamp": "Colored lamp",
+      "enchantment.palamod.bighole": "Big hole ",
       "advancements.avancementendiumingot.descr": "Obtain a Endium Nugget",
       "item.palamod.forturnemodifier": "Forturne modifier",
       "block.palamod.ametystespike": "Ametyste spike",
@@ -10780,6 +11090,7 @@
       "block.palamod.judeecercis_planks": "Judeecercis Planks",
       "block.palamod.findium_ore": "Findium Ore",
       "item.palamod.goldmixedcoal": "Gold mixed coal",
+      "item.palamod.autosmeltupgradepotg": "Auto - smelt upgrade",
       "block.palamod.colofullamp": "Coloful  lamp",
       "advancements.avancementanvofp.title": "An new vision of pvp",
       "block.palamod.jacaranda_log": "Jacaranda Log",
@@ -10821,6 +11132,7 @@
       "block.palamod.grindercasing": "Grinder casing",
       "advancements.avancementlittlekitforalchimist.title": "A little kit for alchimist",
       "item.palamod.amethystebroadsword": "Amethyste broadsword",
+      "item.palamod.infernalknocker": "Infernalknocker",
       "item.palamod.paladium_armor_leggings": "Paladium Leggings",
       "advancements.avancement_hammeryourlife.descr": "Craft a hammer in the grinder",
       "item.palamod.ingotpatern": "Ingot patern",
@@ -10883,11 +11195,13 @@
       "block.palamod.grinderblock": "Grinder block",
       "block.palamod.tcv_2": "Contructed grinder",
       "block.palamod.ostrya_wood_leaves": "Ostrya Leaves",
+      "item.palamod.voidstone": "Voidstone",
       "item.palamod.damagestick": "Damage stick",
       "advancements.avancementcompressedavantur.title": "Compressed avanture",
       "item.palamod.diamondstring": "Diamond string",
       "block.palamod.trxiumore": "Trxium ore",
       "advancements.avancementanvofp.descr": "Craft an paladium machine ",
+      "item.palamod.bigholeupgrade": "Big hole upgrade",
       "effect.antifake": "antifake",
       "subtitles.devmod.test.sound.ogg": "Radio is playing : devmod radio Test",
       "item.palamod.speedmodifier": "Speed modifier",
@@ -10919,6 +11233,7 @@
       "block.palamod.findium_block": "Block of Findium",
       "item.palamod.legendarystoneinvisible": "Legendary stone invisible",
       "advancements.avancementforgeafa.descr": "Craft a Forge",
+      "item.palamod.paladiumexcavator": "Titane Exavator",
       "block.palamod.woddenspike": "Iron spike",
       "block.palamod.ostrya_wood_stairs": "Ostrya Stairs",
       "item.palamod.endium_armor_chestplate": "Endium Chestplate",
@@ -10932,6 +11247,7 @@
       "item.palamod.corechi": "reddated:/f soon",
       "block.palamod.erablesappling": "Erable sappling",
       "entity.palamod.endiumdynamite": "Endium dynamite",
+      "enchantment.palamod.autosmeltpotg": "Auto Smelt",
       "block.palamod.judeecercis_leaves": "Judeecercis Leaves",
       "block.palamod.paladium_greenblock": "Block of Green Paladium ",
       "item.palamod.elephantlittle_spawn_egg": "Elephant_little Spawn Egg",
@@ -11019,6 +11335,7 @@
       "block.palamod.orangeblue_3": "Orangeblue state 3",
       "block.palamod.ostrya_wood_planks": "Ostrya Planks",
       "item.palamod.luckybeta": "Lucky beta",
+      "item.palamod.amethystexacvator": "Amethyste Exavator",
       "item.palamod.eggplant": "Eggplant",
       "item.palamod.strenghtstick": "Strenght stick",
       "block.palamod.ostrya_wood_wood": "Ostrya Wood",
@@ -11048,6 +11365,7 @@
       "advancements.avancementcoreloading.title": "Veuillez attndre quelques secondes",
       "block.palamod.amethyste_ore": "Minerais d\u0027am�thyste",
       "item.palamod.titane_shovel": "Pelle en titane",
+      "item.palamod.titaneexcavator": "Amethyste Exavator",
       "advancements.palamodavancement.descr": "A nouvelle dimention pour l\u0027advanture",
       "item.palamod.stickofgods": "Baton des Dieux",
       "block.palamod.jacaranda_wood": "Bois de Jacaranda",
@@ -11109,6 +11427,7 @@
       "block.palamod.findiumslab": "Slab en Findium",
       "item.palamod.poisonimbuepotion": "Potion de poison",
       "block.palamod.coloredlamp": "Lampe color�e",
+      "enchantment.palamod.bighole": "Big hole ",
       "advancements.avancementendiumingot.descr": "Obtenir un lingot en Endium",
       "item.palamod.forturnemodifier": "Modifier de forturne",
       "block.palamod.ametystespike": "Spike en am�tyste",
@@ -11119,6 +11438,7 @@
       "block.palamod.judeecercissappling": "Pousse de judeecercis",
       "block.palamod.findium_ore": "Minerais de findium",
       "item.palamod.goldmixedcoal": "Charbon infus�e d\u0027or",
+      "item.palamod.autosmeltupgradepotg": "Auto - smelt upgrade",
       "block.palamod.colofullamp": "Coloful  lamp",
       "advancements.avancementanvofp.title": "Une nouvelle vision du pvp",
       "item.palamod.paladium_armor_helmet": "Casque en paladium",
@@ -11162,6 +11482,7 @@
       "item.palamod.amethyste_ingot": "Lingot d\u0027amethyste",
       "advancements.avancementlittlekitforalchimist.title": "Petit kit pour un alchemiste",
       "item.palamod.amethystebroadsword": "Amethyste broadsword",
+      "item.palamod.infernalknocker": "Infernalknocker",
       "item.palamod.paladium_armor_leggings": "Jambi�re en paladium",
       "advancements.avancement_hammeryourlife.descr": "Fabrique un hammer",
       "item.palamod.ingotpatern": "Ent�te de lingot",
@@ -11224,11 +11545,13 @@
       "block.palamod.grinderblock": "Grinder block",
       "block.palamod.tcv_2": "Grinder block temporaire",
       "block.palamod.ostrya_wood_leaves": "Feuille d\u0027ostrya",
+      "item.palamod.voidstone": "Voidstone",
       "item.palamod.damagestick": "B�ton de d�gats",
       "advancements.avancementcompressedavantur.title": "Compressed avanture",
       "item.palamod.diamondstring": "Fils en Diamand",
       "block.palamod.trxiumore": "Trxium ore",
       "advancements.avancementanvofp.descr": "Fabrique un paladium machine",
+      "item.palamod.bigholeupgrade": "Big hole upgrade",
       "effect.antifake": "antifake",
       "subtitles.devmod.test.sound.ogg": "La Radio joue :  Devmod test sound",
       "item.palamod.speedmodifier": "Modifier de vitesse",
@@ -11260,6 +11583,7 @@
       "block.palamod.findium_block": "Block de Findium",
       "item.palamod.legendarystoneinvisible": "Legendary stone invisible",
       "advancements.avancementforgeafa.descr": "Fabrique une forge",
+      "item.palamod.paladiumexcavator": "Titane Exavator",
       "block.palamod.woddenspike": "Spike en bois",
       "block.palamod.ostrya_wood_stairs": "Escalier d\u0027ostrya",
       "item.palamod.endium_armor_chestplate": "Plastron en endium",
@@ -11273,6 +11597,7 @@
       "item.palamod.corechi": "Corechi ( beta )",
       "block.palamod.erablesappling": "Pousse de sappling",
       "entity.palamod.endiumdynamite": "Paladium dynamite",
+      "enchantment.palamod.autosmeltpotg": "Auto Smelt",
       "block.palamod.judeecercis_leaves": "Feuilles de judeecercis",
       "block.palamod.paladium_greenblock": "Block de paladium vert",
       "item.palamod.elephantlittle_spawn_egg": "Elephant_little Spawn Egg",
@@ -11362,6 +11687,7 @@
       "item.palamod.endium_leggings": "Jambi�re en endium",
       "block.palamod.ostrya_wood_planks": "Planches en Ostrya",
       "item.palamod.luckybeta": "Lucky beta",
+      "item.palamod.amethystexacvator": "Amethyste Shovel",
       "item.palamod.eggplant": "Eggplant",
       "item.palamod.strenghtstick": "B�ton de force",
       "block.palamod.ostrya_wood_wood": "B�che d\u0027ostrya",
@@ -11390,7 +11716,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "palamod ",
-    "version": "beta 1 build 16a0.1  0073",
+    "version": "1.16.0081",
     "description": "the palamod ... in 1.16",
     "author": "cb9",
     "websiteURL": "https://mcreator.net, https://paladium-pvp.fr",

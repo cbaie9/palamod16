@@ -13,12 +13,12 @@
       {
         "type": "label",
         "data": {
-          "text": "H�tel de vente",
+          "text": "Hôtel de vente",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "H�tel de vente",
+          "name": "Hôtel de vente",
           "x": 111,
           "y": 13
         }
@@ -43,8 +43,8 @@
           "width": 61,
           "height": 20,
           "name": "suivant",
-          "x": 297,
-          "y": 204
+          "x": 298,
+          "y": 202
         }
       },
       {
@@ -58,7 +58,7 @@
           "height": 20,
           "name": "aide",
           "x": 242,
-          "y": 203
+          "y": 202
         }
       },
       {
@@ -157,17 +157,6 @@
         }
       },
       {
-        "type": "textfield",
-        "data": {
-          "placeholder": "rechercher quelque chose dans l' h�tel de vente",
-          "width": 120,
-          "height": 20,
-          "name": "recs",
-          "x": 73,
-          "y": 39
-        }
-      },
-      {
         "type": "inputslot",
         "data": {
           "inputLimit": {
@@ -191,7 +180,7 @@
           "disableStackInteraction": true,
           "dropItemsWhenNotBound": false,
           "name": "Slot #3",
-          "x": 89,
+          "x": 90,
           "y": 153
         }
       },
@@ -326,6 +315,17 @@
           "name": "Barre de recherche",
           "x": 74,
           "y": 28
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "que veut tu rechercher ajourd'hui",
+          "width": 120,
+          "height": 20,
+          "name": "recs",
+          "x": 71,
+          "y": 41
         }
       }
     ],

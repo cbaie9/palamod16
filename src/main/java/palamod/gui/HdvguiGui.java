@@ -162,7 +162,7 @@ public class HdvguiGui extends PalamodModElements.ModElement {
 					return false;
 				}
 			}));
-			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 26, 146) {
+			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 27, 146) {
 				@Override
 				public boolean canTakeStack(PlayerEntity player) {
 					return false;

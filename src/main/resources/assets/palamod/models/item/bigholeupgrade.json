@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "palamod:items/upgrade_big_hole_potg"
+  }
+}
