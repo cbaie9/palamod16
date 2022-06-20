@@ -1,7 +1,7 @@
 
 package palamod.item;
 
-import palamod.itemgroup.PalamodItemGroup;
+import palamod.itemgroup.PickaxeofgodstabItemGroup;
 
 import palamod.PalamodModElements;
 
@@ -29,7 +29,7 @@ public class AutosmeltupgradepotgItem extends PalamodModElements.ModElement {
 
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(PalamodItemGroup.tab).maxStackSize(64).rarity(Rarity.UNCOMMON));
+			super(new Item.Properties().group(PickaxeofgodstabItemGroup.tab).maxStackSize(64).rarity(Rarity.UNCOMMON));
 			setRegistryName("autosmeltupgradepotg");
 		}
 

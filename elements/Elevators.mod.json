@@ -1,0 +1,41 @@
+{
+  "_fv": 28,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:Elevatorwhite"
+      },
+      {
+        "value": "CUSTOM:Elevatorred"
+      },
+      {
+        "value": "CUSTOM:Elevatorblue"
+      },
+      {
+        "value": "CUSTOM:Elevatorgreen"
+      },
+      {
+        "value": "CUSTOM:Elevatorpink"
+      },
+      {
+        "value": "CUSTOM:Elevatorlightblue"
+      },
+      {
+        "value": "CUSTOM:Elevatorlightgreen"
+      },
+      {
+        "value": "CUSTOM:Elevatorbrown"
+      },
+      {
+        "value": "CUSTOM:Elevatororange"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "elevator",
+    "namespace": "mod"
+  }
+}

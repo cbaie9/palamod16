@@ -62,6 +62,10 @@ public class HdvguiGuiWindow extends ContainerScreen<HdvguiGui.GuiContainerMod> 
 		int k = (this.width - this.xSize) / 2;
 		int l = (this.height - this.ySize) / 2;
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("palamod:textures/beta_block.png"));
+		this.blit(ms, this.guiLeft + 7, this.guiTop + 74, 0, 0, 16, 16, 16, 16);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -87,12 +91,12 @@ public class HdvguiGuiWindow extends ContainerScreen<HdvguiGui.GuiContainerMod> 
 		this.font.drawString(ms, "H\u00F4tel de vente", 47, 5, -12829636);
 		this.font.drawString(ms, "Wip build 0031", 220, 4, -12829636);
 		this.font.drawString(ms, "Premium ", 7, 59, -26368);
-		this.font.drawString(ms, "" + (PalamodModVariables.MapVariables.get(world).market_name_0) + "", 50, 76, -12829636);
-		this.font.drawString(ms, "" + (PalamodModVariables.MapVariables.get(world).market_price_0) + " $", 154, 77, -12829636);
-		this.font.drawString(ms, "" + (PalamodModVariables.MapVariables.get(world).market_name_1) + "", 47, 100, -12829636);
-		this.font.drawString(ms, "" + (PalamodModVariables.MapVariables.get(world).market_name_2) + "", 47, 123, -12829636);
-		this.font.drawString(ms, "" + (PalamodModVariables.MapVariables.get(world).market_name_3) + "", 46, 147, -12829636);
-		this.font.drawString(ms, "" + (PalamodModVariables.MapVariables.get(world).market_price_1) + " $", 154, 99, -12829636);
+		this.font.drawString(ms, "" + (PalamodModVariables.market_name_0) + "", 50, 76, -12829636);
+		this.font.drawString(ms, "" + (PalamodModVariables.market_price_0) + " $", 154, 77, -12829636);
+		this.font.drawString(ms, "" + (PalamodModVariables.market_name_1) + "", 47, 100, -12829636);
+		this.font.drawString(ms, "" + (PalamodModVariables.market_name_2) + "", 47, 123, -12829636);
+		this.font.drawString(ms, "" + (PalamodModVariables.market_name_3) + "", 46, 147, -12829636);
+		this.font.drawString(ms, "" + (PalamodModVariables.market_price_1) + " $", 154, 99, -12829636);
 		this.font.drawString(ms, "" + (PalamodModVariables.MapVariables.get(world).market_price_2) + "", 153, 120, -12829636);
 		this.font.drawString(ms, "" + (PalamodModVariables.MapVariables.get(world).market_price_3) + "", 155, 145, -12829636);
 		this.font.drawString(ms, "Barre de recherche", 10, 20, -12829636);

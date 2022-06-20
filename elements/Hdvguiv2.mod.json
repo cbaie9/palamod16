@@ -1,0 +1,206 @@
+{
+  "_fv": 28,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 300,
+    "height": 200,
+    "inventoryOffsetX": 60,
+    "inventoryOffsetY": 20,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Hdv v2 build 0082",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Hdv v2 build 0082",
+          "x": 69,
+          "y": 26
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #0",
+          "x": 73,
+          "y": 45
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "beta_block.png",
+          "use1Xscale": false,
+          "name": "beta_block.png",
+          "x": 340,
+          "y": 24
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:market_name_0>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<VAR:market_name_0>",
+          "x": 94,
+          "y": 45
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:market_price_0> €",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<VAR:market_price_0> €",
+          "x": 93,
+          "y": 56
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Acheter",
+          "onClick": {
+            "name": "Hdvbuy"
+          },
+          "width": 61,
+          "height": 20,
+          "name": "Acheter",
+          "x": 74,
+          "y": 72
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #1",
+          "x": 219,
+          "y": 47
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:integer:market_price_1> €",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<VAR:integer:market_price_1> €",
+          "x": 238,
+          "y": 56
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:market_name_1>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<VAR:market_name_1>",
+          "x": 239,
+          "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Acheter",
+          "onClick": {
+            "name": "Hdvbuy1"
+          },
+          "width": 61,
+          "height": 20,
+          "name": "Acheter",
+          "x": 218,
+          "y": 72
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Search in Hdv",
+          "width": 120,
+          "height": 20,
+          "name": "bdr_hdv",
+          "x": 68,
+          "y": 174
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Rechercher",
+          "width": 77,
+          "height": 20,
+          "name": "Rechercher",
+          "x": 86,
+          "y": 195
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Vendre",
+          "onClick": {
+            "name": "Openhdvsell"
+          },
+          "width": 46,
+          "height": 20,
+          "name": "Vendre",
+          "x": 74,
+          "y": 151
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Aide",
+          "onClick": {
+            "name": "Hdvaide"
+          },
+          "width": 46,
+          "height": 20,
+          "name": "Aide",
+          "x": 132,
+          "y": 151
+        }
+      }
+    ],
+    "onOpen": {
+      "name": "HdvguiThisGUIIsOpened"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -227,7 +227,7 @@ public class HdvguiThisGUIIsOpenedProcedure {
 					}
 				}
 			}
-			PalamodModVariables.MapVariables.get(world).market_name_0 = (new Object() {
+			PalamodModVariables.market_name_0 = (new Object() {
 				public String getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
@@ -235,8 +235,7 @@ public class HdvguiThisGUIIsOpenedProcedure {
 					return "";
 				}
 			}.getValue(world, new BlockPos(0, 10, 0), "market_name0"));
-			PalamodModVariables.MapVariables.get(world).syncData(world);
-			PalamodModVariables.MapVariables.get(world).market_name_1 = (new Object() {
+			PalamodModVariables.market_name_1 = (new Object() {
 				public String getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
@@ -244,8 +243,7 @@ public class HdvguiThisGUIIsOpenedProcedure {
 					return "";
 				}
 			}.getValue(world, new BlockPos(0, 10, 0), "market_name1"));
-			PalamodModVariables.MapVariables.get(world).syncData(world);
-			PalamodModVariables.MapVariables.get(world).market_name_2 = (new Object() {
+			PalamodModVariables.market_name_2 = (new Object() {
 				public String getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
@@ -253,8 +251,7 @@ public class HdvguiThisGUIIsOpenedProcedure {
 					return "";
 				}
 			}.getValue(world, new BlockPos(0, 10, 0), "market_name2"));
-			PalamodModVariables.MapVariables.get(world).syncData(world);
-			PalamodModVariables.MapVariables.get(world).market_name_3 = (new Object() {
+			PalamodModVariables.market_name_3 = (new Object() {
 				public String getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
@@ -262,8 +259,7 @@ public class HdvguiThisGUIIsOpenedProcedure {
 					return "";
 				}
 			}.getValue(world, new BlockPos(0, 10, 0), "market_name3"));
-			PalamodModVariables.MapVariables.get(world).syncData(world);
-			PalamodModVariables.MapVariables.get(world).market_price_0 = (new Object() {
+			PalamodModVariables.market_price_0 = (new Object() {
 				public double getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
@@ -271,8 +267,7 @@ public class HdvguiThisGUIIsOpenedProcedure {
 					return -1;
 				}
 			}.getValue(world, new BlockPos(0, 10, 0), "market_price0"));
-			PalamodModVariables.MapVariables.get(world).syncData(world);
-			PalamodModVariables.MapVariables.get(world).market_price_1 = (new Object() {
+			PalamodModVariables.market_price_1 = (new Object() {
 				public double getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
@@ -280,7 +275,6 @@ public class HdvguiThisGUIIsOpenedProcedure {
 					return -1;
 				}
 			}.getValue(world, new BlockPos(0, 10, 0), "market_price1"));
-			PalamodModVariables.MapVariables.get(world).syncData(world);
 			PalamodModVariables.MapVariables.get(world).market_price_2 = (new Object() {
 				public double getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);

@@ -1,7 +1,7 @@
 package palamod.procedures;
 
 import palamod.gui.Palaerror0001Gui;
-import palamod.gui.HdvguiGui;
+import palamod.gui.Hdvguiv2Gui;
 
 import palamod.block.NbtblockBlock;
 
@@ -88,12 +88,12 @@ public class Hdv_openProcedure {
 					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
 						public ITextComponent getDisplayName() {
-							return new StringTextComponent("Hdvgui");
+							return new StringTextComponent("Hdvguiv2");
 						}
 
 						@Override
 						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-							return new HdvguiGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+							return new Hdvguiv2Gui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}

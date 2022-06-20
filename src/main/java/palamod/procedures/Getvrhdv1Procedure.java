@@ -61,7 +61,7 @@ public class Getvrhdv1Procedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
-		PalamodModVariables.MapVariables.get(world).market_price_0 = (new Object() {
+		PalamodModVariables.market_price_0 = (new Object() {
 			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
@@ -69,8 +69,7 @@ public class Getvrhdv1Procedure {
 				return -1;
 			}
 		}.getValue(world, new BlockPos(0, 10, 0), "market"));
-		PalamodModVariables.MapVariables.get(world).syncData(world);
-		PalamodModVariables.MapVariables.get(world).market_name_0 = (new Object() {
+		PalamodModVariables.market_name_0 = (new Object() {
 			public String getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
@@ -78,7 +77,6 @@ public class Getvrhdv1Procedure {
 				return "";
 			}
 		}.getValue(world, new BlockPos(0, 10, 0), "market_name0"));
-		PalamodModVariables.MapVariables.get(world).syncData(world);
 		{
 			Entity _ent = entity;
 			if (_ent instanceof ServerPlayerEntity) {

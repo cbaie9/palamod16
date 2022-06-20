@@ -50,7 +50,7 @@
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
-    "lightOpacity": 15,
+    "lightOpacity": 1,
     "material": {
       "value": "ROCK"
     },
@@ -121,6 +121,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onTickUpdate": {
+      "name": "Xpbushprocess"
+    },
     "onRandomUpdateEvent": {
       "name": "Xpbushprocess"
     },
@@ -137,6 +140,6 @@
     "frequencyPerChunks": 2,
     "frequencyOnChunk": 1,
     "minGenerateHeight": 0,
-    "maxGenerateHeight": 128
+    "maxGenerateHeight": 310
   }
 }

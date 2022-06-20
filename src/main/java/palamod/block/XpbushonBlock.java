@@ -66,7 +66,7 @@ public class XpbushonBlock extends PalamodModElements.ModElement {
 
 		@Override
 		public int getOpacity(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return 15;
+			return 2;
 		}
 
 		@Override

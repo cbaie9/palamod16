@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 4 ",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "palamod:amethyste_shovel"
+    },
+    "1": {
+      "item": "palamod:amethyste_shovel"
+    },
+    "2": {
+      "item": "palamod:amethyste_shovel"
+    },
+    "4": {
+      "item": "palamod:amethytestick"
+    },
+    "7": {
+      "item": "palamod:amethytestick"
+    }
+  },
+  "result": {
+    "item": "palamod:amethystexacvator",
+    "count": 1
+  }
+}

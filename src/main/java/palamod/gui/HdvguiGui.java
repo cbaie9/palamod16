@@ -130,48 +130,12 @@ public class HdvguiGui extends PalamodModElements.ModElement {
 				}
 			}
 			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 27, 74) {
-				@Override
-				public boolean canTakeStack(PlayerEntity player) {
-					return false;
-				}
-
-				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return false;
-				}
 			}));
 			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 27, 98) {
-				@Override
-				public boolean canTakeStack(PlayerEntity player) {
-					return false;
-				}
-
-				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return false;
-				}
 			}));
 			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 27, 121) {
-				@Override
-				public boolean canTakeStack(PlayerEntity player) {
-					return false;
-				}
-
-				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return false;
-				}
 			}));
 			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 27, 146) {
-				@Override
-				public boolean canTakeStack(PlayerEntity player) {
-					return false;
-				}
-
-				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return false;
-				}
 			}));
 			int si;
 			int sj;
@@ -318,6 +282,8 @@ public class HdvguiGui extends PalamodModElements.ModElement {
 					for (int j = 0; j < internal.getSlots(); ++j) {
 						if (j == 0)
 							continue;
+						if (j == 1)
+							continue;
 						if (j == 2)
 							continue;
 						if (j == 3)
@@ -327,6 +293,8 @@ public class HdvguiGui extends PalamodModElements.ModElement {
 				} else {
 					for (int i = 0; i < internal.getSlots(); ++i) {
 						if (i == 0)
+							continue;
+						if (i == 1)
 							continue;
 						if (i == 2)
 							continue;

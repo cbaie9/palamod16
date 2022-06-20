@@ -1,0 +1,12 @@
+{
+  "_fv": 28,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "O",
+    "keyBindingName": "Adminshopkeyblinding",
+    "keyBindingCategoryKey": "multiplayer",
+    "onKeyPressed": {
+      "name": "Adminshop_open"
+    }
+  }
+}

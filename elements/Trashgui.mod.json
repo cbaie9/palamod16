@@ -57,6 +57,9 @@
         }
       }
     ],
+    "onTick": {
+      "name": "Deleteall"
+    },
     "onClosed": {
       "name": "Deleteall"
     },

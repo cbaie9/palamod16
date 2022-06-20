@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 4 ",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "palamod:titane_shovel"
+    },
+    "1": {
+      "item": "palamod:titane_shovel"
+    },
+    "2": {
+      "item": "palamod:titane_shovel"
+    },
+    "4": {
+      "item": "palamod:titanestick"
+    },
+    "7": {
+      "item": "palamod:titanestick"
+    }
+  },
+  "result": {
+    "item": "palamod:titaneexcavator",
+    "count": 1
+  }
+}

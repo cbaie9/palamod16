@@ -1,0 +1,132 @@
+{
+  "_fv": 28,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 205,
+    "height": 190,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "text": "Dirt",
+          "width": 46,
+          "height": 20,
+          "name": "Dirt",
+          "x": 133,
+          "y": 31
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Grass",
+          "width": 51,
+          "height": 20,
+          "name": "Grass",
+          "x": 257,
+          "y": 33
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Stone",
+          "width": 51,
+          "height": 20,
+          "name": "Stone",
+          "x": 133,
+          "y": 57
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Netherrack",
+          "width": 82,
+          "height": 20,
+          "name": "Netherrack",
+          "x": 133,
+          "y": 83
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Soul sand",
+          "width": 72,
+          "height": 20,
+          "name": "Soul sand",
+          "x": 132,
+          "y": 109
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Sand",
+          "width": 46,
+          "height": 20,
+          "name": "Sand",
+          "x": 262,
+          "y": 58
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Gravel",
+          "width": 56,
+          "height": 20,
+          "name": "Gravel",
+          "x": 252,
+          "y": 82
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Glowstone",
+          "width": 72,
+          "height": 20,
+          "name": "Glowstone",
+          "x": 132,
+          "y": 138
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Oak wood",
+          "width": 66,
+          "height": 20,
+          "name": "Oak wood",
+          "x": 132,
+          "y": 166
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "blackstone",
+          "width": 77,
+          "height": 20,
+          "name": "blackstone",
+          "x": 231,
+          "y": 109
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}
