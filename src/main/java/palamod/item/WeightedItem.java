@@ -31,7 +31,7 @@ public class WeightedItem extends PalamodModElements.ModElement {
 	public static final Item boots = null;
 
 	public WeightedItem(PalamodModElements instance) {
-		super(instance, 186);
+		super(instance, 188);
 	}
 
 	@Override

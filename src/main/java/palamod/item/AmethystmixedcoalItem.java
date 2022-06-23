@@ -19,7 +19,7 @@ public class AmethystmixedcoalItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public AmethystmixedcoalItem(PalamodModElements instance) {
-		super(instance, 170);
+		super(instance, 172);
 	}
 
 	@Override

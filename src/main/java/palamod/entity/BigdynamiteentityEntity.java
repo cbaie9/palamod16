@@ -60,7 +60,7 @@ public class BigdynamiteentityEntity extends PalamodModElements.ModElement {
 			.size(0.6f, 1.8f)).build("bigdynamiteentity").setRegistryName("bigdynamiteentity");
 
 	public BigdynamiteentityEntity(PalamodModElements instance) {
-		super(instance, 640);
+		super(instance, 667);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BigdynamiteentityRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 	}

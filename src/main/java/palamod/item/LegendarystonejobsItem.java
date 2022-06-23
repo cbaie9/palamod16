@@ -30,7 +30,7 @@ public class LegendarystonejobsItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public LegendarystonejobsItem(PalamodModElements instance) {
-		super(instance, 179);
+		super(instance, 181);
 	}
 
 	@Override

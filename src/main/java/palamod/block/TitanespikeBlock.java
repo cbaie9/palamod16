@@ -52,7 +52,7 @@ public class TitanespikeBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public TitanespikeBlock(PalamodModElements instance) {
-		super(instance, 166);
+		super(instance, 168);
 	}
 
 	@Override

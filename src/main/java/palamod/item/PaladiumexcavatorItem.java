@@ -30,7 +30,7 @@ public class PaladiumexcavatorItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public PaladiumexcavatorItem(PalamodModElements instance) {
-		super(instance, 797);
+		super(instance, 221);
 	}
 
 	@Override

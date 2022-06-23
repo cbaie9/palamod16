@@ -36,7 +36,7 @@ public class AdminshopkeyblindingKeyBinding extends PalamodModElements.ModElemen
 	private KeyBinding keys;
 
 	public AdminshopkeyblindingKeyBinding(PalamodModElements instance) {
-		super(instance, 829);
+		super(instance, 849);
 		elements.addNetworkMessage(KeyBindingPressedMessage.class, KeyBindingPressedMessage::buffer, KeyBindingPressedMessage::new,
 				KeyBindingPressedMessage::handler);
 	}

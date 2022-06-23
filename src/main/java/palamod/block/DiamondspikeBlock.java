@@ -52,7 +52,7 @@ public class DiamondspikeBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public DiamondspikeBlock(PalamodModElements instance) {
-		super(instance, 164);
+		super(instance, 166);
 	}
 
 	@Override

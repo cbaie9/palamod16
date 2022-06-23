@@ -15,7 +15,7 @@ public class BigholeEnchantment extends PalamodModElements.ModElement {
 	public static final Enchantment enchantment = null;
 
 	public BigholeEnchantment(PalamodModElements instance) {
-		super(instance, 800);
+		super(instance, 823);
 	}
 
 	@Override

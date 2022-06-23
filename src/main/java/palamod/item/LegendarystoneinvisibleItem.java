@@ -30,7 +30,7 @@ public class LegendarystoneinvisibleItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public LegendarystoneinvisibleItem(PalamodModElements instance) {
-		super(instance, 177);
+		super(instance, 179);
 	}
 
 	@Override

@@ -54,7 +54,7 @@ public class IronspikeBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public IronspikeBlock(PalamodModElements instance) {
-		super(instance, 162);
+		super(instance, 164);
 	}
 
 	@Override

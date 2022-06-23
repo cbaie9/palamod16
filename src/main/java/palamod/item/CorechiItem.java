@@ -34,7 +34,7 @@ public class CorechiItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public CorechiItem(PalamodModElements instance) {
-		super(instance, 199);
+		super(instance, 201);
 	}
 
 	@Override

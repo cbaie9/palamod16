@@ -18,7 +18,7 @@ public class FuzeiiidiscItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public FuzeiiidiscItem(PalamodModElements instance) {
-		super(instance, 202);
+		super(instance, 204);
 	}
 
 	@Override

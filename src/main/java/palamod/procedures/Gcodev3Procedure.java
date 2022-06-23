@@ -95,17 +95,11 @@ public class Gcodev3Procedure {
 				PalamodMod.LOGGER.warn("Failed to load dependency entity for procedure Gcodev3!");
 			return;
 		}
-		if (dependencies.get("itemstack") == null) {
-			if (!dependencies.containsKey("itemstack"))
-				PalamodMod.LOGGER.warn("Failed to load dependency itemstack for procedure Gcodev3!");
-			return;
-		}
 		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
-		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
 		PalamodModVariables.g_num = (new Object() {
 			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
@@ -2268,7 +2262,21 @@ public class Gcodev3Procedure {
 					}
 				}
 			}
-			(itemstack).addEnchantment(BigholeEnchantment.enchantment,
+			((new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (5)))).addEnchantment(BigholeEnchantment.enchantment,
 					(int) (EnchantmentHelper.getEnchantmentLevel(BigholeEnchantment.enchantment, (new Object() {
 						public ItemStack getItemStack(int sltid) {
 							Entity _ent = entity;
@@ -2302,12 +2310,54 @@ public class Gcodev3Procedure {
 			if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
 				PalamodMod.LOGGER.debug((entity + "Add BIg Hole Upgrade to potg"));
 			}
-			if ((EnchantmentHelper.getEnchantmentLevel(AutosmeltpotgEnchantment.enchantment, itemstack) != 0)) {
+			if ((EnchantmentHelper.getEnchantmentLevel(AutosmeltpotgEnchantment.enchantment, (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (5)))) != 0)) {
 				{
-					Map<Enchantment, Integer> _enchantments = EnchantmentHelper.getEnchantments(itemstack);
+					Map<Enchantment, Integer> _enchantments = EnchantmentHelper.getEnchantments((new Object() {
+						public ItemStack getItemStack(int sltid) {
+							Entity _ent = entity;
+							if (_ent instanceof ServerPlayerEntity) {
+								Container _current = ((ServerPlayerEntity) _ent).openContainer;
+								if (_current instanceof Supplier) {
+									Object invobj = ((Supplier) _current).get();
+									if (invobj instanceof Map) {
+										return ((Slot) ((Map) invobj).get(sltid)).getStack();
+									}
+								}
+							}
+							return ItemStack.EMPTY;
+						}
+					}.getItemStack((int) (5))));
 					if (_enchantments.containsKey(AutosmeltpotgEnchantment.enchantment)) {
 						_enchantments.remove(AutosmeltpotgEnchantment.enchantment);
-						EnchantmentHelper.setEnchantments(_enchantments, itemstack);
+						EnchantmentHelper.setEnchantments(_enchantments, (new Object() {
+							public ItemStack getItemStack(int sltid) {
+								Entity _ent = entity;
+								if (_ent instanceof ServerPlayerEntity) {
+									Container _current = ((ServerPlayerEntity) _ent).openContainer;
+									if (_current instanceof Supplier) {
+										Object invobj = ((Supplier) _current).get();
+										if (invobj instanceof Map) {
+											return ((Slot) ((Map) invobj).get(sltid)).getStack();
+										}
+									}
+								}
+								return ItemStack.EMPTY;
+							}
+						}.getItemStack((int) (5))));
 					}
 				}
 				(new Object() {
@@ -2411,7 +2461,21 @@ public class Gcodev3Procedure {
 					}
 				}
 			}
-			(itemstack).addEnchantment(BigholeEnchantment.enchantment, (int) 1);
+			((new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (5)))).addEnchantment(BigholeEnchantment.enchantment, (int) 1);
 			(new Object() {
 				public ItemStack getItemStack(int sltid) {
 					Entity _ent = entity;
@@ -2430,12 +2494,54 @@ public class Gcodev3Procedure {
 			if (world.getWorldInfo().getGameRulesInstance().getBoolean(LogsallGameRule.gamerule)) {
 				PalamodMod.LOGGER.debug((entity + "Add Auto Smelt Upgrade to potg"));
 			}
-			if ((EnchantmentHelper.getEnchantmentLevel(BigholeEnchantment.enchantment, itemstack) != 0)) {
+			if ((EnchantmentHelper.getEnchantmentLevel(BigholeEnchantment.enchantment, (new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (5)))) != 0)) {
 				{
-					Map<Enchantment, Integer> _enchantments = EnchantmentHelper.getEnchantments(itemstack);
+					Map<Enchantment, Integer> _enchantments = EnchantmentHelper.getEnchantments((new Object() {
+						public ItemStack getItemStack(int sltid) {
+							Entity _ent = entity;
+							if (_ent instanceof ServerPlayerEntity) {
+								Container _current = ((ServerPlayerEntity) _ent).openContainer;
+								if (_current instanceof Supplier) {
+									Object invobj = ((Supplier) _current).get();
+									if (invobj instanceof Map) {
+										return ((Slot) ((Map) invobj).get(sltid)).getStack();
+									}
+								}
+							}
+							return ItemStack.EMPTY;
+						}
+					}.getItemStack((int) (5))));
 					if (_enchantments.containsKey(BigholeEnchantment.enchantment)) {
 						_enchantments.remove(BigholeEnchantment.enchantment);
-						EnchantmentHelper.setEnchantments(_enchantments, itemstack);
+						EnchantmentHelper.setEnchantments(_enchantments, (new Object() {
+							public ItemStack getItemStack(int sltid) {
+								Entity _ent = entity;
+								if (_ent instanceof ServerPlayerEntity) {
+									Container _current = ((ServerPlayerEntity) _ent).openContainer;
+									if (_current instanceof Supplier) {
+										Object invobj = ((Supplier) _current).get();
+										if (invobj instanceof Map) {
+											return ((Slot) ((Map) invobj).get(sltid)).getStack();
+										}
+									}
+								}
+								return ItemStack.EMPTY;
+							}
+						}.getItemStack((int) (5))));
 					}
 				}
 				(new Object() {

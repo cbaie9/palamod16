@@ -14,7 +14,7 @@ import net.minecraft.item.ItemGroup;
 @PalamodModElements.ModElement.Tag
 public class PickaxeofgodstabItemGroup extends PalamodModElements.ModElement {
 	public PickaxeofgodstabItemGroup(PalamodModElements instance) {
-		super(instance, 777);
+		super(instance, 804);
 	}
 
 	@Override

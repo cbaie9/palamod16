@@ -19,7 +19,7 @@ public class TitanemixedcoalItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public TitanemixedcoalItem(PalamodModElements instance) {
-		super(instance, 171);
+		super(instance, 173);
 	}
 
 	@Override

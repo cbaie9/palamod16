@@ -1,14 +1,18 @@
 {
   "replace": false,
   "values": [
+    "palamod:elevatorbrown",
+    "palamod:elevatorcyan",
+    "palamod:elevatorgray",
+    "palamod:elevatorblue",
+    "palamod:elevatorpurple",
+    "palamod:elevatororange",
+    "palamod:elevatorlightgreen",
+    "palamod:elevatorgreen",
     "palamod:elevatorpink",
     "palamod:elevatorwhite",
-    "palamod:elevatorbrown",
-    "palamod:elevatorblue",
+    "palamod:elevatorlightgray",
     "palamod:elevatorlightblue",
-    "palamod:elevatororange",
-    "palamod:elevatorred",
-    "palamod:elevatorlightgreen",
-    "palamod:elevatorgreen"
+    "palamod:elevatorred"
   ]
 }

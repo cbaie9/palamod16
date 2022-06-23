@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=north": {
       "model": "palamod:block/grinderblock"
+    },
+    "facing=east": {
+      "model": "palamod:block/grinderblock",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "palamod:block/grinderblock",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "palamod:block/grinderblock",
+      "y": 270
     }
   }
 }

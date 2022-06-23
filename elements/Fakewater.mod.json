@@ -12,6 +12,9 @@
     "levelDecrease": 1,
     "slopeFindDistance": 4,
     "spawnParticles": false,
+    "dripParticle": {
+      "value": "EXPLOSION_NORMAL"
+    },
     "flowStrength": 1.0,
     "luminosity": 0,
     "density": 1000,
@@ -20,8 +23,12 @@
     "temperature": 300,
     "type": "WATER",
     "generateBucket": true,
+    "textureBucket": "bucket_sulfuric",
     "creativeTab": {
       "value": "CUSTOM:Palamod"
+    },
+    "emptySound": {
+      "value": ""
     },
     "rarity": "COMMON",
     "specialInfo": [],

@@ -30,7 +30,7 @@ public class AmethystexacvatorItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public AmethystexacvatorItem(PalamodModElements instance) {
-		super(instance, 794);
+		super(instance, 219);
 	}
 
 	@Override

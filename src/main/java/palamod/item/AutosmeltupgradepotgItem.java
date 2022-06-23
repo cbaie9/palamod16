@@ -19,7 +19,7 @@ public class AutosmeltupgradepotgItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public AutosmeltupgradepotgItem(PalamodModElements instance) {
-		super(instance, 806);
+		super(instance, 262);
 	}
 
 	@Override

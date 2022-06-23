@@ -30,7 +30,7 @@ public class VoidstoneItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public VoidstoneItem(PalamodModElements instance) {
-		super(instance, 802);
+		super(instance, 222);
 	}
 
 	@Override

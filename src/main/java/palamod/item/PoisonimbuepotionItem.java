@@ -29,7 +29,7 @@ public class PoisonimbuepotionItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public PoisonimbuepotionItem(PalamodModElements instance) {
-		super(instance, 214);
+		super(instance, 216);
 	}
 
 	@Override

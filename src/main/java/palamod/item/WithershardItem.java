@@ -19,7 +19,7 @@ public class WithershardItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public WithershardItem(PalamodModElements instance) {
-		super(instance, 185);
+		super(instance, 187);
 	}
 
 	@Override

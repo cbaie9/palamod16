@@ -34,7 +34,7 @@ public class DynamiteItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public DynamiteItem(PalamodModElements instance) {
-		super(instance, 195);
+		super(instance, 197);
 	}
 
 	@Override

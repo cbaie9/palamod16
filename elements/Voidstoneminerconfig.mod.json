@@ -1,0 +1,70 @@
+{
+  "_fv": 28,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 200,
+    "height": 100,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "checkbox",
+        "data": {
+          "text": "",
+          "name": "mv_picon",
+          "x": 118,
+          "y": 74
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Activer le déplacement automatique",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Activer le déplacement automatique",
+          "x": 116,
+          "y": 99
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "De la pierre dans la voidstone",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "De la pierre dans la voidstone",
+          "x": 117,
+          "y": 111
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Voidstone configuration",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Voidstone configuration",
+          "x": 188,
+          "y": 74
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

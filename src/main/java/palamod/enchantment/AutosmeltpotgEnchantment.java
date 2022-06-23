@@ -15,7 +15,7 @@ public class AutosmeltpotgEnchantment extends PalamodModElements.ModElement {
 	public static final Enchantment enchantment = null;
 
 	public AutosmeltpotgEnchantment(PalamodModElements instance) {
-		super(instance, 801);
+		super(instance, 824);
 	}
 
 	@Override

@@ -13,7 +13,7 @@ public class LogsallGameRule extends PalamodModElements.ModElement {
 	public static final GameRules.RuleKey<GameRules.BooleanValue> gamerule = GameRules.register("logsall", GameRules.Category.PLAYER, create(false));
 
 	public LogsallGameRule(PalamodModElements instance) {
-		super(instance, 426);
+		super(instance, 453);
 	}
 
 	public static GameRules.RuleType<GameRules.BooleanValue> create(boolean defaultValue) {

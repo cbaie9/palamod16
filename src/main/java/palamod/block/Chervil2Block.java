@@ -44,7 +44,7 @@ public class Chervil2Block extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public Chervil2Block(PalamodModElements instance) {
-		super(instance, 585);
+		super(instance, 612);
 	}
 
 	@Override

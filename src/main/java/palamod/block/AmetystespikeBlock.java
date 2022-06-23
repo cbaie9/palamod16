@@ -52,7 +52,7 @@ public class AmetystespikeBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public AmetystespikeBlock(PalamodModElements instance) {
-		super(instance, 165);
+		super(instance, 167);
 	}
 
 	@Override

@@ -29,7 +29,7 @@ public class WitherimbuepotionItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public WitherimbuepotionItem(PalamodModElements instance) {
-		super(instance, 212);
+		super(instance, 214);
 	}
 
 	@Override

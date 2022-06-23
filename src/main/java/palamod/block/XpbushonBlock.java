@@ -42,7 +42,7 @@ public class XpbushonBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public XpbushonBlock(PalamodModElements instance) {
-		super(instance, 373);
+		super(instance, 400);
 	}
 
 	@Override

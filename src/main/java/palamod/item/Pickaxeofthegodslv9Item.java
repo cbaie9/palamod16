@@ -32,7 +32,7 @@ public class Pickaxeofthegodslv9Item extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public Pickaxeofthegodslv9Item(PalamodModElements instance) {
-		super(instance, 224);
+		super(instance, 248);
 	}
 
 	@Override

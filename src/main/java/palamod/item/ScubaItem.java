@@ -40,7 +40,7 @@ public class ScubaItem extends PalamodModElements.ModElement {
 	public static final Item boots = null;
 
 	public ScubaItem(PalamodModElements instance) {
-		super(instance, 813);
+		super(instance, 225);
 	}
 
 	@Override

@@ -52,7 +52,7 @@ public class PaladiumspikeBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public PaladiumspikeBlock(PalamodModElements instance) {
-		super(instance, 167);
+		super(instance, 169);
 	}
 
 	@Override

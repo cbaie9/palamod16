@@ -36,7 +36,7 @@ public class ElevatorlightgreenBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public ElevatorlightgreenBlock(PalamodModElements instance) {
-		super(instance, 840);
+		super(instance, 233);
 	}
 
 	@Override

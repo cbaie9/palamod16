@@ -75,7 +75,7 @@ public class Tcv2Block extends PalamodModElements.ModElement {
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 
 	public Tcv2Block(PalamodModElements instance) {
-		super(instance, 175);
+		super(instance, 177);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

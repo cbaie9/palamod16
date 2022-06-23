@@ -47,7 +47,7 @@ public class WitherarrowItem extends PalamodModElements.ModElement {
 			.size(0.5f, 0.5f)).build("projectile_witherarrow").setRegistryName("projectile_witherarrow");
 
 	public WitherarrowItem(PalamodModElements instance) {
-		super(instance, 188);
+		super(instance, 190);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new WitherarrowRenderer.ModelRegisterHandler());
 	}
 

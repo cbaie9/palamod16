@@ -46,7 +46,7 @@ public class Orangeblue3Block extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public Orangeblue3Block(PalamodModElements instance) {
-		super(instance, 658);
+		super(instance, 685);
 	}
 
 	@Override

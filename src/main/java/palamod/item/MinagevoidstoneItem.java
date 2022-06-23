@@ -30,7 +30,7 @@ public class MinagevoidstoneItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public MinagevoidstoneItem(PalamodModElements instance) {
-		super(instance, 844);
+		super(instance, 218);
 	}
 
 	@Override
@@ -72,9 +72,11 @@ public class MinagevoidstoneItem extends PalamodModElements.ModElement {
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
 
-			MvprocessProcedure.executeProcedure(
-					Stream.of(new AbstractMap.SimpleEntry<>("entity", entity), new AbstractMap.SimpleEntry<>("itemstack", itemstack))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+			MvprocessProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity),
+							new AbstractMap.SimpleEntry<>("itemstack", itemstack))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			return ar;
 		}
 	}

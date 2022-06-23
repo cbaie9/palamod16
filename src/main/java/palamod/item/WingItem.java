@@ -19,7 +19,7 @@ public class WingItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public WingItem(PalamodModElements instance) {
-		super(instance, 814);
+		super(instance, 226);
 	}
 
 	@Override

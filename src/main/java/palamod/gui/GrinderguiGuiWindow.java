@@ -87,7 +87,7 @@ public class GrinderguiGuiWindow extends ContainerScreen<GrinderguiGui.GuiContai
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "" + (PalamodModVariables.g_num) + " /100", 88, 99, -12829636);
+		this.font.drawString(ms, "" + (PalamodModVariables.g_num) + " /100", 82, 100, -12829636);
 		this.font.drawString(ms, "Inventory", 6, 101, -12829636);
 	}
 

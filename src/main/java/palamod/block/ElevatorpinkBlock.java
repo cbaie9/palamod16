@@ -36,7 +36,7 @@ public class ElevatorpinkBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public ElevatorpinkBlock(PalamodModElements instance) {
-		super(instance, 838);
+		super(instance, 231);
 	}
 
 	@Override

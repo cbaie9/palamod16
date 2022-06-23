@@ -28,7 +28,7 @@ public class PaladiumappleItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public PaladiumappleItem(PalamodModElements instance) {
-		super(instance, 215);
+		super(instance, 217);
 	}
 
 	@Override

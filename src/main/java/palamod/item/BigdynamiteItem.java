@@ -34,7 +34,7 @@ public class BigdynamiteItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public BigdynamiteItem(PalamodModElements instance) {
-		super(instance, 197);
+		super(instance, 199);
 	}
 
 	@Override

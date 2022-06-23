@@ -78,7 +78,7 @@ public class PaladiumfurnaceonBlock extends PalamodModElements.ModElement {
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 
 	public PaladiumfurnaceonBlock(PalamodModElements instance) {
-		super(instance, 419);
+		super(instance, 446);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

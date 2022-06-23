@@ -31,6 +31,18 @@
       },
       {
         "value": "CUSTOM:Elevatororange"
+      },
+      {
+        "value": "CUSTOM:Elevatorpurple"
+      },
+      {
+        "value": "CUSTOM:Elevatorgray"
+      },
+      {
+        "value": "CUSTOM:Elevatorlightgray"
+      },
+      {
+        "value": "CUSTOM:Elevatorcyan"
       }
     ],
     "functions": [],

@@ -71,7 +71,7 @@ public class MegasafechestBlock extends PalamodModElements.ModElement {
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 
 	public MegasafechestBlock(PalamodModElements instance) {
-		super(instance, 192);
+		super(instance, 194);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

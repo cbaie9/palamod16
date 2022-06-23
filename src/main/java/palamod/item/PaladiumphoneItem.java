@@ -54,7 +54,7 @@ public class PaladiumphoneItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public PaladiumphoneItem(PalamodModElements instance) {
-		super(instance, 201);
+		super(instance, 203);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

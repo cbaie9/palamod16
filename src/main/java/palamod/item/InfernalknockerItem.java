@@ -28,7 +28,7 @@ public class InfernalknockerItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public InfernalknockerItem(PalamodModElements instance) {
-		super(instance, 807);
+		super(instance, 223);
 	}
 
 	@Override

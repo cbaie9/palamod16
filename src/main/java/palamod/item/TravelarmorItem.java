@@ -43,7 +43,7 @@ public class TravelarmorItem extends PalamodModElements.ModElement {
 	public static final Item boots = null;
 
 	public TravelarmorItem(PalamodModElements instance) {
-		super(instance, 808);
+		super(instance, 224);
 	}
 
 	@Override

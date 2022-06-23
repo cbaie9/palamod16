@@ -19,7 +19,7 @@ public class BigholeupgradeItem extends PalamodModElements.ModElement {
 	public static final Item block = null;
 
 	public BigholeupgradeItem(PalamodModElements instance) {
-		super(instance, 799);
+		super(instance, 261);
 	}
 
 	@Override

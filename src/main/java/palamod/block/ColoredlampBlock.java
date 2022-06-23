@@ -34,7 +34,7 @@ public class ColoredlampBlock extends PalamodModElements.ModElement {
 	public static final Block block = null;
 
 	public ColoredlampBlock(PalamodModElements instance) {
-		super(instance, 193);
+		super(instance, 195);
 	}
 
 	@Override
